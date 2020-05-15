@@ -32,10 +32,26 @@ import java.util.Set;
 public class AntuIconProvider implements SvgIconProvider<IconStyle> {
 	public static final String LIBRARY_ID = "antu";
 
-	private static final IconStyle ICON_STYLE = new IconStyle() {
+	private static final IconStyle STANDARD = new IconStyle() {
 		@Override
 		public String getStyleId() {
-			return "standard";
+			return "Antu";
+		}
+
+		@Override
+		public String getStyleName() {
+			return null;
+		}
+
+		@Override
+		public boolean canBeUsedAsSubIcon() {
+			return true;
+		}
+	};
+	private static final IconStyle DARK = new IconStyle() {
+		@Override
+		public String getStyleId() {
+			return "AntuDark";
 		}
 
 		@Override
@@ -50,7 +66,10 @@ public class AntuIconProvider implements SvgIconProvider<IconStyle> {
 	};
 	private static final Set<IconStyle> STYLES = new HashSet<>();
 
-	static { STYLES.add(ICON_STYLE);}
+	static {
+		STYLES.add(STANDARD);
+		STYLES.add(DARK);
+	}
 
 	public String getInnerSvg(IconStyle style, String s) {
 		return null;
@@ -70,9 +89,9 @@ public class AntuIconProvider implements SvgIconProvider<IconStyle> {
 		if (!iconName.endsWith(".svg")) {
 			iconName += ".svg";
 		}
-
+		
         String iconPath = iconName.replace("__", "/");
-		InputStream inputStream = getClass().getResourceAsStream("/org/teamapps/icon/antu-classic/Antu/" + iconPath);
+		InputStream inputStream = getClass().getResourceAsStream("/org/teamapps/icon/antu-classic/" + styleId + "/" + iconPath);
 		if (inputStream == null) {
 			return null;
 		}
@@ -97,15 +116,15 @@ public class AntuIconProvider implements SvgIconProvider<IconStyle> {
 	}
 
 	public IconStyle getDefaultDesktopStyle() {
-		return ICON_STYLE;
+		return STANDARD;
 	}
 
 	public IconStyle getDefaultMobileStyle() {
-		return ICON_STYLE;
+		return STANDARD;
 	}
 
 	public IconStyle getDefaultSubIconStyle() {
-		return ICON_STYLE;
+		return STANDARD;
 	}
 
 }

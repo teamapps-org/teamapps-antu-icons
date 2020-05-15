@@ -89,9 +89,17 @@ public class AntuIconProvider implements SvgIconProvider<IconStyle> {
 		if (!iconName.endsWith(".svg")) {
 			iconName += ".svg";
 		}
-		
         String iconPath = iconName.replace("__", "/");
-		InputStream inputStream = getClass().getResourceAsStream("/org/teamapps/icon/antu-classic/" + styleId + "/" + iconPath);
+		String iconFolder;
+
+		// Default style of TeamApps is "plain_grey_700"
+		if (styleId == null || styleId.equals("plain_grey_700")){
+			iconFolder = "Antu";
+		} else {
+			iconFolder = styleId;
+		}
+		InputStream inputStream = getClass().getResourceAsStream("/org/teamapps/icon/antu-classic/" + iconFolder + "/" + iconPath);
+
 		if (inputStream == null) {
 			return null;
 		}

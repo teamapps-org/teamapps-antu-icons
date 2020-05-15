@@ -32,7 +32,7 @@ import java.util.Set;
 public class AntuIconProvider implements SvgIconProvider<IconStyle> {
 	public static final String LIBRARY_ID = "antu";
 
-	private static final IconStyle STANDARD = new IconStyle() {
+	public static final IconStyle STANDARD = new IconStyle() {
 		@Override
 		public String getStyleId() {
 			return "Antu";
@@ -48,7 +48,7 @@ public class AntuIconProvider implements SvgIconProvider<IconStyle> {
 			return true;
 		}
 	};
-	private static final IconStyle DARK = new IconStyle() {
+	public static final IconStyle DARK = new IconStyle() {
 		@Override
 		public String getStyleId() {
 			return "AntuDark";
@@ -64,7 +64,7 @@ public class AntuIconProvider implements SvgIconProvider<IconStyle> {
 			return true;
 		}
 	};
-	private static final Set<IconStyle> STYLES = new HashSet<>();
+	public static final Set<IconStyle> STYLES = new HashSet<>();
 
 	static {
 		STYLES.add(STANDARD);

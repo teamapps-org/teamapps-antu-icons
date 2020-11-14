@@ -107,7 +107,7 @@ public class AntuIcon implements Icon<AntuIcon, AntuIconStyle> {
     public static final AntuIcon APPLET_WEATHERWIDGET_256 = create("applets__256__org.kde.weatherWidget");
 
     // APPS
-    public static final AntuIcon APP_0AD_48 = create("apps__48__0ad.svg");
+    public static final AntuIcon APP_0AD_48 = create("apps__48__0ad");
     public static final AntuIcon APP_1PASSWORD_48 = create("apps__48__1password");
     public static final AntuIcon APP_2048_48 = create("apps__48__2048");
     public static final AntuIcon APP_2048_QT_48 = create("apps__48__2048-qt");
@@ -1172,7 +1172,7 @@ public class AntuIcon implements Icon<AntuIcon, AntuIconStyle> {
     public static final AntuIcon APP_PREFERENCES_SYSTEM_BLUETOOTH_48 = create("apps__48__preferences-system-bluetooth");
     public static final AntuIcon APP_PREFERENCES_SYSTEM_BLUETOOTH_INACTIVE_32 = create("apps__32__preferences-system-bluetooth-inactive");
     public static final AntuIcon APP_PREFERENCES_SYSTEM_BLUETOOTH_INACTIVE_48 = create("apps__48__preferences-system-bluetooth-inactive");
-    public static final AntuIcon APP_PREFERENCES_SYSTEM_BLUETOOTH_INACTIVE_SVG_48 = create("apps__48__preferences-system-bluetooth-inactive.svg");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_BLUETOOTH_INACTIVE2_48 = create("apps__48__preferences-system-bluetooth-inactive2");
     public static final AntuIcon APP_PREFERENCES_SYSTEM_FIREWALL_48 = create("apps__48__preferences-system-firewall");
     public static final AntuIcon APP_PREFERENCES_SYSTEM_HOTCORNERS_48 = create("apps__48__preferences-system-hotcorners");
     public static final AntuIcon APP_PREFERENCES_SYSTEM_LOGIN_32 = create("apps__32__preferences-system-login");

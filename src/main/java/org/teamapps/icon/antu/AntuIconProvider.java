@@ -32,10 +32,10 @@ import java.util.Set;
 public class AntuIconProvider implements SvgIconProvider<IconStyle> {
 	public static final String LIBRARY_ID = "antu";
 
-	private static final IconStyle ICON_STYLE = new IconStyle() {
+	public static final IconStyle STANDARD = new IconStyle() {
 		@Override
 		public String getStyleId() {
-			return "standard";
+			return "Antu";
 		}
 
 		@Override
@@ -48,9 +48,28 @@ public class AntuIconProvider implements SvgIconProvider<IconStyle> {
 			return true;
 		}
 	};
-	private static final Set<IconStyle> STYLES = new HashSet<>();
+	public static final IconStyle DARK = new IconStyle() {
+		@Override
+		public String getStyleId() {
+			return "AntuDark";
+		}
 
-	static { STYLES.add(ICON_STYLE);}
+		@Override
+		public String getStyleName() {
+			return null;
+		}
+
+		@Override
+		public boolean canBeUsedAsSubIcon() {
+			return true;
+		}
+	};
+	public static final Set<IconStyle> STYLES = new HashSet<>();
+
+	static {
+		STYLES.add(STANDARD);
+		STYLES.add(DARK);
+	}
 
 	public String getInnerSvg(IconStyle style, String s) {
 		return null;
@@ -70,9 +89,17 @@ public class AntuIconProvider implements SvgIconProvider<IconStyle> {
 		if (!iconName.endsWith(".svg")) {
 			iconName += ".svg";
 		}
-
         String iconPath = iconName.replace("__", "/");
-		InputStream inputStream = getClass().getResourceAsStream("/org/teamapps/icon/antu-classic/Antu/" + iconPath);
+		String iconFolder;
+
+		// Default style of TeamApps is "plain_grey_700"
+		if (styleId == null || styleId.equals("plain_grey_700")){
+			iconFolder = "Antu";
+		} else {
+			iconFolder = styleId;
+		}
+		InputStream inputStream = getClass().getResourceAsStream("/org/teamapps/icon/antu-classic/" + iconFolder + "/" + iconPath);
+
 		if (inputStream == null) {
 			return null;
 		}
@@ -97,15 +124,15 @@ public class AntuIconProvider implements SvgIconProvider<IconStyle> {
 	}
 
 	public IconStyle getDefaultDesktopStyle() {
-		return ICON_STYLE;
+		return STANDARD;
 	}
 
 	public IconStyle getDefaultMobileStyle() {
-		return ICON_STYLE;
+		return STANDARD;
 	}
 
 	public IconStyle getDefaultSubIconStyle() {
-		return ICON_STYLE;
+		return STANDARD;
 	}
 
 }

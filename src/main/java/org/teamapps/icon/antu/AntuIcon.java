@@ -19,9 +19,7 @@
  */
 package org.teamapps.icon.antu;
 
-import org.teamapps.icons.api.Icon;
-import org.teamapps.icons.api.SimpleIcon;
-import org.teamapps.icons.api.StyledIcon;
+import org.teamapps.icons.api.*;
 
 public enum AntuIcon {
 	//Grouped in sub enums as Java does not support more than 2750 enums per class
@@ -101,9 +99,9 @@ public enum AntuIcon {
 			return AntuIconProvider.LIBRARY_ID;
 		}
 
-//		public Icon withStyle(SingleColorStyle style) {
-//			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
-//		}
+		public Icon withStyle(IconStyle style) {
+			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
+		}
 	}
 
 	public enum APPS implements SimpleIcon {
@@ -1617,9 +1615,9 @@ public enum AntuIcon {
 			return AntuIconProvider.LIBRARY_ID;
 		}
 
-//		public Icon withStyle(SingleColorStyle style) {
-//			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
-//		}
+		public Icon withStyle(IconStyle style) {
+			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
+		}
 	}
 	public enum CATEGORIES implements SimpleIcon {
 		APPLICATIONS_DEVELOPMENT_22("categories__22__applications-development.svg"),
@@ -1765,9 +1763,9 @@ public enum AntuIcon {
 			return AntuIconProvider.LIBRARY_ID;
 		}
 
-//		public Icon withStyle(SingleColorStyle style) {
-//			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
-//		}
+		public Icon withStyle(IconStyle style) {
+			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
+		}
 	}
 
 	public enum EMBLEMS implements SimpleIcon {
@@ -1809,9 +1807,9 @@ public enum AntuIcon {
 			return AntuIconProvider.LIBRARY_ID;
 		}
 
-//		public Icon withStyle(SingleColorStyle style) {
-//			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
-//		}
+		public Icon withStyle(IconStyle style) {
+			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
+		}
 	}
 
 
@@ -1865,9 +1863,9 @@ public enum AntuIcon {
 			return AntuIconProvider.LIBRARY_ID;
 		}
 
-//		public Icon withStyle(SingleColorStyle style) {
-//			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
-//		}
+		public Icon withStyle(IconStyle style) {
+			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
+		}
 	}
 
 	public enum PLACES implements SimpleIcon {
@@ -2159,9 +2157,9 @@ public enum AntuIcon {
 			return AntuIconProvider.LIBRARY_ID;
 		}
 
-//		public Icon withStyle(SingleColorStyle style) {
-//			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
-//		}
+		public Icon withStyle(IconStyle style) {
+			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
+		}
 	}
 
 	public enum STATUS implements SimpleIcon {
@@ -2320,9 +2318,9 @@ public enum AntuIcon {
 			return AntuIconProvider.LIBRARY_ID;
 		}
 
-//		public Icon withStyle(SingleColorStyle style) {
-//			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
-//		}
+		public Icon withStyle(IconStyle style) {
+			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
+		}
 	}
 
 	public enum ACTION implements SimpleIcon {ACCEPT_SIGNAL_24("actions__24__accept_signal.svg"),
@@ -3814,9 +3812,9 @@ public enum AntuIcon {
 			return AntuIconProvider.LIBRARY_ID;
 		}
 
-//		public Icon withStyle(SingleColorStyle style) {
-//			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
-//		}
+		public Icon withStyle(IconStyle style) {
+			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
+		}
 	}
 
 

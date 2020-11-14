@@ -19,3805 +19,3660 @@
  */
 package org.teamapps.icon.antu;
 
-import org.teamapps.icons.api.*;
+import org.teamapps.icons.Icon;
+import org.teamapps.icons.spi.IconLibrary;
 
-public enum AntuIcon {
-	//Grouped in sub enums as Java does not support more than 2750 enums per class
-	;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
-	public enum APPLETS implements SimpleIcon {
-
-		APPLETS_TEMPLATE_256("applets__256__applets-template.svg"),
-		YAHOOWEATHER_256("applets__256__com.librehat.yahooweather.svg"),
-		WEBSLICE_256("applets__256__cqcb.plasma.webslice.svg"),
-		SIMPLEDATEANDTIME_256("applets__256__org.kde.contrib.simpledateandtime.svg"),
-		TAKEABREAK_256("applets__256__org.kde.contrib.takeabreak.svg"),
-		KTPCONTACTLIST_256("applets__256__org.kde.ktpcontactlist.svg"),
-		MUONNOTIFIER_256("applets__256__org.kde.muonnotifier.svg"),
-		NETWORKMONITOR_256("applets__256__org.kde.networkMonitor.svg"),
-		ACTIVITYBAR_256("applets__256__org.kde.plasma.activitybar.svg"),
-		ACTIVITYPAGER_256("applets__256__org.kde.plasma.activitypager.svg"),
-		ANALOGCLOCK_256("applets__256__org.kde.plasma.analogclock.svg"),
-		AWESOMEWIDGET_256("applets__256__org.kde.plasma.awesomewidget.svg"),
-		BATTERY_256("applets__256__org.kde.plasma.battery.svg"),
-		BINARYCLOCK_256("applets__256__org.kde.plasma.binaryclock.svg"),
-		CALCULATOR_256("applets__256__org.kde.plasma.calculator.svg"),
-		CALENDAR_256("applets__256__org.kde.plasma.calendar.svg"),
-		CLIPBOARD_256("applets__256__org.kde.plasma.clipboard.svg"),
-		COLORPICKER_256("applets__256__org.kde.plasma.colorpicker.svg"),
-		COMIC_256("applets__256__org.kde.plasma.comic.svg"),
-		DEVICENOTIFIER_256("applets__256__org.kde.plasma.devicenotifier.svg"),
-		DIGITALCLOCK_256("applets__256__org.kde.plasma.digitalclock.svg"),
-		DISKQUOTA_256("applets__256__org.kde.plasma.diskquota.svg"),
-		FIFTEENPUZZLE_256("applets__256__org.kde.plasma.fifteenpuzzle.svg"),
-		FOLDER_256("applets__256__org.kde.plasma.folder.svg"),
-		FRAME_256("applets__256__org.kde.plasma.frame.svg"),
-		FUZZYCLOCK_256("applets__256__org.kde.plasma.fuzzyclock.svg"),
-		GMAILFEED_256("applets__256__org.kde.plasma.gmailfeed.svg"),
-		ICONTASKS_256("applets__256__org.kde.plasma.icontasks.svg"),
-		KICKER_256("applets__256__org.kde.plasma.kicker.svg"),
-		KICKERDASH_256("applets__256__org.kde.plasma.kickerdash.svg"),
-		KICKOFF_256("applets__256__org.kde.plasma.kickoff.svg"),
-		MEDIACONTROLLER_256("applets__256__org.kde.plasma.mediacontroller.svg"),
-		MEDIACONTROLLERCOMPACT_256("applets__256__org.kde.plasma.mediacontrollercompact.svg"),
-		MULTIMEDIACONTROLS_256("applets__256__org.kde.plasma.multimediacontrols.svg"),
-		NETWORKMANAGEMENT_256("applets__256__org.kde.plasma.networkmanagement.svg"),
-		NOTES_256("applets__256__org.kde.plasma.notes.svg"),
-		PAGER_256("applets__256__org.kde.plasma.pager.svg"),
-		QUICKLAUNCH_256("applets__256__org.kde.plasma.quicklaunch.svg"),
-		SHOWACTIVITYMANAGER_256("applets__256__org.kde.plasma.showActivityManager.svg"),
-		SYSTEMLOADVIEWER_256("applets__256__org.kde.plasma.systemloadviewer.svg"),
-		SYSTEMMONITOR_CPU_256("applets__256__org.kde.plasma.systemmonitor.cpu.svg"),
-		SYSTEMMONITOR_DISKACTIVITY_256("applets__256__org.kde.plasma.systemmonitor.diskactivity.svg"),
-		SYSTEMMONITOR_DISKUSAGE_256("applets__256__org.kde.plasma.systemmonitor.diskusage.svg"),
-		SYSTEMMONITOR_MEMORY_256("applets__256__org.kde.plasma.systemmonitor.memory.svg"),
-		SYSTEMMONITOR_NET_256("applets__256__org.kde.plasma.systemmonitor.net.svg"),
-		SYSTEMTRAY_256("applets__256__org.kde.plasma.systemtray.svg"),
-		TASKMANAGER_256("applets__256__org.kde.plasma.taskmanager.svg"),
-		TIMER_256("applets__256__org.kde.plasma.timer.svg"),
-		USERSWITCHER_256("applets__256__org.kde.plasma.userswitcher.svg"),
-		VOLUME_256("applets__256__org.kde.plasma.volume.svg"),
-		WINDOWLIST_256("applets__256__org.kde.plasma.windowlist.svg"),
-		REDSHIFTCONTROL_256("applets__256__org.kde.redshiftControl.svg"),
-		THERMALMONITOR_256("applets__256__org.kde.thermalMonitor.svg"),
-		UPTIMEWIDGET_256("applets__256__org.kde.uptimeWidget.svg"),
-		WEATHERWIDGET_256("applets__256__org.kde.weatherWidget.svg"),
-		;
-		private String name;
-
-		APPLETS(String name) {
-			this.name = name;
-		}
-
-		@Override
-		public String getIconName() {
-			return name;
-		}
-
-		@Override
-		public String getIconLibraryId() {
-			return AntuIconProvider.LIBRARY_ID;
-		}
-
-		public Icon withStyle(IconStyle style) {
-			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
-		}
-	}
-
-	public enum APPS implements SimpleIcon {
-		_0AD_48("apps__48__0ad.svg"),
-		_1PASSWORD_48("apps__48__1password.svg"),
-		_2048_48("apps__48__2048.svg"),
-		_2048_QT_48("apps__48__2048-qt.svg"),
-		_4KVIDEODOWNLOADER_48("apps__48__4kvideodownloader.svg"),
-		_67EF_ADDONINSTALLER_0_48("apps__48__67EF_addoninstaller.0.svg"),
-		_7Z_48("apps__48__7z.svg"),
-		_7ZIP_48("apps__48__7zip.svg"),
-		_8_BALL_POOL_48("apps__48__8-ball-pool.svg"),
-		ABRT_48("apps__48__abrt.svg"),
-		ACCESS_48("apps__48__access.svg"),
-		ACCESSIBILITY_48("apps__48__accessibility.svg"),
-		ACCESSIBILITY_DIRECTORY_48("apps__48__accessibility-directory.svg"),
-		ACCESSIBILITY_SECTION_48("apps__48__accessibility_section.svg"),
-		ACCESSORIES_ARCHIVER_48("apps__48__accessories-archiver.svg"),
-		ACCESSORIES_CALCULATOR_48("apps__48__accessories-calculator.svg"),
-		ACCESSORIES_CAMERA_48("apps__48__accessories-camera.svg"),
-		ACCESSORIES_CHARACTER_MAP_48("apps__48__accessories-character-map.svg"),
-		ACCESSORIES_CLOCK_48("apps__48__accessories-clock.svg"),
-		ACCESSORIES_DICTIONARY_48("apps__48__accessories-dictionary.svg"),
-		ACCESSORIES_DOCUMENT_VIEWER_48("apps__48__accessories-document-viewer.svg"),
-		ACCESSORIES_EBOOK_READER_48("apps__48__accessories-ebook-reader.svg"),
-		ACCESSORIES_NOTES_48("apps__48__accessories-notes.svg"),
-		ACCESSORIES_TEXT_EDITOR_48("apps__48__accessories-text-editor.svg"),
-		ACETINO2_48("apps__48__Acetino2.svg"),
-		ACETONEISO_48("apps__48__acetoneiso.svg"),
-		ACROREAD_48("apps__48__acroread.svg"),
-		ACTIVITY_LOG_MANAGER_48("apps__48__activity-log-manager.svg"),
-		ADDRESSBOOK_48("apps__48__addressbook.svg"),
-		ADJUST_COLORS_48("apps__48__adjust-colors.svg"),
-		ADMINISTRATION_48("apps__48__administration.svg"),
-		ADOBE_AIR_48("apps__48__adobe-air.svg"),
-		ADOBE_FLASHPLAYER_48("apps__48__adobe-flashplayer.svg"),
-		ADOBEAFTEREFFECT_48("apps__48__AdobeAfterEffect.svg"),
-		ADOBEAUDITION_48("apps__48__AdobeAudition.svg"),
-		ADOBEBRIDGE_48("apps__48__AdobeBridge.svg"),
-		ADOBEDREAMWEAVER_48("apps__48__AdobeDreamweaver.svg"),
-		ADOBEENCORE_48("apps__48__AdobeEncore.svg"),
-		ADOBEFIREWORK_48("apps__48__AdobeFirework.svg"),
-		ADOBEFLASH_48("apps__48__AdobeFlash.svg"),
-		ADOBEFLASHBUILDER_48("apps__48__AdobeFlashBuilder.svg"),
-		ADOBEFLASHPLUGIN_48("apps__48__adobeflashplugin.svg"),
-		ADOBEILLUSTRATOR_48("apps__48__Adobeillustrator.svg"),
-		ADOBEINDESIGN_48("apps__48__AdobeIndesign.svg"),
-		ADOBELIGHTROOM_48("apps__48__AdobeLightroom.svg"),
-		ADOBEPHOTOSHOP_48("apps__48__AdobePhotoshop.svg"),
-		ADOBEPRELUDE_48("apps__48__AdobePrelude.svg"),
-		ADOBEPREMIEREPRO_48("apps__48__AdobePremierePro.svg"),
-		ADOBESPEEDGRADE_48("apps__48__AdobeSpeedgrade.svg"),
-		ADOBEUPDATE_48("apps__48__AdobeUpdate.svg"),
-		ADOBEWIDGETBROWSER_48("apps__48__AdobeWidgetBrowser.svg"),
-		AIM_48("apps__48__aim.svg"),
-		AIM_PROTOCOL_48("apps__48__aim_protocol.svg"),
-		AIRPORTUTILITY_48("apps__48__AirPortUtility.svg"),
-		AIRWAVE_MANAGER_48("apps__48__airwave-manager.svg"),
-		AKONADI_48("apps__48__akonadi.svg"),
-		AKONADICONSOLE_48("apps__48__akonadiconsole.svg"),
-		AKONADITRAY_48("apps__48__akonaditray.svg"),
-		AKREGATOR_22("apps__22__akregator.svg"),
-		AKREGATOR_48("apps__48__akregator.svg"),
-		AKREGATOR_EMPTY_48("apps__48__akregator_empty.svg"),
-		ALACARTE_48("apps__48__alacarte.svg"),
-		ALARM_CLOCK_48("apps__48__alarm-clock.svg"),
-		ALCHEMY_48("apps__48__alchemy.svg"),
-		ALEXANDRA_48("apps__48__alexandra.svg"),
-		ALIEN_ARENA_48("apps__48__alien-arena.svg"),
-		ALIENARENA_48("apps__48__alienarena.svg"),
-		ALSAMIXERGUI_48("apps__48__alsamixergui.svg"),
-		AMARK_48("apps__48__amark.svg"),
-		AMAROK_48("apps__48__amarok.svg"),
-		AMAROK_CHANGE_LANGUAGE_32("apps__32__amarok_change_language.svg"),
-		AMAROK_CHANGE_LANGUAGE_48("apps__48__amarok_change_language.svg"),
-		AMAROK_ICON_48("apps__48__amarok-icon.svg"),
-		AMAROK2_48("apps__48__amarok2.svg"),
-		AMAZON_MP3_STORE_SOURCE_48("apps__48__amazon-mp3-store-source.svg"),
-		AMAZON_STORE_48("apps__48__amazon-store.svg"),
-		AMD_48("apps__48__amd.svg"),
-		AMD_ATI_48("apps__48__amd-ati.svg"),
-		AMULE_48("apps__48__amule.svg"),
-		AMZDOWNLOADER_48("apps__48__amzdownloader.svg"),
-		ANACONDA_48("apps__48__anaconda.svg"),
-		ANDROID_FILE_TRANSFER_48("apps__48__android-file-transfer.svg"),
-		ANDROID_SDK_48("apps__48__android-sdk.svg"),
-		ANDROID_STUDIO_48("apps__48__android-studio.svg"),
-		ANDROIDSTUDIO_48("apps__48__androidstudio.svg"),
-		ANJUTA_48("apps__48__anjuta.svg"),
-		ANKI_48("apps__48__anki.svg"),
-		ANY_DO_48("apps__48__any_do.svg"),
-		APP_LAUNCHER_48("apps__48__app-launcher.svg"),
-		APPARMOR_VIEW_PROFILE_48("apps__48__apparmor_view_profile.svg"),
-		APPGRID_48("apps__48__appgrid.svg"),
-		APPLETS_SCREENSHOOTER_48("apps__48__applets-screenshooter.svg"),
-		APPLICATION_COMMUNITY_48("apps__48__application-community.svg"),
-		APPLICATION_DEFAULT_ICON_48("apps__48__application-default-icon.svg"),
-		APPLICATION_SXW_48("apps__48__application-sxw.svg"),
-		APPLICATION_X_CLEMENTINE_48("apps__48__application-x-clementine.svg"),
-		APPLICATION_X_REMOTE_CONNECTION_48("apps__48__application-x-remote-connection.svg"),
-		APPLICATION_X_VNC_48("apps__48__application-x-vnc.svg"),
-		APPLICATION_X_YAROCK_48("apps__48__application-x-yarock.svg"),
-		APPLICATIONS_ACCESSORIES_48("apps__48__applications-accessories.svg"),
-		APPLICATIONS_DEVELOPMENT_48("apps__48__applications-development.svg"),
-		APPLICATIONS_DEVELOPMENT_TRANSLATION_48("apps__48__applications-development-translation.svg"),
-		APPLICATIONS_DEVELOPMENT_WEB_48("apps__48__applications-development-web.svg"),
-		APPLICATIONS_EDUCATION_48("apps__48__applications-education.svg"),
-		APPLICATIONS_EDUCATION_LANGUAGE_48("apps__48__applications-education-language.svg"),
-		APPLICATIONS_EDUCATION_MATHEMATICS_48("apps__48__applications-education-mathematics.svg"),
-		APPLICATIONS_EDUCATION_MISCELLANEOUS_48("apps__48__applications-education-miscellaneous.svg"),
-		APPLICATIONS_EDUCATION_PRESCHOOL_48("apps__48__applications-education-preschool.svg"),
-		APPLICATIONS_EDUCATION_SCHOOL_48("apps__48__applications-education-school.svg"),
-		APPLICATIONS_EDUCATION_SCIENCE_48("apps__48__applications-education-science.svg"),
-		APPLICATIONS_EDUCATION_UNIVERSITY_48("apps__48__applications-education-university.svg"),
-		APPLICATIONS_ENGINEERING_48("apps__48__applications-engineering.svg"),
-		APPLICATIONS_GAMES_48("apps__48__applications-games.svg"),
-		APPLICATIONS_GRAPHICS_48("apps__48__applications-graphics.svg"),
-		APPLICATIONS_INTERNET_48("apps__48__applications-internet.svg"),
-		APPLICATIONS_MULTIMEDIA_48("apps__48__applications-multimedia.svg"),
-		APPLICATIONS_OFFICE_48("apps__48__applications-office.svg"),
-		APPLICATIONS_OTHER_48("apps__48__applications-other.svg"),
-		APPLICATIONS_SCIENCE_48("apps__48__applications-science.svg"),
-		APPLICATIONS_SYSTEM_48("apps__48__applications-system.svg"),
-		APPLICATIONS_SYSTEM_ORANGE_48("apps__48__applications-system-orange.svg"),
-		APPLICATIONS_TOYS_48("apps__48__applications-toys.svg"),
-		APPLICATIONS_UTILITIES_48("apps__48__applications-utilities.svg"),
-		APPORT_48("apps__48__apport.svg"),
-		APPORT_GTK2_48("apps__48__apport-gtk2.svg"),
-		APTDAEMON_DOWNLOAD_48("apps__48__aptdaemon-download.svg"),
-		APTDAEMON_UPDATE_CACHE_48("apps__48__aptdaemon-update-cache.svg"),
-		APTDAEMON_UPGRADE_48("apps__48__aptdaemon-upgrade.svg"),
-		APTDAEMON_WORKING_48("apps__48__aptdaemon-working.svg"),
-		APTIK_48("apps__48__aptik.svg"),
-		ARCHIVE_MANAGER_48("apps__48__archive-manager.svg"),
-		ARCHIVEMANAGER_48("apps__48__archivemanager.svg"),
-		ARDOUR_48("apps__48__ardour.svg"),
-		ARDUINO_48("apps__48__arduino.svg"),
-		ARDUINO_ICON_SMALL_48("apps__48__arduino-icon-small.svg"),
-		ARDUINO_IDE_48("apps__48__arduino-ide.svg"),
-		ARIO_48("apps__48__ario.svg"),
-		ARK_48("apps__48__ark.svg"),
-		ARRONAX_48("apps__48__arronax.svg"),
-		ARTHA_48("apps__48__artha.svg"),
-		ARTIKULATE_48("apps__48__artikulate.svg"),
-		ARTS_48("apps__48__arts.svg"),
-		ASOUNDER_48("apps__48__asounder.svg"),
-		ASSAULTCUBE_48("apps__48__assaultcube.svg"),
-		ASSISTANT_48("apps__48__assistant.svg"),
-		ASSISTANT_QT4_48("apps__48__assistant-qt4.svg"),
-		ASSISTANT_QT5_48("apps__48__assistant-qt5.svg"),
-		ASSISTANT5_48("apps__48__assistant5.svg"),
-		ASTAH_COMMUNITY_48("apps__48__astah-community.svg"),
-		ASUNDER_48("apps__48__asunder.svg"),
-		ATOM_48("apps__48__atom.svg"),
-		ATOM_TEXT_EDITOR_48("apps__48__atom-text-editor.svg"),
-		ATOMIX_48("apps__48__atomix.svg"),
-		ATOMIX_ICON_48("apps__48__atomix-icon.svg"),
-		ATUNES_48("apps__48__atunes.svg"),
-		AUDACIOUS_48("apps__48__audacious.svg"),
-		AUDACITY_48("apps__48__audacity.svg"),
-		AUDEX_48("apps__48__audex.svg"),
-		AUDIENCE_48("apps__48__audience.svg"),
-		AUDIO_EDITOR_48("apps__48__audio-editor.svg"),
-		AUDIO_PLAYER_48("apps__48__audio-player.svg"),
-		AUDIO_TAG_TOOL_48("apps__48__audio-tag-tool.svg"),
-		AUDIOBOOK_48("apps__48__audiobook.svg"),
-		AUTHOR_48("apps__48__author.svg"),
-		AUTOPLUS_48("apps__48__autoplus.svg"),
-		AVASTGUI_48("apps__48__avastgui.svg"),
-		AVIDEMUX_48("apps__48__avidemux.svg"),
-		AWF_48("apps__48__awf.svg"),
-		AWN_APPLET_48("apps__48__awn-applet.svg"),
-		AWN_APPLET_DIGITAL_CLOCK_48("apps__48__awn-applet-digital-clock.svg"),
-		AX_APPLET_48("apps__48__ax-applet.svg"),
-		AZUREUS_48("apps__48__azureus.svg"),
-		BACKGROUND_48("apps__48__background.svg"),
-		BALOO_32("apps__32__baloo.svg"),
-		BALOO_48("apps__48__baloo.svg"),
-		BANGARANG_48("apps__48__bangarang.svg"),
-		BANSHEE_1_48("apps__48__banshee-1.svg"),
-		BANSHEE_48("apps__48__banshee.svg"),
-		BAOBAB_48("apps__48__baobab.svg"),
-		BASH_48("apps__48__bash.svg"),
-		BASKET_48("apps__48__basket.svg"),
-		BATTLEFORWESNOTH_48("apps__48__battleforwesnoth.svg"),
-		BBALL_48("apps__48__bball.svg"),
-		BEATBOX_48("apps__48__beatbox.svg"),
-		BERYL_48("apps__48__beryl.svg"),
-		BERYL_SETTINGS_48("apps__48__beryl-settings.svg"),
-		BIJIBEN_48("apps__48__bijiben.svg"),
-		BIRDIE_48("apps__48__birdie.svg"),
-		BITCOIN_QT_48("apps__48__bitcoin-qt.svg"),
-		BITDEFENDER_48("apps__48__bitdefender.svg"),
-		BITMAP2COMPONENT_48("apps__48__bitmap2component.svg"),
-		BITTORENT_48("apps__48__bittorent.svg"),
-		BITTORRENT_48("apps__48__bittorrent.svg"),
-		BITWIG_STUDIO_48("apps__48__bitwig-studio.svg"),
-		BLEACHBIT_48("apps__48__bleachbit.svg"),
-		BLENDER_48("apps__48__blender.svg"),
-		BLESS_48X48_48("apps__48__bless-48x48.svg"),
-		BLOGGER_48("apps__48__blogger.svg"),
-		BLOGILO_48("apps__48__blogilo.svg"),
-		BLUEJ_48("apps__48__bluej.svg"),
-		BLUETOOTH_48("apps__48__bluetooth.svg"),
-		BOINC_MANAGER_48("apps__48__boinc-manager.svg"),
-		BOMI_48("apps__48__bomi.svg"),
-		BOOT_REPAIR_48("apps__48__boot-repair.svg"),
-		BRACKETS_48("apps__48__brackets.svg"),
-		BRAINDUMP_48("apps__48__braindump.svg"),
-		BRASERO_48("apps__48__brasero.svg"),
-		BREEZE_SETTINGS_48("apps__48__breeze-settings.svg"),
-		BROKENSWORD_48("apps__48__BrokenSword.svg"),
-		BTSYNC_USER_48("apps__48__btsync-user.svg"),
-		BUG_BUDDY_48("apps__48__bug-buddy.svg"),
-		BZR_ICON_64_48("apps__48__bzr-icon-64.svg"),
-		CAFFEINE_48("apps__48__caffeine.svg"),
-		CALAMARES_48("apps__48__calamares.svg"),
-		CALENDAR_48("apps__48__calendar.svg"),
-		CALIBRE_48("apps__48__calibre.svg"),
-		CALIBRE_EBOOK_EDIT_48("apps__48__calibre-ebook-edit.svg"),
-		CALIBRE_GUI_48("apps__48__calibre-gui.svg"),
-		CALIBRE_VIEWER_48("apps__48__calibre-viewer.svg"),
-		CALIBRE2_48("apps__48__calibre2.svg"),
-		CALLIGRA_EXTRAS_48("apps__48__calligra-extras.svg"),
-		CALLIGRAAUTHOR_48("apps__48__calligraauthor.svg"),
-		CALLIGRADEVTOOLS_48("apps__48__calligradevtools.svg"),
-		CALLIGRAFILTERS_48("apps__48__calligrafilters.svg"),
-		CALLIGRAFLOW_48("apps__48__calligraflow.svg"),
-		CALLIGRAGEMINI_48("apps__48__calligragemini.svg"),
-		CALLIGRAHANDBOOK_48("apps__48__calligrahandbook.svg"),
-		CALLIGRAKARBON_48("apps__48__calligrakarbon.svg"),
-		CALLIGRAKEXI_48("apps__48__calligrakexi.svg"),
-		CALLIGRAKRITA_48("apps__48__calligrakrita.svg"),
-		CALLIGRAKRITA_L_48("apps__48__calligrakrita_l.svg"),
-		CALLIGRAPLAN_48("apps__48__calligraplan.svg"),
-		CALLIGRAPLANWORK_48("apps__48__calligraplanwork.svg"),
-		CALLIGRAPLUGINS_48("apps__48__calligraplugins.svg"),
-		CALLIGRASHEETS_48("apps__48__calligrasheets.svg"),
-		CALLIGRASTAGE_48("apps__48__calligrastage.svg"),
-		CALLIGRAWORDS_48("apps__48__calligrawords.svg"),
-		CAMERA_WEB_48("apps__48__camera-web.svg"),
-		CANOPY_48("apps__48__canopy.svg"),
-		CANTATA_48("apps__48__cantata.svg"),
-		CANTOR_48("apps__48__cantor.svg"),
-		CCC_LARGE_48("apps__48__ccc_large.svg"),
-		CELESTIA_48("apps__48__celestia.svg"),
-		CHAKRA_BACKUP_48("apps__48__chakra-backup.svg"),
-		CHAKRA_FLAT_48("apps__48__chakra-flat.svg"),
-		CHAKRA_SHIELD_48("apps__48__chakra-shield.svg"),
-		CHAKRA_SHINY_48("apps__48__chakra-shiny.svg"),
-		CHAKRA_SMOOTH_48("apps__48__chakra-smooth.svg"),
-		CHARM_48("apps__48__Charm.svg"),
-		CHECKBOX_48("apps__48__checkbox.svg"),
-		CHECKBOX_QT_48("apps__48__checkbox-qt.svg"),
-		CHEESE_48("apps__48__cheese.svg"),
-		CHERRYTREE_48("apps__48__cherrytree.svg"),
-		CHESS_48("apps__48__chess.svg"),
-		CHINESECALENDAR_64_48("apps__48__chinesecalendar-64.svg"),
-		CHOQOK_48("apps__48__choqok.svg"),
-		CHROME_48("apps__48__chrome.svg"),
-		CHROME_AHFGEIENLIHCKOGMOHJHADLKJGOCPLEB_DEFAULT_48("apps__48__chrome-ahfgeienlihckogmohjhadlkjgocpleb-Default.svg"),
-		CHROME_APP_LIST_48("apps__48__chrome-app-list.svg"),
-		CHROME_CMNPFFGFPCOHHPODDJANKJANOLCEKBNI_DEFAULT_48("apps__48__chrome-cmnpffgfpcohhpoddjankjanolcekbni-Default.svg"),
-		CHROME_DKFHFAPHFKOPDGPBFKEBJFCBLCAFCMPI_DEFAULT_48("apps__48__chrome-dkfhfaphfkopdgpbfkebjfcblcafcmpi-Default.svg"),
-		CHROME_FHBJGBIFLINJBDGGEHCDDCBNCDDDOMOP_DEFAULT_48("apps__48__chrome-fhbjgbiflinjbdggehcddcbncdddomop-Default.svg"),
-		CHROME_FNIBMBCDEEPAAHJMDDIIHOHJANLIMLMJ_DEFAULT_48("apps__48__chrome-fnibmbcdeepaahjmddiihohjanlimlmj-Default.svg"),
-		CHROME_GIGHMMPIOBKLFEPJOCNAMGKKBIGLIDOM_DEFAULT_48("apps__48__chrome-gighmmpiobklfepjocnamgkkbiglidom-Default.svg"),
-		CHROME_IGGPFPNAHKGPNINDFKDNCKNOLDGNCCDG_DEFAULT_48("apps__48__chrome-iggpfpnahkgpnindfkdncknoldgnccdg-Default.svg"),
-		CHROME_IJFECBILADPINDDBJFODAAIAHGGOMHAF_DEFAULT_48("apps__48__chrome-ijfecbiladpinddbjfodaaiahggomhaf-Default.svg"),
-		CHROME_JFBADLNDCMINBKFOJHLIMNKGAACKJMDO_DEFAULT_48("apps__48__chrome-jfbadlndcminbkfojhlimnkgaackjmdo-Default.svg"),
-		CHROME_PKBFAKCPHDOKDNBDHLNDLPCEHEBMPLAB_DEFAULT_48("apps__48__chrome-pkbfakcphdokdnbdhlndlpcehebmplab-Default.svg"),
-		CHROMIUM_48("apps__48__chromium.svg"),
-		CHROMIUM_APP_LIST_48("apps__48__chromium-app-list.svg"),
-		CHROMIUM_BROWSER_48("apps__48__chromium-browser.svg"),
-		CHROMIUM_BSU_48("apps__48__chromium-bsu.svg"),
-		CISCO_PT_48("apps__48__cisco-pt.svg"),
-		CLAMAV_48("apps__48__clamav.svg"),
-		CLASSICMENU_INDICATOR_DARK_48("apps__48__classicmenu-indicator-dark.svg"),
-		CLEMENTINE_48("apps__48__clementine.svg"),
-		CLEMENTINE_PANEL_48("apps__48__clementine-panel.svg"),
-		CLEMENTINE_PANEL_GREY_48("apps__48__clementine-panel-grey.svg"),
-		CLEMENTINE2_48("apps__48__clementine2.svg"),
-		CLIPGRAB_48("apps__48__clipgrab.svg"),
-		CLOCK_48("apps__48__clock.svg"),
-		CMAKE_48("apps__48__cmake.svg"),
-		CMAKESETUP_48("apps__48__cmakesetup.svg"),
-		CMAKESETUP32_48("apps__48__CMakeSetup32.svg"),
-		CMPLAYER_48("apps__48__cmplayer.svg"),
-		CODEBLOCKS_48("apps__48__codeblocks.svg"),
-		CODELITE_48("apps__48__codelite.svg"),
-		COG_48("apps__48__cog.svg"),
-		COLORHUG_48("apps__48__colorhug.svg"),
-		COLORHUG_CCMX_48("apps__48__colorhug-ccmx.svg"),
-		COLORHUG_FLASH_48("apps__48__colorhug-flash.svg"),
-		COLORS_48("apps__48__colors.svg"),
-		COMIX_48("apps__48__comix.svg"),
-		COMPUTER_48("apps__48__computer.svg"),
-		CONFIG_USERS_48("apps__48__config-users.svg"),
-		CONKY_48("apps__48__conky.svg"),
-		CONKY_MANAGER_48("apps__48__conky-manager.svg"),
-		CONVERSEEN_48("apps__48__converseen.svg"),
-		COPY_48("apps__48__copy.svg"),
-		COPYQ_48("apps__48__copyq.svg"),
-		CRASHPLAN_48("apps__48__crashplan.svg"),
-		CS_PRINTER_48("apps__48__cs-printer.svg"),
-		CS_TABLET_48("apps__48__cs-tablet.svg"),
-		CUPS_48("apps__48__cups.svg"),
-		CUPS_LAUNCHER_48("apps__48__cups-launcher.svg"),
-		CUTEGRAM_48("apps__48__cutegram.svg"),
-		CUTTLEFISH_48("apps__48__cuttlefish.svg"),
-		CXMENU_CXOFFICE_0_CROSSOVER_48("apps__48__cxmenu-cxoffice-0-crossover.svg"),
-		CXMENU_CXOFFICE_0_CXDOC_48("apps__48__cxmenu-cxoffice-0-cxdoc.svg"),
-		CXMENU_CXOFFICE_0_CXREGISTER_48("apps__48__cxmenu-cxoffice-0-cxregister.svg"),
-		CXMENU_CXOFFICE_0_CXRESET_48("apps__48__cxmenu-cxoffice-0-cxreset.svg"),
-		CXMENU_CXOFFICE_0_CXRUN_48("apps__48__cxmenu-cxoffice-0-cxrun.svg"),
-		CXMENU_CXOFFICE_0_CXUNINSTALL_48("apps__48__cxmenu-cxoffice-0-cxuninstall.svg"),
-		CYCLE_48("apps__48__cycle.svg"),
-		DAEMON_48("apps__48__daemon.svg"),
-		DARKTABLE_48("apps__48__darktable.svg"),
-		DART_48("apps__48__dart.svg"),
-		DARWINIA_48("apps__48__Darwinia.svg"),
-		DASSAULT_SYSTEMES_DRAFTSIGHT_48("apps__48__dassault-systemes.draftsight.svg"),
-		DASSAULT_SYSTEMS_DRAFTSIGHT_48("apps__48__dassault-systems.draftsight.svg"),
-		DCPP_48("apps__48__dc++.svg"),
-		DECIBEL_48("apps__48__decibel.svg"),
-		DEFCON_48("apps__48__defcon.svg"),
-		DEJA_DUP_48("apps__48__deja-dup.svg"),
-		DESIGNER_48("apps__48__designer.svg"),
-		DESIGNER_QT4_48("apps__48__designer-qt4.svg"),
-		DESIGNER_QT5_48("apps__48__designer-qt5.svg"),
-		DESKTOP_EFFECTS_48("apps__48__desktop-effects.svg"),
-		DESKTOP_ENVIROMENT_KDE_48("apps__48__desktop-enviroment-kde.svg"),
-		DESMUME_48("apps__48__DeSmuME.svg"),
-		DESURA_48("apps__48__desura.svg"),
-		DEVDOCS_48("apps__48__DevDocs.svg"),
-		DEVHELP_48("apps__48__devhelp.svg"),
-		DEVIANTART_48("apps__48__deviantart.svg"),
-		DEVICE_NOTIFIER_48("apps__48__device-notifier.svg"),
-		DEWDROP_48("apps__48__dewdrop.svg"),
-		DIA_48("apps__48__dia.svg"),
-		DIANARA_48("apps__48__dianara.svg"),
-		DIFFUSE_48("apps__48__diffuse.svg"),
-		DIGIKAM_48("apps__48__digikam.svg"),
-		DIODON_48("apps__48__diodon.svg"),
-		DOCKBARX_48("apps__48__dockbarx.svg"),
-		DOCKY_48("apps__48__docky.svg"),
-		DOCUMENT_PRINT_PREVIEW_48("apps__48__document-print-preview.svg"),
-		DOCUMENTATION_48("apps__48__documentation.svg"),
-		DOLPHIN_48("apps__48__dolphin.svg"),
-		DOLPHIN_EMU_48("apps__48__dolphin-emu.svg"),
-		DOLPHIN_ROOT_48("apps__48__dolphin-root.svg"),
-		DOSBOX_48("apps__48__dosbox.svg"),
-		DOTA_48("apps__48__dota.svg"),
-		DOUBLECMD_48("apps__48__doublecmd.svg"),
-		DRAGONPLAYER_48("apps__48__dragonplayer.svg"),
-		DRIVE_REMOVABLE_MEDIA_32("apps__32__drive-removable-media.svg"),
-		DRIVE_REMOVABLE_MEDIA_48("apps__48__drive-removable-media.svg"),
-		DROPBOX_48("apps__48__dropbox.svg"),
-		DRRACKET_48("apps__48__drracket.svg"),
-		DUKTO_48("apps__48__dukto.svg"),
-		EAGLE_48("apps__48__eagle.svg"),
-		EASY_TAG_48("apps__48__easy-tag.svg"),
-		EASYMP3GAIN_48("apps__48__easyMP3Gain.svg"),
-		EASYSTROKE_48("apps__48__easystroke.svg"),
-		EBAY_48("apps__48__ebay.svg"),
-		ECLIPSE_48("apps__48__eclipse.svg"),
-		EMACS_48("apps__48__emacs.svg"),
-		EMERALD_THEME_MANAGER_ICON_48("apps__48__emerald-theme-manager-icon.svg"),
-		EMESENE_48("apps__48__emesene.svg"),
-		EMPATHY_48("apps__48__empathy.svg"),
-		EOG_48("apps__48__eog.svg"),
-		EPOPTES_48("apps__48__epoptes.svg"),
-		ERADIO_48("apps__48__eradio.svg"),
-		ERIC_48("apps__48__eric.svg"),
-		ESD_48("apps__48__esd.svg"),
-		ESPEAK_GUI_48("apps__48__espeak-gui.svg"),
-		ETR_48("apps__48__etr.svg"),
-		EVERNOTE_48("apps__48__evernote.svg"),
-		EVOLUTION_48("apps__48__evolution.svg"),
-		EVOLUTION_CALENDAR_48("apps__48__evolution-calendar.svg"),
-		EVOLUTION_TASKS_48("apps__48__evolution-tasks.svg"),
-		EXFALSO_48("apps__48__exfalso.svg"),
-		EXPOBLENDING_48("apps__48__expoblending.svg"),
-		EXTENSIONS_48("apps__48__extensions.svg"),
-		EYES_48("apps__48__eyes.svg"),
-		FACE_SMILE_32("apps__32__face-smile.svg"),
-		FACE_SMILE_48("apps__48__face-smile.svg"),
-		FACEBOOK_48("apps__48__facebook.svg"),
-		FADEIN_48("apps__48__fadein.svg"),
-		FBMESSENGER_48("apps__48__fbmessenger.svg"),
-		FCITX_48("apps__48__fcitx.svg"),
-		FCITX_SOGOUPINYIN_48("apps__48__fcitx-sogoupinyin.svg"),
-		FEEDLY_48("apps__48__feedly.svg"),
-		FFADO_48("apps__48__ffado.svg"),
-		FIFTEENPUZZLE_48("apps__48__fifteenpuzzle.svg"),
-		FILE_ROLLER_48("apps__48__file-roller.svg"),
-		FILEBOT_48("apps__48__filebot.svg"),
-		FILELIGHT_48("apps__48__filelight.svg"),
-		FILEZILLA_48("apps__48__filezilla.svg"),
-		FINDER_W_48("apps__48__Finder_w.svg"),
-		FIREFOX_48("apps__48__firefox.svg"),
-		FIREFOX_DEVELOPER_48("apps__48__firefox-developer.svg"),
-		FIREFOX_DEVELOPER_EDITION_48("apps__48__firefox-developer-edition.svg"),
-		FIREFOX_TRUNK_48("apps__48__firefox-trunk.svg"),
-		FIRESTORM_ICON_48("apps__48__firestorm_icon.svg"),
-		FITYK_48("apps__48__fityk.svg"),
-		FLACON_48("apps__48__flacon.svg"),
-		FLARE_48("apps__48__flare.svg"),
-		FLAREGET_48("apps__48__flareget.svg"),
-		FLASH_48("apps__48__flash.svg"),
-		FLICKR_48("apps__48__flickr.svg"),
-		FLIGHTGEAR_48("apps__48__flightgear.svg"),
-		FLIPBOARD_48("apps__48__flipboard.svg"),
-		FLOW_48("apps__48__flow.svg"),
-		FLOWBLADE_48("apps__48__flowblade.svg"),
-		FLUID_48("apps__48__fluid.svg"),
-		FLUXGUI_48("apps__48__fluxgui.svg"),
-		FOGGER_48("apps__48__fogger.svg"),
-		FONTFORGE_48("apps__48__fontforge.svg"),
-		FOTO_48("apps__48__foto.svg"),
-		FREECIV_CLIENT_48("apps__48__freeciv-client.svg"),
-		FREECIV_SERVER_48("apps__48__freeciv-server.svg"),
-		FREEMIND_48("apps__48__freemind.svg"),
-		FREEPLANE_48("apps__48__freeplane.svg"),
-		FRITZING_48("apps__48__fritzing.svg"),
-		FROSTWIRE_48("apps__48__frostwire.svg"),
-		FROZENSYNAPSE_48("apps__48__frozensynapse.svg"),
-		FSLINT_48("apps__48__fslint.svg"),
-		FTL_48("apps__48__FTL.svg"),
-		FURIUSISOMOUNT_48("apps__48__furiusisomount.svg"),
-		FUSION_ICON_48("apps__48__fusion-icon.svg"),
-		GADU_PROTOCOL_48("apps__48__gadu_protocol.svg"),
-		GCONF_EDITOR_48("apps__48__gconf-editor.svg"),
-		GCSTAR_48("apps__48__gcstar.svg"),
-		GDEBI_48("apps__48__gdebi.svg"),
-		GEANY_48("apps__48__geany.svg"),
-		GELEMENTAL_48("apps__48__gelemental.svg"),
-		GENSGS_48("apps__48__gensgs.svg"),
-		GENYMOTION_48("apps__48__genymotion.svg"),
-		GEOCLUE_48("apps__48__geoclue.svg"),
-		GEOGEBRA_48("apps__48__geogebra.svg"),
-		GESPEAKER_48("apps__48__gespeaker.svg"),
-		GFTP_48("apps__48__gFTP.svg"),
-		GHEX_48("apps__48__ghex.svg"),
-		GIGGLE_48("apps__48__giggle.svg"),
-		GIMP_48("apps__48__gimp.svg"),
-		GIT_48("apps__48__git.svg"),
-		GIT_COLA_48("apps__48__git-cola.svg"),
-		GIT_DAG_48("apps__48__git-dag.svg"),
-		GKSU_48("apps__48__gksu.svg"),
-		GLOOBUS_48("apps__48__gloobus.svg"),
-		GLOOBUS_PREVIEW_48("apps__48__gloobus-preview.svg"),
-		GMAIL_48("apps__48__gmail.svg"),
-		GMAIL_OFFLINE_48("apps__48__gmail-offline.svg"),
-		GMSH_48("apps__48__gmsh.svg"),
-		GNAC_48("apps__48__gnac.svg"),
-		GNASH_48("apps__48__gnash.svg"),
-		GNOME_AISLERIOT_48("apps__48__gnome-aisleriot.svg"),
-		GNOME_CONTACTS_48("apps__48__gnome-contacts.svg"),
-		GNOME_DISKS_48("apps__48__gnome-disks.svg"),
-		GNOME_MPLAYER_48("apps__48__gnome-mplayer.svg"),
-		GNOME_PDF_48("apps__48__gnome-pdf.svg"),
-		GNOME_SEARCH_TOOL_48("apps__48__gnome-search-tool.svg"),
-		GNOME_SOUND_RECORDER_48("apps__48__gnome-sound-recorder.svg"),
-		GNOME_STICKY_NOTES_APPLET_48("apps__48__gnome-sticky-notes-applet.svg"),
-		GNOME_SUBTITLES_48("apps__48__gnome-subtitles.svg"),
-		GOA_ACCOUNT_48("apps__48__goa-account.svg"),
-		GOA_ACCOUNT_KERBEROS_48("apps__48__goa-account-kerberos.svg"),
-		GOA_ACCOUNT_OWNCLOUD_48("apps__48__goa-account-owncloud.svg"),
-		GOOGLE_48("apps__48__google.svg"),
-		GOOGLE_CALCULATOR_48("apps__48__google-calculator.svg"),
-		GOOGLE_CALENDAR_48("apps__48__google-calendar.svg"),
-		GOOGLE_CHROME_48("apps__48__google-chrome.svg"),
-		GOOGLE_CHROME_BETA_48("apps__48__google-chrome-beta.svg"),
-		GOOGLE_CHROME_DEVELOPER_TOOL_48("apps__48__google-chrome-developer-tool.svg"),
-		GOOGLE_CHROME_UNSTABLE_48("apps__48__google-chrome-unstable.svg"),
-		GOOGLE_DOCS_48("apps__48__google-docs.svg"),
-		GOOGLE_DRAWS_48("apps__48__google-draws.svg"),
-		GOOGLE_DRIVE_48("apps__48__google-drive.svg"),
-		GOOGLE_EARTH_48("apps__48__google-earth.svg"),
-		GOOGLE_FORMS_48("apps__48__google-forms.svg"),
-		GOOGLE_HANGOUTS_48("apps__48__google-hangouts.svg"),
-		GOOGLE_KEEP_48("apps__48__google-keep.svg"),
-		GOOGLE_MAIL_48("apps__48__google-mail.svg"),
-		GOOGLE_MAPS_48("apps__48__google-maps.svg"),
-		GOOGLE_MOVIES_48("apps__48__google-movies.svg"),
-		GOOGLE_MUSIC_48("apps__48__google-music.svg"),
-		GOOGLE_PHOTOS_48("apps__48__google-photos.svg"),
-		GOOGLE_PLAY_BOOKS_48("apps__48__google-play-books.svg"),
-		GOOGLE_PLAY_MUSIC_48("apps__48__google-play-music.svg"),
-		GOOGLE_PLUS_PICTURES_48("apps__48__google-plus-pictures.svg"),
-		GOOGLE_SHEETS_48("apps__48__google-sheets.svg"),
-		GOOGLE_SLIDES_48("apps__48__google-slides.svg"),
-		GOOGLE_SPREADSHEETS_48("apps__48__google-spreadsheets.svg"),
-		GOOGLE_TRANSLATE_48("apps__48__google-translate.svg"),
-		GOOGLEEARTH_48("apps__48__googleearth.svg"),
-		GOOGLEPLUS_48("apps__48__googleplus.svg"),
-		GPARTED_48("apps__48__gparted.svg"),
-		GPDFTEXT_48("apps__48__gpdftext.svg"),
-		GPICK_48("apps__48__gpick.svg"),
-		GRAMPS_48("apps__48__gramps.svg"),
-		GRAPHICS_VIEWER_DOCUMENT_48("apps__48__graphics-viewer-document.svg"),
-		GREEDCORP_48("apps__48__GreedCorp.svg"),
-		GRIP_48("apps__48__grip.svg"),
-		GROMIT_48("apps__48__gromit.svg"),
-		GROUPWISE_PROTOCOL_48("apps__48__groupwise_protocol.svg"),
-		GRSYNC_48("apps__48__grsync.svg"),
-		GRSYNC_RESTORE_48("apps__48__grsync-restore.svg"),
-		GRUB_CUSTOMIZER_48("apps__48__grub-customizer.svg"),
-		GSTREAMER_48("apps__48__gstreamer.svg"),
-		GTICK_48("apps__48__gtick.svg"),
-		GTK_INFO_48("apps__48__gtk-info.svg"),
-		GTK3_DEMO_48("apps__48__gtk3-demo.svg"),
-		GTK3_WIDGET_FACTORY_48("apps__48__gtk3-widget-factory.svg"),
-		GTKCONFIG_32("apps__32__gtkconfig.svg"),
-		GTKCONFIG_48("apps__48__gtkconfig.svg"),
-		GTKHASH_48("apps__48__gtkhash.svg"),
-		GUAYADEQUE_48("apps__48__guayadeque.svg"),
-		GUFW_48("apps__48__gufw.svg"),
-		GUMMI_48("apps__48__gummi.svg"),
-		GVIM_48("apps__48__gvim.svg"),
-		GWENVIEW_48("apps__48__gwenview.svg"),
-		GWIBBER_48("apps__48__gwibber.svg"),
-		H2_ICON_48("apps__48__h2-icon.svg"),
-		HAGUICHI_48("apps__48__haguichi.svg"),
-		HAROOPAD_48("apps__48__haroopad.svg"),
-		HEDGEWARS_48("apps__48__hedgewars.svg"),
-		HEIMDALL_FRONTEND_48("apps__48__heimdall-frontend.svg"),
-		HELP_48("apps__48__help.svg"),
-		HELP_ABOUT_32("apps__32__help-about.svg"),
-		HELP_ABOUT_48("apps__48__help-about.svg"),
-		HELP_BROWSER_48("apps__48__help-browser.svg"),
-		HIGAN_48("apps__48__higan.svg"),
-		HIPCHAT_48("apps__48__hipchat.svg"),
-		HOMEBANK_48("apps__48__homebank.svg"),
-		HOMERUN_22("apps__22__homerun.svg"),
-		HOMERUN_48("apps__48__homerun.svg"),
-		HOTOT_48("apps__48__hotot.svg"),
-		HP_LOGO_48("apps__48__hp_logo.svg"),
-		HTOP_48("apps__48__htop.svg"),
-		HUGIN_48("apps__48__hugin.svg"),
-		HWINFO_48("apps__48__hwinfo.svg"),
-		I2PROUTER_48("apps__48__i2prouter.svg"),
-		IBUS_SETUP_48("apps__48__ibus-setup.svg"),
-		ICEDOVE_48("apps__48__icedove.svg"),
-		ICEWEASEL_48("apps__48__iceweasel.svg"),
-		ICON_48("apps__48__icon.svg"),
-		ICQ_PROTOCOL_48("apps__48__icq_protocol.svg"),
-		IDEA_48("apps__48__idea.svg"),
-		IM_AIM_48("apps__48__im-aim.svg"),
-		IM_QQ_48("apps__48__im-qq.svg"),
-		IMAGEWRITER_48("apps__48__imagewriter.svg"),
-		IMLOGVIEW_48("apps__48__imlogview.svg"),
-		INCREDIPEDE_48("apps__48__Incredipede.svg"),
-		INDICATOR_CHINA_WEATHER_48("apps__48__indicator-china-weather.svg"),
-		INDICATOR_REMINDOR_48("apps__48__indicator-remindor.svg"),
-		INDICATOR_SOUND_SWITCHER_48("apps__48__indicator-sound-switcher.svg"),
-		INDICATOR_WEATHER_48("apps__48__indicator-weather.svg"),
-		INFO_48("apps__48__info.svg"),
-		INKSCAPE_48("apps__48__inkscape.svg"),
-		INKSCAPE_ALT_48("apps__48__inkscape-alt.svg"),
-		INKSCAPE_LOGO_48("apps__48__inkscape-logo.svg"),
-		INSTAGRAM_48("apps__48__instagram.svg"),
-		INSYNC_48("apps__48__insync.svg"),
-		INTEL_INSTALLER_48("apps__48__intel-installer.svg"),
-		INTERNET_MAIL_22("apps__22__internet-mail.svg"),
-		INTERNET_MAIL_48("apps__48__internet-mail.svg"),
-		INTERNET_TELEPHONY_48("apps__48__internet-telephony.svg"),
-		INTERNET_WEB_BROWSER_48("apps__48__internet-web-browser.svg"),
-		IRC_48("apps__48__irc.svg"),
-		IRC_PROTOCOL_48("apps__48__irc_protocol.svg"),
-		IRSSI_48("apps__48__irssi.svg"),
-		ISTANBUL_48("apps__48__istanbul.svg"),
-		ITUNES_48("apps__48__itunes.svg"),
-		JABBER_48("apps__48__jabber.svg"),
-		JABBER_PROTOCOL_48("apps__48__jabber_protocol.svg"),
-		JABREF_48("apps__48__jabref.svg"),
-		JAVA_48("apps__48__java.svg"),
-		JITSI_48("apps__48__jitsi.svg"),
-		JOCKEY_48("apps__48__jockey.svg"),
-		JUFFED_48("apps__48__juffed.svg"),
-		JUK_48("apps__48__juk.svg"),
-		JUPITER_48("apps__48__jupiter.svg"),
-		K3B_48("apps__48__k3b.svg"),
-		K3D_48("apps__48__k3d.svg"),
-		KADDRESSBOOK_48("apps__48__kaddressbook.svg"),
-		KADU_48("apps__48__kadu.svg"),
-		KAFFEINE_48("apps__48__kaffeine.svg"),
-		KALGEBRA_48("apps__48__kalgebra.svg"),
-		KAMERKA_48("apps__48__kamerka.svg"),
-		KAMOSO_48("apps__48__kamoso.svg"),
-		KARBON_48("apps__48__karbon.svg"),
-		KATE_48("apps__48__kate.svg"),
-		KATOMIC_48("apps__48__katomic.svg"),
-		KBIBTEX_48("apps__48__KBibTex.svg"),
-		KBLOGGER_48("apps__48__kblogger.svg"),
-		KBRUCH_48("apps__48__kbruch.svg"),
-		KBUGBUSTER_48("apps__48__kbugbuster.svg"),
-		KCALC_48("apps__48__kcalc.svg"),
-		KCHART_48("apps__48__kchart.svg"),
-		KCM_SYSTEMD_48("apps__48__kcm-systemd.svg"),
-		KCOLORCHOOSER_48("apps__48__kcolorchooser.svg"),
-		KDCRAW_48("apps__48__kdcraw.svg"),
-		KDE_22("apps__22__kde.svg"),
-		KDE_48("apps__48__kde.svg"),
-		KDE_GTK_CONFIG_32("apps__32__kde-gtk-config.svg"),
-		KDE_GTK_CONFIG_48("apps__48__kde-gtk-config.svg"),
-		KDE_SERVICES_48("apps__48__kde-services.svg"),
-		KDE_WINDOWS_48("apps__48__kde-windows.svg"),
-		KDEAPP_48("apps__48__kdeapp.svg"),
-		KDECONNECT_32("apps__32__kdeconnect.svg"),
-		KDECONNECT_48("apps__48__kdeconnect.svg"),
-		KDENLIVE_48("apps__48__kdenlive.svg"),
-		KDEPIM_DROPBOX_48("apps__48__kdepim-dropbox.svg"),
-		KDESVN_48("apps__48__kdesvn.svg"),
-		KDEVELOP_48("apps__48__kdevelop.svg"),
-		KDF_48("apps__48__kdf.svg"),
-		KDIFF3_48("apps__48__kdiff3.svg"),
-		KDOTS_48("apps__48__kdots.svg"),
-		KEEPASS_48("apps__48__keepass.svg"),
-		KEEPASSX_48("apps__48__keepassx.svg"),
-		KERNEL_48("apps__48__kernel.svg"),
-		KEXI_48("apps__48__kexi.svg"),
-		KEYSYNC_48("apps__48__keysync.svg"),
-		KFILEREPLACE_48("apps__48__kfilereplace.svg"),
-		KFIND_48("apps__48__kfind.svg"),
-		KFONTVIEW_48("apps__48__kfontview.svg"),
-		KFORMULA_48("apps__48__kformula.svg"),
-		KFTPGRABBER_48("apps__48__kftpgrabber.svg"),
-		KGEOGRAPHY_48("apps__48__kgeography.svg"),
-		KGET_22("apps__22__kget.svg"),
-		KGET_48("apps__48__kget.svg"),
-		KGPG_48("apps__48__kgpg.svg"),
-		KICAD_48("apps__48__kicad.svg"),
-		KIG_48("apps__48__kig.svg"),
-		KILE_48("apps__48__kile.svg"),
-		KIMAGEMAPEDITOR_48("apps__48__kimagemapeditor.svg"),
-		KINDLE_48("apps__48__kindle.svg"),
-		KIPI_48("apps__48__kipi.svg"),
-		KIPI_DEBIANSCREENSHOTS_48("apps__48__kipi-debianscreenshots.svg"),
-		KIPI_DLNA_48("apps__48__kipi-dlna.svg"),
-		KIPI_DNGCONVERTER_48("apps__48__kipi-dngconverter.svg"),
-		KIPI_DROPBOX_48("apps__48__kipi-dropbox.svg"),
-		KIPI_EXPOBLENDING_48("apps__48__kipi-expoblending.svg"),
-		KIPI_FLASH_48("apps__48__kipi-flash.svg"),
-		KIPI_GOOGLEDRIVE_48("apps__48__kipi-googledrive.svg"),
-		KIPI_GPSIMAGETAG_48("apps__48__kipi-gpsimagetag.svg"),
-		KIPI_HQ_48("apps__48__kipi-hq.svg"),
-		KIPI_IMAGESHACK_48("apps__48__kipi-imageshack.svg"),
-		KIPI_IMGUR_48("apps__48__kipi-imgur.svg"),
-		KIPI_JALBUM_48("apps__48__kipi-jalbum.svg"),
-		KIPI_METADATAEDIT_48("apps__48__kipi-metadataedit.svg"),
-		KIPI_OGL_48("apps__48__kipi-ogl.svg"),
-		KIPI_PANORAMA_48("apps__48__kipi-panorama.svg"),
-		KIPI_RAJCE_48("apps__48__kipi-rajce.svg"),
-		KIPI_SHWUP_48("apps__48__kipi-shwup.svg"),
-		KIPI_SLIDESHOW_48("apps__48__kipi-slideshow.svg"),
-		KIPI_SMUGMUG_48("apps__48__kipi-smugmug.svg"),
-		KIPI_TIMEADJUST_48("apps__48__kipi-timeadjust.svg"),
-		KITEN_48("apps__48__kiten.svg"),
-		KIVIO_48("apps__48__kivio.svg"),
-		KJOTS_48("apps__48__kjots.svg"),
-		KJOURNAL_48("apps__48__kjournal.svg"),
-		KLEOPATRA_48("apps__48__kleopatra.svg"),
-		KLINKSTATUS_48("apps__48__klinkstatus.svg"),
-		KLIPPER_48("apps__48__klipper.svg"),
-		KMAG_48("apps__48__kmag.svg"),
-		KMAIL_48("apps__48__kmail.svg"),
-		KMAIL2_48("apps__48__kmail2.svg"),
-		KMENUEDIT_48("apps__48__kmenuedit.svg"),
-		KMIX_48("apps__48__kmix.svg"),
-		KMLDONKEY_48("apps__48__kmldonkey.svg"),
-		KMOUSETOOL_48("apps__48__kmousetool.svg"),
-		KMOUTH_48("apps__48__kmouth.svg"),
-		KMPLAYER_48("apps__48__kmplayer.svg"),
-		KMPLOT_48("apps__48__kmplot.svg"),
-		KMYMONEY_48("apps__48__kmymoney.svg"),
-		KNEMO_48("apps__48__knemo.svg"),
-		KNETATTACH_48("apps__48__knetattach.svg"),
-		KNEWSTICKER_48("apps__48__knewsticker.svg"),
-		KNODE_48("apps__48__knode.svg"),
-		KNOTES_48("apps__48__knotes.svg"),
-		KODI_48("apps__48__kodi.svg"),
-		KOLAB_48("apps__48__kolab.svg"),
-		KOMODO_48("apps__48__komodo.svg"),
-		KOMPARE_48("apps__48__kompare.svg"),
-		KOMPOZER_48("apps__48__kompozer.svg"),
-		KONQUEROR_48("apps__48__konqueror.svg"),
-		KONSTRUKTOR_48("apps__48__konstruktor.svg"),
-		KONTACT_48("apps__48__kontact.svg"),
-		KONTACT_IMPORT_WIZARD_48("apps__48__kontact-import-wizard.svg"),
-		KONVERSATION_48("apps__48__konversation.svg"),
-		KOPETE_48("apps__48__kopete.svg"),
-		KOPETE_OFFLINE_48("apps__48__kopete-offline.svg"),
-		KORG_JOURNAL_48("apps__48__korg-journal.svg"),
-		KORG_TODO_22("apps__22__korg-todo.svg"),
-		KORG_TODO_48("apps__48__korg-todo.svg"),
-		KORGAC_48("apps__48__korgac.svg"),
-		KORGANIZER_48("apps__48__korganizer.svg"),
-		KPACKAGE_48("apps__48__kpackage.svg"),
-		KPAGER_48("apps__48__kpager.svg"),
-		KPAT_48("apps__48__kpat.svg"),
-		KPLATO_48("apps__48__kplato.svg"),
-		KPRESENTER_48("apps__48__kpresenter.svg"),
-		KRAFT_48("apps__48__kraft.svg"),
-		KRDC_48("apps__48__krdc.svg"),
-		KRECIPES_48("apps__48__krecipes.svg"),
-		KRENAME_48("apps__48__krename.svg"),
-		KRFB_48("apps__48__krfb.svg"),
-		KRITA_48("apps__48__krita.svg"),
-		KRITAGEMINI_48("apps__48__kritagemini.svg"),
-		KRITASKETCH_48("apps__48__kritasketch.svg"),
-		KRONOMETER_48("apps__48__kronometer.svg"),
-		KRULER_48("apps__48__kruler.svg"),
-		KRUSADER_48("apps__48__krusader.svg"),
-		KRUSADER_ROOT_2_48("apps__48__krusader-root-2.svg"),
-		KRUSADER_ROOT_48("apps__48__krusader-root.svg"),
-		KRUSADER_USER_48("apps__48__krusader_user.svg"),
-		KSCD_48("apps__48__kscd.svg"),
-		KSNAPSHOT_48("apps__48__ksnapshot.svg"),
-		KSNIFFER_48("apps__48__ksniffer.svg"),
-		KSPREAD_48("apps__48__kspread.svg"),
-		KSUDOKU_48("apps__48__ksudoku.svg"),
-		KSYSGUARDD_48("apps__48__ksysguardd.svg"),
-		KTEATIME_48("apps__48__kteatime.svg"),
-		KTHESAURUS_48("apps__48__kthesaurus.svg"),
-		KTIP_48("apps__48__ktip.svg"),
-		KTORRENT_22("apps__22__ktorrent.svg"),
-		KTORRENT_48("apps__48__ktorrent.svg"),
-		KTP_CONTACTLIST_48("apps__48__ktp-contactlist.svg"),
-		KTURTLE_48("apps__48__kturtle.svg"),
-		KUAIPAN4UK_48("apps__48__kuaipan4uk.svg"),
-		KUICKSHOW_48("apps__48__kuickshow.svg"),
-		KUP_48("apps__48__kup.svg"),
-		KUPFER_48("apps__48__kupfer.svg"),
-		KVANTUMMANAGER_48("apps__48__kvantummanager.svg"),
-		KVERBOS_48("apps__48__kverbos.svg"),
-		KWALLETMANAGER_48("apps__48__kwalletmanager.svg"),
-		KWALLETMANAGER2_48("apps__48__kwalletmanager2.svg"),
-		KWIKDISK_48("apps__48__kwikdisk.svg"),
-		KWIN_48("apps__48__kwin.svg"),
-		KWORD_48("apps__48__kword.svg"),
-		KWPLAYER_48("apps__48__kwplayer.svg"),
-		KWRITE_48("apps__48__kwrite.svg"),
-		LABPLOT_48("apps__48__labplot.svg"),
-		LANCELOT_48("apps__48__lancelot.svg"),
-		LANCELOT_START_48("apps__48__lancelot-start.svg"),
-		LASTFM_48("apps__48__lastfm.svg"),
-		LASTPASS_VAULT_48("apps__48__lastpass-vault.svg"),
-		LAUNCHPAD_LAUNCHPAD_NET_48("apps__48__Launchpad-launchpad.net.svg"),
-		LAZARUS_48("apps__48__lazarus.svg"),
-		LDLITE_48("apps__48__ldlite.svg"),
-		LDVIEW_48("apps__48__ldview.svg"),
-		LEOCAD_48("apps__48__leocad.svg"),
-		LIBRARY_INTERNET_RADIO_48("apps__48__library-internet-radio.svg"),
-		LIBRECAD_48("apps__48__librecad.svg"),
-		LIBREOFFICE_BASE_48("apps__48__libreoffice-base.svg"),
-		LIBREOFFICE_CALC_48("apps__48__libreoffice-calc.svg"),
-		LIBREOFFICE_DRAW_48("apps__48__libreoffice-draw.svg"),
-		LIBREOFFICE_IMPRESS_48("apps__48__libreoffice-impress.svg"),
-		LIBREOFFICE_MAIN_48("apps__48__libreoffice-main.svg"),
-		LIBREOFFICE_MATH_48("apps__48__libreoffice-math.svg"),
-		LIBREOFFICE_PRINTERADMIN_48("apps__48__libreoffice-printeradmin.svg"),
-		LIBREOFFICE_STARCENTER_48("apps__48__libreoffice-starcenter.svg"),
-		LIBREOFFICE_STARTCENTER_48("apps__48__libreoffice-startcenter.svg"),
-		LIBREOFFICE_WRITER_48("apps__48__libreoffice-writer.svg"),
-		LIGHTSOFF_48("apps__48__Lightsoff.svg"),
-		LIGHTWORKS_48("apps__48__lightworks.svg"),
-		LIGHTZONE_48("apps__48__lightzone.svg"),
-		LINGUIST_48("apps__48__linguist.svg"),
-		LINGUIST_QT4_48("apps__48__linguist-qt4.svg"),
-		LINGUIST_QT5_48("apps__48__linguist-qt5.svg"),
-		LINGUISTIC_48("apps__48__linguistic.svg"),
-		LINKEDIN_48("apps__48__linkedin.svg"),
-		LIVE_48("apps__48__live.svg"),
-		LIVEINST_48("apps__48__liveinst.svg"),
-		LIVES_48("apps__48__lives.svg"),
-		LIVEUSB_CREATOR_48("apps__48__liveusb-creator.svg"),
-		LOGOQLE2_48("apps__48__logoqle2.svg"),
-		LOGVIEWER_48("apps__48__logviewer.svg"),
-		LOKALIZE_48("apps__48__lokalize.svg"),
-		LORDOFULTIMA_48("apps__48__lordofultima.svg"),
-		LOVE_APP_48("apps__48__love-app.svg"),
-		LPUB_48("apps__48__lpub.svg"),
-		LTICON_48("apps__48__lticon.svg"),
-		LUNA_48("apps__48__luna.svg"),
-		LYX_48("apps__48__lyx.svg"),
-		M64PY_48("apps__48__m64py.svg"),
-		MAHJONGG_48("apps__48__mahjongg.svg"),
-		MAIL_CLIENT_48("apps__48__mail-client.svg"),
-		MAILRU_MAIL_RU_48("apps__48__mailru-mail.ru.svg"),
-		MAKEHUMAN_48("apps__48__makehuman.svg"),
-		MAMEEXECUTOR_48("apps__48__mameexecutor.svg"),
-		MANSA_48("apps__48__mansa.svg"),
-		MAPS_48("apps__48__maps.svg"),
-		MARBLE_48("apps__48__marble.svg"),
-		MASTER_PDF_EDITOR_48("apps__48__master-pdf-editor.svg"),
-		MASTERPDFEDITOR_48("apps__48__masterpdfeditor.svg"),
-		MATHEMATICA_48("apps__48__mathematica.svg"),
-		MATLAB_48("apps__48__matlab.svg"),
-		MAXTHON_BROWSER_48("apps__48__maxthon-browser.svg"),
-		MCOMIX_48("apps__48__mcomix.svg"),
-		MEDIA_PLAYER_BANSHEE_48("apps__48__media-player-banshee.svg"),
-		MEDIAINFO_GUI_48("apps__48__mediainfo-gui.svg"),
-		MEGASYNC_48("apps__48__megasync.svg"),
-		MELD_48("apps__48__meld.svg"),
-		MELLOWPLAYER_48("apps__48__mellowplayer.svg"),
-		MENDELEY_48("apps__48__mendeley.svg"),
-		MENU_EDITOR_48("apps__48__menu-editor.svg"),
-		MIDORI_48("apps__48__midori.svg"),
-		MINITUBE_48("apps__48__minitube.svg"),
-		MIRROR_CHECK_48("apps__48__mirror-check.svg"),
-		MKVMERGE_48("apps__48__mkvmerge.svg"),
-		MKVTOOLNIX_GUI_48("apps__48__mkvtoolnix-gui.svg"),
-		MLCAD_48("apps__48__mlcad.svg"),
-		MODELIO_48("apps__48__modelio.svg"),
-		MODEMMANAGER_48("apps__48__ModemManager.svg"),
-		MOINMOIN_48("apps__48__moinmoin.svg"),
-		MONGODB_48("apps__48__mongodb.svg"),
-		MONODEVELOP_48("apps__48__monodevelop.svg"),
-		MOVIE_EDITOR_48("apps__48__movie-editor.svg"),
-		MPLAYER_48("apps__48__mplayer.svg"),
-		MPV_48("apps__48__mpv.svg"),
-		MS_EXCEL_48("apps__48__ms-excel.svg"),
-		MS_ONENOTE_48("apps__48__ms-onenote.svg"),
-		MS_POWERPOINT_48("apps__48__ms-powerpoint.svg"),
-		MS_WORD_48("apps__48__ms-word.svg"),
-		MSN_PROTOCOL_48("apps__48__msn_protocol.svg"),
-		MULTIMEDIA_VOLUME_CONTROL_48("apps__48__multimedia-volume-control.svg"),
-		MULTISYSTEM_48("apps__48__multisystem.svg"),
-		MUMBLE_48("apps__48__mumble.svg"),
-		MUON_48("apps__48__muon.svg"),
-		MUONDISCOVER_48("apps__48__muondiscover.svg"),
-		MUPEN64PLUS_48("apps__48__mupen64plus.svg"),
-		MUSESCORE_48("apps__48__musescore.svg"),
-		MUSICBRAINZ_48("apps__48__musicbrainz.svg"),
-		MUSICTUBE_48("apps__48__musictube.svg"),
-		MUSIQUE_48("apps__48__musique.svg"),
-		MYSMS_48("apps__48__mysms.svg"),
-		MYSQL_WORKBENCH_48("apps__48__mysql-workbench.svg"),
-		NAVICAT_48("apps__48__navicat.svg"),
-		NEMIVER_48("apps__48__nemiver.svg"),
-		NEPOMUK_16("apps__16__nepomuk.svg"),
-		NEPOMUK_32("apps__32__nepomuk.svg"),
-		NEPOMUK_48("apps__48__nepomuk.svg"),
-		NETBEANS_48("apps__48__netbeans.svg"),
-		NETBEANS_BETA_48("apps__48__netbeans-beta.svg"),
-		NETBEANS_IDE_48("apps__48__netbeans-ide.svg"),
-		NETFLIX_DESKTOP_48("apps__48__netflix-desktop.svg"),
-		NETWORK_MANAGER_48("apps__48__network-manager.svg"),
-		NEVERBALL_48("apps__48__neverball.svg"),
-		NEVERPUTT_48("apps__48__neverputt.svg"),
-		NEWSBLUR_48("apps__48__newsblur.svg"),
-		NEXUIZ_48("apps__48__nexuiz.svg"),
-		NINJA_IDE_48("apps__48__ninja-ide.svg"),
-		NITRO_48("apps__48__nitro.svg"),
-		NITROGEN_48("apps__48__nitrogen.svg"),
-		NITROSHARE_48("apps__48__nitroshare.svg"),
-		NITROTASKS_48("apps__48__nitrotasks.svg"),
-		NM_DEVICE_WIRELESS_48("apps__48__nm-device-wireless.svg"),
-		NMAP_48("apps__48__nmap.svg"),
-		NMAP_ICON_48("apps__48__nmap_icon.svg"),
-		NOMACS_48("apps__48__nomacs.svg"),
-		NOTIFYOSDCONF_48("apps__48__notifyosdconf.svg"),
-		NTFS_CONFIG_48("apps__48__ntfs-config.svg"),
-		NUVOLAPLAYER_48("apps__48__nuvolaplayer.svg"),
-		NVCLOCK_48("apps__48__nvclock.svg"),
-		NVDOCK_48("apps__48__nvdock.svg"),
-		NVIDIA_310_SETTINGS_48("apps__48__nvidia-310-settings.svg"),
-		NVIDIA_48("apps__48__nvidia.svg"),
-		NVIDIA_CURRENT_SETTINGS_48("apps__48__nvidia-current-settings.svg"),
-		NVIDIA_CURRENT_UPDATES_SETTINGS_48("apps__48__nvidia-current-updates-settings.svg"),
-		NVIDIA_DRIVERS_SETTINGS_48("apps__48__nvidia-drivers-settings.svg"),
-		NVIDIA_SETTINGS_48("apps__48__nvidia-settings.svg"),
-		NVIDIA_X_SERVER_SETTING_48("apps__48__nvidia-x-server-setting.svg"),
-		NVIDIA_X_SERVER_SETTINGS_48("apps__48__nvidia-x-server-settings.svg"),
-		NYLAS_48("apps__48__nylas.svg"),
-		OCENAUDIO_48("apps__48__ocenaudio.svg"),
-		OCTAVE_48("apps__48__octave.svg"),
-		OCTAVE_ICON_48("apps__48__octave-icon.svg"),
-		OCTAVE_LOGO_48("apps__48__octave-logo.svg"),
-		OCTOPI_48("apps__48__octopi.svg"),
-		OCTOPI_NOTIFIER_48("apps__48__octopi-notifier.svg"),
-		OCTOPI_PANEL_48("apps__48__octopi-panel.svg"),
-		OCTOPI_RED_48("apps__48__octopi_red.svg"),
-		OCTOPI_YELLOW_48("apps__48__octopi_yellow.svg"),
-		OCTOPI2_48("apps__48__octopi2.svg"),
-		OFFICE_ADDRESS_BOOK_48("apps__48__office-address-book.svg"),
-		OFFICE_CALENDAR_48("apps__48__office-calendar.svg"),
-		OFFICE_PRINTER_48("apps__48__office-printer.svg"),
-		OKTETA_48("apps__48__okteta.svg"),
-		OKULAR_48("apps__48__okular.svg"),
-		OMEGAT_48("apps__48__omegat.svg"),
-		ONBOARD_48("apps__48__onboard.svg"),
-		ONBOARD_SETTINGS_48("apps__48__onboard-settings.svg"),
-		ONEDRIVE_48("apps__48__onedrive.svg"),
-		OOO_48("apps__48__ooo.svg"),
-		OPENARENA_48("apps__48__openarena.svg"),
-		OPENBRAVO_ERP_48("apps__48__openbravo-erp.svg"),
-		OPENJDK_6_48("apps__48__openjdk-6.svg"),
-		OPENJDK_7_48("apps__48__openjdk-7.svg"),
-		OPENJDK_8_48("apps__48__openjdk-8.svg"),
-		OPENSCAD_48("apps__48__openscad.svg"),
-		OPENSHOT_48("apps__48__openshot.svg"),
-		OPENTTD_48("apps__48__openttd.svg"),
-		OPERA_48("apps__48__opera.svg"),
-		OPERA_BETA_48("apps__48__opera-beta.svg"),
-		OPERA_DEVELOPER_48("apps__48__opera-developer.svg"),
-		OPERA_NEXT_BROWSER_48("apps__48__opera-next-browser.svg"),
-		OPERA_WIDGET_48("apps__48__opera-widget.svg"),
-		OTHMAN_BROWSER_48("apps__48__othman-browser.svg"),
-		OTTER_BROWSER_48("apps__48__otter-browser.svg"),
-		OUTLOOK_48("apps__48__outlook.svg"),
-		OX_48("apps__48__ox.svg"),
-		OXYGEN_48("apps__48__oxygen.svg"),
-		PACKAGE_ADMINISTRATION_48("apps__48__package_administration.svg"),
-		PACKAGE_DEVELOPMENT_DEBUGGER_48("apps__48__package_development_debugger.svg"),
-		PACKAGE_DEVELOPMENT_TOOLS_48("apps__48__package_development_tools.svg"),
-		PACKAGE_DEVELOPMENT_TRANSLATION_48("apps__48__package_development_translation.svg"),
-		PACKAGE_EDUTAINMENT_ASTRONOMY_48("apps__48__package_edutainment_astronomy.svg"),
-		PACKAGE_EDUTAINMENT_CHEMICAL_48("apps__48__package_edutainment_chemical.svg"),
-		PACKAGE_EDUTAINMENT_SCIENCE_48("apps__48__package_edutainment_science.svg"),
-		PACKAGE_MULTIMEDIA_48("apps__48__package_multimedia.svg"),
-		PACKAGE_SETTINGS_48("apps__48__package_settings.svg"),
-		PALEMOON_48("apps__48__palemoon.svg"),
-		PARAVIEW_48("apps__48__paraview.svg"),
-		PARTITIONMANAGER_48("apps__48__partitionmanager.svg"),
-		PASSWORD_48("apps__48__password.svg"),
-		PASSWORD_MANAGER_48("apps__48__password-manager.svg"),
-		PASSWORDS_48("apps__48__passwords.svg"),
-		PATCHAGE_48("apps__48__patchage.svg"),
-		PAVUMETER_48("apps__48__pavumeter.svg"),
-		PAYPAL_48("apps__48__paypal.svg"),
-		PCSX_ICON_48("apps__48__pcsx-icon.svg"),
-		PCSX2_48("apps__48__pcsx2.svg"),
-		PDFMOD_48("apps__48__pdfmod.svg"),
-		PENCIL_48("apps__48__pencil.svg"),
-		PGADMIN_48("apps__48__pgadmin.svg"),
-		PGLGUI_48("apps__48__pglgui.svg"),
-		PHATCH_48("apps__48__phatch.svg"),
-		PHATCH_INSPECTOR_48("apps__48__phatch-inspector.svg"),
-		PHONON_GSTREAMER_48("apps__48__phonon-gstreamer.svg"),
-		PHOTOFILMSTRIP_48("apps__48__photofilmstrip.svg"),
-		PHOTOLAYOUTSEDITOR_48("apps__48__photolayoutseditor.svg"),
-		PHOTOQT_48("apps__48__photoqt.svg"),
-		PHP_48("apps__48__php.svg"),
-		PHPMYADMIN_48("apps__48__phpmyadmin.svg"),
-		PICARD_48("apps__48__picard.svg"),
-		PICASA_48("apps__48__picasa.svg"),
-		PICMI_48("apps__48__picmi.svg"),
-		PIDGIN_48("apps__48__pidgin.svg"),
-		PIMSETTINGEXPORTER_48("apps__48__pimsettingexporter.svg"),
-		PINO_48("apps__48__pino.svg"),
-		PLAN_48("apps__48__plan.svg"),
-		PLANK_48("apps__48__plank.svg"),
-		PLANK_CONFIG_48("apps__48__plank-config.svg"),
-		PLANNER_48("apps__48__planner.svg"),
-		PLANWORK_48("apps__48__planwork.svg"),
-		PLASMA_32("apps__32__plasma.svg"),
-		PLASMA_48("apps__48__plasma.svg"),
-		PLASMA_MEDIA_CENTER_48("apps__48__plasma-media-center.svg"),
-		PLASMA_MOBILE_PHONE_48("apps__48__plasma-mobile-phone.svg"),
-		PLASMA_SEARCH_32("apps__32__plasma-search.svg"),
-		PLASMA_SEARCH_48("apps__48__plasma-search.svg"),
-		PLASMAGIK_48("apps__48__plasmagik.svg"),
-		PLAY_STORE_48("apps__48__play-store.svg"),
-		PLEXHOMETHEATER_48("apps__48__plexhometheater.svg"),
-		PLEXMEDIAMANAGER_48("apps__48__plexmediamanager.svg"),
-		PLV_48("apps__48__plv.svg"),
-		POCKET_48("apps__48__pocket.svg"),
-		PODCAST_48("apps__48__podcast.svg"),
-		PODCAST_AMAROK_32("apps__32__podcast-amarok.svg"),
-		PODCAST_AMAROK_48("apps__48__podcast-amarok.svg"),
-		POPCORN_TIME_48("apps__48__popcorn-time.svg"),
-		POPCORNTIME_48("apps__48__popcorntime.svg"),
-		POSTMAN_IMAGE_UPLOADER_48("apps__48__postman-image-uploader.svg"),
-		POWDER_TOY_48("apps__48__powder-toy.svg"),
-		PRAGHA_48("apps__48__pragha.svg"),
-		PREFERENCES_CONTACT_LIST_32("apps__32__preferences-contact-list.svg"),
-		PREFERENCES_CONTACT_LIST_48("apps__48__preferences-contact-list.svg"),
-		PREFERENCES_DESKTOP_32("apps__32__preferences-desktop.svg"),
-		PREFERENCES_DESKTOP_48("apps__48__preferences-desktop.svg"),
-		PREFERENCES_DESKTOP_ACCESSIBILITY_32("apps__32__preferences-desktop-accessibility.svg"),
-		PREFERENCES_DESKTOP_ACCESSIBILITY_48("apps__48__preferences-desktop-accessibility.svg"),
-		PREFERENCES_DESKTOP_BALOO_32("apps__32__preferences-desktop-baloo.svg"),
-		PREFERENCES_DESKTOP_BALOO_48("apps__48__preferences-desktop-baloo.svg"),
-		PREFERENCES_DESKTOP_COLOR_32("apps__32__preferences-desktop-color.svg"),
-		PREFERENCES_DESKTOP_COLOR_48("apps__48__preferences-desktop-color.svg"),
-		PREFERENCES_DESKTOP_CRYPTOGRAPHY_32("apps__32__preferences-desktop-cryptography.svg"),
-		PREFERENCES_DESKTOP_CRYPTOGRAPHY_48("apps__48__preferences-desktop-cryptography.svg"),
-		PREFERENCES_DESKTOP_DEFAULT_APPLICATIONS_32("apps__32__preferences-desktop-default-applications.svg"),
-		PREFERENCES_DESKTOP_DEFAULT_APPLICATIONS_48("apps__48__preferences-desktop-default-applications.svg"),
-		PREFERENCES_DESKTOP_DISPLAY_32("apps__32__preferences-desktop-display.svg"),
-		PREFERENCES_DESKTOP_DISPLAY_48("apps__48__preferences-desktop-display.svg"),
-		PREFERENCES_DESKTOP_DISPLAY_COLOR_32("apps__32__preferences-desktop-display-color.svg"),
-		PREFERENCES_DESKTOP_DISPLAY_COLOR_48("apps__48__preferences-desktop-display-color.svg"),
-		PREFERENCES_DESKTOP_EFFECTS_48("apps__48__preferences-desktop-effects.svg"),
-		PREFERENCES_DESKTOP_EMOTICONS_32("apps__32__preferences-desktop-emoticons.svg"),
-		PREFERENCES_DESKTOP_EMOTICONS_48("apps__48__preferences-desktop-emoticons.svg"),
-		PREFERENCES_DESKTOP_FILETYPE_ASSOCIATION_32("apps__32__preferences-desktop-filetype-association.svg"),
-		PREFERENCES_DESKTOP_FILETYPE_ASSOCIATION_48("apps__48__preferences-desktop-filetype-association.svg"),
-		PREFERENCES_DESKTOP_FONT_22("apps__22__preferences-desktop-font.svg"),
-		PREFERENCES_DESKTOP_FONT_32("apps__32__preferences-desktop-font.svg"),
-		PREFERENCES_DESKTOP_FONT_48("apps__48__preferences-desktop-font.svg"),
-		PREFERENCES_DESKTOP_FONT_INSTALLER_32("apps__32__preferences-desktop-font-installer.svg"),
-		PREFERENCES_DESKTOP_FONT_INSTALLER_48("apps__48__preferences-desktop-font-installer.svg"),
-		PREFERENCES_DESKTOP_GAMING_32("apps__32__preferences-desktop-gaming.svg"),
-		PREFERENCES_DESKTOP_GAMING_48("apps__48__preferences-desktop-gaming.svg"),
-		PREFERENCES_DESKTOP_ICONS_32("apps__32__preferences-desktop-icons.svg"),
-		PREFERENCES_DESKTOP_ICONS_48("apps__48__preferences-desktop-icons.svg"),
-		PREFERENCES_DESKTOP_KEYBOARD_32("apps__32__preferences-desktop-keyboard.svg"),
-		PREFERENCES_DESKTOP_KEYBOARD_48("apps__48__preferences-desktop-keyboard.svg"),
-		PREFERENCES_DESKTOP_KEYBOARD_SHORTCUTS_48("apps__48__preferences-desktop-keyboard-shortcuts.svg"),
-		PREFERENCES_DESKTOP_LAUNCH_FEEDBACK_32("apps__32__preferences-desktop-launch-feedback.svg"),
-		PREFERENCES_DESKTOP_LAUNCH_FEEDBACK_48("apps__48__preferences-desktop-launch-feedback.svg"),
-		PREFERENCES_DESKTOP_LOCALE_32("apps__32__preferences-desktop-locale.svg"),
-		PREFERENCES_DESKTOP_LOCALE_48("apps__48__preferences-desktop-locale.svg"),
-		PREFERENCES_DESKTOP_MOUSE_32("apps__32__preferences-desktop-mouse.svg"),
-		PREFERENCES_DESKTOP_MOUSE_48("apps__48__preferences-desktop-mouse.svg"),
-		PREFERENCES_DESKTOP_MULTIMEDIA_32("apps__32__preferences-desktop-multimedia.svg"),
-		PREFERENCES_DESKTOP_MULTIMEDIA_48("apps__48__preferences-desktop-multimedia.svg"),
-		PREFERENCES_DESKTOP_NOTIFICATION_32("apps__32__preferences-desktop-notification.svg"),
-		PREFERENCES_DESKTOP_NOTIFICATION_48("apps__48__preferences-desktop-notification.svg"),
-		PREFERENCES_DESKTOP_NOTIFICATION_BELL_32("apps__32__preferences-desktop-notification-bell.svg"),
-		PREFERENCES_DESKTOP_NOTIFICATION_BELL_48("apps__48__preferences-desktop-notification-bell.svg"),
-		PREFERENCES_DESKTOP_ONLINE_ACCOUNTS_48("apps__48__preferences-desktop-online-accounts.svg"),
-		PREFERENCES_DESKTOP_PERIPHERALS_32("apps__32__preferences-desktop-peripherals.svg"),
-		PREFERENCES_DESKTOP_PERIPHERALS_48("apps__48__preferences-desktop-peripherals.svg"),
-		PREFERENCES_DESKTOP_PERSONAL_48("apps__48__preferences-desktop-personal.svg"),
-		PREFERENCES_DESKTOP_PLASMA_32("apps__32__preferences-desktop-plasma.svg"),
-		PREFERENCES_DESKTOP_PLASMA_48("apps__48__preferences-desktop-plasma.svg"),
-		PREFERENCES_DESKTOP_PRINTER_48("apps__48__preferences-desktop-printer.svg"),
-		PREFERENCES_DESKTOP_REMOTE_DESKTOP_48("apps__48__preferences-desktop-remote-desktop.svg"),
-		PREFERENCES_DESKTOP_SCREENSAVER_32("apps__32__preferences-desktop-screensaver.svg"),
-		PREFERENCES_DESKTOP_SCREENSAVER_48("apps__48__preferences-desktop-screensaver.svg"),
-		PREFERENCES_DESKTOP_SEARCH_48("apps__48__preferences-desktop-search.svg"),
-		PREFERENCES_DESKTOP_SOUND_32("apps__32__preferences-desktop-sound.svg"),
-		PREFERENCES_DESKTOP_SOUND_48("apps__48__preferences-desktop-sound.svg"),
-		PREFERENCES_DESKTOP_TEXT_TO_SPEECH_32("apps__32__preferences-desktop-text-to-speech.svg"),
-		PREFERENCES_DESKTOP_TEXT_TO_SPEECH_48("apps__48__preferences-desktop-text-to-speech.svg"),
-		PREFERENCES_DESKTOP_THEME_32("apps__32__preferences-desktop-theme.svg"),
-		PREFERENCES_DESKTOP_THEME_48("apps__48__preferences-desktop-theme.svg"),
-		PREFERENCES_DESKTOP_USER_32("apps__32__preferences-desktop-user.svg"),
-		PREFERENCES_DESKTOP_USER_48("apps__48__preferences-desktop-user.svg"),
-		PREFERENCES_DESKTOP_USER_PASSWORD_32("apps__32__preferences-desktop-user-password.svg"),
-		PREFERENCES_DESKTOP_USER_PASSWORD_48("apps__48__preferences-desktop-user-password.svg"),
-		PREFERENCES_DESKTOP_WALLPAPER_32("apps__32__preferences-desktop-wallpaper.svg"),
-		PREFERENCES_DESKTOP_WALLPAPER_48("apps__48__preferences-desktop-wallpaper.svg"),
-		PREFERENCES_DRIVER_48("apps__48__preferences-driver.svg"),
-		PREFERENCES_GTK_CONFIG_32("apps__32__preferences-gtk-config.svg"),
-		PREFERENCES_GTK_CONFIG_48("apps__48__preferences-gtk-config.svg"),
-		PREFERENCES_KCALC_CONSTANTS_48("apps__48__preferences-kcalc-constants.svg"),
-		PREFERENCES_KDE_CONNECT_32("apps__32__preferences-kde-connect.svg"),
-		PREFERENCES_KDE_CONNECT_48("apps__48__preferences-kde-connect.svg"),
-		PREFERENCES_MANAGEMENT_SERVICE_48("apps__48__preferences-management-service.svg"),
-		PREFERENCES_OTHER_32("apps__32__preferences-other.svg"),
-		PREFERENCES_OTHER_48("apps__48__preferences-other.svg"),
-		PREFERENCES_PLUGIN_22("apps__22__preferences-plugin.svg"),
-		PREFERENCES_PLUGIN_32("apps__32__preferences-plugin.svg"),
-		PREFERENCES_PLUGIN_48("apps__48__preferences-plugin.svg"),
-		PREFERENCES_PLUGIN_SCRIPT_48("apps__48__preferences-plugin-script.svg"),
-		PREFERENCES_REMOTE_DESKTOP_48("apps__48__preferences-remote-desktop.svg"),
-		PREFERENCES_SYSTEM_48("apps__48__preferences-system.svg"),
-		PREFERENCES_SYSTEM_BLUETOOTH_16("apps__16__preferences-system-bluetooth.svg"),
-		PREFERENCES_SYSTEM_BLUETOOTH_32("apps__32__preferences-system-bluetooth.svg"),
-		PREFERENCES_SYSTEM_BLUETOOTH_48("apps__48__preferences-system-bluetooth.svg"),
-		PREFERENCES_SYSTEM_BLUETOOTH_INACTIVE_32("apps__32__preferences-system-bluetooth-inactive.svg"),
-		PREFERENCES_SYSTEM_BLUETOOTH_INACTIVE_48("apps__48__preferences-system-bluetooth-inactive.svg"),
-		PREFERENCES_SYSTEM_BLUETOOTH_INACTIVE_SVG_48("apps__48__preferences-system-bluetooth-inactive.svg.svg"),
-		PREFERENCES_SYSTEM_FIREWALL_48("apps__48__preferences-system-firewall.svg"),
-		PREFERENCES_SYSTEM_HOTCORNERS_48("apps__48__preferences-system-hotcorners.svg"),
-		PREFERENCES_SYSTEM_LOGIN_32("apps__32__preferences-system-login.svg"),
-		PREFERENCES_SYSTEM_LOGIN_48("apps__48__preferences-system-login.svg"),
-		PREFERENCES_SYSTEM_NETWORK_32("apps__32__preferences-system-network.svg"),
-		PREFERENCES_SYSTEM_NETWORK_48("apps__48__preferences-system-network.svg"),
-		PREFERENCES_SYSTEM_NETWORK_SHARING_32("apps__32__preferences-system-network-sharing.svg"),
-		PREFERENCES_SYSTEM_NETWORK_SHARING_48("apps__48__preferences-system-network-sharing.svg"),
-		PREFERENCES_SYSTEM_PERFORMANCE_48("apps__48__preferences-system-performance.svg"),
-		PREFERENCES_SYSTEM_POWER_48("apps__48__preferences-system-power.svg"),
-		PREFERENCES_SYSTEM_POWER_MANAGEMENT_32("apps__32__preferences-system-power-management.svg"),
-		PREFERENCES_SYSTEM_POWER_MANAGEMENT_48("apps__48__preferences-system-power-management.svg"),
-		PREFERENCES_SYSTEM_PRIVACY_32("apps__32__preferences-system-privacy.svg"),
-		PREFERENCES_SYSTEM_PRIVACY_48("apps__48__preferences-system-privacy.svg"),
-		PREFERENCES_SYSTEM_SEARCH_48("apps__48__preferences-system-search.svg"),
-		PREFERENCES_SYSTEM_SESSION_48("apps__48__preferences-system-session.svg"),
-		PREFERENCES_SYSTEM_SESSION_SERVICES_32("apps__32__preferences-system-session-services.svg"),
-		PREFERENCES_SYSTEM_SESSION_SERVICES_48("apps__48__preferences-system-session-services.svg"),
-		PREFERENCES_SYSTEM_TIME_32("apps__32__preferences-system-time.svg"),
-		PREFERENCES_SYSTEM_TIME_48("apps__48__preferences-system-time.svg"),
-		PREFERENCES_SYSTEM_WINDOWS_32("apps__32__preferences-system-windows.svg"),
-		PREFERENCES_SYSTEM_WINDOWS_48("apps__48__preferences-system-windows.svg"),
-		PREFERENCES_SYSTEM_WINDOWS_ACTIONS_32("apps__32__preferences-system-windows-actions.svg"),
-		PREFERENCES_SYSTEM_WINDOWS_ACTIONS_48("apps__48__preferences-system-windows-actions.svg"),
-		PREFERENCES_SYSTEM_WINDOWS_MOVE_32("apps__32__preferences-system-windows-move.svg"),
-		PREFERENCES_SYSTEM_WINDOWS_MOVE_48("apps__48__preferences-system-windows-move.svg"),
-		PREFERENCES_WEB_BROWSER_ADBLOCK_32("apps__32__preferences-web-browser-adblock.svg"),
-		PREFERENCES_WEB_BROWSER_ADBLOCK_48("apps__48__preferences-web-browser-adblock.svg"),
-		PREFERENCES_WEB_BROWSER_CACHE_32("apps__32__preferences-web-browser-cache.svg"),
-		PREFERENCES_WEB_BROWSER_CACHE_48("apps__48__preferences-web-browser-cache.svg"),
-		PREFERENCES_WEB_BROWSER_COOKIES_32("apps__32__preferences-web-browser-cookies.svg"),
-		PREFERENCES_WEB_BROWSER_COOKIES_48("apps__48__preferences-web-browser-cookies.svg"),
-		PREFERENCES_WEB_BROWSER_IDENTIFICATION_32("apps__32__preferences-web-browser-identification.svg"),
-		PREFERENCES_WEB_BROWSER_IDENTIFICATION_48("apps__48__preferences-web-browser-identification.svg"),
-		PREFERENCES_WEB_BROWSER_SHORTCUTS_32("apps__32__preferences-web-browser-shortcuts.svg"),
-		PREFERENCES_WEB_BROWSER_SHORTCUTS_48("apps__48__preferences-web-browser-shortcuts.svg"),
-		PREFERENCES_WEB_BROWSER_SSL_32("apps__32__preferences-web-browser-ssl.svg"),
-		PREFERENCES_WEB_BROWSER_SSL_48("apps__48__preferences-web-browser-ssl.svg"),
-		PREFERENCES_WEB_BROWSER_STYLESHEETS_32("apps__32__preferences-web-browser-stylesheets.svg"),
-		PREFERENCES_WEB_BROWSER_STYLESHEETS_48("apps__48__preferences-web-browser-stylesheets.svg"),
-		PRINTER_48("apps__48__printer.svg"),
-		PRJM16_TRANSPARENT_48("apps__48__prjm16-transparent.svg"),
-		PSENSOR_48("apps__48__psensor.svg"),
-		PTBATCHER_48("apps__48__ptbatcher.svg"),
-		PUTTY_48("apps__48__putty.svg"),
-		PWSAFE_48("apps__48__pwsafe.svg"),
-		PYCAD_48("apps__48__pycad.svg"),
-		PYCHARM_48("apps__48__pycharm.svg"),
-		PYRENAMER_48("apps__48__pyrenamer.svg"),
-		PYTHON_48("apps__48__python.svg"),
-		PYTHON_IDLE_48("apps__48__python-idle.svg"),
-		PYTHON2_7_48("apps__48__python2.7.svg"),
-		Q4WINE_48("apps__48__q4wine.svg"),
-		QALCULATE_48("apps__48__qalculate.svg"),
-		QASMIXER_48("apps__48__qasmixer.svg"),
-		QBITTORRENT_48("apps__48__qbittorrent.svg"),
-		QCOMICBOOK_48("apps__48__qcomicbook.svg"),
-		QDBUSVIEWER_48("apps__48__qdbusviewer.svg"),
-		QDBUSVIEWER_QT5_48("apps__48__qdbusviewer-qt5.svg"),
-		QDIRSTAT_48("apps__48__qdirstat.svg"),
-		QELECTROTECH_48("apps__48__qelectrotech.svg"),
-		QGIS_48("apps__48__qgis.svg"),
-		QGIT_48("apps__48__qgit.svg"),
-		QGO_48("apps__48__qgo.svg"),
-		QJACKCTL_48("apps__48__qjackctl.svg"),
-		QMKVEXTRACTOR_48("apps__48__qmkvextractor.svg"),
-		QMLSCENE_48("apps__48__qmlscene.svg"),
-		QMMP_48("apps__48__qmmp.svg"),
-		QNAPI_48_48("apps__48__qnapi-48.svg"),
-		QPHOTOREC_48("apps__48__qphotorec.svg"),
-		QSYNTH_48("apps__48__qsynth.svg"),
-		QT4LOGO_48("apps__48__qt4logo.svg"),
-		QTASSISTANT_48("apps__48__qtassistant.svg"),
-		QTCREATOR_48("apps__48__qtcreator.svg"),
-		QTDBUSVIEWER_48("apps__48__qtdbusviewer.svg"),
-		QTDESIGNER_48("apps__48__qtdesigner.svg"),
-		QTIPLOT_48("apps__48__qtiplot.svg"),
-		QTLINGUIST_48("apps__48__qtlinguist.svg"),
-		QTLINGUISTIC_48("apps__48__qtlinguistic.svg"),
-		QTLOGO_48("apps__48__qtlogo.svg"),
-		QTOX_48("apps__48__qtox.svg"),
-		QTRACTOR_48("apps__48__qtractor.svg"),
-		QUASSEL_48("apps__48__quassel.svg"),
-		QUASSEL_L_48("apps__48__quassel_l.svg"),
-		QUASSEL1_48("apps__48__quassel1.svg"),
-		QUCS_48("apps__48__qucs.svg"),
-		QUICKUSBFORMATTER_48("apps__48__quickusbformatter.svg"),
-		QUICKVIEW_48("apps__48__quickview.svg"),
-		QUIMUP_48("apps__48__quimup.svg"),
-		QUITERSS_48("apps__48__quiterss.svg"),
-		QUPZILLA_48("apps__48__qupzilla.svg"),
-		QUTIM_48("apps__48__qutim.svg"),
-		QV4L2_48("apps__48__qv4l2.svg"),
-		QWINFF_48("apps__48__qwinff.svg"),
-		RAWCONVERTER_48("apps__48__rawconverter.svg"),
-		RAWTHERAPEE_48("apps__48__rawtherapee.svg"),
-		REALTIMESYNC_48("apps__48__realtimesync.svg"),
-		RECOLL_48("apps__48__recoll.svg"),
-		REDDIT_48("apps__48__reddit.svg"),
-		REDECLIPSE_48("apps__48__redeclipse.svg"),
-		REDITR_48("apps__48__reditr.svg"),
-		REDNOTEBOOK_48("apps__48__rednotebook.svg"),
-		REDSHIFT_48("apps__48__redshift.svg"),
-		REKONQ_48("apps__48__rekonq.svg"),
-		REMMINA_48("apps__48__remmina.svg"),
-		REMOTE_DESKTOP_48("apps__48__remote-desktop.svg"),
-		RENAME_48("apps__48__rename.svg"),
-		RETROARCH_48("apps__48__retroarch.svg"),
-		RETROSHARE_48("apps__48__retroshare.svg"),
-		ROBOMONGO_48("apps__48__robomongo.svg"),
-		ROCCAT_48("apps__48__roccat.svg"),
-		ROSAMP_48("apps__48__rosamp.svg"),
-		RSTUDIO_48("apps__48__rstudio.svg"),
-		RUBYMINE_48("apps__48__rubymine.svg"),
-		RUNNING_48("apps__48__running.svg"),
-		SAMSUNG_DRIVER_48("apps__48__samsung-driver.svg"),
-		SANATA_48("apps__48__sanata-.svg"),
-		SAYONARA_48("apps__48__sayonara.svg"),
-		SCANNER_48("apps__48__scanner.svg"),
-		SCANTAILOR_48("apps__48__scantailor.svg"),
-		SCILABBACKEND_48("apps__48__scilabbackend.svg"),
-		SCREEN_RECORDER_48("apps__48__screen-recorder.svg"),
-		SCREENRULER_48("apps__48__screenruler.svg"),
-		SCREENRULER_ICON_48("apps__48__screenruler-icon.svg"),
-		SCRIBUS_48("apps__48__scribus.svg"),
-		SCRIVENER_48("apps__48__Scrivener.svg"),
-		SCUOLABOOK_48("apps__48__scuolabook.svg"),
-		SEAFILE_48("apps__48__seafile.svg"),
-		SEARCH_48("apps__48__search.svg"),
-		SECURITY_MEDIUM_48("apps__48__security-medium.svg"),
-		SELENE_48("apps__48__selene.svg"),
-		SELINUX_48("apps__48__selinux.svg"),
-		SEMN_48("apps__48__semn.svg"),
-		SENCHA_ANIMATOR_48("apps__48__sencha-animator.svg"),
-		SESSION_PROPERTIES_48("apps__48__session-properties.svg"),
-		SETROUBLESHOOT_48("apps__48__setroubleshoot.svg"),
-		SETROUBLESHOOT_ICON_48("apps__48__setroubleshoot_icon.svg"),
-		SHEETS_48("apps__48__sheets.svg"),
-		SHELL_48("apps__48__shell.svg"),
-		SHOTWELL_48("apps__48__shotwell.svg"),
-		SHOWFOTO_48("apps__48__showfoto.svg"),
-		SIGIL_48("apps__48__sigil.svg"),
-		SIMPLESCREENRECORDER_48("apps__48__simplescreenrecorder.svg"),
-		SIMPLESCREENRECORDER_PAUSED_48("apps__48__simplescreenrecorder-paused.svg"),
-		SIMPLESCREENRECORDER_RECORDING_48("apps__48__simplescreenrecorder-recording.svg"),
-		SKANLITE_48("apps__48__skanlite.svg"),
-		SKROOGE_48("apps__48__skrooge.svg"),
-		SKROOGE_BLACK_48("apps__48__skrooge-black.svg"),
-		SKYDRIVE_48("apps__48__skydrive.svg"),
-		SKYPE_48("apps__48__skype.svg"),
-		SKYPE_CALL_RECORDER_48("apps__48__skype-call-recorder.svg"),
-		SKYPE_PROTOCOL_48("apps__48__skype_protocol.svg"),
-		SMARTGIT_48("apps__48__smartgit.svg"),
-		SMARTGITHG_48("apps__48__smartgithg.svg"),
-		SMARTSVN_48("apps__48__smartsvn.svg"),
-		SMC_48("apps__48__smc.svg"),
-		SMPLAYER_48("apps__48__smplayer.svg"),
-		SMS_PROTOCOL_48("apps__48__sms_protocol.svg"),
-		SMTUBE_48("apps__48__smtube.svg"),
-		SNAPPY_48("apps__48__snappy.svg"),
-		SNES9X_48("apps__48__snes9x.svg"),
-		SOFTWARE_PROPERTIES_48("apps__48__software-properties.svg"),
-		SOLAAR_48("apps__48__solaar.svg"),
-		SONATA_48("apps__48__sonata.svg"),
-		SOULSEEK_48("apps__48__soulseek.svg"),
-		SOUND_JUICER_48("apps__48__sound-juicer.svg"),
-		SOUNDCLOUD_48("apps__48__soundcloud.svg"),
-		SOUNDCONVERTER_48("apps__48__soundconverter.svg"),
-		SOUNDKONVERTER_48("apps__48__soundkonverter.svg"),
-		SPACEFM_48("apps__48__spacefm.svg"),
-		SPACEFM_FIND_48("apps__48__spacefm-find.svg"),
-		SPARKLESHARE_48("apps__48__sparkleshare.svg"),
-		SPE_48("apps__48__spe.svg"),
-		SPECTACLE_48("apps__48__spectacle.svg"),
-		SPIDEROAK_48("apps__48__spideroak.svg"),
-		SPOTIFY_48("apps__48__spotify.svg"),
-		SPOTIFY_CLIENT_48("apps__48__spotify-client.svg"),
-		SPRING_48("apps__48__Spring.svg"),
-		SSH_ADD_48("apps__48__ssh-add.svg"),
-		STAGE_48("apps__48__stage.svg"),
-		STARDICT_48("apps__48__stardict.svg"),
-		STEAM_48("apps__48__steam.svg"),
-		STEAMSKINMANAGER_48("apps__48__steamskinmanager.svg"),
-		STELLARIUM_48("apps__48__stellarium.svg"),
-		STEP_48("apps__48__step.svg"),
-		STOCK_KEYRING_48("apps__48__stock_keyring.svg"),
-		STOCK_TASKS_48("apps__48__stock_tasks.svg"),
-		STORMCLOUD_48("apps__48__stormcloud.svg"),
-		STRIGI_48("apps__48__strigi.svg"),
-		SUBDOWNLOADER_48("apps__48__subdownloader.svg"),
-		SUBLIME_48("apps__48__sublime.svg"),
-		SUBLIME_TEXT_48("apps__48__sublime-text.svg"),
-		SUBTITLECOMPOSER_48("apps__48__subtitlecomposer.svg"),
-		SUBTITLEEDITOR_48("apps__48__subtitleeditor.svg"),
-		SVN_48("apps__48__svn.svg"),
-		SWAMI_48("apps__48__swami.svg"),
-		SWEEPER_48("apps__48__sweeper.svg"),
-		SYNAPTIC_48("apps__48__synaptic.svg"),
-		SYNAPTICS_48("apps__48__synaptics.svg"),
-		SYNAPTIKS_48("apps__48__synaptiks.svg"),
-		SYNFIG_ICON_48("apps__48__synfig_icon.svg"),
-		SYNFIGSTUDIO_48("apps__48__synfigstudio.svg"),
-		SYSPEEK_48("apps__48__syspeek.svg"),
-		SYSTEM_DIAGNOSIS_48("apps__48__system-diagnosis.svg"),
-		SYSTEM_ERROR_48("apps__48__system-error.svg"),
-		SYSTEM_FILE_MANAGER_48("apps__48__system-file-manager.svg"),
-		SYSTEM_HELP_16("apps__16__system-help.svg"),
-		SYSTEM_HELP_22("apps__22__system-help.svg"),
-		SYSTEM_HELP_48("apps__48__system-help.svg"),
-		SYSTEM_LOCK_SCREEN_22("apps__22__system-lock-screen.svg"),
-		SYSTEM_LOCK_SCREEN_32("apps__32__system-lock-screen.svg"),
-		SYSTEM_LOCK_SCREEN_48("apps__48__system-lock-screen.svg"),
-		SYSTEM_LOG_OUT_22("apps__22__system-log-out.svg"),
-		SYSTEM_LOG_OUT_32("apps__32__system-log-out.svg"),
-		SYSTEM_LOG_OUT_48("apps__48__system-log-out.svg"),
-		SYSTEM_REBOOT_22("apps__22__system-reboot.svg"),
-		SYSTEM_REBOOT_32("apps__32__system-reboot.svg"),
-		SYSTEM_REBOOT_48("apps__48__system-reboot.svg"),
-		SYSTEM_RUN_32("apps__32__system-run.svg"),
-		SYSTEM_RUN_48("apps__48__system-run.svg"),
-		SYSTEM_SHUTDOWN_22("apps__22__system-shutdown.svg"),
-		SYSTEM_SHUTDOWN_32("apps__32__system-shutdown.svg"),
-		SYSTEM_SHUTDOWN_48("apps__48__system-shutdown.svg"),
-		SYSTEM_SOFTWARE_UPDATE_48("apps__48__system-software-update.svg"),
-		SYSTEM_SUSPEND_22("apps__22__system-suspend.svg"),
-		SYSTEM_SUSPEND_32("apps__32__system-suspend.svg"),
-		SYSTEM_SUSPEND_48("apps__48__system-suspend.svg"),
-		SYSTEM_SUSPEND_HIBERNATE_22("apps__22__system-suspend-hibernate.svg"),
-		SYSTEM_SUSPEND_HIBERNATE_32("apps__32__system-suspend-hibernate.svg"),
-		SYSTEM_SUSPEND_HIBERNATE_48("apps__48__system-suspend-hibernate.svg"),
-		SYSTEM_SWITCH_USER_22("apps__22__system-switch-user.svg"),
-		SYSTEM_SWITCH_USER_32("apps__32__system-switch-user.svg"),
-		SYSTEM_SWITCH_USER_48("apps__48__system-switch-user.svg"),
-		SYSTEM_USERS_32("apps__32__system-users.svg"),
-		SYSTEM_USERS_48("apps__48__system-users.svg"),
-		SYSTEMSETTINGS_48("apps__48__systemsettings.svg"),
-		T_LASKU_48("apps__48__t-lasku.svg"),
-		TAGUA_48("apps__48__tagua.svg"),
-		TEAMVIEWER_48("apps__48__teamviewer.svg"),
-		TELEGRAM_48("apps__48__telegram.svg"),
-		TELEPATHY_KDE_48("apps__48__telepathy-kde.svg"),
-		TELIF_48("apps__48__telif.svg"),
-		TERMINATOR_48("apps__48__terminator.svg"),
-		TEXMAKER_48("apps__48__texmaker.svg"),
-		TEXSTUDIO_48("apps__48__texstudio.svg"),
-		THUNDERBIRD_48("apps__48__thunderbird.svg"),
-		TIMESHIFT_48("apps__48__timeshift.svg"),
-		TIMEVAULT_48("apps__48__timevault.svg"),
-		TOMAHAWK_48("apps__48__tomahawk.svg"),
-		TOMATE_48("apps__48__tomate.svg"),
-		TOR_BROWSER_48("apps__48__tor-browser.svg"),
-		TOTEM_48("apps__48__totem.svg"),
-		TRANSCODER_48("apps__48__transcoder.svg"),
-		TRANSMAGEDDON_48("apps__48__transmageddon.svg"),
-		TRANSMISSION_48("apps__48__transmission.svg"),
-		TRANSMISSION_TRAY_48("apps__48__transmission-tray.svg"),
-		TRELLO_48("apps__48__trello.svg"),
-		TROJITA_48("apps__48__trojita.svg"),
-		TRUECRYPT_48("apps__48__truecrypt.svg"),
-		TUMBLR_48("apps__48__tumblr.svg"),
-		TUPI_48("apps__48__tupi.svg"),
-		TURPIAL_48("apps__48__turpial.svg"),
-		TUXGUITAR_48("apps__48__tuxguitar.svg"),
-		TVMAXE_48("apps__48__tvmaxe.svg"),
-		TWITTER_48("apps__48__twitter.svg"),
-		TYPECATCHER_48("apps__48__typecatcher.svg"),
-		UBIQUITY_48("apps__48__ubiquity.svg"),
-		UNETBOOTIN_48("apps__48__unetbootin.svg"),
-		UNKNOWNAPP_48("apps__48__unknownapp.svg"),
-		USB_CREATOR_KDE_48("apps__48__usb-creator-kde.svg"),
-		UTILITIES_DESKTOP_EXTRA_48("apps__48__utilities-desktop-extra.svg"),
-		UTILITIES_ENERGY_MONITOR_48("apps__48__utilities-energy-monitor.svg"),
-		UTILITIES_FILE_ARCHIVER_48("apps__48__utilities-file-archiver.svg"),
-		UTILITIES_LOG_VIEWER_48("apps__48__utilities-log-viewer.svg"),
-		UTILITIES_SYSTEM_MONITOR_48("apps__48__utilities-system-monitor.svg"),
-		UTILITIES_TERMINAL_48("apps__48__utilities-terminal.svg"),
-		UTILITIES_TERMINAL_SU_48("apps__48__utilities-terminal_su.svg"),
-		VBAM_48("apps__48__vbam.svg"),
-		VBOX_48("apps__48__vbox.svg"),
-		VEROMIX_48("apps__48__Veromix.svg"),
-		VIBER_48("apps__48__viber.svg"),
-		VIDALIA_48("apps__48__vidalia.svg"),
-		VIDEOPLAYER_48("apps__48__videoplayer.svg"),
-		VIEW_MEDIA_PLAYLIST_32("apps__32__view-media-playlist.svg"),
-		VIEW_MEDIA_PLAYLIST_48("apps__48__view-media-playlist.svg"),
-		VIM_48("apps__48__vim.svg"),
-		VIM_QT_48("apps__48__vim-qt.svg"),
-		VIMEO_48("apps__48__vimeo.svg"),
-		VIMEO_ALT_48("apps__48__vimeo_alt.svg"),
-		VINEYARD_48("apps__48__vineyard.svg"),
-		VINEYARD_PREFERENCES_48("apps__48__vineyard-preferences.svg"),
-		VIRTUALBOX_48("apps__48__virtualbox.svg"),
-		VISUALVM_48("apps__48__visualvm.svg"),
-		VIVALDI_48("apps__48__vivaldi.svg"),
-		VIVALDI_SNAPSHOT_48("apps__48__vivaldi-snapshot.svg"),
-		VLC_48("apps__48__vlc.svg"),
-		VLC_XMAS_48("apps__48__vlc-xmas.svg"),
-		VMWARE_48("apps__48__vmware.svg"),
-		VMWARE_NETCFG_48("apps__48__vmware-netcfg.svg"),
-		VMWARE_PLAYER_48("apps__48__vmware-player.svg"),
-		VOCAL_48("apps__48__vocal.svg"),
-		VOKOSCREEN_48("apps__48__vokoscreen.svg"),
-		VSTUDIO_48("apps__48__vstudio.svg"),
-		WAITING_48("apps__48__waiting.svg"),
-		WALLPAPER_48("apps__48__wallpaper.svg"),
-		WAVE_ACCOUNTING_48("apps__48__wave-accounting.svg"),
-		WAYLAND_48("apps__48__wayland.svg"),
-		WEB_48("apps__48__web.svg"),
-		WEB_BROWSER_48("apps__48__web-browser.svg"),
-		WEB_GOOGLE_APPS_SCRIPT_48("apps__48__web-google-apps-script.svg"),
-		WEB_GOOGLE_DRAWINGS_48("apps__48__web-google-drawings.svg"),
-		WEB_GOOGLE_FORMS_48("apps__48__web-google-forms.svg"),
-		WEB_GOOGLE_SLIDES_48("apps__48__web-google-slides.svg"),
-		WEB_INBOX_48("apps__48__web-inbox.svg"),
-		WEB_JOLICLOUD_48("apps__48__web-jolicloud.svg"),
-		WEB_KINDLE_48("apps__48__web-kindle.svg"),
-		WEBBROWSER_APP_48("apps__48__webbrowser-app.svg"),
-		WEBKIT_48("apps__48__webkit.svg"),
-		WESNOTH_1_10_EDITOR_ICON_48("apps__48__wesnoth-1.10_editor-icon.svg"),
-		WESNOTH_1_10_ICON_48("apps__48__wesnoth-1.10-icon.svg"),
-		WESNOTH_48("apps__48__wesnoth.svg"),
-		WIKIMEDIA_COMMONS_48("apps__48__wikimedia-commons.svg"),
-		WIKIPEDIA_48("apps__48__wikipedia.svg"),
-		WINDOW_DUPLICATE_32("apps__32__window-duplicate.svg"),
-		WINDOW_DUPLICATE_48("apps__48__window-duplicate.svg"),
-		WINE_48("apps__48__wine.svg"),
-		WINE_HELP_48("apps__48__wine-help.svg"),
-		WINE_UNINSTALLER_48("apps__48__wine-uninstaller.svg"),
-		WINE_WINECFG_48("apps__48__wine-winecfg.svg"),
-		WINECFG_48("apps__48__winecfg.svg"),
-		WINETRICKS_48("apps__48__winetricks.svg"),
-		WINFF_48("apps__48__winff.svg"),
-		WINUSB_48("apps__48__winusb.svg"),
-		WINUSBGUI_ICON_48("apps__48__winusbgui-icon.svg"),
-		WORDPRESS_48("apps__48__wordpress.svg"),
-		WORDPRESS_WORDPRESS_COM_48("apps__48__wordpress-wordpress.com.svg"),
-		WORDS_48("apps__48__words.svg"),
-		WORDVIEW_48("apps__48__wordview.svg"),
-		WPCOM_48("apps__48__wpcom.svg"),
-		WPS_OFFICE_ETMAIN_48("apps__48__wps-office-etmain.svg"),
-		WPS_OFFICE_WPPMAIN_48("apps__48__wps-office-wppmain.svg"),
-		WPS_OFFICE_WPSMAIN_48("apps__48__wps-office-wpsmain.svg"),
-		X_PLANE_48("apps__48__x-plane.svg"),
-		X_TERMINAL_EMULATOR_48("apps__48__x-terminal-emulator.svg"),
-		XCHAT_48("apps__48__xchat.svg"),
-		XDG_BROWSER_LAUNCHER_48("apps__48__xdg-browser-launcher.svg"),
-		XDIAGNOSE_48("apps__48__xdiagnose.svg"),
-		XINE_48("apps__48__xine.svg"),
-		XMIND_48("apps__48__xmind.svg"),
-		XMRADIO_48("apps__48__xmradio.svg"),
-		XNCONVERT_48("apps__48__xnconvert.svg"),
-		XNVIEW_48("apps__48__xnview.svg"),
-		XONOTIC_48("apps__48__xonotic.svg"),
-		XORG_48("apps__48__xorg.svg"),
-		XOURNAL_48("apps__48__xournal.svg"),
-		XPLANE_48("apps__48__xplane.svg"),
-		XSANE_48("apps__48__xsane.svg"),
-		XSENSORS_48("apps__48__xsensors.svg"),
-		XTERM_48("apps__48__xterm.svg"),
-		XTERM_COLOR_48("apps__48__xterm-color.svg"),
-		Y_PPA_MANAGER_48("apps__48__y-ppa-manager.svg"),
-		YAD_48("apps__48__yad.svg"),
-		YAHOO_48("apps__48__yahoo.svg"),
-		YAHOO_PROTOCOL_48("apps__48__yahoo_protocol.svg"),
-		YAKUAKE_48("apps__48__yakuake.svg"),
-		YANDEX_BROWSER_48("apps__48__yandex-browser.svg"),
-		YANDEX_BROWSER_BETA_48("apps__48__yandex-browser-beta.svg"),
-		YAROCK_48("apps__48__yarock.svg"),
-		YAST_48("apps__48__yast.svg"),
-		YAST_ADDON_48("apps__48__yast-addon.svg"),
-		YAST_BOOTLOADER_48("apps__48__yast-bootloader.svg"),
-		YAST_CHECKMEDIA_48("apps__48__yast-checkmedia.svg"),
-		YAST_DISK_48("apps__48__yast-disk.svg"),
-		YAST_FIREWALL_48("apps__48__yast-firewall.svg"),
-		YAST_HARDWARE_48("apps__48__yast-hardware.svg"),
-		YAST_HIGH_AVAILABILITY_48("apps__48__yast-high_availability.svg"),
-		YAST_HOST_48("apps__48__yast-host.svg"),
-		YAST_HWINFO_48("apps__48__yast-hwinfo.svg"),
-		YAST_INETD_48("apps__48__yast-inetd.svg"),
-		YAST_ISCSI_CLIENT_48("apps__48__yast-iscsi-client.svg"),
-		YAST_KEYBOARD_48("apps__48__yast-keyboard.svg"),
-		YAST_LAN_48("apps__48__yast-lan.svg"),
-		YAST_LANGUAGE_48("apps__48__yast-language.svg"),
-		YAST_LIVE_INSTALL_48("apps__48__yast-live-install.svg"),
-		YAST_MAIL_48("apps__48__yast-mail.svg"),
-		YAST_MESSAGES_48("apps__48__yast-messages.svg"),
-		YAST_MISC_48("apps__48__yast-misc.svg"),
-		YAST_NETWORK_SERVICES_48("apps__48__yast-network-services.svg"),
-		YAST_NFS_48("apps__48__yast-nfs.svg"),
-		YAST_NIS_48("apps__48__yast-nis.svg"),
-		YAST_NTP_CLIENT_48("apps__48__yast-ntp-client.svg"),
-		YAST_ONLINE_UPDATE_48("apps__48__yast-online-update.svg"),
-		YAST_POWERTWEAK_48("apps__48__yast-powertweak.svg"),
-		YAST_PRINTER_48("apps__48__yast-printer.svg"),
-		YAST_PROXY_48("apps__48__yast-proxy.svg"),
-		YAST_RELEASE_NOTES_48("apps__48__yast-release-notes.svg"),
-		YAST_REMOTE_48("apps__48__yast-remote.svg"),
-		YAST_RUNLEVEL_48("apps__48__yast-runlevel.svg"),
-		YAST_SAMBA_CLIENT_48("apps__48__yast-samba-client.svg"),
-		YAST_SAMBA_SERVER_48("apps__48__yast-samba-server.svg"),
-		YAST_SCANNER_48("apps__48__yast-scanner.svg"),
-		YAST_SECURITY_48("apps__48__yast-security.svg"),
-		YAST_SNAPPER_48("apps__48__yast-snapper.svg"),
-		YAST_SOFTWARE_48("apps__48__yast-software.svg"),
-		YAST_SOUND_48("apps__48__yast-sound.svg"),
-		YAST_SUDO_48("apps__48__yast-sudo.svg"),
-		YAST_SUPPORT_48("apps__48__yast-support.svg"),
-		YAST_SW_SINGLE_48("apps__48__yast-sw_single.svg"),
-		YAST_SW_SOURCE_48("apps__48__yast-sw_source.svg"),
-		YAST_SYSCONFIG_48("apps__48__yast-sysconfig.svg"),
-		YAST_SYSTEM_48("apps__48__yast-system.svg"),
-		YAST_TIMEZONE_48("apps__48__yast-timezone.svg"),
-		YAST_USERS_48("apps__48__yast-users.svg"),
-		YAST_VENDOR_48("apps__48__yast-vendor.svg"),
-		YAST_VM_INSTALL_48("apps__48__yast-vm-install.svg"),
-		YED_48("apps__48__yed.svg"),
-		YOUTUBE_48("apps__48__youtube.svg"),
-		YOUTUBE_DL_48("apps__48__youtube-dl.svg"),
-		YOUTUBE_DL_GUI_48("apps__48__youtube-dl-gui.svg"),
-		YOUTUBE_DLG_48("apps__48__youtube-dlg.svg"),
-		YOUTUBE_TO_MP3_48("apps__48__youtube-to-mp3.svg"),
-		YUMEX_48("apps__48__yumex.svg"),
-		ZANSHIN_48("apps__48__zanshin.svg"),
-		ZAZ_48("apps__48__zaz.svg"),
-		ZEKR_48("apps__48__zekr.svg"),
-		ZEROINSTALL_48("apps__48__zeroinstall.svg"),
-		ZSNES_48("apps__48__zsnes.svg"),
-		;
-		private String name;
-
-		APPS(String name) {
-			this.name = name;
-		}
-
-		@Override
-		public String getIconName() {
-			return name;
-		}
-
-		@Override
-		public String getIconLibraryId() {
-			return AntuIconProvider.LIBRARY_ID;
-		}
-
-		public Icon withStyle(IconStyle style) {
-			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
-		}
-	}
-	public enum CATEGORIES implements SimpleIcon {
-		APPLICATIONS_DEVELOPMENT_22("categories__22__applications-development.svg"),
-		APPLICATIONS_ACCESSORIES_32("categories__32__applications-accessories.svg"),
-		APPLICATIONS_DEVELOPMENT_TRANSLATION_32("categories__32__applications-development-translation.svg"),
-		APPLICATIONS_DEVELOPMENT_WEB_32("categories__32__applications-development-web.svg"),
-		APPLICATIONS_DEVELOPMENT_32("categories__32__applications-development.svg"),
-		APPLICATIONS_EDUCATION_LANGUAGE_32("categories__32__applications-education-language.svg"),
-		APPLICATIONS_EDUCATION_MATHEMATICS_32("categories__32__applications-education-mathematics.svg"),
-		APPLICATIONS_EDUCATION_MISCELLANEOUS_32("categories__32__applications-education-miscellaneous.svg"),
-		APPLICATIONS_EDUCATION_PRESCHOOL_32("categories__32__applications-education-preschool.svg"),
-		APPLICATIONS_EDUCATION_SCHOOL_32("categories__32__applications-education-school.svg"),
-		APPLICATIONS_EDUCATION_SCIENCE_32("categories__32__applications-education-science.svg"),
-		APPLICATIONS_EDUCATION_UNIVERSITY_32("categories__32__applications-education-university.svg"),
-		APPLICATIONS_EDUCATION_32("categories__32__applications-education.svg"),
-		APPLICATIONS_ENGINEERING_32("categories__32__applications-engineering.svg"),
-		APPLICATIONS_GAMES_32("categories__32__applications-games.svg"),
-		APPLICATIONS_GRAPHICS_32("categories__32__applications-graphics.svg"),
-		APPLICATIONS_INTERNET_32("categories__32__applications-internet.svg"),
-		APPLICATIONS_MULTIMEDIA_32("categories__32__applications-multimedia.svg"),
-		APPLICATIONS_OFFICE_32("categories__32__applications-office.svg"),
-		APPLICATIONS_OTHER_32("categories__32__applications-other.svg"),
-		APPLICATIONS_SCIENCE_32("categories__32__applications-science.svg"),
-		APPLICATIONS_SYSTEM_32("categories__32__applications-system.svg"),
-		APPLICATIONS_TOYS_32("categories__32__applications-toys.svg"),
-		APPLICATIONS_UTILITIES_32("categories__32__applications-utilities.svg"),
-		PREFERENCES_DESKTOP_PERIPHERALS_32("categories__32__preferences-desktop-peripherals.svg"),
-		PREFERENCES_DESKTOP_PERSONAL_32("categories__32__preferences-desktop-personal.svg"),
-		PREFERENCES_DESKTOP_32("categories__32__preferences-desktop.svg"),
-		PREFERENCES_OTHER_32("categories__32__preferences-other.svg"),
-		PREFERENCES_SYSTEM_NETWORK_32("categories__32__preferences-system-network.svg"),
-		PREFERENCES_SYSTEM_32("categories__32__preferences-system.svg"),
-		SYSTEM_HELP_32("categories__32__system-help.svg"),
-		APPLICATIONS_OTHER_48("categories__48__applications-other.svg"),
-		;
-		private String name;
-
-		CATEGORIES(String name) {
-			this.name = name;
-		}
-
-		@Override
-		public String getIconName() {
-			return name;
-		}
-
-		@Override
-		public String getIconLibraryId() {
-			return AntuIconProvider.LIBRARY_ID;
-		}
-
-//		public Icon withStyle(SingleColorStyle style) {
-//			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
-//		}
-	}
-
-	public enum DEVICES implements SimpleIcon {
-
-		CAMERA_PHOTO_22("devices__22__camera-photo.svg"),
-		COMPUTER_LAPTOP_22("devices__22__computer-laptop.svg"),
-		COMPUTER_22("devices__22__computer.svg"),
-		DRIVE_HARDDISK_22("devices__22__drive-harddisk.svg"),
-		DRIVE_REMOVABLE_MEDIA_USB_PENDRIVE_22("devices__22__drive-removable-media-usb-pendrive.svg"),
-		DRIVE_REMOVABLE_MEDIA_USB_22("devices__22__drive-removable-media-usb.svg"),
-		DRIVE_REMOVABLE_MEDIA_22("devices__22__drive-removable-media.svg"),
-		KDECONNECT_22("devices__22__kdeconnect.svg"),
-		MEDIA_FLOPPY_22("devices__22__media-floppy.svg"),
-		MEDIA_OPTICAL_AUDIO_22("devices__22__media-optical-audio.svg"),
-		MEDIA_OPTICAL_DATA_22("devices__22__media-optical-data.svg"),
-		MEDIA_OPTICAL_MIXED_CD_22("devices__22__media-optical-mixed-cd.svg"),
-		MEDIA_OPTICAL_RECORDABLE_22("devices__22__media-optical-recordable.svg"),
-		MEDIA_OPTICAL_VIDEO_22("devices__22__media-optical-video.svg"),
-		MEDIA_OPTICAL_22("devices__22__media-optical.svg"),
-		MULTIMEDIA_PLAYER_IPOD_MINI_BLUE_22("devices__22__multimedia-player-ipod-mini-blue.svg"),
-		MULTIMEDIA_PLAYER_22("devices__22__multimedia-player.svg"),
-		NETWORK_BLUETOOTH_22("devices__22__network-bluetooth.svg"),
-		NETWORK_MODEM_22("devices__22__network-modem.svg"),
-		NETWORK_VPN_22("devices__22__network-vpn.svg"),
-		NETWORK_WIRED_ACTIVATED_22("devices__22__network-wired-activated.svg"),
-		NETWORK_WIRED_UNAVAILABLE_22("devices__22__network-wired-unavailable.svg"),
-		NETWORK_WIRED_22("devices__22__network-wired.svg"),
-		NETWORK_WIRELESS_CONNECTED_00_22("devices__22__network-wireless-connected-00.svg"),
-		NETWORK_WIRELESS_CONNECTED_100_22("devices__22__network-wireless-connected-100.svg"),
-		NETWORK_WIRELESS_CONNECTED_25_22("devices__22__network-wireless-connected-25.svg"),
-		NETWORK_WIRELESS_CONNECTED_50_22("devices__22__network-wireless-connected-50.svg"),
-		NETWORK_WIRELESS_CONNECTED_75_22("devices__22__network-wireless-connected-75.svg"),
-		NETWORK_WIRELESS_DISCONNECTED_22("devices__22__network-wireless-disconnected.svg"),
-		NETWORK_WIRELESS_22("devices__22__network-wireless.svg"),
-		PHONE_22("devices__22__phone.svg"),
-		SMARTPHONE_22("devices__22__smartphone.svg"),
-		TABLET_22("devices__22__tablet.svg"),
-		COMPUTER_48("devices__48__computer.svg"),
-		AUDIO_CARD_64("devices__64__audio-card.svg"),
-		AUDIO_HEADPHONES_64("devices__64__audio-headphones.svg"),
-		BATTERY_64("devices__64__battery.svg"),
-		CAMERA_PHOTO_64("devices__64__camera-photo.svg"),
-		CAMERA_WEB_64("devices__64__camera-web.svg"),
-		COMPUTER_LAPTOP_64("devices__64__computer-laptop.svg"),
-		COMPUTER_64("devices__64__computer.svg"),
-		CPU_64("devices__64__cpu.svg"),
-		DRIVE_HARDDISK_64("devices__64__drive-harddisk.svg"),
-		DRIVE_REMOVABLE_MEDIA_PENDRIVE_64("devices__64__drive-removable-media-pendrive.svg"),
-		DRIVE_REMOVABLE_MEDIA_USB_64("devices__64__drive-removable-media-usb.svg"),
-		DRIVE_REMOVABLE_MEDIA_64("devices__64__drive-removable-media.svg"),
-		INPUT_GAMING_64("devices__64__input-gaming.svg"),
-		INPUT_KEYBOARD_64("devices__64__input-keyboard.svg"),
-		INPUT_MOUSE_64("devices__64__input-mouse.svg"),
-		INPUT_TOUCHPAD_64("devices__64__input-touchpad.svg"),
-		MEDIA_FLASH_MEMORY_STICK_64("devices__64__media-flash-memory-stick.svg"),
-		MEDIA_FLASH_SD_MMC_64("devices__64__media-flash-sd-mmc.svg"),
-		MEDIA_FLASH_SMART_MEDIA_64("devices__64__media-flash-smart-media.svg"),
-		MEDIA_FLASH_64("devices__64__media-flash.svg"),
-		MEDIA_OPTICAL_AUDIO_64("devices__64__media-optical-audio.svg"),
-		MEDIA_OPTICAL_BLU_RAY_64("devices__64__media-optical-blu-ray.svg"),
-		MEDIA_OPTICAL_DATA_64("devices__64__media-optical-data.svg"),
-		MEDIA_OPTICAL_DVD_64("devices__64__media-optical-dvd.svg"),
-		MEDIA_OPTICAL_RECORDABLE_64("devices__64__media-optical-recordable.svg"),
-		MEDIA_OPTICAL_VIDEO_64("devices__64__media-optical-video.svg"),
-		MEDIA_OPTICAL_64("devices__64__media-optical.svg"),
-		MULTIMEDIA_PLAYER_64("devices__64__multimedia-player.svg"),
-		NETWORK_CARD_64("devices__64__network-card.svg"),
-		PHONE_64("devices__64__phone.svg"),
-		PRINTER_64("devices__64__printer.svg"),
-		SCANNER_64("devices__64__scanner.svg"),
-		SMARTPHONE_64("devices__64__smartphone.svg"),
-		TABLET_64("devices__64__tablet.svg"),
-		VIDEO_DISPLAY_64("devices__64__video-display.svg"),
-		VIDEO_TELEVISION_64("devices__64__video-television.svg"),
-		;
-		private String name;
-
-		DEVICES(String name) {
-			this.name = name;
-		}
-
-		@Override
-		public String getIconName() {
-			return name;
-		}
-
-		@Override
-		public String getIconLibraryId() {
-			return AntuIconProvider.LIBRARY_ID;
-		}
-
-		public Icon withStyle(IconStyle style) {
-			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
-		}
-	}
-
-	public enum EMBLEMS implements SimpleIcon {
-		EMBLEM_SYMBOLIC_LINK_16("emblems__16__emblem-symbolic-link.svg"),
-		VCS_ADDED_16("emblems__16__vcs-added.svg"),
-		VCS_CONFLICTING_16("emblems__16__vcs-conflicting.svg"),
-		VCS_LOCALLY_MODIFIED_UNSTAGED_16("emblems__16__vcs-locally-modified-unstaged.svg"),
-		VCS_LOCALLY_MODIFIED_16("emblems__16__vcs-locally-modified.svg"),
-		VCS_NORMAL_16("emblems__16__vcs-normal.svg"),
-		VCS_REMOVED_16("emblems__16__vcs-removed.svg"),
-		VCS_UPDATE_REQUIRED_16("emblems__16__vcs-update-required.svg"),
-		EMBLEM_FAVORITE_22("emblems__22__emblem-favorite.svg"),
-		EMBLEM_IMPORTANT_22("emblems__22__emblem-important.svg"),
-		EMBLEM_LOCKED_22("emblems__22__emblem-locked.svg"),
-		EMBLEM_SYMBOLIC_LINK_22("emblems__22__emblem-symbolic-link.svg"),
-		EMBLEM_UNLOCKED_22("emblems__22__emblem-unlocked.svg"),
-		EMBLEMS__8__CHECKMARK_SVG("emblems__8__checkmark.svg"),
-		EMBLEMS__8__EMBLEM_CHECKED_SVG("emblems__8__emblem-checked.svg"),
-		EMBLEMS__8__EMBLEM_LOCKED_SVG("emblems__8__emblem-locked.svg"),
-		EMBLEMS__8__EMBLEM_MOUNTED_SVG("emblems__8__emblem-mounted.svg"),
-		EMBLEMS__8__EMBLEM_PAUSE_SVG("emblems__8__emblem-pause.svg"),
-		EMBLEMS__8__EMBLEM_UNAVAILABLE_SVG("emblems__8__emblem-unavailable.svg"),
-		EMBLEMS__8__EMBLEM_UNLOCKED_SVG("emblems__8__emblem-unlocked.svg"),
-		EMBLEMS__8__EMBLEM_UNMOUNTED_SVG("emblems__8__emblem-unmounted.svg"),
-		;
-		private String name;
-
-		EMBLEMS(String name) {
-			this.name = name;
-		}
-
-		@Override
-		public String getIconName() {
-			return name;
-		}
-
-		@Override
-		public String getIconLibraryId() {
-			return AntuIconProvider.LIBRARY_ID;
-		}
-
-		public Icon withStyle(IconStyle style) {
-			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
-		}
-	}
+@IconLibrary(
+        name = "antu",
+        encoder = AntuIconEncoder.class,
+        decoder = AntuIconDecoder.class,
+        loader = AntuIconLoader.class,
+        defaultStyleSupplier = AntuIconDefaultIconSupplier.class
+)
+public class AntuIcon implements Icon<AntuIcon, AntuIconStyle> {
 
 
-	public enum EMOTES implements SimpleIcon {
-		DRINK_BEER_22("emotes__22__drink-beer.svg"),
-		DRINK_MARTINI_22("emotes__22__drink-martini.svg"),
-		FACE_ANGEL_22("emotes__22__face-angel.svg"),
-		FACE_ANGRY_22("emotes__22__face-angry.svg"),
-		FACE_CLOWN_22("emotes__22__face-clown.svg"),
-		FACE_CONFUSED_22("emotes__22__face-confused.svg"),
-		FACE_COOL_22("emotes__22__face-cool.svg"),
-		FACE_CRYING_22("emotes__22__face-crying.svg"),
-		FACE_DEVILISH_22("emotes__22__face-devilish.svg"),
-		FACE_EMBARRASSED_22("emotes__22__face-embarrassed.svg"),
-		FACE_GLASSES_22("emotes__22__face-glasses.svg"),
-		FACE_IN_LOVE_22("emotes__22__face-in-love.svg"),
-		FACE_KISS_22("emotes__22__face-kiss.svg"),
-		FACE_LAUGHING_22("emotes__22__face-laughing.svg"),
-		FACE_NINJA_22("emotes__22__face-ninja.svg"),
-		FACE_PIRATE_22("emotes__22__face-pirate.svg"),
-		FACE_PLAIN_22("emotes__22__face-plain.svg"),
-		FACE_QUIET_22("emotes__22__face-quiet.svg"),
-		FACE_RASPBERRY_22("emotes__22__face-raspberry.svg"),
-		FACE_SAD_22("emotes__22__face-sad.svg"),
-		FACE_SICK_22("emotes__22__face-sick.svg"),
-		FACE_SLEEPING_22("emotes__22__face-sleeping.svg"),
-		FACE_SMILE_BIG_22("emotes__22__face-smile-big.svg"),
-		FACE_SMILE_GRIN_22("emotes__22__face-smile-grin.svg"),
-		FACE_SMILE_22("emotes__22__face-smile.svg"),
-		FACE_SMIRK_22("emotes__22__face-smirk.svg"),
-		FACE_SURPRISE_22("emotes__22__face-surprise.svg"),
-		FACE_UNCERTAIN_22("emotes__22__face-uncertain.svg"),
-		FACE_WINK_22("emotes__22__face-wink.svg "),
-		FACE_WORRIED_22("emotes__22__face-worried.svg"),
-		FACE_YAWN_22("emotes__22__face-yawn.svg"),
-		FOOD_CAKE_22("emotes__22__food-cake.svg"),
-		;
-		private String name;
+    private static final Map<String, AntuIcon> ICONS_BY_ID = new HashMap<>();
 
-		EMOTES(String name) {
-			this.name = name;
-		}
+    // APPLETS
+    public static final AntuIcon APPLET_APPLETS_TEMPLATE_256 = create("applets__256__applets-template");
+    public static final AntuIcon APPLET_YAHOOWEATHER_256 = create("applets__256__com.librehat.yahooweather");
+    public static final AntuIcon APPLET_WEBSLICE_256 = create("applets__256__cqcb.plasma.webslice");
+    public static final AntuIcon APPLET_SIMPLEDATEANDTIME_256 = create("applets__256__org.kde.contrib.simpledateandtime");
+    public static final AntuIcon APPLET_TAKEABREAK_256 = create("applets__256__org.kde.contrib.takeabreak");
+    public static final AntuIcon APPLET_KTPCONTACTLIST_256 = create("applets__256__org.kde.ktpcontactlist");
+    public static final AntuIcon APPLET_MUONNOTIFIER_256 = create("applets__256__org.kde.muonnotifier");
+    public static final AntuIcon APPLET_NETWORKMONITOR_256 = create("applets__256__org.kde.networkMonitor");
+    public static final AntuIcon APPLET_ACTIVITYBAR_256 = create("applets__256__org.kde.plasma.activitybar");
+    public static final AntuIcon APPLET_ACTIVITYPAGER_256 = create("applets__256__org.kde.plasma.activitypager");
+    public static final AntuIcon APPLET_ANALOGCLOCK_256 = create("applets__256__org.kde.plasma.analogclock");
+    public static final AntuIcon APPLET_AWESOMEWIDGET_256 = create("applets__256__org.kde.plasma.awesomewidget");
+    public static final AntuIcon APPLET_BATTERY_256 = create("applets__256__org.kde.plasma.battery");
+    public static final AntuIcon APPLET_BINARYCLOCK_256 = create("applets__256__org.kde.plasma.binaryclock");
+    public static final AntuIcon APPLET_CALCULATOR_256 = create("applets__256__org.kde.plasma.calculator");
+    public static final AntuIcon APPLET_CALENDAR_256 = create("applets__256__org.kde.plasma.calendar");
+    public static final AntuIcon APPLET_CLIPBOARD_256 = create("applets__256__org.kde.plasma.clipboard");
+    public static final AntuIcon APPLET_COLORPICKER_256 = create("applets__256__org.kde.plasma.colorpicker");
+    public static final AntuIcon APPLET_COMIC_256 = create("applets__256__org.kde.plasma.comic");
+    public static final AntuIcon APPLET_DEVICENOTIFIER_256 = create("applets__256__org.kde.plasma.devicenotifier");
+    public static final AntuIcon APPLET_DIGITALCLOCK_256 = create("applets__256__org.kde.plasma.digitalclock");
+    public static final AntuIcon APPLET_DISKQUOTA_256 = create("applets__256__org.kde.plasma.diskquota");
+    public static final AntuIcon APPLET_FIFTEENPUZZLE_256 = create("applets__256__org.kde.plasma.fifteenpuzzle");
+    public static final AntuIcon APPLET_FOLDER_256 = create("applets__256__org.kde.plasma.folder");
+    public static final AntuIcon APPLET_FRAME_256 = create("applets__256__org.kde.plasma.frame");
+    public static final AntuIcon APPLET_FUZZYCLOCK_256 = create("applets__256__org.kde.plasma.fuzzyclock");
+    public static final AntuIcon APPLET_GMAILFEED_256 = create("applets__256__org.kde.plasma.gmailfeed");
+    public static final AntuIcon APPLET_ICONTASKS_256 = create("applets__256__org.kde.plasma.icontasks");
+    public static final AntuIcon APPLET_KICKER_256 = create("applets__256__org.kde.plasma.kicker");
+    public static final AntuIcon APPLET_KICKERDASH_256 = create("applets__256__org.kde.plasma.kickerdash");
+    public static final AntuIcon APPLET_KICKOFF_256 = create("applets__256__org.kde.plasma.kickoff");
+    public static final AntuIcon APPLET_MEDIACONTROLLER_256 = create("applets__256__org.kde.plasma.mediacontroller");
+    public static final AntuIcon APPLET_MEDIACONTROLLERCOMPACT_256 = create("applets__256__org.kde.plasma.mediacontrollercompact");
+    public static final AntuIcon APPLET_MULTIMEDIACONTROLS_256 = create("applets__256__org.kde.plasma.multimediacontrols");
+    public static final AntuIcon APPLET_NETWORKMANAGEMENT_256 = create("applets__256__org.kde.plasma.networkmanagement");
+    public static final AntuIcon APPLET_NOTES_256 = create("applets__256__org.kde.plasma.notes");
+    public static final AntuIcon APPLET_PAGER_256 = create("applets__256__org.kde.plasma.pager");
+    public static final AntuIcon APPLET_QUICKLAUNCH_256 = create("applets__256__org.kde.plasma.quicklaunch");
+    public static final AntuIcon APPLET_SHOWACTIVITYMANAGER_256 = create("applets__256__org.kde.plasma.showActivityManager");
+    public static final AntuIcon APPLET_SYSTEMLOADVIEWER_256 = create("applets__256__org.kde.plasma.systemloadviewer");
+    public static final AntuIcon APPLET_SYSTEMMONITOR_CPU_256 = create("applets__256__org.kde.plasma.systemmonitor.cpu");
+    public static final AntuIcon APPLET_SYSTEMMONITOR_DISKACTIVITY_256 = create("applets__256__org.kde.plasma.systemmonitor.diskactivity");
+    public static final AntuIcon APPLET_SYSTEMMONITOR_DISKUSAGE_256 = create("applets__256__org.kde.plasma.systemmonitor.diskusage");
+    public static final AntuIcon APPLET_SYSTEMMONITOR_MEMORY_256 = create("applets__256__org.kde.plasma.systemmonitor.memory");
+    public static final AntuIcon APPLET_SYSTEMMONITOR_NET_256 = create("applets__256__org.kde.plasma.systemmonitor.net");
+    public static final AntuIcon APPLET_SYSTEMTRAY_256 = create("applets__256__org.kde.plasma.systemtray");
+    public static final AntuIcon APPLET_TASKMANAGER_256 = create("applets__256__org.kde.plasma.taskmanager");
+    public static final AntuIcon APPLET_TIMER_256 = create("applets__256__org.kde.plasma.timer");
+    public static final AntuIcon APPLET_USERSWITCHER_256 = create("applets__256__org.kde.plasma.userswitcher");
+    public static final AntuIcon APPLET_VOLUME_256 = create("applets__256__org.kde.plasma.volume");
+    public static final AntuIcon APPLET_WINDOWLIST_256 = create("applets__256__org.kde.plasma.windowlist");
+    public static final AntuIcon APPLET_REDSHIFTCONTROL_256 = create("applets__256__org.kde.redshiftControl");
+    public static final AntuIcon APPLET_THERMALMONITOR_256 = create("applets__256__org.kde.thermalMonitor");
+    public static final AntuIcon APPLET_UPTIMEWIDGET_256 = create("applets__256__org.kde.uptimeWidget");
+    public static final AntuIcon APPLET_WEATHERWIDGET_256 = create("applets__256__org.kde.weatherWidget");
 
-		@Override
-		public String getIconName() {
-			return name;
-		}
+    // APPS
+    public static final AntuIcon APP_0AD_48 = create("apps__48__0ad.svg");
+    public static final AntuIcon APP_1PASSWORD_48 = create("apps__48__1password");
+    public static final AntuIcon APP_2048_48 = create("apps__48__2048");
+    public static final AntuIcon APP_2048_QT_48 = create("apps__48__2048-qt");
+    public static final AntuIcon APP_4KVIDEODOWNLOADER_48 = create("apps__48__4kvideodownloader");
+    public static final AntuIcon APP_67EF_ADDONINSTALLER_0_48 = create("apps__48__67EF_addoninstaller.0");
+    public static final AntuIcon APP_7Z_48 = create("apps__48__7z");
+    public static final AntuIcon APP_7ZIP_48 = create("apps__48__7zip");
+    public static final AntuIcon APP_8_BALL_POOL_48 = create("apps__48__8-ball-pool");
+    public static final AntuIcon APP_ABRT_48 = create("apps__48__abrt");
+    public static final AntuIcon APP_ACCESS_48 = create("apps__48__access");
+    public static final AntuIcon APP_ACCESSIBILITY_48 = create("apps__48__accessibility");
+    public static final AntuIcon APP_ACCESSIBILITY_DIRECTORY_48 = create("apps__48__accessibility-directory");
+    public static final AntuIcon APP_ACCESSIBILITY_SECTION_48 = create("apps__48__accessibility_section");
+    public static final AntuIcon APP_ACCESSORIES_ARCHIVER_48 = create("apps__48__accessories-archiver");
+    public static final AntuIcon APP_ACCESSORIES_CALCULATOR_48 = create("apps__48__accessories-calculator");
+    public static final AntuIcon APP_ACCESSORIES_CAMERA_48 = create("apps__48__accessories-camera");
+    public static final AntuIcon APP_ACCESSORIES_CHARACTER_MAP_48 = create("apps__48__accessories-character-map");
+    public static final AntuIcon APP_ACCESSORIES_CLOCK_48 = create("apps__48__accessories-clock");
+    public static final AntuIcon APP_ACCESSORIES_DICTIONARY_48 = create("apps__48__accessories-dictionary");
+    public static final AntuIcon APP_ACCESSORIES_DOCUMENT_VIEWER_48 = create("apps__48__accessories-document-viewer");
+    public static final AntuIcon APP_ACCESSORIES_EBOOK_READER_48 = create("apps__48__accessories-ebook-reader");
+    public static final AntuIcon APP_ACCESSORIES_NOTES_48 = create("apps__48__accessories-notes");
+    public static final AntuIcon APP_ACCESSORIES_TEXT_EDITOR_48 = create("apps__48__accessories-text-editor");
+    public static final AntuIcon APP_ACETINO2_48 = create("apps__48__Acetino2");
+    public static final AntuIcon APP_ACETONEISO_48 = create("apps__48__acetoneiso");
+    public static final AntuIcon APP_ACROREAD_48 = create("apps__48__acroread");
+    public static final AntuIcon APP_ACTIVITY_LOG_MANAGER_48 = create("apps__48__activity-log-manager");
+    public static final AntuIcon APP_ADDRESSBOOK_48 = create("apps__48__addressbook");
+    public static final AntuIcon APP_ADJUST_COLORS_48 = create("apps__48__adjust-colors");
+    public static final AntuIcon APP_ADMINISTRATION_48 = create("apps__48__administration");
+    public static final AntuIcon APP_ADOBE_AIR_48 = create("apps__48__adobe-air");
+    public static final AntuIcon APP_ADOBE_FLASHPLAYER_48 = create("apps__48__adobe-flashplayer");
+    public static final AntuIcon APP_ADOBEAFTEREFFECT_48 = create("apps__48__AdobeAfterEffect");
+    public static final AntuIcon APP_ADOBEAUDITION_48 = create("apps__48__AdobeAudition");
+    public static final AntuIcon APP_ADOBEBRIDGE_48 = create("apps__48__AdobeBridge");
+    public static final AntuIcon APP_ADOBEDREAMWEAVER_48 = create("apps__48__AdobeDreamweaver");
+    public static final AntuIcon APP_ADOBEENCORE_48 = create("apps__48__AdobeEncore");
+    public static final AntuIcon APP_ADOBEFIREWORK_48 = create("apps__48__AdobeFirework");
+    public static final AntuIcon APP_ADOBEFLASH_48 = create("apps__48__AdobeFlash");
+    public static final AntuIcon APP_ADOBEFLASHBUILDER_48 = create("apps__48__AdobeFlashBuilder");
+    public static final AntuIcon APP_ADOBEFLASHPLUGIN_48 = create("apps__48__adobeflashplugin");
+    public static final AntuIcon APP_ADOBEILLUSTRATOR_48 = create("apps__48__Adobeillustrator");
+    public static final AntuIcon APP_ADOBEINDESIGN_48 = create("apps__48__AdobeIndesign");
+    public static final AntuIcon APP_ADOBELIGHTROOM_48 = create("apps__48__AdobeLightroom");
+    public static final AntuIcon APP_ADOBEPHOTOSHOP_48 = create("apps__48__AdobePhotoshop");
+    public static final AntuIcon APP_ADOBEPRELUDE_48 = create("apps__48__AdobePrelude");
+    public static final AntuIcon APP_ADOBEPREMIEREPRO_48 = create("apps__48__AdobePremierePro");
+    public static final AntuIcon APP_ADOBESPEEDGRADE_48 = create("apps__48__AdobeSpeedgrade");
+    public static final AntuIcon APP_ADOBEUPDATE_48 = create("apps__48__AdobeUpdate");
+    public static final AntuIcon APP_ADOBEWIDGETBROWSER_48 = create("apps__48__AdobeWidgetBrowser");
+    public static final AntuIcon APP_AIM_48 = create("apps__48__aim");
+    public static final AntuIcon APP_AIM_PROTOCOL_48 = create("apps__48__aim_protocol");
+    public static final AntuIcon APP_AIRPORTUTILITY_48 = create("apps__48__AirPortUtility");
+    public static final AntuIcon APP_AIRWAVE_MANAGER_48 = create("apps__48__airwave-manager");
+    public static final AntuIcon APP_AKONADI_48 = create("apps__48__akonadi");
+    public static final AntuIcon APP_AKONADICONSOLE_48 = create("apps__48__akonadiconsole");
+    public static final AntuIcon APP_AKONADITRAY_48 = create("apps__48__akonaditray");
+    public static final AntuIcon APP_AKREGATOR_22 = create("apps__22__akregator");
+    public static final AntuIcon APP_AKREGATOR_48 = create("apps__48__akregator");
+    public static final AntuIcon APP_AKREGATOR_EMPTY_48 = create("apps__48__akregator_empty");
+    public static final AntuIcon APP_ALACARTE_48 = create("apps__48__alacarte");
+    public static final AntuIcon APP_ALARM_CLOCK_48 = create("apps__48__alarm-clock");
+    public static final AntuIcon APP_ALCHEMY_48 = create("apps__48__alchemy");
+    public static final AntuIcon APP_ALEXANDRA_48 = create("apps__48__alexandra");
+    public static final AntuIcon APP_ALIEN_ARENA_48 = create("apps__48__alien-arena");
+    public static final AntuIcon APP_ALIENARENA_48 = create("apps__48__alienarena");
+    public static final AntuIcon APP_ALSAMIXERGUI_48 = create("apps__48__alsamixergui");
+    public static final AntuIcon APP_AMARK_48 = create("apps__48__amark");
+    public static final AntuIcon APP_AMAROK_48 = create("apps__48__amarok");
+    public static final AntuIcon APP_AMAROK_CHANGE_LANGUAGE_32 = create("apps__32__amarok_change_language");
+    public static final AntuIcon APP_AMAROK_CHANGE_LANGUAGE_48 = create("apps__48__amarok_change_language");
+    public static final AntuIcon APP_AMAROK_ICON_48 = create("apps__48__amarok-icon");
+    public static final AntuIcon APP_AMAROK2_48 = create("apps__48__amarok2");
+    public static final AntuIcon APP_AMAZON_MP3_STORE_SOURCE_48 = create("apps__48__amazon-mp3-store-source");
+    public static final AntuIcon APP_AMAZON_STORE_48 = create("apps__48__amazon-store");
+    public static final AntuIcon APP_AMD_48 = create("apps__48__amd");
+    public static final AntuIcon APP_AMD_ATI_48 = create("apps__48__amd-ati");
+    public static final AntuIcon APP_AMULE_48 = create("apps__48__amule");
+    public static final AntuIcon APP_AMZDOWNLOADER_48 = create("apps__48__amzdownloader");
+    public static final AntuIcon APP_ANACONDA_48 = create("apps__48__anaconda");
+    public static final AntuIcon APP_ANDROID_FILE_TRANSFER_48 = create("apps__48__android-file-transfer");
+    public static final AntuIcon APP_ANDROID_SDK_48 = create("apps__48__android-sdk");
+    public static final AntuIcon APP_ANDROID_STUDIO_48 = create("apps__48__android-studio");
+    public static final AntuIcon APP_ANDROIDSTUDIO_48 = create("apps__48__androidstudio");
+    public static final AntuIcon APP_ANJUTA_48 = create("apps__48__anjuta");
+    public static final AntuIcon APP_ANKI_48 = create("apps__48__anki");
+    public static final AntuIcon APP_ANY_DO_48 = create("apps__48__any_do");
+    public static final AntuIcon APP_APP_LAUNCHER_48 = create("apps__48__app-launcher");
+    public static final AntuIcon APP_APPARMOR_VIEW_PROFILE_48 = create("apps__48__apparmor_view_profile");
+    public static final AntuIcon APP_APPGRID_48 = create("apps__48__appgrid");
+    public static final AntuIcon APP_APPLETS_SCREENSHOOTER_48 = create("apps__48__applets-screenshooter");
+    public static final AntuIcon APP_APPLICATION_COMMUNITY_48 = create("apps__48__application-community");
+    public static final AntuIcon APP_APPLICATION_DEFAULT_ICON_48 = create("apps__48__application-default-icon");
+    public static final AntuIcon APP_APPLICATION_SXW_48 = create("apps__48__application-sxw");
+    public static final AntuIcon APP_APPLICATION_X_CLEMENTINE_48 = create("apps__48__application-x-clementine");
+    public static final AntuIcon APP_APPLICATION_X_REMOTE_CONNECTION_48 = create("apps__48__application-x-remote-connection");
+    public static final AntuIcon APP_APPLICATION_X_VNC_48 = create("apps__48__application-x-vnc");
+    public static final AntuIcon APP_APPLICATION_X_YAROCK_48 = create("apps__48__application-x-yarock");
+    public static final AntuIcon APP_APPLICATIONS_ACCESSORIES_48 = create("apps__48__applications-accessories");
+    public static final AntuIcon APP_APPLICATIONS_DEVELOPMENT_48 = create("apps__48__applications-development");
+    public static final AntuIcon APP_APPLICATIONS_DEVELOPMENT_TRANSLATION_48 = create("apps__48__applications-development-translation");
+    public static final AntuIcon APP_APPLICATIONS_DEVELOPMENT_WEB_48 = create("apps__48__applications-development-web");
+    public static final AntuIcon APP_APPLICATIONS_EDUCATION_48 = create("apps__48__applications-education");
+    public static final AntuIcon APP_APPLICATIONS_EDUCATION_LANGUAGE_48 = create("apps__48__applications-education-language");
+    public static final AntuIcon APP_APPLICATIONS_EDUCATION_MATHEMATICS_48 = create("apps__48__applications-education-mathematics");
+    public static final AntuIcon APP_APPLICATIONS_EDUCATION_MISCELLANEOUS_48 = create("apps__48__applications-education-miscellaneous");
+    public static final AntuIcon APP_APPLICATIONS_EDUCATION_PRESCHOOL_48 = create("apps__48__applications-education-preschool");
+    public static final AntuIcon APP_APPLICATIONS_EDUCATION_SCHOOL_48 = create("apps__48__applications-education-school");
+    public static final AntuIcon APP_APPLICATIONS_EDUCATION_SCIENCE_48 = create("apps__48__applications-education-science");
+    public static final AntuIcon APP_APPLICATIONS_EDUCATION_UNIVERSITY_48 = create("apps__48__applications-education-university");
+    public static final AntuIcon APP_APPLICATIONS_ENGINEERING_48 = create("apps__48__applications-engineering");
+    public static final AntuIcon APP_APPLICATIONS_GAMES_48 = create("apps__48__applications-games");
+    public static final AntuIcon APP_APPLICATIONS_GRAPHICS_48 = create("apps__48__applications-graphics");
+    public static final AntuIcon APP_APPLICATIONS_INTERNET_48 = create("apps__48__applications-internet");
+    public static final AntuIcon APP_APPLICATIONS_MULTIMEDIA_48 = create("apps__48__applications-multimedia");
+    public static final AntuIcon APP_APPLICATIONS_OFFICE_48 = create("apps__48__applications-office");
+    public static final AntuIcon APP_APPLICATIONS_OTHER_48 = create("apps__48__applications-other");
+    public static final AntuIcon APP_APPLICATIONS_SCIENCE_48 = create("apps__48__applications-science");
+    public static final AntuIcon APP_APPLICATIONS_SYSTEM_48 = create("apps__48__applications-system");
+    public static final AntuIcon APP_APPLICATIONS_SYSTEM_ORANGE_48 = create("apps__48__applications-system-orange");
+    public static final AntuIcon APP_APPLICATIONS_TOYS_48 = create("apps__48__applications-toys");
+    public static final AntuIcon APP_APPLICATIONS_UTILITIES_48 = create("apps__48__applications-utilities");
+    public static final AntuIcon APP_APPORT_48 = create("apps__48__apport");
+    public static final AntuIcon APP_APPORT_GTK2_48 = create("apps__48__apport-gtk2");
+    public static final AntuIcon APP_APTDAEMON_DOWNLOAD_48 = create("apps__48__aptdaemon-download");
+    public static final AntuIcon APP_APTDAEMON_UPDATE_CACHE_48 = create("apps__48__aptdaemon-update-cache");
+    public static final AntuIcon APP_APTDAEMON_UPGRADE_48 = create("apps__48__aptdaemon-upgrade");
+    public static final AntuIcon APP_APTDAEMON_WORKING_48 = create("apps__48__aptdaemon-working");
+    public static final AntuIcon APP_APTIK_48 = create("apps__48__aptik");
+    public static final AntuIcon APP_ARCHIVE_MANAGER_48 = create("apps__48__archive-manager");
+    public static final AntuIcon APP_ARCHIVEMANAGER_48 = create("apps__48__archivemanager");
+    public static final AntuIcon APP_ARDOUR_48 = create("apps__48__ardour");
+    public static final AntuIcon APP_ARDUINO_48 = create("apps__48__arduino");
+    public static final AntuIcon APP_ARDUINO_ICON_SMALL_48 = create("apps__48__arduino-icon-small");
+    public static final AntuIcon APP_ARDUINO_IDE_48 = create("apps__48__arduino-ide");
+    public static final AntuIcon APP_ARIO_48 = create("apps__48__ario");
+    public static final AntuIcon APP_ARK_48 = create("apps__48__ark");
+    public static final AntuIcon APP_ARRONAX_48 = create("apps__48__arronax");
+    public static final AntuIcon APP_ARTHA_48 = create("apps__48__artha");
+    public static final AntuIcon APP_ARTIKULATE_48 = create("apps__48__artikulate");
+    public static final AntuIcon APP_ARTS_48 = create("apps__48__arts");
+    public static final AntuIcon APP_ASOUNDER_48 = create("apps__48__asounder");
+    public static final AntuIcon APP_ASSAULTCUBE_48 = create("apps__48__assaultcube");
+    public static final AntuIcon APP_ASSISTANT_48 = create("apps__48__assistant");
+    public static final AntuIcon APP_ASSISTANT_QT4_48 = create("apps__48__assistant-qt4");
+    public static final AntuIcon APP_ASSISTANT_QT5_48 = create("apps__48__assistant-qt5");
+    public static final AntuIcon APP_ASSISTANT5_48 = create("apps__48__assistant5");
+    public static final AntuIcon APP_ASTAH_COMMUNITY_48 = create("apps__48__astah-community");
+    public static final AntuIcon APP_ASUNDER_48 = create("apps__48__asunder");
+    public static final AntuIcon APP_ATOM_48 = create("apps__48__atom");
+    public static final AntuIcon APP_ATOM_TEXT_EDITOR_48 = create("apps__48__atom-text-editor");
+    public static final AntuIcon APP_ATOMIX_48 = create("apps__48__atomix");
+    public static final AntuIcon APP_ATOMIX_ICON_48 = create("apps__48__atomix-icon");
+    public static final AntuIcon APP_ATUNES_48 = create("apps__48__atunes");
+    public static final AntuIcon APP_AUDACIOUS_48 = create("apps__48__audacious");
+    public static final AntuIcon APP_AUDACITY_48 = create("apps__48__audacity");
+    public static final AntuIcon APP_AUDEX_48 = create("apps__48__audex");
+    public static final AntuIcon APP_AUDIENCE_48 = create("apps__48__audience");
+    public static final AntuIcon APP_AUDIO_EDITOR_48 = create("apps__48__audio-editor");
+    public static final AntuIcon APP_AUDIO_PLAYER_48 = create("apps__48__audio-player");
+    public static final AntuIcon APP_AUDIO_TAG_TOOL_48 = create("apps__48__audio-tag-tool");
+    public static final AntuIcon APP_AUDIOBOOK_48 = create("apps__48__audiobook");
+    public static final AntuIcon APP_AUTHOR_48 = create("apps__48__author");
+    public static final AntuIcon APP_AUTOPLUS_48 = create("apps__48__autoplus");
+    public static final AntuIcon APP_AVASTGUI_48 = create("apps__48__avastgui");
+    public static final AntuIcon APP_AVIDEMUX_48 = create("apps__48__avidemux");
+    public static final AntuIcon APP_AWF_48 = create("apps__48__awf");
+    public static final AntuIcon APP_AWN_APPLET_48 = create("apps__48__awn-applet");
+    public static final AntuIcon APP_AWN_APPLET_DIGITAL_CLOCK_48 = create("apps__48__awn-applet-digital-clock");
+    public static final AntuIcon APP_AX_APPLET_48 = create("apps__48__ax-applet");
+    public static final AntuIcon APP_AZUREUS_48 = create("apps__48__azureus");
+    public static final AntuIcon APP_BACKGROUND_48 = create("apps__48__background");
+    public static final AntuIcon APP_BALOO_32 = create("apps__32__baloo");
+    public static final AntuIcon APP_BALOO_48 = create("apps__48__baloo");
+    public static final AntuIcon APP_BANGARANG_48 = create("apps__48__bangarang");
+    public static final AntuIcon APP_BANSHEE_1_48 = create("apps__48__banshee-1");
+    public static final AntuIcon APP_BANSHEE_48 = create("apps__48__banshee");
+    public static final AntuIcon APP_BAOBAB_48 = create("apps__48__baobab");
+    public static final AntuIcon APP_BASH_48 = create("apps__48__bash");
+    public static final AntuIcon APP_BASKET_48 = create("apps__48__basket");
+    public static final AntuIcon APP_BATTLEFORWESNOTH_48 = create("apps__48__battleforwesnoth");
+    public static final AntuIcon APP_BBALL_48 = create("apps__48__bball");
+    public static final AntuIcon APP_BEATBOX_48 = create("apps__48__beatbox");
+    public static final AntuIcon APP_BERYL_48 = create("apps__48__beryl");
+    public static final AntuIcon APP_BERYL_SETTINGS_48 = create("apps__48__beryl-settings");
+    public static final AntuIcon APP_BIJIBEN_48 = create("apps__48__bijiben");
+    public static final AntuIcon APP_BIRDIE_48 = create("apps__48__birdie");
+    public static final AntuIcon APP_BITCOIN_QT_48 = create("apps__48__bitcoin-qt");
+    public static final AntuIcon APP_BITDEFENDER_48 = create("apps__48__bitdefender");
+    public static final AntuIcon APP_BITMAP2COMPONENT_48 = create("apps__48__bitmap2component");
+    public static final AntuIcon APP_BITTORENT_48 = create("apps__48__bittorent");
+    public static final AntuIcon APP_BITTORRENT_48 = create("apps__48__bittorrent");
+    public static final AntuIcon APP_BITWIG_STUDIO_48 = create("apps__48__bitwig-studio");
+    public static final AntuIcon APP_BLEACHBIT_48 = create("apps__48__bleachbit");
+    public static final AntuIcon APP_BLENDER_48 = create("apps__48__blender");
+    public static final AntuIcon APP_BLESS_48X48_48 = create("apps__48__bless-48x48");
+    public static final AntuIcon APP_BLOGGER_48 = create("apps__48__blogger");
+    public static final AntuIcon APP_BLOGILO_48 = create("apps__48__blogilo");
+    public static final AntuIcon APP_BLUEJ_48 = create("apps__48__bluej");
+    public static final AntuIcon APP_BLUETOOTH_48 = create("apps__48__bluetooth");
+    public static final AntuIcon APP_BOINC_MANAGER_48 = create("apps__48__boinc-manager");
+    public static final AntuIcon APP_BOMI_48 = create("apps__48__bomi");
+    public static final AntuIcon APP_BOOT_REPAIR_48 = create("apps__48__boot-repair");
+    public static final AntuIcon APP_BRACKETS_48 = create("apps__48__brackets");
+    public static final AntuIcon APP_BRAINDUMP_48 = create("apps__48__braindump");
+    public static final AntuIcon APP_BRASERO_48 = create("apps__48__brasero");
+    public static final AntuIcon APP_BREEZE_SETTINGS_48 = create("apps__48__breeze-settings");
+    public static final AntuIcon APP_BROKENSWORD_48 = create("apps__48__BrokenSword");
+    public static final AntuIcon APP_BTSYNC_USER_48 = create("apps__48__btsync-user");
+    public static final AntuIcon APP_BUG_BUDDY_48 = create("apps__48__bug-buddy");
+    public static final AntuIcon APP_BZR_ICON_64_48 = create("apps__48__bzr-icon-64");
+    public static final AntuIcon APP_CAFFEINE_48 = create("apps__48__caffeine");
+    public static final AntuIcon APP_CALAMARES_48 = create("apps__48__calamares");
+    public static final AntuIcon APP_CALENDAR_48 = create("apps__48__calendar");
+    public static final AntuIcon APP_CALIBRE_48 = create("apps__48__calibre");
+    public static final AntuIcon APP_CALIBRE_EBOOK_EDIT_48 = create("apps__48__calibre-ebook-edit");
+    public static final AntuIcon APP_CALIBRE_GUI_48 = create("apps__48__calibre-gui");
+    public static final AntuIcon APP_CALIBRE_VIEWER_48 = create("apps__48__calibre-viewer");
+    public static final AntuIcon APP_CALIBRE2_48 = create("apps__48__calibre2");
+    public static final AntuIcon APP_CALLIGRA_EXTRAS_48 = create("apps__48__calligra-extras");
+    public static final AntuIcon APP_CALLIGRAAUTHOR_48 = create("apps__48__calligraauthor");
+    public static final AntuIcon APP_CALLIGRADEVTOOLS_48 = create("apps__48__calligradevtools");
+    public static final AntuIcon APP_CALLIGRAFILTERS_48 = create("apps__48__calligrafilters");
+    public static final AntuIcon APP_CALLIGRAFLOW_48 = create("apps__48__calligraflow");
+    public static final AntuIcon APP_CALLIGRAGEMINI_48 = create("apps__48__calligragemini");
+    public static final AntuIcon APP_CALLIGRAHANDBOOK_48 = create("apps__48__calligrahandbook");
+    public static final AntuIcon APP_CALLIGRAKARBON_48 = create("apps__48__calligrakarbon");
+    public static final AntuIcon APP_CALLIGRAKEXI_48 = create("apps__48__calligrakexi");
+    public static final AntuIcon APP_CALLIGRAKRITA_48 = create("apps__48__calligrakrita");
+    public static final AntuIcon APP_CALLIGRAKRITA_L_48 = create("apps__48__calligrakrita_l");
+    public static final AntuIcon APP_CALLIGRAPLAN_48 = create("apps__48__calligraplan");
+    public static final AntuIcon APP_CALLIGRAPLANWORK_48 = create("apps__48__calligraplanwork");
+    public static final AntuIcon APP_CALLIGRAPLUGINS_48 = create("apps__48__calligraplugins");
+    public static final AntuIcon APP_CALLIGRASHEETS_48 = create("apps__48__calligrasheets");
+    public static final AntuIcon APP_CALLIGRASTAGE_48 = create("apps__48__calligrastage");
+    public static final AntuIcon APP_CALLIGRAWORDS_48 = create("apps__48__calligrawords");
+    public static final AntuIcon APP_CAMERA_WEB_48 = create("apps__48__camera-web");
+    public static final AntuIcon APP_CANOPY_48 = create("apps__48__canopy");
+    public static final AntuIcon APP_CANTATA_48 = create("apps__48__cantata");
+    public static final AntuIcon APP_CANTOR_48 = create("apps__48__cantor");
+    public static final AntuIcon APP_CCC_LARGE_48 = create("apps__48__ccc_large");
+    public static final AntuIcon APP_CELESTIA_48 = create("apps__48__celestia");
+    public static final AntuIcon APP_CHAKRA_BACKUP_48 = create("apps__48__chakra-backup");
+    public static final AntuIcon APP_CHAKRA_FLAT_48 = create("apps__48__chakra-flat");
+    public static final AntuIcon APP_CHAKRA_SHIELD_48 = create("apps__48__chakra-shield");
+    public static final AntuIcon APP_CHAKRA_SHINY_48 = create("apps__48__chakra-shiny");
+    public static final AntuIcon APP_CHAKRA_SMOOTH_48 = create("apps__48__chakra-smooth");
+    public static final AntuIcon APP_CHARM_48 = create("apps__48__Charm");
+    public static final AntuIcon APP_CHECKBOX_48 = create("apps__48__checkbox");
+    public static final AntuIcon APP_CHECKBOX_QT_48 = create("apps__48__checkbox-qt");
+    public static final AntuIcon APP_CHEESE_48 = create("apps__48__cheese");
+    public static final AntuIcon APP_CHERRYTREE_48 = create("apps__48__cherrytree");
+    public static final AntuIcon APP_CHESS_48 = create("apps__48__chess");
+    public static final AntuIcon APP_CHINESECALENDAR_64_48 = create("apps__48__chinesecalendar-64");
+    public static final AntuIcon APP_CHOQOK_48 = create("apps__48__choqok");
+    public static final AntuIcon APP_CHROME_48 = create("apps__48__chrome");
+    public static final AntuIcon APP_CHROME_AHFGEIENLIHCKOGMOHJHADLKJGOCPLEB_DEFAULT_48 = create("apps__48__chrome-ahfgeienlihckogmohjhadlkjgocpleb-Default");
+    public static final AntuIcon APP_CHROME_APP_LIST_48 = create("apps__48__chrome-app-list");
+    public static final AntuIcon APP_CHROME_CMNPFFGFPCOHHPODDJANKJANOLCEKBNI_DEFAULT_48 = create("apps__48__chrome-cmnpffgfpcohhpoddjankjanolcekbni-Default");
+    public static final AntuIcon APP_CHROME_DKFHFAPHFKOPDGPBFKEBJFCBLCAFCMPI_DEFAULT_48 = create("apps__48__chrome-dkfhfaphfkopdgpbfkebjfcblcafcmpi-Default");
+    public static final AntuIcon APP_CHROME_FHBJGBIFLINJBDGGEHCDDCBNCDDDOMOP_DEFAULT_48 = create("apps__48__chrome-fhbjgbiflinjbdggehcddcbncdddomop-Default");
+    public static final AntuIcon APP_CHROME_FNIBMBCDEEPAAHJMDDIIHOHJANLIMLMJ_DEFAULT_48 = create("apps__48__chrome-fnibmbcdeepaahjmddiihohjanlimlmj-Default");
+    public static final AntuIcon APP_CHROME_GIGHMMPIOBKLFEPJOCNAMGKKBIGLIDOM_DEFAULT_48 = create("apps__48__chrome-gighmmpiobklfepjocnamgkkbiglidom-Default");
+    public static final AntuIcon APP_CHROME_IGGPFPNAHKGPNINDFKDNCKNOLDGNCCDG_DEFAULT_48 = create("apps__48__chrome-iggpfpnahkgpnindfkdncknoldgnccdg-Default");
+    public static final AntuIcon APP_CHROME_IJFECBILADPINDDBJFODAAIAHGGOMHAF_DEFAULT_48 = create("apps__48__chrome-ijfecbiladpinddbjfodaaiahggomhaf-Default");
+    public static final AntuIcon APP_CHROME_JFBADLNDCMINBKFOJHLIMNKGAACKJMDO_DEFAULT_48 = create("apps__48__chrome-jfbadlndcminbkfojhlimnkgaackjmdo-Default");
+    public static final AntuIcon APP_CHROME_PKBFAKCPHDOKDNBDHLNDLPCEHEBMPLAB_DEFAULT_48 = create("apps__48__chrome-pkbfakcphdokdnbdhlndlpcehebmplab-Default");
+    public static final AntuIcon APP_CHROMIUM_48 = create("apps__48__chromium");
+    public static final AntuIcon APP_CHROMIUM_APP_LIST_48 = create("apps__48__chromium-app-list");
+    public static final AntuIcon APP_CHROMIUM_BROWSER_48 = create("apps__48__chromium-browser");
+    public static final AntuIcon APP_CHROMIUM_BSU_48 = create("apps__48__chromium-bsu");
+    public static final AntuIcon APP_CISCO_PT_48 = create("apps__48__cisco-pt");
+    public static final AntuIcon APP_CLAMAV_48 = create("apps__48__clamav");
+    public static final AntuIcon APP_CLASSICMENU_INDICATOR_DARK_48 = create("apps__48__classicmenu-indicator-dark");
+    public static final AntuIcon APP_CLEMENTINE_48 = create("apps__48__clementine");
+    public static final AntuIcon APP_CLEMENTINE_PANEL_48 = create("apps__48__clementine-panel");
+    public static final AntuIcon APP_CLEMENTINE_PANEL_GREY_48 = create("apps__48__clementine-panel-grey");
+    public static final AntuIcon APP_CLEMENTINE2_48 = create("apps__48__clementine2");
+    public static final AntuIcon APP_CLIPGRAB_48 = create("apps__48__clipgrab");
+    public static final AntuIcon APP_CLOCK_48 = create("apps__48__clock");
+    public static final AntuIcon APP_CMAKE_48 = create("apps__48__cmake");
+    public static final AntuIcon APP_CMAKESETUP_48 = create("apps__48__cmakesetup");
+    public static final AntuIcon APP_CMAKESETUP32_48 = create("apps__48__CMakeSetup32");
+    public static final AntuIcon APP_CMPLAYER_48 = create("apps__48__cmplayer");
+    public static final AntuIcon APP_CODEBLOCKS_48 = create("apps__48__codeblocks");
+    public static final AntuIcon APP_CODELITE_48 = create("apps__48__codelite");
+    public static final AntuIcon APP_COG_48 = create("apps__48__cog");
+    public static final AntuIcon APP_COLORHUG_48 = create("apps__48__colorhug");
+    public static final AntuIcon APP_COLORHUG_CCMX_48 = create("apps__48__colorhug-ccmx");
+    public static final AntuIcon APP_COLORHUG_FLASH_48 = create("apps__48__colorhug-flash");
+    public static final AntuIcon APP_COLORS_48 = create("apps__48__colors");
+    public static final AntuIcon APP_COMIX_48 = create("apps__48__comix");
+    public static final AntuIcon APP_COMPUTER_48 = create("apps__48__computer");
+    public static final AntuIcon APP_CONFIG_USERS_48 = create("apps__48__config-users");
+    public static final AntuIcon APP_CONKY_48 = create("apps__48__conky");
+    public static final AntuIcon APP_CONKY_MANAGER_48 = create("apps__48__conky-manager");
+    public static final AntuIcon APP_CONVERSEEN_48 = create("apps__48__converseen");
+    public static final AntuIcon APP_COPY_48 = create("apps__48__copy");
+    public static final AntuIcon APP_COPYQ_48 = create("apps__48__copyq");
+    public static final AntuIcon APP_CRASHPLAN_48 = create("apps__48__crashplan");
+    public static final AntuIcon APP_CS_PRINTER_48 = create("apps__48__cs-printer");
+    public static final AntuIcon APP_CS_TABLET_48 = create("apps__48__cs-tablet");
+    public static final AntuIcon APP_CUPS_48 = create("apps__48__cups");
+    public static final AntuIcon APP_CUPS_LAUNCHER_48 = create("apps__48__cups-launcher");
+    public static final AntuIcon APP_CUTEGRAM_48 = create("apps__48__cutegram");
+    public static final AntuIcon APP_CUTTLEFISH_48 = create("apps__48__cuttlefish");
+    public static final AntuIcon APP_CXMENU_CXOFFICE_0_CROSSOVER_48 = create("apps__48__cxmenu-cxoffice-0-crossover");
+    public static final AntuIcon APP_CXMENU_CXOFFICE_0_CXDOC_48 = create("apps__48__cxmenu-cxoffice-0-cxdoc");
+    public static final AntuIcon APP_CXMENU_CXOFFICE_0_CXREGISTER_48 = create("apps__48__cxmenu-cxoffice-0-cxregister");
+    public static final AntuIcon APP_CXMENU_CXOFFICE_0_CXRESET_48 = create("apps__48__cxmenu-cxoffice-0-cxreset");
+    public static final AntuIcon APP_CXMENU_CXOFFICE_0_CXRUN_48 = create("apps__48__cxmenu-cxoffice-0-cxrun");
+    public static final AntuIcon APP_CXMENU_CXOFFICE_0_CXUNINSTALL_48 = create("apps__48__cxmenu-cxoffice-0-cxuninstall");
+    public static final AntuIcon APP_CYCLE_48 = create("apps__48__cycle");
+    public static final AntuIcon APP_DAEMON_48 = create("apps__48__daemon");
+    public static final AntuIcon APP_DARKTABLE_48 = create("apps__48__darktable");
+    public static final AntuIcon APP_DART_48 = create("apps__48__dart");
+    public static final AntuIcon APP_DARWINIA_48 = create("apps__48__Darwinia");
+    public static final AntuIcon APP_DASSAULT_SYSTEMES_DRAFTSIGHT_48 = create("apps__48__dassault-systemes.draftsight");
+    public static final AntuIcon APP_DASSAULT_SYSTEMS_DRAFTSIGHT_48 = create("apps__48__dassault-systems.draftsight");
+    public static final AntuIcon APP_DCPP_48 = create("apps__48__dc++");
+    public static final AntuIcon APP_DECIBEL_48 = create("apps__48__decibel");
+    public static final AntuIcon APP_DEFCON_48 = create("apps__48__defcon");
+    public static final AntuIcon APP_DEJA_DUP_48 = create("apps__48__deja-dup");
+    public static final AntuIcon APP_DESIGNER_48 = create("apps__48__designer");
+    public static final AntuIcon APP_DESIGNER_QT4_48 = create("apps__48__designer-qt4");
+    public static final AntuIcon APP_DESIGNER_QT5_48 = create("apps__48__designer-qt5");
+    public static final AntuIcon APP_DESKTOP_EFFECTS_48 = create("apps__48__desktop-effects");
+    public static final AntuIcon APP_DESKTOP_ENVIROMENT_KDE_48 = create("apps__48__desktop-enviroment-kde");
+    public static final AntuIcon APP_DESMUME_48 = create("apps__48__DeSmuME");
+    public static final AntuIcon APP_DESURA_48 = create("apps__48__desura");
+    public static final AntuIcon APP_DEVDOCS_48 = create("apps__48__DevDocs");
+    public static final AntuIcon APP_DEVHELP_48 = create("apps__48__devhelp");
+    public static final AntuIcon APP_DEVIANTART_48 = create("apps__48__deviantart");
+    public static final AntuIcon APP_DEVICE_NOTIFIER_48 = create("apps__48__device-notifier");
+    public static final AntuIcon APP_DEWDROP_48 = create("apps__48__dewdrop");
+    public static final AntuIcon APP_DIA_48 = create("apps__48__dia");
+    public static final AntuIcon APP_DIANARA_48 = create("apps__48__dianara");
+    public static final AntuIcon APP_DIFFUSE_48 = create("apps__48__diffuse");
+    public static final AntuIcon APP_DIGIKAM_48 = create("apps__48__digikam");
+    public static final AntuIcon APP_DIODON_48 = create("apps__48__diodon");
+    public static final AntuIcon APP_DOCKBARX_48 = create("apps__48__dockbarx");
+    public static final AntuIcon APP_DOCKY_48 = create("apps__48__docky");
+    public static final AntuIcon APP_DOCUMENT_PRINT_PREVIEW_48 = create("apps__48__document-print-preview");
+    public static final AntuIcon APP_DOCUMENTATION_48 = create("apps__48__documentation");
+    public static final AntuIcon APP_DOLPHIN_48 = create("apps__48__dolphin");
+    public static final AntuIcon APP_DOLPHIN_EMU_48 = create("apps__48__dolphin-emu");
+    public static final AntuIcon APP_DOLPHIN_ROOT_48 = create("apps__48__dolphin-root");
+    public static final AntuIcon APP_DOSBOX_48 = create("apps__48__dosbox");
+    public static final AntuIcon APP_DOTA_48 = create("apps__48__dota");
+    public static final AntuIcon APP_DOUBLECMD_48 = create("apps__48__doublecmd");
+    public static final AntuIcon APP_DRAGONPLAYER_48 = create("apps__48__dragonplayer");
+    public static final AntuIcon APP_DRIVE_REMOVABLE_MEDIA_32 = create("apps__32__drive-removable-media");
+    public static final AntuIcon APP_DRIVE_REMOVABLE_MEDIA_48 = create("apps__48__drive-removable-media");
+    public static final AntuIcon APP_DROPBOX_48 = create("apps__48__dropbox");
+    public static final AntuIcon APP_DRRACKET_48 = create("apps__48__drracket");
+    public static final AntuIcon APP_DUKTO_48 = create("apps__48__dukto");
+    public static final AntuIcon APP_EAGLE_48 = create("apps__48__eagle");
+    public static final AntuIcon APP_EASY_TAG_48 = create("apps__48__easy-tag");
+    public static final AntuIcon APP_EASYMP3GAIN_48 = create("apps__48__easyMP3Gain");
+    public static final AntuIcon APP_EASYSTROKE_48 = create("apps__48__easystroke");
+    public static final AntuIcon APP_EBAY_48 = create("apps__48__ebay");
+    public static final AntuIcon APP_ECLIPSE_48 = create("apps__48__eclipse");
+    public static final AntuIcon APP_EMACS_48 = create("apps__48__emacs");
+    public static final AntuIcon APP_EMERALD_THEME_MANAGER_ICON_48 = create("apps__48__emerald-theme-manager-icon");
+    public static final AntuIcon APP_EMESENE_48 = create("apps__48__emesene");
+    public static final AntuIcon APP_EMPATHY_48 = create("apps__48__empathy");
+    public static final AntuIcon APP_EOG_48 = create("apps__48__eog");
+    public static final AntuIcon APP_EPOPTES_48 = create("apps__48__epoptes");
+    public static final AntuIcon APP_ERADIO_48 = create("apps__48__eradio");
+    public static final AntuIcon APP_ERIC_48 = create("apps__48__eric");
+    public static final AntuIcon APP_ESD_48 = create("apps__48__esd");
+    public static final AntuIcon APP_ESPEAK_GUI_48 = create("apps__48__espeak-gui");
+    public static final AntuIcon APP_ETR_48 = create("apps__48__etr");
+    public static final AntuIcon APP_EVERNOTE_48 = create("apps__48__evernote");
+    public static final AntuIcon APP_EVOLUTION_48 = create("apps__48__evolution");
+    public static final AntuIcon APP_EVOLUTION_CALENDAR_48 = create("apps__48__evolution-calendar");
+    public static final AntuIcon APP_EVOLUTION_TASKS_48 = create("apps__48__evolution-tasks");
+    public static final AntuIcon APP_EXFALSO_48 = create("apps__48__exfalso");
+    public static final AntuIcon APP_EXPOBLENDING_48 = create("apps__48__expoblending");
+    public static final AntuIcon APP_EXTENSIONS_48 = create("apps__48__extensions");
+    public static final AntuIcon APP_EYES_48 = create("apps__48__eyes");
+    public static final AntuIcon APP_FACE_SMILE_32 = create("apps__32__face-smile");
+    public static final AntuIcon APP_FACE_SMILE_48 = create("apps__48__face-smile");
+    public static final AntuIcon APP_FACEBOOK_48 = create("apps__48__facebook");
+    public static final AntuIcon APP_FADEIN_48 = create("apps__48__fadein");
+    public static final AntuIcon APP_FBMESSENGER_48 = create("apps__48__fbmessenger");
+    public static final AntuIcon APP_FCITX_48 = create("apps__48__fcitx");
+    public static final AntuIcon APP_FCITX_SOGOUPINYIN_48 = create("apps__48__fcitx-sogoupinyin");
+    public static final AntuIcon APP_FEEDLY_48 = create("apps__48__feedly");
+    public static final AntuIcon APP_FFADO_48 = create("apps__48__ffado");
+    public static final AntuIcon APP_FIFTEENPUZZLE_48 = create("apps__48__fifteenpuzzle");
+    public static final AntuIcon APP_FILE_ROLLER_48 = create("apps__48__file-roller");
+    public static final AntuIcon APP_FILEBOT_48 = create("apps__48__filebot");
+    public static final AntuIcon APP_FILELIGHT_48 = create("apps__48__filelight");
+    public static final AntuIcon APP_FILEZILLA_48 = create("apps__48__filezilla");
+    public static final AntuIcon APP_FINDER_W_48 = create("apps__48__Finder_w");
+    public static final AntuIcon APP_FIREFOX_48 = create("apps__48__firefox");
+    public static final AntuIcon APP_FIREFOX_DEVELOPER_48 = create("apps__48__firefox-developer");
+    public static final AntuIcon APP_FIREFOX_DEVELOPER_EDITION_48 = create("apps__48__firefox-developer-edition");
+    public static final AntuIcon APP_FIREFOX_TRUNK_48 = create("apps__48__firefox-trunk");
+    public static final AntuIcon APP_FIRESTORM_ICON_48 = create("apps__48__firestorm_icon");
+    public static final AntuIcon APP_FITYK_48 = create("apps__48__fityk");
+    public static final AntuIcon APP_FLACON_48 = create("apps__48__flacon");
+    public static final AntuIcon APP_FLARE_48 = create("apps__48__flare");
+    public static final AntuIcon APP_FLAREGET_48 = create("apps__48__flareget");
+    public static final AntuIcon APP_FLASH_48 = create("apps__48__flash");
+    public static final AntuIcon APP_FLICKR_48 = create("apps__48__flickr");
+    public static final AntuIcon APP_FLIGHTGEAR_48 = create("apps__48__flightgear");
+    public static final AntuIcon APP_FLIPBOARD_48 = create("apps__48__flipboard");
+    public static final AntuIcon APP_FLOW_48 = create("apps__48__flow");
+    public static final AntuIcon APP_FLOWBLADE_48 = create("apps__48__flowblade");
+    public static final AntuIcon APP_FLUID_48 = create("apps__48__fluid");
+    public static final AntuIcon APP_FLUXGUI_48 = create("apps__48__fluxgui");
+    public static final AntuIcon APP_FOGGER_48 = create("apps__48__fogger");
+    public static final AntuIcon APP_FONTFORGE_48 = create("apps__48__fontforge");
+    public static final AntuIcon APP_FOTO_48 = create("apps__48__foto");
+    public static final AntuIcon APP_FREECIV_CLIENT_48 = create("apps__48__freeciv-client");
+    public static final AntuIcon APP_FREECIV_SERVER_48 = create("apps__48__freeciv-server");
+    public static final AntuIcon APP_FREEMIND_48 = create("apps__48__freemind");
+    public static final AntuIcon APP_FREEPLANE_48 = create("apps__48__freeplane");
+    public static final AntuIcon APP_FRITZING_48 = create("apps__48__fritzing");
+    public static final AntuIcon APP_FROSTWIRE_48 = create("apps__48__frostwire");
+    public static final AntuIcon APP_FROZENSYNAPSE_48 = create("apps__48__frozensynapse");
+    public static final AntuIcon APP_FSLINT_48 = create("apps__48__fslint");
+    public static final AntuIcon APP_FTL_48 = create("apps__48__FTL");
+    public static final AntuIcon APP_FURIUSISOMOUNT_48 = create("apps__48__furiusisomount");
+    public static final AntuIcon APP_FUSION_ICON_48 = create("apps__48__fusion-icon");
+    public static final AntuIcon APP_GADU_PROTOCOL_48 = create("apps__48__gadu_protocol");
+    public static final AntuIcon APP_GCONF_EDITOR_48 = create("apps__48__gconf-editor");
+    public static final AntuIcon APP_GCSTAR_48 = create("apps__48__gcstar");
+    public static final AntuIcon APP_GDEBI_48 = create("apps__48__gdebi");
+    public static final AntuIcon APP_GEANY_48 = create("apps__48__geany");
+    public static final AntuIcon APP_GELEMENTAL_48 = create("apps__48__gelemental");
+    public static final AntuIcon APP_GENSGS_48 = create("apps__48__gensgs");
+    public static final AntuIcon APP_GENYMOTION_48 = create("apps__48__genymotion");
+    public static final AntuIcon APP_GEOCLUE_48 = create("apps__48__geoclue");
+    public static final AntuIcon APP_GEOGEBRA_48 = create("apps__48__geogebra");
+    public static final AntuIcon APP_GESPEAKER_48 = create("apps__48__gespeaker");
+    public static final AntuIcon APP_GFTP_48 = create("apps__48__gFTP");
+    public static final AntuIcon APP_GHEX_48 = create("apps__48__ghex");
+    public static final AntuIcon APP_GIGGLE_48 = create("apps__48__giggle");
+    public static final AntuIcon APP_GIMP_48 = create("apps__48__gimp");
+    public static final AntuIcon APP_GIT_48 = create("apps__48__git");
+    public static final AntuIcon APP_GIT_COLA_48 = create("apps__48__git-cola");
+    public static final AntuIcon APP_GIT_DAG_48 = create("apps__48__git-dag");
+    public static final AntuIcon APP_GKSU_48 = create("apps__48__gksu");
+    public static final AntuIcon APP_GLOOBUS_48 = create("apps__48__gloobus");
+    public static final AntuIcon APP_GLOOBUS_PREVIEW_48 = create("apps__48__gloobus-preview");
+    public static final AntuIcon APP_GMAIL_48 = create("apps__48__gmail");
+    public static final AntuIcon APP_GMAIL_OFFLINE_48 = create("apps__48__gmail-offline");
+    public static final AntuIcon APP_GMSH_48 = create("apps__48__gmsh");
+    public static final AntuIcon APP_GNAC_48 = create("apps__48__gnac");
+    public static final AntuIcon APP_GNASH_48 = create("apps__48__gnash");
+    public static final AntuIcon APP_GNOME_AISLERIOT_48 = create("apps__48__gnome-aisleriot");
+    public static final AntuIcon APP_GNOME_CONTACTS_48 = create("apps__48__gnome-contacts");
+    public static final AntuIcon APP_GNOME_DISKS_48 = create("apps__48__gnome-disks");
+    public static final AntuIcon APP_GNOME_MPLAYER_48 = create("apps__48__gnome-mplayer");
+    public static final AntuIcon APP_GNOME_PDF_48 = create("apps__48__gnome-pdf");
+    public static final AntuIcon APP_GNOME_SEARCH_TOOL_48 = create("apps__48__gnome-search-tool");
+    public static final AntuIcon APP_GNOME_SOUND_RECORDER_48 = create("apps__48__gnome-sound-recorder");
+    public static final AntuIcon APP_GNOME_STICKY_NOTES_APPLET_48 = create("apps__48__gnome-sticky-notes-applet");
+    public static final AntuIcon APP_GNOME_SUBTITLES_48 = create("apps__48__gnome-subtitles");
+    public static final AntuIcon APP_GOA_ACCOUNT_48 = create("apps__48__goa-account");
+    public static final AntuIcon APP_GOA_ACCOUNT_KERBEROS_48 = create("apps__48__goa-account-kerberos");
+    public static final AntuIcon APP_GOA_ACCOUNT_OWNCLOUD_48 = create("apps__48__goa-account-owncloud");
+    public static final AntuIcon APP_GOOGLE_48 = create("apps__48__google");
+    public static final AntuIcon APP_GOOGLE_CALCULATOR_48 = create("apps__48__google-calculator");
+    public static final AntuIcon APP_GOOGLE_CALENDAR_48 = create("apps__48__google-calendar");
+    public static final AntuIcon APP_GOOGLE_CHROME_48 = create("apps__48__google-chrome");
+    public static final AntuIcon APP_GOOGLE_CHROME_BETA_48 = create("apps__48__google-chrome-beta");
+    public static final AntuIcon APP_GOOGLE_CHROME_DEVELOPER_TOOL_48 = create("apps__48__google-chrome-developer-tool");
+    public static final AntuIcon APP_GOOGLE_CHROME_UNSTABLE_48 = create("apps__48__google-chrome-unstable");
+    public static final AntuIcon APP_GOOGLE_DOCS_48 = create("apps__48__google-docs");
+    public static final AntuIcon APP_GOOGLE_DRAWS_48 = create("apps__48__google-draws");
+    public static final AntuIcon APP_GOOGLE_DRIVE_48 = create("apps__48__google-drive");
+    public static final AntuIcon APP_GOOGLE_EARTH_48 = create("apps__48__google-earth");
+    public static final AntuIcon APP_GOOGLE_FORMS_48 = create("apps__48__google-forms");
+    public static final AntuIcon APP_GOOGLE_HANGOUTS_48 = create("apps__48__google-hangouts");
+    public static final AntuIcon APP_GOOGLE_KEEP_48 = create("apps__48__google-keep");
+    public static final AntuIcon APP_GOOGLE_MAIL_48 = create("apps__48__google-mail");
+    public static final AntuIcon APP_GOOGLE_MAPS_48 = create("apps__48__google-maps");
+    public static final AntuIcon APP_GOOGLE_MOVIES_48 = create("apps__48__google-movies");
+    public static final AntuIcon APP_GOOGLE_MUSIC_48 = create("apps__48__google-music");
+    public static final AntuIcon APP_GOOGLE_PHOTOS_48 = create("apps__48__google-photos");
+    public static final AntuIcon APP_GOOGLE_PLAY_BOOKS_48 = create("apps__48__google-play-books");
+    public static final AntuIcon APP_GOOGLE_PLAY_MUSIC_48 = create("apps__48__google-play-music");
+    public static final AntuIcon APP_GOOGLE_PLUS_PICTURES_48 = create("apps__48__google-plus-pictures");
+    public static final AntuIcon APP_GOOGLE_SHEETS_48 = create("apps__48__google-sheets");
+    public static final AntuIcon APP_GOOGLE_SLIDES_48 = create("apps__48__google-slides");
+    public static final AntuIcon APP_GOOGLE_SPREADSHEETS_48 = create("apps__48__google-spreadsheets");
+    public static final AntuIcon APP_GOOGLE_TRANSLATE_48 = create("apps__48__google-translate");
+    public static final AntuIcon APP_GOOGLEEARTH_48 = create("apps__48__googleearth");
+    public static final AntuIcon APP_GOOGLEPLUS_48 = create("apps__48__googleplus");
+    public static final AntuIcon APP_GPARTED_48 = create("apps__48__gparted");
+    public static final AntuIcon APP_GPDFTEXT_48 = create("apps__48__gpdftext");
+    public static final AntuIcon APP_GPICK_48 = create("apps__48__gpick");
+    public static final AntuIcon APP_GRAMPS_48 = create("apps__48__gramps");
+    public static final AntuIcon APP_GRAPHICS_VIEWER_DOCUMENT_48 = create("apps__48__graphics-viewer-document");
+    public static final AntuIcon APP_GREEDCORP_48 = create("apps__48__GreedCorp");
+    public static final AntuIcon APP_GRIP_48 = create("apps__48__grip");
+    public static final AntuIcon APP_GROMIT_48 = create("apps__48__gromit");
+    public static final AntuIcon APP_GROUPWISE_PROTOCOL_48 = create("apps__48__groupwise_protocol");
+    public static final AntuIcon APP_GRSYNC_48 = create("apps__48__grsync");
+    public static final AntuIcon APP_GRSYNC_RESTORE_48 = create("apps__48__grsync-restore");
+    public static final AntuIcon APP_GRUB_CUSTOMIZER_48 = create("apps__48__grub-customizer");
+    public static final AntuIcon APP_GSTREAMER_48 = create("apps__48__gstreamer");
+    public static final AntuIcon APP_GTICK_48 = create("apps__48__gtick");
+    public static final AntuIcon APP_GTK_INFO_48 = create("apps__48__gtk-info");
+    public static final AntuIcon APP_GTK3_DEMO_48 = create("apps__48__gtk3-demo");
+    public static final AntuIcon APP_GTK3_WIDGET_FACTORY_48 = create("apps__48__gtk3-widget-factory");
+    public static final AntuIcon APP_GTKCONFIG_32 = create("apps__32__gtkconfig");
+    public static final AntuIcon APP_GTKCONFIG_48 = create("apps__48__gtkconfig");
+    public static final AntuIcon APP_GTKHASH_48 = create("apps__48__gtkhash");
+    public static final AntuIcon APP_GUAYADEQUE_48 = create("apps__48__guayadeque");
+    public static final AntuIcon APP_GUFW_48 = create("apps__48__gufw");
+    public static final AntuIcon APP_GUMMI_48 = create("apps__48__gummi");
+    public static final AntuIcon APP_GVIM_48 = create("apps__48__gvim");
+    public static final AntuIcon APP_GWENVIEW_48 = create("apps__48__gwenview");
+    public static final AntuIcon APP_GWIBBER_48 = create("apps__48__gwibber");
+    public static final AntuIcon APP_H2_ICON_48 = create("apps__48__h2-icon");
+    public static final AntuIcon APP_HAGUICHI_48 = create("apps__48__haguichi");
+    public static final AntuIcon APP_HAROOPAD_48 = create("apps__48__haroopad");
+    public static final AntuIcon APP_HEDGEWARS_48 = create("apps__48__hedgewars");
+    public static final AntuIcon APP_HEIMDALL_FRONTEND_48 = create("apps__48__heimdall-frontend");
+    public static final AntuIcon APP_HELP_48 = create("apps__48__help");
+    public static final AntuIcon APP_HELP_ABOUT_32 = create("apps__32__help-about");
+    public static final AntuIcon APP_HELP_ABOUT_48 = create("apps__48__help-about");
+    public static final AntuIcon APP_HELP_BROWSER_48 = create("apps__48__help-browser");
+    public static final AntuIcon APP_HIGAN_48 = create("apps__48__higan");
+    public static final AntuIcon APP_HIPCHAT_48 = create("apps__48__hipchat");
+    public static final AntuIcon APP_HOMEBANK_48 = create("apps__48__homebank");
+    public static final AntuIcon APP_HOMERUN_22 = create("apps__22__homerun");
+    public static final AntuIcon APP_HOMERUN_48 = create("apps__48__homerun");
+    public static final AntuIcon APP_HOTOT_48 = create("apps__48__hotot");
+    public static final AntuIcon APP_HP_LOGO_48 = create("apps__48__hp_logo");
+    public static final AntuIcon APP_HTOP_48 = create("apps__48__htop");
+    public static final AntuIcon APP_HUGIN_48 = create("apps__48__hugin");
+    public static final AntuIcon APP_HWINFO_48 = create("apps__48__hwinfo");
+    public static final AntuIcon APP_I2PROUTER_48 = create("apps__48__i2prouter");
+    public static final AntuIcon APP_IBUS_SETUP_48 = create("apps__48__ibus-setup");
+    public static final AntuIcon APP_ICEDOVE_48 = create("apps__48__icedove");
+    public static final AntuIcon APP_ICEWEASEL_48 = create("apps__48__iceweasel");
+    public static final AntuIcon APP_ICON_48 = create("apps__48__icon");
+    public static final AntuIcon APP_ICQ_PROTOCOL_48 = create("apps__48__icq_protocol");
+    public static final AntuIcon APP_IDEA_48 = create("apps__48__idea");
+    public static final AntuIcon APP_IM_AIM_48 = create("apps__48__im-aim");
+    public static final AntuIcon APP_IM_QQ_48 = create("apps__48__im-qq");
+    public static final AntuIcon APP_IMAGEWRITER_48 = create("apps__48__imagewriter");
+    public static final AntuIcon APP_IMLOGVIEW_48 = create("apps__48__imlogview");
+    public static final AntuIcon APP_INCREDIPEDE_48 = create("apps__48__Incredipede");
+    public static final AntuIcon APP_INDICATOR_CHINA_WEATHER_48 = create("apps__48__indicator-china-weather");
+    public static final AntuIcon APP_INDICATOR_REMINDOR_48 = create("apps__48__indicator-remindor");
+    public static final AntuIcon APP_INDICATOR_SOUND_SWITCHER_48 = create("apps__48__indicator-sound-switcher");
+    public static final AntuIcon APP_INDICATOR_WEATHER_48 = create("apps__48__indicator-weather");
+    public static final AntuIcon APP_INFO_48 = create("apps__48__info");
+    public static final AntuIcon APP_INKSCAPE_48 = create("apps__48__inkscape");
+    public static final AntuIcon APP_INKSCAPE_ALT_48 = create("apps__48__inkscape-alt");
+    public static final AntuIcon APP_INKSCAPE_LOGO_48 = create("apps__48__inkscape-logo");
+    public static final AntuIcon APP_INSTAGRAM_48 = create("apps__48__instagram");
+    public static final AntuIcon APP_INSYNC_48 = create("apps__48__insync");
+    public static final AntuIcon APP_INTEL_INSTALLER_48 = create("apps__48__intel-installer");
+    public static final AntuIcon APP_INTERNET_MAIL_22 = create("apps__22__internet-mail");
+    public static final AntuIcon APP_INTERNET_MAIL_48 = create("apps__48__internet-mail");
+    public static final AntuIcon APP_INTERNET_TELEPHONY_48 = create("apps__48__internet-telephony");
+    public static final AntuIcon APP_INTERNET_WEB_BROWSER_48 = create("apps__48__internet-web-browser");
+    public static final AntuIcon APP_IRC_48 = create("apps__48__irc");
+    public static final AntuIcon APP_IRC_PROTOCOL_48 = create("apps__48__irc_protocol");
+    public static final AntuIcon APP_IRSSI_48 = create("apps__48__irssi");
+    public static final AntuIcon APP_ISTANBUL_48 = create("apps__48__istanbul");
+    public static final AntuIcon APP_ITUNES_48 = create("apps__48__itunes");
+    public static final AntuIcon APP_JABBER_48 = create("apps__48__jabber");
+    public static final AntuIcon APP_JABBER_PROTOCOL_48 = create("apps__48__jabber_protocol");
+    public static final AntuIcon APP_JABREF_48 = create("apps__48__jabref");
+    public static final AntuIcon APP_JAVA_48 = create("apps__48__java");
+    public static final AntuIcon APP_JITSI_48 = create("apps__48__jitsi");
+    public static final AntuIcon APP_JOCKEY_48 = create("apps__48__jockey");
+    public static final AntuIcon APP_JUFFED_48 = create("apps__48__juffed");
+    public static final AntuIcon APP_JUK_48 = create("apps__48__juk");
+    public static final AntuIcon APP_JUPITER_48 = create("apps__48__jupiter");
+    public static final AntuIcon APP_K3B_48 = create("apps__48__k3b");
+    public static final AntuIcon APP_K3D_48 = create("apps__48__k3d");
+    public static final AntuIcon APP_KADDRESSBOOK_48 = create("apps__48__kaddressbook");
+    public static final AntuIcon APP_KADU_48 = create("apps__48__kadu");
+    public static final AntuIcon APP_KAFFEINE_48 = create("apps__48__kaffeine");
+    public static final AntuIcon APP_KALGEBRA_48 = create("apps__48__kalgebra");
+    public static final AntuIcon APP_KAMERKA_48 = create("apps__48__kamerka");
+    public static final AntuIcon APP_KAMOSO_48 = create("apps__48__kamoso");
+    public static final AntuIcon APP_KARBON_48 = create("apps__48__karbon");
+    public static final AntuIcon APP_KATE_48 = create("apps__48__kate");
+    public static final AntuIcon APP_KATOMIC_48 = create("apps__48__katomic");
+    public static final AntuIcon APP_KBIBTEX_48 = create("apps__48__KBibTex");
+    public static final AntuIcon APP_KBLOGGER_48 = create("apps__48__kblogger");
+    public static final AntuIcon APP_KBRUCH_48 = create("apps__48__kbruch");
+    public static final AntuIcon APP_KBUGBUSTER_48 = create("apps__48__kbugbuster");
+    public static final AntuIcon APP_KCALC_48 = create("apps__48__kcalc");
+    public static final AntuIcon APP_KCHART_48 = create("apps__48__kchart");
+    public static final AntuIcon APP_KCM_SYSTEMD_48 = create("apps__48__kcm-systemd");
+    public static final AntuIcon APP_KCOLORCHOOSER_48 = create("apps__48__kcolorchooser");
+    public static final AntuIcon APP_KDCRAW_48 = create("apps__48__kdcraw");
+    public static final AntuIcon APP_KDE_22 = create("apps__22__kde");
+    public static final AntuIcon APP_KDE_48 = create("apps__48__kde");
+    public static final AntuIcon APP_KDE_GTK_CONFIG_32 = create("apps__32__kde-gtk-config");
+    public static final AntuIcon APP_KDE_GTK_CONFIG_48 = create("apps__48__kde-gtk-config");
+    public static final AntuIcon APP_KDE_SERVICES_48 = create("apps__48__kde-services");
+    public static final AntuIcon APP_KDE_WINDOWS_48 = create("apps__48__kde-windows");
+    public static final AntuIcon APP_KDEAPP_48 = create("apps__48__kdeapp");
+    public static final AntuIcon APP_KDECONNECT_32 = create("apps__32__kdeconnect");
+    public static final AntuIcon APP_KDECONNECT_48 = create("apps__48__kdeconnect");
+    public static final AntuIcon APP_KDENLIVE_48 = create("apps__48__kdenlive");
+    public static final AntuIcon APP_KDEPIM_DROPBOX_48 = create("apps__48__kdepim-dropbox");
+    public static final AntuIcon APP_KDESVN_48 = create("apps__48__kdesvn");
+    public static final AntuIcon APP_KDEVELOP_48 = create("apps__48__kdevelop");
+    public static final AntuIcon APP_KDF_48 = create("apps__48__kdf");
+    public static final AntuIcon APP_KDIFF3_48 = create("apps__48__kdiff3");
+    public static final AntuIcon APP_KDOTS_48 = create("apps__48__kdots");
+    public static final AntuIcon APP_KEEPASS_48 = create("apps__48__keepass");
+    public static final AntuIcon APP_KEEPASSX_48 = create("apps__48__keepassx");
+    public static final AntuIcon APP_KERNEL_48 = create("apps__48__kernel");
+    public static final AntuIcon APP_KEXI_48 = create("apps__48__kexi");
+    public static final AntuIcon APP_KEYSYNC_48 = create("apps__48__keysync");
+    public static final AntuIcon APP_KFILEREPLACE_48 = create("apps__48__kfilereplace");
+    public static final AntuIcon APP_KFIND_48 = create("apps__48__kfind");
+    public static final AntuIcon APP_KFONTVIEW_48 = create("apps__48__kfontview");
+    public static final AntuIcon APP_KFORMULA_48 = create("apps__48__kformula");
+    public static final AntuIcon APP_KFTPGRABBER_48 = create("apps__48__kftpgrabber");
+    public static final AntuIcon APP_KGEOGRAPHY_48 = create("apps__48__kgeography");
+    public static final AntuIcon APP_KGET_22 = create("apps__22__kget");
+    public static final AntuIcon APP_KGET_48 = create("apps__48__kget");
+    public static final AntuIcon APP_KGPG_48 = create("apps__48__kgpg");
+    public static final AntuIcon APP_KICAD_48 = create("apps__48__kicad");
+    public static final AntuIcon APP_KIG_48 = create("apps__48__kig");
+    public static final AntuIcon APP_KILE_48 = create("apps__48__kile");
+    public static final AntuIcon APP_KIMAGEMAPEDITOR_48 = create("apps__48__kimagemapeditor");
+    public static final AntuIcon APP_KINDLE_48 = create("apps__48__kindle");
+    public static final AntuIcon APP_KIPI_48 = create("apps__48__kipi");
+    public static final AntuIcon APP_KIPI_DEBIANSCREENSHOTS_48 = create("apps__48__kipi-debianscreenshots");
+    public static final AntuIcon APP_KIPI_DLNA_48 = create("apps__48__kipi-dlna");
+    public static final AntuIcon APP_KIPI_DNGCONVERTER_48 = create("apps__48__kipi-dngconverter");
+    public static final AntuIcon APP_KIPI_DROPBOX_48 = create("apps__48__kipi-dropbox");
+    public static final AntuIcon APP_KIPI_EXPOBLENDING_48 = create("apps__48__kipi-expoblending");
+    public static final AntuIcon APP_KIPI_FLASH_48 = create("apps__48__kipi-flash");
+    public static final AntuIcon APP_KIPI_GOOGLEDRIVE_48 = create("apps__48__kipi-googledrive");
+    public static final AntuIcon APP_KIPI_GPSIMAGETAG_48 = create("apps__48__kipi-gpsimagetag");
+    public static final AntuIcon APP_KIPI_HQ_48 = create("apps__48__kipi-hq");
+    public static final AntuIcon APP_KIPI_IMAGESHACK_48 = create("apps__48__kipi-imageshack");
+    public static final AntuIcon APP_KIPI_IMGUR_48 = create("apps__48__kipi-imgur");
+    public static final AntuIcon APP_KIPI_JALBUM_48 = create("apps__48__kipi-jalbum");
+    public static final AntuIcon APP_KIPI_METADATAEDIT_48 = create("apps__48__kipi-metadataedit");
+    public static final AntuIcon APP_KIPI_OGL_48 = create("apps__48__kipi-ogl");
+    public static final AntuIcon APP_KIPI_PANORAMA_48 = create("apps__48__kipi-panorama");
+    public static final AntuIcon APP_KIPI_RAJCE_48 = create("apps__48__kipi-rajce");
+    public static final AntuIcon APP_KIPI_SHWUP_48 = create("apps__48__kipi-shwup");
+    public static final AntuIcon APP_KIPI_SLIDESHOW_48 = create("apps__48__kipi-slideshow");
+    public static final AntuIcon APP_KIPI_SMUGMUG_48 = create("apps__48__kipi-smugmug");
+    public static final AntuIcon APP_KIPI_TIMEADJUST_48 = create("apps__48__kipi-timeadjust");
+    public static final AntuIcon APP_KITEN_48 = create("apps__48__kiten");
+    public static final AntuIcon APP_KIVIO_48 = create("apps__48__kivio");
+    public static final AntuIcon APP_KJOTS_48 = create("apps__48__kjots");
+    public static final AntuIcon APP_KJOURNAL_48 = create("apps__48__kjournal");
+    public static final AntuIcon APP_KLEOPATRA_48 = create("apps__48__kleopatra");
+    public static final AntuIcon APP_KLINKSTATUS_48 = create("apps__48__klinkstatus");
+    public static final AntuIcon APP_KLIPPER_48 = create("apps__48__klipper");
+    public static final AntuIcon APP_KMAG_48 = create("apps__48__kmag");
+    public static final AntuIcon APP_KMAIL_48 = create("apps__48__kmail");
+    public static final AntuIcon APP_KMAIL2_48 = create("apps__48__kmail2");
+    public static final AntuIcon APP_KMENUEDIT_48 = create("apps__48__kmenuedit");
+    public static final AntuIcon APP_KMIX_48 = create("apps__48__kmix");
+    public static final AntuIcon APP_KMLDONKEY_48 = create("apps__48__kmldonkey");
+    public static final AntuIcon APP_KMOUSETOOL_48 = create("apps__48__kmousetool");
+    public static final AntuIcon APP_KMOUTH_48 = create("apps__48__kmouth");
+    public static final AntuIcon APP_KMPLAYER_48 = create("apps__48__kmplayer");
+    public static final AntuIcon APP_KMPLOT_48 = create("apps__48__kmplot");
+    public static final AntuIcon APP_KMYMONEY_48 = create("apps__48__kmymoney");
+    public static final AntuIcon APP_KNEMO_48 = create("apps__48__knemo");
+    public static final AntuIcon APP_KNETATTACH_48 = create("apps__48__knetattach");
+    public static final AntuIcon APP_KNEWSTICKER_48 = create("apps__48__knewsticker");
+    public static final AntuIcon APP_KNODE_48 = create("apps__48__knode");
+    public static final AntuIcon APP_KNOTES_48 = create("apps__48__knotes");
+    public static final AntuIcon APP_KODI_48 = create("apps__48__kodi");
+    public static final AntuIcon APP_KOLAB_48 = create("apps__48__kolab");
+    public static final AntuIcon APP_KOMODO_48 = create("apps__48__komodo");
+    public static final AntuIcon APP_KOMPARE_48 = create("apps__48__kompare");
+    public static final AntuIcon APP_KOMPOZER_48 = create("apps__48__kompozer");
+    public static final AntuIcon APP_KONQUEROR_48 = create("apps__48__konqueror");
+    public static final AntuIcon APP_KONSTRUKTOR_48 = create("apps__48__konstruktor");
+    public static final AntuIcon APP_KONTACT_48 = create("apps__48__kontact");
+    public static final AntuIcon APP_KONTACT_IMPORT_WIZARD_48 = create("apps__48__kontact-import-wizard");
+    public static final AntuIcon APP_KONVERSATION_48 = create("apps__48__konversation");
+    public static final AntuIcon APP_KOPETE_48 = create("apps__48__kopete");
+    public static final AntuIcon APP_KOPETE_OFFLINE_48 = create("apps__48__kopete-offline");
+    public static final AntuIcon APP_KORG_JOURNAL_48 = create("apps__48__korg-journal");
+    public static final AntuIcon APP_KORG_TODO_22 = create("apps__22__korg-todo");
+    public static final AntuIcon APP_KORG_TODO_48 = create("apps__48__korg-todo");
+    public static final AntuIcon APP_KORGAC_48 = create("apps__48__korgac");
+    public static final AntuIcon APP_KORGANIZER_48 = create("apps__48__korganizer");
+    public static final AntuIcon APP_KPACKAGE_48 = create("apps__48__kpackage");
+    public static final AntuIcon APP_KPAGER_48 = create("apps__48__kpager");
+    public static final AntuIcon APP_KPAT_48 = create("apps__48__kpat");
+    public static final AntuIcon APP_KPLATO_48 = create("apps__48__kplato");
+    public static final AntuIcon APP_KPRESENTER_48 = create("apps__48__kpresenter");
+    public static final AntuIcon APP_KRAFT_48 = create("apps__48__kraft");
+    public static final AntuIcon APP_KRDC_48 = create("apps__48__krdc");
+    public static final AntuIcon APP_KRECIPES_48 = create("apps__48__krecipes");
+    public static final AntuIcon APP_KRENAME_48 = create("apps__48__krename");
+    public static final AntuIcon APP_KRFB_48 = create("apps__48__krfb");
+    public static final AntuIcon APP_KRITA_48 = create("apps__48__krita");
+    public static final AntuIcon APP_KRITAGEMINI_48 = create("apps__48__kritagemini");
+    public static final AntuIcon APP_KRITASKETCH_48 = create("apps__48__kritasketch");
+    public static final AntuIcon APP_KRONOMETER_48 = create("apps__48__kronometer");
+    public static final AntuIcon APP_KRULER_48 = create("apps__48__kruler");
+    public static final AntuIcon APP_KRUSADER_48 = create("apps__48__krusader");
+    public static final AntuIcon APP_KRUSADER_ROOT_2_48 = create("apps__48__krusader-root-2");
+    public static final AntuIcon APP_KRUSADER_ROOT_48 = create("apps__48__krusader-root");
+    public static final AntuIcon APP_KRUSADER_USER_48 = create("apps__48__krusader_user");
+    public static final AntuIcon APP_KSCD_48 = create("apps__48__kscd");
+    public static final AntuIcon APP_KSNAPSHOT_48 = create("apps__48__ksnapshot");
+    public static final AntuIcon APP_KSNIFFER_48 = create("apps__48__ksniffer");
+    public static final AntuIcon APP_KSPREAD_48 = create("apps__48__kspread");
+    public static final AntuIcon APP_KSUDOKU_48 = create("apps__48__ksudoku");
+    public static final AntuIcon APP_KSYSGUARDD_48 = create("apps__48__ksysguardd");
+    public static final AntuIcon APP_KTEATIME_48 = create("apps__48__kteatime");
+    public static final AntuIcon APP_KTHESAURUS_48 = create("apps__48__kthesaurus");
+    public static final AntuIcon APP_KTIP_48 = create("apps__48__ktip");
+    public static final AntuIcon APP_KTORRENT_22 = create("apps__22__ktorrent");
+    public static final AntuIcon APP_KTORRENT_48 = create("apps__48__ktorrent");
+    public static final AntuIcon APP_KTP_CONTACTLIST_48 = create("apps__48__ktp-contactlist");
+    public static final AntuIcon APP_KTURTLE_48 = create("apps__48__kturtle");
+    public static final AntuIcon APP_KUAIPAN4UK_48 = create("apps__48__kuaipan4uk");
+    public static final AntuIcon APP_KUICKSHOW_48 = create("apps__48__kuickshow");
+    public static final AntuIcon APP_KUP_48 = create("apps__48__kup");
+    public static final AntuIcon APP_KUPFER_48 = create("apps__48__kupfer");
+    public static final AntuIcon APP_KVANTUMMANAGER_48 = create("apps__48__kvantummanager");
+    public static final AntuIcon APP_KVERBOS_48 = create("apps__48__kverbos");
+    public static final AntuIcon APP_KWALLETMANAGER_48 = create("apps__48__kwalletmanager");
+    public static final AntuIcon APP_KWALLETMANAGER2_48 = create("apps__48__kwalletmanager2");
+    public static final AntuIcon APP_KWIKDISK_48 = create("apps__48__kwikdisk");
+    public static final AntuIcon APP_KWIN_48 = create("apps__48__kwin");
+    public static final AntuIcon APP_KWORD_48 = create("apps__48__kword");
+    public static final AntuIcon APP_KWPLAYER_48 = create("apps__48__kwplayer");
+    public static final AntuIcon APP_KWRITE_48 = create("apps__48__kwrite");
+    public static final AntuIcon APP_LABPLOT_48 = create("apps__48__labplot");
+    public static final AntuIcon APP_LANCELOT_48 = create("apps__48__lancelot");
+    public static final AntuIcon APP_LANCELOT_START_48 = create("apps__48__lancelot-start");
+    public static final AntuIcon APP_LASTFM_48 = create("apps__48__lastfm");
+    public static final AntuIcon APP_LASTPASS_VAULT_48 = create("apps__48__lastpass-vault");
+    public static final AntuIcon APP_LAUNCHPAD_LAUNCHPAD_NET_48 = create("apps__48__Launchpad-launchpad.net");
+    public static final AntuIcon APP_LAZARUS_48 = create("apps__48__lazarus");
+    public static final AntuIcon APP_LDLITE_48 = create("apps__48__ldlite");
+    public static final AntuIcon APP_LDVIEW_48 = create("apps__48__ldview");
+    public static final AntuIcon APP_LEOCAD_48 = create("apps__48__leocad");
+    public static final AntuIcon APP_LIBRARY_INTERNET_RADIO_48 = create("apps__48__library-internet-radio");
+    public static final AntuIcon APP_LIBRECAD_48 = create("apps__48__librecad");
+    public static final AntuIcon APP_LIBREOFFICE_BASE_48 = create("apps__48__libreoffice-base");
+    public static final AntuIcon APP_LIBREOFFICE_CALC_48 = create("apps__48__libreoffice-calc");
+    public static final AntuIcon APP_LIBREOFFICE_DRAW_48 = create("apps__48__libreoffice-draw");
+    public static final AntuIcon APP_LIBREOFFICE_IMPRESS_48 = create("apps__48__libreoffice-impress");
+    public static final AntuIcon APP_LIBREOFFICE_MAIN_48 = create("apps__48__libreoffice-main");
+    public static final AntuIcon APP_LIBREOFFICE_MATH_48 = create("apps__48__libreoffice-math");
+    public static final AntuIcon APP_LIBREOFFICE_PRINTERADMIN_48 = create("apps__48__libreoffice-printeradmin");
+    public static final AntuIcon APP_LIBREOFFICE_STARCENTER_48 = create("apps__48__libreoffice-starcenter");
+    public static final AntuIcon APP_LIBREOFFICE_STARTCENTER_48 = create("apps__48__libreoffice-startcenter");
+    public static final AntuIcon APP_LIBREOFFICE_WRITER_48 = create("apps__48__libreoffice-writer");
+    public static final AntuIcon APP_LIGHTSOFF_48 = create("apps__48__Lightsoff");
+    public static final AntuIcon APP_LIGHTWORKS_48 = create("apps__48__lightworks");
+    public static final AntuIcon APP_LIGHTZONE_48 = create("apps__48__lightzone");
+    public static final AntuIcon APP_LINGUIST_48 = create("apps__48__linguist");
+    public static final AntuIcon APP_LINGUIST_QT4_48 = create("apps__48__linguist-qt4");
+    public static final AntuIcon APP_LINGUIST_QT5_48 = create("apps__48__linguist-qt5");
+    public static final AntuIcon APP_LINGUISTIC_48 = create("apps__48__linguistic");
+    public static final AntuIcon APP_LINKEDIN_48 = create("apps__48__linkedin");
+    public static final AntuIcon APP_LIVE_48 = create("apps__48__live");
+    public static final AntuIcon APP_LIVEINST_48 = create("apps__48__liveinst");
+    public static final AntuIcon APP_LIVES_48 = create("apps__48__lives");
+    public static final AntuIcon APP_LIVEUSB_CREATOR_48 = create("apps__48__liveusb-creator");
+    public static final AntuIcon APP_LOGOQLE2_48 = create("apps__48__logoqle2");
+    public static final AntuIcon APP_LOGVIEWER_48 = create("apps__48__logviewer");
+    public static final AntuIcon APP_LOKALIZE_48 = create("apps__48__lokalize");
+    public static final AntuIcon APP_LORDOFULTIMA_48 = create("apps__48__lordofultima");
+    public static final AntuIcon APP_LOVE_APP_48 = create("apps__48__love-app");
+    public static final AntuIcon APP_LPUB_48 = create("apps__48__lpub");
+    public static final AntuIcon APP_LTICON_48 = create("apps__48__lticon");
+    public static final AntuIcon APP_LUNA_48 = create("apps__48__luna");
+    public static final AntuIcon APP_LYX_48 = create("apps__48__lyx");
+    public static final AntuIcon APP_M64PY_48 = create("apps__48__m64py");
+    public static final AntuIcon APP_MAHJONGG_48 = create("apps__48__mahjongg");
+    public static final AntuIcon APP_MAIL_CLIENT_48 = create("apps__48__mail-client");
+    public static final AntuIcon APP_MAILRU_MAIL_RU_48 = create("apps__48__mailru-mail.ru");
+    public static final AntuIcon APP_MAKEHUMAN_48 = create("apps__48__makehuman");
+    public static final AntuIcon APP_MAMEEXECUTOR_48 = create("apps__48__mameexecutor");
+    public static final AntuIcon APP_MANSA_48 = create("apps__48__mansa");
+    public static final AntuIcon APP_MAPS_48 = create("apps__48__maps");
+    public static final AntuIcon APP_MARBLE_48 = create("apps__48__marble");
+    public static final AntuIcon APP_MASTER_PDF_EDITOR_48 = create("apps__48__master-pdf-editor");
+    public static final AntuIcon APP_MASTERPDFEDITOR_48 = create("apps__48__masterpdfeditor");
+    public static final AntuIcon APP_MATHEMATICA_48 = create("apps__48__mathematica");
+    public static final AntuIcon APP_MATLAB_48 = create("apps__48__matlab");
+    public static final AntuIcon APP_MAXTHON_BROWSER_48 = create("apps__48__maxthon-browser");
+    public static final AntuIcon APP_MCOMIX_48 = create("apps__48__mcomix");
+    public static final AntuIcon APP_MEDIA_PLAYER_BANSHEE_48 = create("apps__48__media-player-banshee");
+    public static final AntuIcon APP_MEDIAINFO_GUI_48 = create("apps__48__mediainfo-gui");
+    public static final AntuIcon APP_MEGASYNC_48 = create("apps__48__megasync");
+    public static final AntuIcon APP_MELD_48 = create("apps__48__meld");
+    public static final AntuIcon APP_MELLOWPLAYER_48 = create("apps__48__mellowplayer");
+    public static final AntuIcon APP_MENDELEY_48 = create("apps__48__mendeley");
+    public static final AntuIcon APP_MENU_EDITOR_48 = create("apps__48__menu-editor");
+    public static final AntuIcon APP_MIDORI_48 = create("apps__48__midori");
+    public static final AntuIcon APP_MINITUBE_48 = create("apps__48__minitube");
+    public static final AntuIcon APP_MIRROR_CHECK_48 = create("apps__48__mirror-check");
+    public static final AntuIcon APP_MKVMERGE_48 = create("apps__48__mkvmerge");
+    public static final AntuIcon APP_MKVTOOLNIX_GUI_48 = create("apps__48__mkvtoolnix-gui");
+    public static final AntuIcon APP_MLCAD_48 = create("apps__48__mlcad");
+    public static final AntuIcon APP_MODELIO_48 = create("apps__48__modelio");
+    public static final AntuIcon APP_MODEMMANAGER_48 = create("apps__48__ModemManager");
+    public static final AntuIcon APP_MOINMOIN_48 = create("apps__48__moinmoin");
+    public static final AntuIcon APP_MONGODB_48 = create("apps__48__mongodb");
+    public static final AntuIcon APP_MONODEVELOP_48 = create("apps__48__monodevelop");
+    public static final AntuIcon APP_MOVIE_EDITOR_48 = create("apps__48__movie-editor");
+    public static final AntuIcon APP_MPLAYER_48 = create("apps__48__mplayer");
+    public static final AntuIcon APP_MPV_48 = create("apps__48__mpv");
+    public static final AntuIcon APP_MS_EXCEL_48 = create("apps__48__ms-excel");
+    public static final AntuIcon APP_MS_ONENOTE_48 = create("apps__48__ms-onenote");
+    public static final AntuIcon APP_MS_POWERPOINT_48 = create("apps__48__ms-powerpoint");
+    public static final AntuIcon APP_MS_WORD_48 = create("apps__48__ms-word");
+    public static final AntuIcon APP_MSN_PROTOCOL_48 = create("apps__48__msn_protocol");
+    public static final AntuIcon APP_MULTIMEDIA_VOLUME_CONTROL_48 = create("apps__48__multimedia-volume-control");
+    public static final AntuIcon APP_MULTISYSTEM_48 = create("apps__48__multisystem");
+    public static final AntuIcon APP_MUMBLE_48 = create("apps__48__mumble");
+    public static final AntuIcon APP_MUON_48 = create("apps__48__muon");
+    public static final AntuIcon APP_MUONDISCOVER_48 = create("apps__48__muondiscover");
+    public static final AntuIcon APP_MUPEN64PLUS_48 = create("apps__48__mupen64plus");
+    public static final AntuIcon APP_MUSESCORE_48 = create("apps__48__musescore");
+    public static final AntuIcon APP_MUSICBRAINZ_48 = create("apps__48__musicbrainz");
+    public static final AntuIcon APP_MUSICTUBE_48 = create("apps__48__musictube");
+    public static final AntuIcon APP_MUSIQUE_48 = create("apps__48__musique");
+    public static final AntuIcon APP_MYSMS_48 = create("apps__48__mysms");
+    public static final AntuIcon APP_MYSQL_WORKBENCH_48 = create("apps__48__mysql-workbench");
+    public static final AntuIcon APP_NAVICAT_48 = create("apps__48__navicat");
+    public static final AntuIcon APP_NEMIVER_48 = create("apps__48__nemiver");
+    public static final AntuIcon APP_NEPOMUK_16 = create("apps__16__nepomuk");
+    public static final AntuIcon APP_NEPOMUK_32 = create("apps__32__nepomuk");
+    public static final AntuIcon APP_NEPOMUK_48 = create("apps__48__nepomuk");
+    public static final AntuIcon APP_NETBEANS_48 = create("apps__48__netbeans");
+    public static final AntuIcon APP_NETBEANS_BETA_48 = create("apps__48__netbeans-beta");
+    public static final AntuIcon APP_NETBEANS_IDE_48 = create("apps__48__netbeans-ide");
+    public static final AntuIcon APP_NETFLIX_DESKTOP_48 = create("apps__48__netflix-desktop");
+    public static final AntuIcon APP_NETWORK_MANAGER_48 = create("apps__48__network-manager");
+    public static final AntuIcon APP_NEVERBALL_48 = create("apps__48__neverball");
+    public static final AntuIcon APP_NEVERPUTT_48 = create("apps__48__neverputt");
+    public static final AntuIcon APP_NEWSBLUR_48 = create("apps__48__newsblur");
+    public static final AntuIcon APP_NEXUIZ_48 = create("apps__48__nexuiz");
+    public static final AntuIcon APP_NINJA_IDE_48 = create("apps__48__ninja-ide");
+    public static final AntuIcon APP_NITRO_48 = create("apps__48__nitro");
+    public static final AntuIcon APP_NITROGEN_48 = create("apps__48__nitrogen");
+    public static final AntuIcon APP_NITROSHARE_48 = create("apps__48__nitroshare");
+    public static final AntuIcon APP_NITROTASKS_48 = create("apps__48__nitrotasks");
+    public static final AntuIcon APP_NM_DEVICE_WIRELESS_48 = create("apps__48__nm-device-wireless");
+    public static final AntuIcon APP_NMAP_48 = create("apps__48__nmap");
+    public static final AntuIcon APP_NMAP_ICON_48 = create("apps__48__nmap_icon");
+    public static final AntuIcon APP_NOMACS_48 = create("apps__48__nomacs");
+    public static final AntuIcon APP_NOTIFYOSDCONF_48 = create("apps__48__notifyosdconf");
+    public static final AntuIcon APP_NTFS_CONFIG_48 = create("apps__48__ntfs-config");
+    public static final AntuIcon APP_NUVOLAPLAYER_48 = create("apps__48__nuvolaplayer");
+    public static final AntuIcon APP_NVCLOCK_48 = create("apps__48__nvclock");
+    public static final AntuIcon APP_NVDOCK_48 = create("apps__48__nvdock");
+    public static final AntuIcon APP_NVIDIA_310_SETTINGS_48 = create("apps__48__nvidia-310-settings");
+    public static final AntuIcon APP_NVIDIA_48 = create("apps__48__nvidia");
+    public static final AntuIcon APP_NVIDIA_CURRENT_SETTINGS_48 = create("apps__48__nvidia-current-settings");
+    public static final AntuIcon APP_NVIDIA_CURRENT_UPDATES_SETTINGS_48 = create("apps__48__nvidia-current-updates-settings");
+    public static final AntuIcon APP_NVIDIA_DRIVERS_SETTINGS_48 = create("apps__48__nvidia-drivers-settings");
+    public static final AntuIcon APP_NVIDIA_SETTINGS_48 = create("apps__48__nvidia-settings");
+    public static final AntuIcon APP_NVIDIA_X_SERVER_SETTING_48 = create("apps__48__nvidia-x-server-setting");
+    public static final AntuIcon APP_NVIDIA_X_SERVER_SETTINGS_48 = create("apps__48__nvidia-x-server-settings");
+    public static final AntuIcon APP_NYLAS_48 = create("apps__48__nylas");
+    public static final AntuIcon APP_OCENAUDIO_48 = create("apps__48__ocenaudio");
+    public static final AntuIcon APP_OCTAVE_48 = create("apps__48__octave");
+    public static final AntuIcon APP_OCTAVE_ICON_48 = create("apps__48__octave-icon");
+    public static final AntuIcon APP_OCTAVE_LOGO_48 = create("apps__48__octave-logo");
+    public static final AntuIcon APP_OCTOPI_48 = create("apps__48__octopi");
+    public static final AntuIcon APP_OCTOPI_NOTIFIER_48 = create("apps__48__octopi-notifier");
+    public static final AntuIcon APP_OCTOPI_PANEL_48 = create("apps__48__octopi-panel");
+    public static final AntuIcon APP_OCTOPI_RED_48 = create("apps__48__octopi_red");
+    public static final AntuIcon APP_OCTOPI_YELLOW_48 = create("apps__48__octopi_yellow");
+    public static final AntuIcon APP_OCTOPI2_48 = create("apps__48__octopi2");
+    public static final AntuIcon APP_OFFICE_ADDRESS_BOOK_48 = create("apps__48__office-address-book");
+    public static final AntuIcon APP_OFFICE_CALENDAR_48 = create("apps__48__office-calendar");
+    public static final AntuIcon APP_OFFICE_PRINTER_48 = create("apps__48__office-printer");
+    public static final AntuIcon APP_OKTETA_48 = create("apps__48__okteta");
+    public static final AntuIcon APP_OKULAR_48 = create("apps__48__okular");
+    public static final AntuIcon APP_OMEGAT_48 = create("apps__48__omegat");
+    public static final AntuIcon APP_ONBOARD_48 = create("apps__48__onboard");
+    public static final AntuIcon APP_ONBOARD_SETTINGS_48 = create("apps__48__onboard-settings");
+    public static final AntuIcon APP_ONEDRIVE_48 = create("apps__48__onedrive");
+    public static final AntuIcon APP_OOO_48 = create("apps__48__ooo");
+    public static final AntuIcon APP_OPENARENA_48 = create("apps__48__openarena");
+    public static final AntuIcon APP_OPENBRAVO_ERP_48 = create("apps__48__openbravo-erp");
+    public static final AntuIcon APP_OPENJDK_6_48 = create("apps__48__openjdk-6");
+    public static final AntuIcon APP_OPENJDK_7_48 = create("apps__48__openjdk-7");
+    public static final AntuIcon APP_OPENJDK_8_48 = create("apps__48__openjdk-8");
+    public static final AntuIcon APP_OPENSCAD_48 = create("apps__48__openscad");
+    public static final AntuIcon APP_OPENSHOT_48 = create("apps__48__openshot");
+    public static final AntuIcon APP_OPENTTD_48 = create("apps__48__openttd");
+    public static final AntuIcon APP_OPERA_48 = create("apps__48__opera");
+    public static final AntuIcon APP_OPERA_BETA_48 = create("apps__48__opera-beta");
+    public static final AntuIcon APP_OPERA_DEVELOPER_48 = create("apps__48__opera-developer");
+    public static final AntuIcon APP_OPERA_NEXT_BROWSER_48 = create("apps__48__opera-next-browser");
+    public static final AntuIcon APP_OPERA_WIDGET_48 = create("apps__48__opera-widget");
+    public static final AntuIcon APP_OTHMAN_BROWSER_48 = create("apps__48__othman-browser");
+    public static final AntuIcon APP_OTTER_BROWSER_48 = create("apps__48__otter-browser");
+    public static final AntuIcon APP_OUTLOOK_48 = create("apps__48__outlook");
+    public static final AntuIcon APP_OX_48 = create("apps__48__ox");
+    public static final AntuIcon APP_OXYGEN_48 = create("apps__48__oxygen");
+    public static final AntuIcon APP_PACKAGE_ADMINISTRATION_48 = create("apps__48__package_administration");
+    public static final AntuIcon APP_PACKAGE_DEVELOPMENT_DEBUGGER_48 = create("apps__48__package_development_debugger");
+    public static final AntuIcon APP_PACKAGE_DEVELOPMENT_TOOLS_48 = create("apps__48__package_development_tools");
+    public static final AntuIcon APP_PACKAGE_DEVELOPMENT_TRANSLATION_48 = create("apps__48__package_development_translation");
+    public static final AntuIcon APP_PACKAGE_EDUTAINMENT_ASTRONOMY_48 = create("apps__48__package_edutainment_astronomy");
+    public static final AntuIcon APP_PACKAGE_EDUTAINMENT_CHEMICAL_48 = create("apps__48__package_edutainment_chemical");
+    public static final AntuIcon APP_PACKAGE_EDUTAINMENT_SCIENCE_48 = create("apps__48__package_edutainment_science");
+    public static final AntuIcon APP_PACKAGE_MULTIMEDIA_48 = create("apps__48__package_multimedia");
+    public static final AntuIcon APP_PACKAGE_SETTINGS_48 = create("apps__48__package_settings");
+    public static final AntuIcon APP_PALEMOON_48 = create("apps__48__palemoon");
+    public static final AntuIcon APP_PARAVIEW_48 = create("apps__48__paraview");
+    public static final AntuIcon APP_PARTITIONMANAGER_48 = create("apps__48__partitionmanager");
+    public static final AntuIcon APP_PASSWORD_48 = create("apps__48__password");
+    public static final AntuIcon APP_PASSWORD_MANAGER_48 = create("apps__48__password-manager");
+    public static final AntuIcon APP_PASSWORDS_48 = create("apps__48__passwords");
+    public static final AntuIcon APP_PATCHAGE_48 = create("apps__48__patchage");
+    public static final AntuIcon APP_PAVUMETER_48 = create("apps__48__pavumeter");
+    public static final AntuIcon APP_PAYPAL_48 = create("apps__48__paypal");
+    public static final AntuIcon APP_PCSX_ICON_48 = create("apps__48__pcsx-icon");
+    public static final AntuIcon APP_PCSX2_48 = create("apps__48__pcsx2");
+    public static final AntuIcon APP_PDFMOD_48 = create("apps__48__pdfmod");
+    public static final AntuIcon APP_PENCIL_48 = create("apps__48__pencil");
+    public static final AntuIcon APP_PGADMIN_48 = create("apps__48__pgadmin");
+    public static final AntuIcon APP_PGLGUI_48 = create("apps__48__pglgui");
+    public static final AntuIcon APP_PHATCH_48 = create("apps__48__phatch");
+    public static final AntuIcon APP_PHATCH_INSPECTOR_48 = create("apps__48__phatch-inspector");
+    public static final AntuIcon APP_PHONON_GSTREAMER_48 = create("apps__48__phonon-gstreamer");
+    public static final AntuIcon APP_PHOTOFILMSTRIP_48 = create("apps__48__photofilmstrip");
+    public static final AntuIcon APP_PHOTOLAYOUTSEDITOR_48 = create("apps__48__photolayoutseditor");
+    public static final AntuIcon APP_PHOTOQT_48 = create("apps__48__photoqt");
+    public static final AntuIcon APP_PHP_48 = create("apps__48__php");
+    public static final AntuIcon APP_PHPMYADMIN_48 = create("apps__48__phpmyadmin");
+    public static final AntuIcon APP_PICARD_48 = create("apps__48__picard");
+    public static final AntuIcon APP_PICASA_48 = create("apps__48__picasa");
+    public static final AntuIcon APP_PICMI_48 = create("apps__48__picmi");
+    public static final AntuIcon APP_PIDGIN_48 = create("apps__48__pidgin");
+    public static final AntuIcon APP_PIMSETTINGEXPORTER_48 = create("apps__48__pimsettingexporter");
+    public static final AntuIcon APP_PINO_48 = create("apps__48__pino");
+    public static final AntuIcon APP_PLAN_48 = create("apps__48__plan");
+    public static final AntuIcon APP_PLANK_48 = create("apps__48__plank");
+    public static final AntuIcon APP_PLANK_CONFIG_48 = create("apps__48__plank-config");
+    public static final AntuIcon APP_PLANNER_48 = create("apps__48__planner");
+    public static final AntuIcon APP_PLANWORK_48 = create("apps__48__planwork");
+    public static final AntuIcon APP_PLASMA_32 = create("apps__32__plasma");
+    public static final AntuIcon APP_PLASMA_48 = create("apps__48__plasma");
+    public static final AntuIcon APP_PLASMA_MEDIA_CENTER_48 = create("apps__48__plasma-media-center");
+    public static final AntuIcon APP_PLASMA_MOBILE_PHONE_48 = create("apps__48__plasma-mobile-phone");
+    public static final AntuIcon APP_PLASMA_SEARCH_32 = create("apps__32__plasma-search");
+    public static final AntuIcon APP_PLASMA_SEARCH_48 = create("apps__48__plasma-search");
+    public static final AntuIcon APP_PLASMAGIK_48 = create("apps__48__plasmagik");
+    public static final AntuIcon APP_PLAY_STORE_48 = create("apps__48__play-store");
+    public static final AntuIcon APP_PLEXHOMETHEATER_48 = create("apps__48__plexhometheater");
+    public static final AntuIcon APP_PLEXMEDIAMANAGER_48 = create("apps__48__plexmediamanager");
+    public static final AntuIcon APP_PLV_48 = create("apps__48__plv");
+    public static final AntuIcon APP_POCKET_48 = create("apps__48__pocket");
+    public static final AntuIcon APP_PODCAST_48 = create("apps__48__podcast");
+    public static final AntuIcon APP_PODCAST_AMAROK_32 = create("apps__32__podcast-amarok");
+    public static final AntuIcon APP_PODCAST_AMAROK_48 = create("apps__48__podcast-amarok");
+    public static final AntuIcon APP_POPCORN_TIME_48 = create("apps__48__popcorn-time");
+    public static final AntuIcon APP_POPCORNTIME_48 = create("apps__48__popcorntime");
+    public static final AntuIcon APP_POSTMAN_IMAGE_UPLOADER_48 = create("apps__48__postman-image-uploader");
+    public static final AntuIcon APP_POWDER_TOY_48 = create("apps__48__powder-toy");
+    public static final AntuIcon APP_PRAGHA_48 = create("apps__48__pragha");
+    public static final AntuIcon APP_PREFERENCES_CONTACT_LIST_32 = create("apps__32__preferences-contact-list");
+    public static final AntuIcon APP_PREFERENCES_CONTACT_LIST_48 = create("apps__48__preferences-contact-list");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_32 = create("apps__32__preferences-desktop");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_48 = create("apps__48__preferences-desktop");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_ACCESSIBILITY_32 = create("apps__32__preferences-desktop-accessibility");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_ACCESSIBILITY_48 = create("apps__48__preferences-desktop-accessibility");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_BALOO_32 = create("apps__32__preferences-desktop-baloo");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_BALOO_48 = create("apps__48__preferences-desktop-baloo");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_COLOR_32 = create("apps__32__preferences-desktop-color");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_COLOR_48 = create("apps__48__preferences-desktop-color");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_CRYPTOGRAPHY_32 = create("apps__32__preferences-desktop-cryptography");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_CRYPTOGRAPHY_48 = create("apps__48__preferences-desktop-cryptography");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_DEFAULT_APPLICATIONS_32 = create("apps__32__preferences-desktop-default-applications");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_DEFAULT_APPLICATIONS_48 = create("apps__48__preferences-desktop-default-applications");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_DISPLAY_32 = create("apps__32__preferences-desktop-display");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_DISPLAY_48 = create("apps__48__preferences-desktop-display");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_DISPLAY_COLOR_32 = create("apps__32__preferences-desktop-display-color");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_DISPLAY_COLOR_48 = create("apps__48__preferences-desktop-display-color");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_EFFECTS_48 = create("apps__48__preferences-desktop-effects");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_EMOTICONS_32 = create("apps__32__preferences-desktop-emoticons");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_EMOTICONS_48 = create("apps__48__preferences-desktop-emoticons");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_FILETYPE_ASSOCIATION_32 = create("apps__32__preferences-desktop-filetype-association");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_FILETYPE_ASSOCIATION_48 = create("apps__48__preferences-desktop-filetype-association");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_FONT_22 = create("apps__22__preferences-desktop-font");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_FONT_32 = create("apps__32__preferences-desktop-font");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_FONT_48 = create("apps__48__preferences-desktop-font");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_FONT_INSTALLER_32 = create("apps__32__preferences-desktop-font-installer");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_FONT_INSTALLER_48 = create("apps__48__preferences-desktop-font-installer");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_GAMING_32 = create("apps__32__preferences-desktop-gaming");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_GAMING_48 = create("apps__48__preferences-desktop-gaming");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_ICONS_32 = create("apps__32__preferences-desktop-icons");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_ICONS_48 = create("apps__48__preferences-desktop-icons");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_KEYBOARD_32 = create("apps__32__preferences-desktop-keyboard");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_KEYBOARD_48 = create("apps__48__preferences-desktop-keyboard");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_KEYBOARD_SHORTCUTS_48 = create("apps__48__preferences-desktop-keyboard-shortcuts");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_LAUNCH_FEEDBACK_32 = create("apps__32__preferences-desktop-launch-feedback");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_LAUNCH_FEEDBACK_48 = create("apps__48__preferences-desktop-launch-feedback");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_LOCALE_32 = create("apps__32__preferences-desktop-locale");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_LOCALE_48 = create("apps__48__preferences-desktop-locale");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_MOUSE_32 = create("apps__32__preferences-desktop-mouse");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_MOUSE_48 = create("apps__48__preferences-desktop-mouse");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_MULTIMEDIA_32 = create("apps__32__preferences-desktop-multimedia");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_MULTIMEDIA_48 = create("apps__48__preferences-desktop-multimedia");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_NOTIFICATION_32 = create("apps__32__preferences-desktop-notification");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_NOTIFICATION_48 = create("apps__48__preferences-desktop-notification");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_NOTIFICATION_BELL_32 = create("apps__32__preferences-desktop-notification-bell");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_NOTIFICATION_BELL_48 = create("apps__48__preferences-desktop-notification-bell");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_ONLINE_ACCOUNTS_48 = create("apps__48__preferences-desktop-online-accounts");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_PERIPHERALS_32 = create("apps__32__preferences-desktop-peripherals");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_PERIPHERALS_48 = create("apps__48__preferences-desktop-peripherals");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_PERSONAL_48 = create("apps__48__preferences-desktop-personal");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_PLASMA_32 = create("apps__32__preferences-desktop-plasma");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_PLASMA_48 = create("apps__48__preferences-desktop-plasma");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_PRINTER_48 = create("apps__48__preferences-desktop-printer");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_REMOTE_DESKTOP_48 = create("apps__48__preferences-desktop-remote-desktop");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_SCREENSAVER_32 = create("apps__32__preferences-desktop-screensaver");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_SCREENSAVER_48 = create("apps__48__preferences-desktop-screensaver");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_SEARCH_48 = create("apps__48__preferences-desktop-search");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_SOUND_32 = create("apps__32__preferences-desktop-sound");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_SOUND_48 = create("apps__48__preferences-desktop-sound");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_TEXT_TO_SPEECH_32 = create("apps__32__preferences-desktop-text-to-speech");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_TEXT_TO_SPEECH_48 = create("apps__48__preferences-desktop-text-to-speech");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_THEME_32 = create("apps__32__preferences-desktop-theme");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_THEME_48 = create("apps__48__preferences-desktop-theme");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_USER_32 = create("apps__32__preferences-desktop-user");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_USER_48 = create("apps__48__preferences-desktop-user");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_USER_PASSWORD_32 = create("apps__32__preferences-desktop-user-password");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_USER_PASSWORD_48 = create("apps__48__preferences-desktop-user-password");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_WALLPAPER_32 = create("apps__32__preferences-desktop-wallpaper");
+    public static final AntuIcon APP_PREFERENCES_DESKTOP_WALLPAPER_48 = create("apps__48__preferences-desktop-wallpaper");
+    public static final AntuIcon APP_PREFERENCES_DRIVER_48 = create("apps__48__preferences-driver");
+    public static final AntuIcon APP_PREFERENCES_GTK_CONFIG_32 = create("apps__32__preferences-gtk-config");
+    public static final AntuIcon APP_PREFERENCES_GTK_CONFIG_48 = create("apps__48__preferences-gtk-config");
+    public static final AntuIcon APP_PREFERENCES_KCALC_CONSTANTS_48 = create("apps__48__preferences-kcalc-constants");
+    public static final AntuIcon APP_PREFERENCES_KDE_CONNECT_32 = create("apps__32__preferences-kde-connect");
+    public static final AntuIcon APP_PREFERENCES_KDE_CONNECT_48 = create("apps__48__preferences-kde-connect");
+    public static final AntuIcon APP_PREFERENCES_MANAGEMENT_SERVICE_48 = create("apps__48__preferences-management-service");
+    public static final AntuIcon APP_PREFERENCES_OTHER_32 = create("apps__32__preferences-other");
+    public static final AntuIcon APP_PREFERENCES_OTHER_48 = create("apps__48__preferences-other");
+    public static final AntuIcon APP_PREFERENCES_PLUGIN_22 = create("apps__22__preferences-plugin");
+    public static final AntuIcon APP_PREFERENCES_PLUGIN_32 = create("apps__32__preferences-plugin");
+    public static final AntuIcon APP_PREFERENCES_PLUGIN_48 = create("apps__48__preferences-plugin");
+    public static final AntuIcon APP_PREFERENCES_PLUGIN_SCRIPT_48 = create("apps__48__preferences-plugin-script");
+    public static final AntuIcon APP_PREFERENCES_REMOTE_DESKTOP_48 = create("apps__48__preferences-remote-desktop");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_48 = create("apps__48__preferences-system");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_BLUETOOTH_16 = create("apps__16__preferences-system-bluetooth");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_BLUETOOTH_32 = create("apps__32__preferences-system-bluetooth");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_BLUETOOTH_48 = create("apps__48__preferences-system-bluetooth");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_BLUETOOTH_INACTIVE_32 = create("apps__32__preferences-system-bluetooth-inactive");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_BLUETOOTH_INACTIVE_48 = create("apps__48__preferences-system-bluetooth-inactive");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_BLUETOOTH_INACTIVE_SVG_48 = create("apps__48__preferences-system-bluetooth-inactive.svg");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_FIREWALL_48 = create("apps__48__preferences-system-firewall");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_HOTCORNERS_48 = create("apps__48__preferences-system-hotcorners");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_LOGIN_32 = create("apps__32__preferences-system-login");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_LOGIN_48 = create("apps__48__preferences-system-login");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_NETWORK_32 = create("apps__32__preferences-system-network");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_NETWORK_48 = create("apps__48__preferences-system-network");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_NETWORK_SHARING_32 = create("apps__32__preferences-system-network-sharing");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_NETWORK_SHARING_48 = create("apps__48__preferences-system-network-sharing");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_PERFORMANCE_48 = create("apps__48__preferences-system-performance");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_POWER_48 = create("apps__48__preferences-system-power");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_POWER_MANAGEMENT_32 = create("apps__32__preferences-system-power-management");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_POWER_MANAGEMENT_48 = create("apps__48__preferences-system-power-management");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_PRIVACY_32 = create("apps__32__preferences-system-privacy");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_PRIVACY_48 = create("apps__48__preferences-system-privacy");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_SEARCH_48 = create("apps__48__preferences-system-search");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_SESSION_48 = create("apps__48__preferences-system-session");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_SESSION_SERVICES_32 = create("apps__32__preferences-system-session-services");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_SESSION_SERVICES_48 = create("apps__48__preferences-system-session-services");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_TIME_32 = create("apps__32__preferences-system-time");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_TIME_48 = create("apps__48__preferences-system-time");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_WINDOWS_32 = create("apps__32__preferences-system-windows");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_WINDOWS_48 = create("apps__48__preferences-system-windows");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_WINDOWS_ACTIONS_32 = create("apps__32__preferences-system-windows-actions");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_WINDOWS_ACTIONS_48 = create("apps__48__preferences-system-windows-actions");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_WINDOWS_MOVE_32 = create("apps__32__preferences-system-windows-move");
+    public static final AntuIcon APP_PREFERENCES_SYSTEM_WINDOWS_MOVE_48 = create("apps__48__preferences-system-windows-move");
+    public static final AntuIcon APP_PREFERENCES_WEB_BROWSER_ADBLOCK_32 = create("apps__32__preferences-web-browser-adblock");
+    public static final AntuIcon APP_PREFERENCES_WEB_BROWSER_ADBLOCK_48 = create("apps__48__preferences-web-browser-adblock");
+    public static final AntuIcon APP_PREFERENCES_WEB_BROWSER_CACHE_32 = create("apps__32__preferences-web-browser-cache");
+    public static final AntuIcon APP_PREFERENCES_WEB_BROWSER_CACHE_48 = create("apps__48__preferences-web-browser-cache");
+    public static final AntuIcon APP_PREFERENCES_WEB_BROWSER_COOKIES_32 = create("apps__32__preferences-web-browser-cookies");
+    public static final AntuIcon APP_PREFERENCES_WEB_BROWSER_COOKIES_48 = create("apps__48__preferences-web-browser-cookies");
+    public static final AntuIcon APP_PREFERENCES_WEB_BROWSER_IDENTIFICATION_32 = create("apps__32__preferences-web-browser-identification");
+    public static final AntuIcon APP_PREFERENCES_WEB_BROWSER_IDENTIFICATION_48 = create("apps__48__preferences-web-browser-identification");
+    public static final AntuIcon APP_PREFERENCES_WEB_BROWSER_SHORTCUTS_32 = create("apps__32__preferences-web-browser-shortcuts");
+    public static final AntuIcon APP_PREFERENCES_WEB_BROWSER_SHORTCUTS_48 = create("apps__48__preferences-web-browser-shortcuts");
+    public static final AntuIcon APP_PREFERENCES_WEB_BROWSER_SSL_32 = create("apps__32__preferences-web-browser-ssl");
+    public static final AntuIcon APP_PREFERENCES_WEB_BROWSER_SSL_48 = create("apps__48__preferences-web-browser-ssl");
+    public static final AntuIcon APP_PREFERENCES_WEB_BROWSER_STYLESHEETS_32 = create("apps__32__preferences-web-browser-stylesheets");
+    public static final AntuIcon APP_PREFERENCES_WEB_BROWSER_STYLESHEETS_48 = create("apps__48__preferences-web-browser-stylesheets");
+    public static final AntuIcon APP_PRINTER_48 = create("apps__48__printer");
+    public static final AntuIcon APP_PRJM16_TRANSPARENT_48 = create("apps__48__prjm16-transparent");
+    public static final AntuIcon APP_PSENSOR_48 = create("apps__48__psensor");
+    public static final AntuIcon APP_PTBATCHER_48 = create("apps__48__ptbatcher");
+    public static final AntuIcon APP_PUTTY_48 = create("apps__48__putty");
+    public static final AntuIcon APP_PWSAFE_48 = create("apps__48__pwsafe");
+    public static final AntuIcon APP_PYCAD_48 = create("apps__48__pycad");
+    public static final AntuIcon APP_PYCHARM_48 = create("apps__48__pycharm");
+    public static final AntuIcon APP_PYRENAMER_48 = create("apps__48__pyrenamer");
+    public static final AntuIcon APP_PYTHON_48 = create("apps__48__python");
+    public static final AntuIcon APP_PYTHON_IDLE_48 = create("apps__48__python-idle");
+    public static final AntuIcon APP_PYTHON2_7_48 = create("apps__48__python2.7");
+    public static final AntuIcon APP_Q4WINE_48 = create("apps__48__q4wine");
+    public static final AntuIcon APP_QALCULATE_48 = create("apps__48__qalculate");
+    public static final AntuIcon APP_QASMIXER_48 = create("apps__48__qasmixer");
+    public static final AntuIcon APP_QBITTORRENT_48 = create("apps__48__qbittorrent");
+    public static final AntuIcon APP_QCOMICBOOK_48 = create("apps__48__qcomicbook");
+    public static final AntuIcon APP_QDBUSVIEWER_48 = create("apps__48__qdbusviewer");
+    public static final AntuIcon APP_QDBUSVIEWER_QT5_48 = create("apps__48__qdbusviewer-qt5");
+    public static final AntuIcon APP_QDIRSTAT_48 = create("apps__48__qdirstat");
+    public static final AntuIcon APP_QELECTROTECH_48 = create("apps__48__qelectrotech");
+    public static final AntuIcon APP_QGIS_48 = create("apps__48__qgis");
+    public static final AntuIcon APP_QGIT_48 = create("apps__48__qgit");
+    public static final AntuIcon APP_QGO_48 = create("apps__48__qgo");
+    public static final AntuIcon APP_QJACKCTL_48 = create("apps__48__qjackctl");
+    public static final AntuIcon APP_QMKVEXTRACTOR_48 = create("apps__48__qmkvextractor");
+    public static final AntuIcon APP_QMLSCENE_48 = create("apps__48__qmlscene");
+    public static final AntuIcon APP_QMMP_48 = create("apps__48__qmmp");
+    public static final AntuIcon APP_QNAPI_48_48 = create("apps__48__qnapi-48");
+    public static final AntuIcon APP_QPHOTOREC_48 = create("apps__48__qphotorec");
+    public static final AntuIcon APP_QSYNTH_48 = create("apps__48__qsynth");
+    public static final AntuIcon APP_QT4LOGO_48 = create("apps__48__qt4logo");
+    public static final AntuIcon APP_QTASSISTANT_48 = create("apps__48__qtassistant");
+    public static final AntuIcon APP_QTCREATOR_48 = create("apps__48__qtcreator");
+    public static final AntuIcon APP_QTDBUSVIEWER_48 = create("apps__48__qtdbusviewer");
+    public static final AntuIcon APP_QTDESIGNER_48 = create("apps__48__qtdesigner");
+    public static final AntuIcon APP_QTIPLOT_48 = create("apps__48__qtiplot");
+    public static final AntuIcon APP_QTLINGUIST_48 = create("apps__48__qtlinguist");
+    public static final AntuIcon APP_QTLINGUISTIC_48 = create("apps__48__qtlinguistic");
+    public static final AntuIcon APP_QTLOGO_48 = create("apps__48__qtlogo");
+    public static final AntuIcon APP_QTOX_48 = create("apps__48__qtox");
+    public static final AntuIcon APP_QTRACTOR_48 = create("apps__48__qtractor");
+    public static final AntuIcon APP_QUASSEL_48 = create("apps__48__quassel");
+    public static final AntuIcon APP_QUASSEL_L_48 = create("apps__48__quassel_l");
+    public static final AntuIcon APP_QUASSEL1_48 = create("apps__48__quassel1");
+    public static final AntuIcon APP_QUCS_48 = create("apps__48__qucs");
+    public static final AntuIcon APP_QUICKUSBFORMATTER_48 = create("apps__48__quickusbformatter");
+    public static final AntuIcon APP_QUICKVIEW_48 = create("apps__48__quickview");
+    public static final AntuIcon APP_QUIMUP_48 = create("apps__48__quimup");
+    public static final AntuIcon APP_QUITERSS_48 = create("apps__48__quiterss");
+    public static final AntuIcon APP_QUPZILLA_48 = create("apps__48__qupzilla");
+    public static final AntuIcon APP_QUTIM_48 = create("apps__48__qutim");
+    public static final AntuIcon APP_QV4L2_48 = create("apps__48__qv4l2");
+    public static final AntuIcon APP_QWINFF_48 = create("apps__48__qwinff");
+    public static final AntuIcon APP_RAWCONVERTER_48 = create("apps__48__rawconverter");
+    public static final AntuIcon APP_RAWTHERAPEE_48 = create("apps__48__rawtherapee");
+    public static final AntuIcon APP_REALTIMESYNC_48 = create("apps__48__realtimesync");
+    public static final AntuIcon APP_RECOLL_48 = create("apps__48__recoll");
+    public static final AntuIcon APP_REDDIT_48 = create("apps__48__reddit");
+    public static final AntuIcon APP_REDECLIPSE_48 = create("apps__48__redeclipse");
+    public static final AntuIcon APP_REDITR_48 = create("apps__48__reditr");
+    public static final AntuIcon APP_REDNOTEBOOK_48 = create("apps__48__rednotebook");
+    public static final AntuIcon APP_REDSHIFT_48 = create("apps__48__redshift");
+    public static final AntuIcon APP_REKONQ_48 = create("apps__48__rekonq");
+    public static final AntuIcon APP_REMMINA_48 = create("apps__48__remmina");
+    public static final AntuIcon APP_REMOTE_DESKTOP_48 = create("apps__48__remote-desktop");
+    public static final AntuIcon APP_RENAME_48 = create("apps__48__rename");
+    public static final AntuIcon APP_RETROARCH_48 = create("apps__48__retroarch");
+    public static final AntuIcon APP_RETROSHARE_48 = create("apps__48__retroshare");
+    public static final AntuIcon APP_ROBOMONGO_48 = create("apps__48__robomongo");
+    public static final AntuIcon APP_ROCCAT_48 = create("apps__48__roccat");
+    public static final AntuIcon APP_ROSAMP_48 = create("apps__48__rosamp");
+    public static final AntuIcon APP_RSTUDIO_48 = create("apps__48__rstudio");
+    public static final AntuIcon APP_RUBYMINE_48 = create("apps__48__rubymine");
+    public static final AntuIcon APP_RUNNING_48 = create("apps__48__running");
+    public static final AntuIcon APP_SAMSUNG_DRIVER_48 = create("apps__48__samsung-driver");
+    public static final AntuIcon APP_SANATA_48 = create("apps__48__sanata-");
+    public static final AntuIcon APP_SAYONARA_48 = create("apps__48__sayonara");
+    public static final AntuIcon APP_SCANNER_48 = create("apps__48__scanner");
+    public static final AntuIcon APP_SCANTAILOR_48 = create("apps__48__scantailor");
+    public static final AntuIcon APP_SCILABBACKEND_48 = create("apps__48__scilabbackend");
+    public static final AntuIcon APP_SCREEN_RECORDER_48 = create("apps__48__screen-recorder");
+    public static final AntuIcon APP_SCREENRULER_48 = create("apps__48__screenruler");
+    public static final AntuIcon APP_SCREENRULER_ICON_48 = create("apps__48__screenruler-icon");
+    public static final AntuIcon APP_SCRIBUS_48 = create("apps__48__scribus");
+    public static final AntuIcon APP_SCRIVENER_48 = create("apps__48__Scrivener");
+    public static final AntuIcon APP_SCUOLABOOK_48 = create("apps__48__scuolabook");
+    public static final AntuIcon APP_SEAFILE_48 = create("apps__48__seafile");
+    public static final AntuIcon APP_SEARCH_48 = create("apps__48__search");
+    public static final AntuIcon APP_SECURITY_MEDIUM_48 = create("apps__48__security-medium");
+    public static final AntuIcon APP_SELENE_48 = create("apps__48__selene");
+    public static final AntuIcon APP_SELINUX_48 = create("apps__48__selinux");
+    public static final AntuIcon APP_SEMN_48 = create("apps__48__semn");
+    public static final AntuIcon APP_SENCHA_ANIMATOR_48 = create("apps__48__sencha-animator");
+    public static final AntuIcon APP_SESSION_PROPERTIES_48 = create("apps__48__session-properties");
+    public static final AntuIcon APP_SETROUBLESHOOT_48 = create("apps__48__setroubleshoot");
+    public static final AntuIcon APP_SETROUBLESHOOT_ICON_48 = create("apps__48__setroubleshoot_icon");
+    public static final AntuIcon APP_SHEETS_48 = create("apps__48__sheets");
+    public static final AntuIcon APP_SHELL_48 = create("apps__48__shell");
+    public static final AntuIcon APP_SHOTWELL_48 = create("apps__48__shotwell");
+    public static final AntuIcon APP_SHOWFOTO_48 = create("apps__48__showfoto");
+    public static final AntuIcon APP_SIGIL_48 = create("apps__48__sigil");
+    public static final AntuIcon APP_SIMPLESCREENRECORDER_48 = create("apps__48__simplescreenrecorder");
+    public static final AntuIcon APP_SIMPLESCREENRECORDER_PAUSED_48 = create("apps__48__simplescreenrecorder-paused");
+    public static final AntuIcon APP_SIMPLESCREENRECORDER_RECORDING_48 = create("apps__48__simplescreenrecorder-recording");
+    public static final AntuIcon APP_SKANLITE_48 = create("apps__48__skanlite");
+    public static final AntuIcon APP_SKROOGE_48 = create("apps__48__skrooge");
+    public static final AntuIcon APP_SKROOGE_BLACK_48 = create("apps__48__skrooge-black");
+    public static final AntuIcon APP_SKYDRIVE_48 = create("apps__48__skydrive");
+    public static final AntuIcon APP_SKYPE_48 = create("apps__48__skype");
+    public static final AntuIcon APP_SKYPE_CALL_RECORDER_48 = create("apps__48__skype-call-recorder");
+    public static final AntuIcon APP_SKYPE_PROTOCOL_48 = create("apps__48__skype_protocol");
+    public static final AntuIcon APP_SMARTGIT_48 = create("apps__48__smartgit");
+    public static final AntuIcon APP_SMARTGITHG_48 = create("apps__48__smartgithg");
+    public static final AntuIcon APP_SMARTSVN_48 = create("apps__48__smartsvn");
+    public static final AntuIcon APP_SMC_48 = create("apps__48__smc");
+    public static final AntuIcon APP_SMPLAYER_48 = create("apps__48__smplayer");
+    public static final AntuIcon APP_SMS_PROTOCOL_48 = create("apps__48__sms_protocol");
+    public static final AntuIcon APP_SMTUBE_48 = create("apps__48__smtube");
+    public static final AntuIcon APP_SNAPPY_48 = create("apps__48__snappy");
+    public static final AntuIcon APP_SNES9X_48 = create("apps__48__snes9x");
+    public static final AntuIcon APP_SOFTWARE_PROPERTIES_48 = create("apps__48__software-properties");
+    public static final AntuIcon APP_SOLAAR_48 = create("apps__48__solaar");
+    public static final AntuIcon APP_SONATA_48 = create("apps__48__sonata");
+    public static final AntuIcon APP_SOULSEEK_48 = create("apps__48__soulseek");
+    public static final AntuIcon APP_SOUND_JUICER_48 = create("apps__48__sound-juicer");
+    public static final AntuIcon APP_SOUNDCLOUD_48 = create("apps__48__soundcloud");
+    public static final AntuIcon APP_SOUNDCONVERTER_48 = create("apps__48__soundconverter");
+    public static final AntuIcon APP_SOUNDKONVERTER_48 = create("apps__48__soundkonverter");
+    public static final AntuIcon APP_SPACEFM_48 = create("apps__48__spacefm");
+    public static final AntuIcon APP_SPACEFM_FIND_48 = create("apps__48__spacefm-find");
+    public static final AntuIcon APP_SPARKLESHARE_48 = create("apps__48__sparkleshare");
+    public static final AntuIcon APP_SPE_48 = create("apps__48__spe");
+    public static final AntuIcon APP_SPECTACLE_48 = create("apps__48__spectacle");
+    public static final AntuIcon APP_SPIDEROAK_48 = create("apps__48__spideroak");
+    public static final AntuIcon APP_SPOTIFY_48 = create("apps__48__spotify");
+    public static final AntuIcon APP_SPOTIFY_CLIENT_48 = create("apps__48__spotify-client");
+    public static final AntuIcon APP_SPRING_48 = create("apps__48__Spring");
+    public static final AntuIcon APP_SSH_ADD_48 = create("apps__48__ssh-add");
+    public static final AntuIcon APP_STAGE_48 = create("apps__48__stage");
+    public static final AntuIcon APP_STARDICT_48 = create("apps__48__stardict");
+    public static final AntuIcon APP_STEAM_48 = create("apps__48__steam");
+    public static final AntuIcon APP_STEAMSKINMANAGER_48 = create("apps__48__steamskinmanager");
+    public static final AntuIcon APP_STELLARIUM_48 = create("apps__48__stellarium");
+    public static final AntuIcon APP_STEP_48 = create("apps__48__step");
+    public static final AntuIcon APP_STOCK_KEYRING_48 = create("apps__48__stock_keyring");
+    public static final AntuIcon APP_STOCK_TASKS_48 = create("apps__48__stock_tasks");
+    public static final AntuIcon APP_STORMCLOUD_48 = create("apps__48__stormcloud");
+    public static final AntuIcon APP_STRIGI_48 = create("apps__48__strigi");
+    public static final AntuIcon APP_SUBDOWNLOADER_48 = create("apps__48__subdownloader");
+    public static final AntuIcon APP_SUBLIME_48 = create("apps__48__sublime");
+    public static final AntuIcon APP_SUBLIME_TEXT_48 = create("apps__48__sublime-text");
+    public static final AntuIcon APP_SUBTITLECOMPOSER_48 = create("apps__48__subtitlecomposer");
+    public static final AntuIcon APP_SUBTITLEEDITOR_48 = create("apps__48__subtitleeditor");
+    public static final AntuIcon APP_SVN_48 = create("apps__48__svn");
+    public static final AntuIcon APP_SWAMI_48 = create("apps__48__swami");
+    public static final AntuIcon APP_SWEEPER_48 = create("apps__48__sweeper");
+    public static final AntuIcon APP_SYNAPTIC_48 = create("apps__48__synaptic");
+    public static final AntuIcon APP_SYNAPTICS_48 = create("apps__48__synaptics");
+    public static final AntuIcon APP_SYNAPTIKS_48 = create("apps__48__synaptiks");
+    public static final AntuIcon APP_SYNFIG_ICON_48 = create("apps__48__synfig_icon");
+    public static final AntuIcon APP_SYNFIGSTUDIO_48 = create("apps__48__synfigstudio");
+    public static final AntuIcon APP_SYSPEEK_48 = create("apps__48__syspeek");
+    public static final AntuIcon APP_SYSTEM_DIAGNOSIS_48 = create("apps__48__system-diagnosis");
+    public static final AntuIcon APP_SYSTEM_ERROR_48 = create("apps__48__system-error");
+    public static final AntuIcon APP_SYSTEM_FILE_MANAGER_48 = create("apps__48__system-file-manager");
+    public static final AntuIcon APP_SYSTEM_HELP_16 = create("apps__16__system-help");
+    public static final AntuIcon APP_SYSTEM_HELP_22 = create("apps__22__system-help");
+    public static final AntuIcon APP_SYSTEM_HELP_48 = create("apps__48__system-help");
+    public static final AntuIcon APP_SYSTEM_LOCK_SCREEN_22 = create("apps__22__system-lock-screen");
+    public static final AntuIcon APP_SYSTEM_LOCK_SCREEN_32 = create("apps__32__system-lock-screen");
+    public static final AntuIcon APP_SYSTEM_LOCK_SCREEN_48 = create("apps__48__system-lock-screen");
+    public static final AntuIcon APP_SYSTEM_LOG_OUT_22 = create("apps__22__system-log-out");
+    public static final AntuIcon APP_SYSTEM_LOG_OUT_32 = create("apps__32__system-log-out");
+    public static final AntuIcon APP_SYSTEM_LOG_OUT_48 = create("apps__48__system-log-out");
+    public static final AntuIcon APP_SYSTEM_REBOOT_22 = create("apps__22__system-reboot");
+    public static final AntuIcon APP_SYSTEM_REBOOT_32 = create("apps__32__system-reboot");
+    public static final AntuIcon APP_SYSTEM_REBOOT_48 = create("apps__48__system-reboot");
+    public static final AntuIcon APP_SYSTEM_RUN_32 = create("apps__32__system-run");
+    public static final AntuIcon APP_SYSTEM_RUN_48 = create("apps__48__system-run");
+    public static final AntuIcon APP_SYSTEM_SHUTDOWN_22 = create("apps__22__system-shutdown");
+    public static final AntuIcon APP_SYSTEM_SHUTDOWN_32 = create("apps__32__system-shutdown");
+    public static final AntuIcon APP_SYSTEM_SHUTDOWN_48 = create("apps__48__system-shutdown");
+    public static final AntuIcon APP_SYSTEM_SOFTWARE_UPDATE_48 = create("apps__48__system-software-update");
+    public static final AntuIcon APP_SYSTEM_SUSPEND_22 = create("apps__22__system-suspend");
+    public static final AntuIcon APP_SYSTEM_SUSPEND_32 = create("apps__32__system-suspend");
+    public static final AntuIcon APP_SYSTEM_SUSPEND_48 = create("apps__48__system-suspend");
+    public static final AntuIcon APP_SYSTEM_SUSPEND_HIBERNATE_22 = create("apps__22__system-suspend-hibernate");
+    public static final AntuIcon APP_SYSTEM_SUSPEND_HIBERNATE_32 = create("apps__32__system-suspend-hibernate");
+    public static final AntuIcon APP_SYSTEM_SUSPEND_HIBERNATE_48 = create("apps__48__system-suspend-hibernate");
+    public static final AntuIcon APP_SYSTEM_SWITCH_USER_22 = create("apps__22__system-switch-user");
+    public static final AntuIcon APP_SYSTEM_SWITCH_USER_32 = create("apps__32__system-switch-user");
+    public static final AntuIcon APP_SYSTEM_SWITCH_USER_48 = create("apps__48__system-switch-user");
+    public static final AntuIcon APP_SYSTEM_USERS_32 = create("apps__32__system-users");
+    public static final AntuIcon APP_SYSTEM_USERS_48 = create("apps__48__system-users");
+    public static final AntuIcon APP_SYSTEMSETTINGS_48 = create("apps__48__systemsettings");
+    public static final AntuIcon APP_T_LASKU_48 = create("apps__48__t-lasku");
+    public static final AntuIcon APP_TAGUA_48 = create("apps__48__tagua");
+    public static final AntuIcon APP_TEAMVIEWER_48 = create("apps__48__teamviewer");
+    public static final AntuIcon APP_TELEGRAM_48 = create("apps__48__telegram");
+    public static final AntuIcon APP_TELEPATHY_KDE_48 = create("apps__48__telepathy-kde");
+    public static final AntuIcon APP_TELIF_48 = create("apps__48__telif");
+    public static final AntuIcon APP_TERMINATOR_48 = create("apps__48__terminator");
+    public static final AntuIcon APP_TEXMAKER_48 = create("apps__48__texmaker");
+    public static final AntuIcon APP_TEXSTUDIO_48 = create("apps__48__texstudio");
+    public static final AntuIcon APP_THUNDERBIRD_48 = create("apps__48__thunderbird");
+    public static final AntuIcon APP_TIMESHIFT_48 = create("apps__48__timeshift");
+    public static final AntuIcon APP_TIMEVAULT_48 = create("apps__48__timevault");
+    public static final AntuIcon APP_TOMAHAWK_48 = create("apps__48__tomahawk");
+    public static final AntuIcon APP_TOMATE_48 = create("apps__48__tomate");
+    public static final AntuIcon APP_TOR_BROWSER_48 = create("apps__48__tor-browser");
+    public static final AntuIcon APP_TOTEM_48 = create("apps__48__totem");
+    public static final AntuIcon APP_TRANSCODER_48 = create("apps__48__transcoder");
+    public static final AntuIcon APP_TRANSMAGEDDON_48 = create("apps__48__transmageddon");
+    public static final AntuIcon APP_TRANSMISSION_48 = create("apps__48__transmission");
+    public static final AntuIcon APP_TRANSMISSION_TRAY_48 = create("apps__48__transmission-tray");
+    public static final AntuIcon APP_TRELLO_48 = create("apps__48__trello");
+    public static final AntuIcon APP_TROJITA_48 = create("apps__48__trojita");
+    public static final AntuIcon APP_TRUECRYPT_48 = create("apps__48__truecrypt");
+    public static final AntuIcon APP_TUMBLR_48 = create("apps__48__tumblr");
+    public static final AntuIcon APP_TUPI_48 = create("apps__48__tupi");
+    public static final AntuIcon APP_TURPIAL_48 = create("apps__48__turpial");
+    public static final AntuIcon APP_TUXGUITAR_48 = create("apps__48__tuxguitar");
+    public static final AntuIcon APP_TVMAXE_48 = create("apps__48__tvmaxe");
+    public static final AntuIcon APP_TWITTER_48 = create("apps__48__twitter");
+    public static final AntuIcon APP_TYPECATCHER_48 = create("apps__48__typecatcher");
+    public static final AntuIcon APP_UBIQUITY_48 = create("apps__48__ubiquity");
+    public static final AntuIcon APP_UNETBOOTIN_48 = create("apps__48__unetbootin");
+    public static final AntuIcon APP_UNKNOWNAPP_48 = create("apps__48__unknownapp");
+    public static final AntuIcon APP_USB_CREATOR_KDE_48 = create("apps__48__usb-creator-kde");
+    public static final AntuIcon APP_UTILITIES_DESKTOP_EXTRA_48 = create("apps__48__utilities-desktop-extra");
+    public static final AntuIcon APP_UTILITIES_ENERGY_MONITOR_48 = create("apps__48__utilities-energy-monitor");
+    public static final AntuIcon APP_UTILITIES_FILE_ARCHIVER_48 = create("apps__48__utilities-file-archiver");
+    public static final AntuIcon APP_UTILITIES_LOG_VIEWER_48 = create("apps__48__utilities-log-viewer");
+    public static final AntuIcon APP_UTILITIES_SYSTEM_MONITOR_48 = create("apps__48__utilities-system-monitor");
+    public static final AntuIcon APP_UTILITIES_TERMINAL_48 = create("apps__48__utilities-terminal");
+    public static final AntuIcon APP_UTILITIES_TERMINAL_SU_48 = create("apps__48__utilities-terminal_su");
+    public static final AntuIcon APP_VBAM_48 = create("apps__48__vbam");
+    public static final AntuIcon APP_VBOX_48 = create("apps__48__vbox");
+    public static final AntuIcon APP_VEROMIX_48 = create("apps__48__Veromix");
+    public static final AntuIcon APP_VIBER_48 = create("apps__48__viber");
+    public static final AntuIcon APP_VIDALIA_48 = create("apps__48__vidalia");
+    public static final AntuIcon APP_VIDEOPLAYER_48 = create("apps__48__videoplayer");
+    public static final AntuIcon APP_VIEW_MEDIA_PLAYLIST_32 = create("apps__32__view-media-playlist");
+    public static final AntuIcon APP_VIEW_MEDIA_PLAYLIST_48 = create("apps__48__view-media-playlist");
+    public static final AntuIcon APP_VIM_48 = create("apps__48__vim");
+    public static final AntuIcon APP_VIM_QT_48 = create("apps__48__vim-qt");
+    public static final AntuIcon APP_VIMEO_48 = create("apps__48__vimeo");
+    public static final AntuIcon APP_VIMEO_ALT_48 = create("apps__48__vimeo_alt");
+    public static final AntuIcon APP_VINEYARD_48 = create("apps__48__vineyard");
+    public static final AntuIcon APP_VINEYARD_PREFERENCES_48 = create("apps__48__vineyard-preferences");
+    public static final AntuIcon APP_VIRTUALBOX_48 = create("apps__48__virtualbox");
+    public static final AntuIcon APP_VISUALVM_48 = create("apps__48__visualvm");
+    public static final AntuIcon APP_VIVALDI_48 = create("apps__48__vivaldi");
+    public static final AntuIcon APP_VIVALDI_SNAPSHOT_48 = create("apps__48__vivaldi-snapshot");
+    public static final AntuIcon APP_VLC_48 = create("apps__48__vlc");
+    public static final AntuIcon APP_VLC_XMAS_48 = create("apps__48__vlc-xmas");
+    public static final AntuIcon APP_VMWARE_48 = create("apps__48__vmware");
+    public static final AntuIcon APP_VMWARE_NETCFG_48 = create("apps__48__vmware-netcfg");
+    public static final AntuIcon APP_VMWARE_PLAYER_48 = create("apps__48__vmware-player");
+    public static final AntuIcon APP_VOCAL_48 = create("apps__48__vocal");
+    public static final AntuIcon APP_VOKOSCREEN_48 = create("apps__48__vokoscreen");
+    public static final AntuIcon APP_VSTUDIO_48 = create("apps__48__vstudio");
+    public static final AntuIcon APP_WAITING_48 = create("apps__48__waiting");
+    public static final AntuIcon APP_WALLPAPER_48 = create("apps__48__wallpaper");
+    public static final AntuIcon APP_WAVE_ACCOUNTING_48 = create("apps__48__wave-accounting");
+    public static final AntuIcon APP_WAYLAND_48 = create("apps__48__wayland");
+    public static final AntuIcon APP_WEB_48 = create("apps__48__web");
+    public static final AntuIcon APP_WEB_BROWSER_48 = create("apps__48__web-browser");
+    public static final AntuIcon APP_WEB_GOOGLE_APPS_SCRIPT_48 = create("apps__48__web-google-apps-script");
+    public static final AntuIcon APP_WEB_GOOGLE_DRAWINGS_48 = create("apps__48__web-google-drawings");
+    public static final AntuIcon APP_WEB_GOOGLE_FORMS_48 = create("apps__48__web-google-forms");
+    public static final AntuIcon APP_WEB_GOOGLE_SLIDES_48 = create("apps__48__web-google-slides");
+    public static final AntuIcon APP_WEB_INBOX_48 = create("apps__48__web-inbox");
+    public static final AntuIcon APP_WEB_JOLICLOUD_48 = create("apps__48__web-jolicloud");
+    public static final AntuIcon APP_WEB_KINDLE_48 = create("apps__48__web-kindle");
+    public static final AntuIcon APP_WEBBROWSER_APP_48 = create("apps__48__webbrowser-app");
+    public static final AntuIcon APP_WEBKIT_48 = create("apps__48__webkit");
+    public static final AntuIcon APP_WESNOTH_1_10_EDITOR_ICON_48 = create("apps__48__wesnoth-1.10_editor-icon");
+    public static final AntuIcon APP_WESNOTH_1_10_ICON_48 = create("apps__48__wesnoth-1.10-icon");
+    public static final AntuIcon APP_WESNOTH_48 = create("apps__48__wesnoth");
+    public static final AntuIcon APP_WIKIMEDIA_COMMONS_48 = create("apps__48__wikimedia-commons");
+    public static final AntuIcon APP_WIKIPEDIA_48 = create("apps__48__wikipedia");
+    public static final AntuIcon APP_WINDOW_DUPLICATE_32 = create("apps__32__window-duplicate");
+    public static final AntuIcon APP_WINDOW_DUPLICATE_48 = create("apps__48__window-duplicate");
+    public static final AntuIcon APP_WINE_48 = create("apps__48__wine");
+    public static final AntuIcon APP_WINE_HELP_48 = create("apps__48__wine-help");
+    public static final AntuIcon APP_WINE_UNINSTALLER_48 = create("apps__48__wine-uninstaller");
+    public static final AntuIcon APP_WINE_WINECFG_48 = create("apps__48__wine-winecfg");
+    public static final AntuIcon APP_WINECFG_48 = create("apps__48__winecfg");
+    public static final AntuIcon APP_WINETRICKS_48 = create("apps__48__winetricks");
+    public static final AntuIcon APP_WINFF_48 = create("apps__48__winff");
+    public static final AntuIcon APP_WINUSB_48 = create("apps__48__winusb");
+    public static final AntuIcon APP_WINUSBGUI_ICON_48 = create("apps__48__winusbgui-icon");
+    public static final AntuIcon APP_WORDPRESS_48 = create("apps__48__wordpress");
+    public static final AntuIcon APP_WORDPRESS_WORDPRESS_COM_48 = create("apps__48__wordpress-wordpress.com");
+    public static final AntuIcon APP_WORDS_48 = create("apps__48__words");
+    public static final AntuIcon APP_WORDVIEW_48 = create("apps__48__wordview");
+    public static final AntuIcon APP_WPCOM_48 = create("apps__48__wpcom");
+    public static final AntuIcon APP_WPS_OFFICE_ETMAIN_48 = create("apps__48__wps-office-etmain");
+    public static final AntuIcon APP_WPS_OFFICE_WPPMAIN_48 = create("apps__48__wps-office-wppmain");
+    public static final AntuIcon APP_WPS_OFFICE_WPSMAIN_48 = create("apps__48__wps-office-wpsmain");
+    public static final AntuIcon APP_X_PLANE_48 = create("apps__48__x-plane");
+    public static final AntuIcon APP_X_TERMINAL_EMULATOR_48 = create("apps__48__x-terminal-emulator");
+    public static final AntuIcon APP_XCHAT_48 = create("apps__48__xchat");
+    public static final AntuIcon APP_XDG_BROWSER_LAUNCHER_48 = create("apps__48__xdg-browser-launcher");
+    public static final AntuIcon APP_XDIAGNOSE_48 = create("apps__48__xdiagnose");
+    public static final AntuIcon APP_XINE_48 = create("apps__48__xine");
+    public static final AntuIcon APP_XMIND_48 = create("apps__48__xmind");
+    public static final AntuIcon APP_XMRADIO_48 = create("apps__48__xmradio");
+    public static final AntuIcon APP_XNCONVERT_48 = create("apps__48__xnconvert");
+    public static final AntuIcon APP_XNVIEW_48 = create("apps__48__xnview");
+    public static final AntuIcon APP_XONOTIC_48 = create("apps__48__xonotic");
+    public static final AntuIcon APP_XORG_48 = create("apps__48__xorg");
+    public static final AntuIcon APP_XOURNAL_48 = create("apps__48__xournal");
+    public static final AntuIcon APP_XPLANE_48 = create("apps__48__xplane");
+    public static final AntuIcon APP_XSANE_48 = create("apps__48__xsane");
+    public static final AntuIcon APP_XSENSORS_48 = create("apps__48__xsensors");
+    public static final AntuIcon APP_XTERM_48 = create("apps__48__xterm");
+    public static final AntuIcon APP_XTERM_COLOR_48 = create("apps__48__xterm-color");
+    public static final AntuIcon APP_Y_PPA_MANAGER_48 = create("apps__48__y-ppa-manager");
+    public static final AntuIcon APP_YAD_48 = create("apps__48__yad");
+    public static final AntuIcon APP_YAHOO_48 = create("apps__48__yahoo");
+    public static final AntuIcon APP_YAHOO_PROTOCOL_48 = create("apps__48__yahoo_protocol");
+    public static final AntuIcon APP_YAKUAKE_48 = create("apps__48__yakuake");
+    public static final AntuIcon APP_YANDEX_BROWSER_48 = create("apps__48__yandex-browser");
+    public static final AntuIcon APP_YANDEX_BROWSER_BETA_48 = create("apps__48__yandex-browser-beta");
+    public static final AntuIcon APP_YAROCK_48 = create("apps__48__yarock");
+    public static final AntuIcon APP_YAST_48 = create("apps__48__yast");
+    public static final AntuIcon APP_YAST_ADDON_48 = create("apps__48__yast-addon");
+    public static final AntuIcon APP_YAST_BOOTLOADER_48 = create("apps__48__yast-bootloader");
+    public static final AntuIcon APP_YAST_CHECKMEDIA_48 = create("apps__48__yast-checkmedia");
+    public static final AntuIcon APP_YAST_DISK_48 = create("apps__48__yast-disk");
+    public static final AntuIcon APP_YAST_FIREWALL_48 = create("apps__48__yast-firewall");
+    public static final AntuIcon APP_YAST_HARDWARE_48 = create("apps__48__yast-hardware");
+    public static final AntuIcon APP_YAST_HIGH_AVAILABILITY_48 = create("apps__48__yast-high_availability");
+    public static final AntuIcon APP_YAST_HOST_48 = create("apps__48__yast-host");
+    public static final AntuIcon APP_YAST_HWINFO_48 = create("apps__48__yast-hwinfo");
+    public static final AntuIcon APP_YAST_INETD_48 = create("apps__48__yast-inetd");
+    public static final AntuIcon APP_YAST_ISCSI_CLIENT_48 = create("apps__48__yast-iscsi-client");
+    public static final AntuIcon APP_YAST_KEYBOARD_48 = create("apps__48__yast-keyboard");
+    public static final AntuIcon APP_YAST_LAN_48 = create("apps__48__yast-lan");
+    public static final AntuIcon APP_YAST_LANGUAGE_48 = create("apps__48__yast-language");
+    public static final AntuIcon APP_YAST_LIVE_INSTALL_48 = create("apps__48__yast-live-install");
+    public static final AntuIcon APP_YAST_MAIL_48 = create("apps__48__yast-mail");
+    public static final AntuIcon APP_YAST_MESSAGES_48 = create("apps__48__yast-messages");
+    public static final AntuIcon APP_YAST_MISC_48 = create("apps__48__yast-misc");
+    public static final AntuIcon APP_YAST_NETWORK_SERVICES_48 = create("apps__48__yast-network-services");
+    public static final AntuIcon APP_YAST_NFS_48 = create("apps__48__yast-nfs");
+    public static final AntuIcon APP_YAST_NIS_48 = create("apps__48__yast-nis");
+    public static final AntuIcon APP_YAST_NTP_CLIENT_48 = create("apps__48__yast-ntp-client");
+    public static final AntuIcon APP_YAST_ONLINE_UPDATE_48 = create("apps__48__yast-online-update");
+    public static final AntuIcon APP_YAST_POWERTWEAK_48 = create("apps__48__yast-powertweak");
+    public static final AntuIcon APP_YAST_PRINTER_48 = create("apps__48__yast-printer");
+    public static final AntuIcon APP_YAST_PROXY_48 = create("apps__48__yast-proxy");
+    public static final AntuIcon APP_YAST_RELEASE_NOTES_48 = create("apps__48__yast-release-notes");
+    public static final AntuIcon APP_YAST_REMOTE_48 = create("apps__48__yast-remote");
+    public static final AntuIcon APP_YAST_RUNLEVEL_48 = create("apps__48__yast-runlevel");
+    public static final AntuIcon APP_YAST_SAMBA_CLIENT_48 = create("apps__48__yast-samba-client");
+    public static final AntuIcon APP_YAST_SAMBA_SERVER_48 = create("apps__48__yast-samba-server");
+    public static final AntuIcon APP_YAST_SCANNER_48 = create("apps__48__yast-scanner");
+    public static final AntuIcon APP_YAST_SECURITY_48 = create("apps__48__yast-security");
+    public static final AntuIcon APP_YAST_SNAPPER_48 = create("apps__48__yast-snapper");
+    public static final AntuIcon APP_YAST_SOFTWARE_48 = create("apps__48__yast-software");
+    public static final AntuIcon APP_YAST_SOUND_48 = create("apps__48__yast-sound");
+    public static final AntuIcon APP_YAST_SUDO_48 = create("apps__48__yast-sudo");
+    public static final AntuIcon APP_YAST_SUPPORT_48 = create("apps__48__yast-support");
+    public static final AntuIcon APP_YAST_SW_SINGLE_48 = create("apps__48__yast-sw_single");
+    public static final AntuIcon APP_YAST_SW_SOURCE_48 = create("apps__48__yast-sw_source");
+    public static final AntuIcon APP_YAST_SYSCONFIG_48 = create("apps__48__yast-sysconfig");
+    public static final AntuIcon APP_YAST_SYSTEM_48 = create("apps__48__yast-system");
+    public static final AntuIcon APP_YAST_TIMEZONE_48 = create("apps__48__yast-timezone");
+    public static final AntuIcon APP_YAST_USERS_48 = create("apps__48__yast-users");
+    public static final AntuIcon APP_YAST_VENDOR_48 = create("apps__48__yast-vendor");
+    public static final AntuIcon APP_YAST_VM_INSTALL_48 = create("apps__48__yast-vm-install");
+    public static final AntuIcon APP_YED_48 = create("apps__48__yed");
+    public static final AntuIcon APP_YOUTUBE_48 = create("apps__48__youtube");
+    public static final AntuIcon APP_YOUTUBE_DL_48 = create("apps__48__youtube-dl");
+    public static final AntuIcon APP_YOUTUBE_DL_GUI_48 = create("apps__48__youtube-dl-gui");
+    public static final AntuIcon APP_YOUTUBE_DLG_48 = create("apps__48__youtube-dlg");
+    public static final AntuIcon APP_YOUTUBE_TO_MP3_48 = create("apps__48__youtube-to-mp3");
+    public static final AntuIcon APP_YUMEX_48 = create("apps__48__yumex");
+    public static final AntuIcon APP_ZANSHIN_48 = create("apps__48__zanshin");
+    public static final AntuIcon APP_ZAZ_48 = create("apps__48__zaz");
+    public static final AntuIcon APP_ZEKR_48 = create("apps__48__zekr");
+    public static final AntuIcon APP_ZEROINSTALL_48 = create("apps__48__zeroinstall");
+    public static final AntuIcon APP_ZSNES_48 = create("apps__48__zsnes");
 
-		@Override
-		public String getIconLibraryId() {
-			return AntuIconProvider.LIBRARY_ID;
-		}
-
-		public Icon withStyle(IconStyle style) {
-			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
-		}
-	}
-
-	public enum PLACES implements SimpleIcon {
-
-		BOOKMARKS_22("places__22__bookmarks.svg"),
-		CERTIFICATE_SERVER_22("places__22__certificate-server.svg"),
-		DOCUMENT_MULTIPLE_22("places__22__document-multiple.svg"),
-		FAVORITES_22("places__22__favorites.svg"),
-		FOLDER_ACTIVITIES_22("places__22__folder-activities.svg"),
-		FOLDER_ADD_22("places__22__folder-add.svg"),
-		FOLDER_BLACK_22("places__22__folder-black.svg"),
-		FOLDER_BLUE_22("places__22__folder-blue.svg"),
-		FOLDER_BOOKMARK_22("places__22__folder-bookmark.svg"),
-		FOLDER_BROWN_22("places__22__folder-brown.svg"),
-		FOLDER_CAMERA_22("places__22__folder-camera.svg"),
-		FOLDER_CHAKRA_22("places__22__folder-chakra.svg"),
-		FOLDER_CLOUD_22("places__22__folder-cloud.svg"),
-		FOLDER_CYAN_22("places__22__folder-cyan.svg"),
-		FOLDER_DEVELOPMENT_22("places__22__folder-development.svg"),
-		FOLDER_DOCUMENTS_22("places__22__folder-documents.svg"),
-		FOLDER_DOWNLOAD_22("places__22__folder-download.svg"),
-		FOLDER_DOWNLOADS_22("places__22__folder-downloads.svg"),
-		FOLDER_DROPBOX_22("places__22__folder-dropbox.svg"),
-		FOLDER_FAVORITES_22("places__22__folder-favorites.svg"),
-		FOLDER_GAMES_22("places__22__folder-games.svg"),
-		FOLDER_GDRIVE_22("places__22__folder-gdrive.svg"),
-		FOLDER_GIT_22("places__22__folder-git.svg"),
-		FOLDER_GITHUB_22("places__22__folder-github.svg"),
-		FOLDER_GNOME_22("places__22__folder-gnome.svg"),
-		FOLDER_GREEN_22("places__22__folder-green.svg"),
-		FOLDER_GREY_22("places__22__folder-grey.svg"),
-		FOLDER_HTML_22("places__22__folder-html.svg"),
-		FOLDER_IMAGE_PEOPLE_22("places__22__folder-image-people.svg"),
-		FOLDER_IMAGE_22("places__22__folder-image.svg"),
-		FOLDER_IMAGES_22("places__22__folder-images.svg"),
-		FOLDER_IMPORTANT_22("places__22__folder-important.svg"),
-		FOLDER_KAOS_22("places__22__folder-kaos.svg"),
-		FOLDER_LOCKED_22("places__22__folder-locked.svg"),
-		FOLDER_MAGENTA_22("places__22__folder-magenta.svg"),
-		FOLDER_MAIL_22("places__22__folder-mail.svg"),
-		FOLDER_MUSIC_22("places__22__folder-music.svg"),
-		FOLDER_NETWORK_22("places__22__folder-network.svg"),
-		FOLDER_OPEN_22("places__22__folder-open.svg"),
-		FOLDER_ORANGE_22("places__22__folder-orange.svg"),
-		FOLDER_OWNCLOUD_22("places__22__folder-owncloud.svg"),
-		FOLDER_PICTURE_22("places__22__folder-picture.svg"),
-		FOLDER_PICTURES_22("places__22__folder-pictures.svg"),
-		FOLDER_PRINT_22("places__22__folder-print.svg"),
-		FOLDER_PRIVATE_22("places__22__folder-private.svg"),
-		FOLDER_PUBLIC_22("places__22__folder-public.svg"),
-		FOLDER_PUBLICSHARE_22("places__22__folder-publicshare.svg"),
-		FOLDER_RED_22("places__22__folder-red.svg"),
-		FOLDER_REMOTE_22("places__22__folder-remote.svg"),
-		FOLDER_SCRIPT_22("places__22__folder-script.svg"),
-		FOLDER_SOUND_22("places__22__folder-sound.svg"),
-		FOLDER_TAR_22("places__22__folder-tar.svg"),
-		FOLDER_TEMP_22("places__22__folder-temp.svg"),
-		FOLDER_TEMPLATES_22("places__22__folder-templates.svg"),
-		FOLDER_TEXT_22("places__22__folder-text.svg"),
-		FOLDER_TORRENTS_22("places__22__folder-torrents.svg"),
-		FOLDER_TXT_22("places__22__folder-txt.svg"),
-		FOLDER_VBOX_22("places__22__folder-vbox.svg"),
-		FOLDER_VIDEO_22("places__22__folder-video.svg"),
-		FOLDER_VIDEOCAMERA_22("places__22__folder-videocamera.svg"),
-		FOLDER_VIDEOS_22("places__22__folder-videos.svg"),
-		FOLDER_VIOLET_22("places__22__folder-violet.svg"),
-		FOLDER_WIFI_22("places__22__folder-wifi.svg"),
-		FOLDER_YELLOW_22("places__22__folder-yellow.svg"),
-		FOLDER_22("places__22__folder.svg"),
-		LIBRARY_MUSIC_22("places__22__library-music.svg"),
-		MAIL_FOLDER_INBOX_22("places__22__mail-folder-inbox.svg"),
-		MAIL_FOLDER_OUTBOX_22("places__22__mail-folder-outbox.svg"),
-		MAIL_FOLDER_SENT_22("places__22__mail-folder-sent.svg"),
-		MAIL_MESSAGE_22("places__22__mail-message.svg"),
-		NETWORK_SERVER_DATABASE_22("places__22__network-server-database.svg"),
-		NETWORK_SERVER_22("places__22__network-server.svg"),
-		NETWORK_WORKGROUP_22("places__22__network-workgroup.svg"),
-		REPOSITORY_22("places__22__repository.svg"),
-		SERVER_DATABASE_22("places__22__server-database.svg"),
-		START_HERE_KDE_22("places__22__start-here-kde.svg"),
-		STOCK_FOLDER_22("places__22__stock_folder.svg"),
-		USER_DESKTOP_22("places__22__user-desktop.svg"),
-		USER_HOME_22("places__22__user-home.svg"),
-		USER_TRASH_FULL_22("places__22__user-trash-full.svg"),
-		USER_TRASH_22("places__22__user-trash.svg"),
-		BOOKMARKS_32("places__32__bookmarks.svg"),
-		CERTIFICATE_SERVER_32("places__32__certificate-server.svg"),
-		FAVORITES_32("places__32__favorites.svg"),
-		FOLDER_ACTIVITIES_32("places__32__folder-activities.svg"),
-		FOLDER_BLACK_32("places__32__folder-black.svg"),
-		FOLDER_BLUE_32("places__32__folder-blue.svg"),
-		FOLDER_BOOKMARK_32("places__32__folder-bookmark.svg"),
-		FOLDER_BROWN_32("places__32__folder-brown.svg"),
-		FOLDER_CAMERA_32("places__32__folder-camera.svg"),
-		FOLDER_CHAKRA_32("places__32__folder-chakra.svg"),
-		FOLDER_CLOUD_32("places__32__folder-cloud.svg"),
-		FOLDER_CLOUDS_32("places__32__folder-clouds.svg"),
-		FOLDER_CYAN_32("places__32__folder-cyan.svg"),
-		FOLDER_DEVELOPMENT_32("places__32__folder-development.svg"),
-		FOLDER_DOCUMENTS_32("places__32__folder-documents.svg"),
-		FOLDER_DOWNLOAD_32("places__32__folder-download.svg"),
-		FOLDER_DOWNLOADS_32("places__32__folder-downloads.svg"),
-		FOLDER_DROPBOX_32("places__32__folder-dropbox.svg"),
-		FOLDER_FAVORITES_32("places__32__folder-favorites.svg"),
-		FOLDER_GAMES_32("places__32__folder-games.svg"),
-		FOLDER_GDRIVE_32("places__32__folder-gdrive.svg"),
-		FOLDER_GIT_32("places__32__folder-git.svg"),
-		FOLDER_GITHUB_32("places__32__folder-github.svg"),
-		FOLDER_GNOME_32("places__32__folder-gnome.svg"),
-		FOLDER_GREEN_32("places__32__folder-green.svg"),
-		FOLDER_GREY_32("places__32__folder-grey.svg"),
-		FOLDER_HTML_32("places__32__folder-html.svg"),
-		FOLDER_IMAGE_PEOPLE_32("places__32__folder-image-people.svg"),
-		FOLDER_IMAGE_32("places__32__folder-image.svg"),
-		FOLDER_IMAGES_32("places__32__folder-images.svg"),
-		FOLDER_IMPORTANT_32("places__32__folder-important.svg"),
-		FOLDER_KAOS_32("places__32__folder-kaos.svg"),
-		FOLDER_LOCKED_32("places__32__folder-locked.svg"),
-		FOLDER_MAGENTA_32("places__32__folder-magenta.svg"),
-		FOLDER_MAIL_32("places__32__folder-mail.svg"),
-		FOLDER_MUSIC_32("places__32__folder-music.svg"),
-		FOLDER_NETWORK_32("places__32__folder-network.svg"),
-		FOLDER_OPEN_32("places__32__folder-open.svg"),
-		FOLDER_ORANGE_32("places__32__folder-orange.svg"),
-		FOLDER_OWNCLOUD_32("places__32__folder-owncloud.svg"),
-		FOLDER_PICTURE_32("places__32__folder-picture.svg"),
-		FOLDER_PICTURES_32("places__32__folder-pictures.svg"),
-		FOLDER_PRINT_32("places__32__folder-print.svg"),
-		FOLDER_PRIVATE_32("places__32__folder-private.svg"),
-		FOLDER_PUBLIC_32("places__32__folder-public.svg"),
-		FOLDER_PUBLICSHARE_32("places__32__folder-publicshare.svg"),
-		FOLDER_RED_32("places__32__folder-red.svg"),
-		FOLDER_REMOTE_32("places__32__folder-remote.svg"),
-		FOLDER_SCRIPT_32("places__32__folder-script.svg"),
-		FOLDER_SOUND_32("places__32__folder-sound.svg"),
-		FOLDER_TAR_32("places__32__folder-tar.svg"),
-		FOLDER_TEMP_32("places__32__folder-temp.svg"),
-		FOLDER_TEMPLATES_32("places__32__folder-templates.svg"),
-		FOLDER_TEXT_32("places__32__folder-text.svg"),
-		FOLDER_TORRENTS_32("places__32__folder-torrents.svg"),
-		FOLDER_TXT_32("places__32__folder-txt.svg"),
-		FOLDER_VBOX_32("places__32__folder-vbox.svg"),
-		FOLDER_VIDEO_32("places__32__folder-video.svg"),
-		FOLDER_VIDEOCAMERA_32("places__32__folder-videocamera.svg"),
-		FOLDER_VIDEOS_32("places__32__folder-videos.svg"),
-		FOLDER_VIOLET_32("places__32__folder-violet.svg"),
-		FOLDER_WIFI_32("places__32__folder-wifi.svg"),
-		FOLDER_YELLOW_32("places__32__folder-yellow.svg"),
-		FOLDER_32("places__32__folder.svg"),
-		LIBRARY_MUSIC_32("places__32__library-music.svg"),
-		NETWORK_SERVER_DATABASE_32("places__32__network-server-database.svg"),
-		NETWORK_SERVER_32("places__32__network-server.svg"),
-		NETWORK_WORKGROUP_32("places__32__network-workgroup.svg"),
-		REPOSITORY_32("places__32__repository.svg"),
-		SERVER_DATABASE_32("places__32__server-database.svg"),
-		STOCK_FOLDER_32("places__32__stock_folder.svg"),
-		USER_DESKTOP_32("places__32__user-desktop.svg"),
-		USER_HOME_32("places__32__user-home.svg"),
-		USER_TRASH_FULL_32("places__32__user-trash-full.svg"),
-		USER_TRASH_32("places__32__user-trash.svg"),
-		BOOKMARKS_64("places__64__bookmarks.svg"),
-		CERTIFICATE_SERVER_64("places__64__certificate-server.svg"),
-		DATABASE_CHAKRA_64("places__64__database-chakra.svg"),
-		DISTRIBUTOR_LOGO_ARCHLINUX_64("places__64__distributor-logo-archlinux.svg"),
-		DISTRIBUTOR_LOGO_BLAG_64("places__64__distributor-logo-blag.svg"),
-		DISTRIBUTOR_LOGO_CHAKRA_64("places__64__distributor-logo-chakra.svg"),
-		DISTRIBUTOR_LOGO_DEBIAN_64("places__64__distributor-logo-debian.svg"),
-		DISTRIBUTOR_LOGO_DRAGORA_64("places__64__distributor-logo-dragora.svg"),
-		DISTRIBUTOR_LOGO_FEDORA_64("places__64__distributor-logo-fedora.svg"),
-		DISTRIBUTOR_LOGO_FREEBSD_64("places__64__distributor-logo-freebsd.svg"),
-		DISTRIBUTOR_LOGO_GENTOO_64("places__64__distributor-logo-gentoo.svg"),
-		DISTRIBUTOR_LOGO_GUIX_64("places__64__distributor-logo-guix.svg"),
-		DISTRIBUTOR_LOGO_KAOS_64("places__64__distributor-logo-kaos.svg"),
-		DISTRIBUTOR_LOGO_KUBUNTU_64("places__64__distributor-logo-kubuntu.svg"),
-		DISTRIBUTOR_LOGO_MAGEIA_64("places__64__distributor-logo-mageia.svg"),
-		DISTRIBUTOR_LOGO_MANJARO_64("places__64__distributor-logo-manjaro.svg"),
-		DISTRIBUTOR_LOGO_OPENSUSE_64("places__64__distributor-logo-opensuse.svg"),
-		DISTRIBUTOR_LOGO_PARABOLA_64("places__64__distributor-logo-parabola.svg"),
-		DISTRIBUTOR_LOGO_SLACKWARE_64("places__64__distributor-logo-slackware.svg"),
-		DISTRIBUTOR_LOGO_TRISQUEL_64("places__64__distributor-logo-trisquel.svg"),
-		DISTRIBUTOR_LOGO_UBUNTU_64("places__64__distributor-logo-ubuntu.svg"),
-		DISTRIBUTOR_LOGO_64("places__64__distributor-logo.svg"),
-		FAVORITES_64("places__64__favorites.svg"),
-		FOLDER_ACTIVITIES_64("places__64__folder-activities.svg"),
-		FOLDER_BLACK_64("places__64__folder-black.svg"),
-		FOLDER_BLUE_64("places__64__folder-blue.svg"),
-		FOLDER_BOOKMARK_64("places__64__folder-bookmark.svg"),
-		FOLDER_BROWN_64("places__64__folder-brown.svg"),
-		FOLDER_CAMERA_64("places__64__folder-camera.svg"),
-		FOLDER_CHAKRA_64("places__64__folder-chakra.svg"),
-		FOLDER_CLOUD_64("places__64__folder-cloud.svg"),
-		FOLDER_CYAN_64("places__64__folder-cyan.svg"),
-		FOLDER_DEVELOPMENT_64("places__64__folder-development.svg"),
-		FOLDER_DOCUMENTS_64("places__64__folder-documents.svg"),
-		FOLDER_DOWNLOAD_64("places__64__folder-download.svg"),
-		FOLDER_DOWNLOADS_64("places__64__folder-downloads.svg"),
-		FOLDER_DROPBOX_64("places__64__folder-dropbox.svg"),
-		FOLDER_FAVORITES_64("places__64__folder-favorites.svg"),
-		FOLDER_GAMES_64("places__64__folder-games.svg"),
-		FOLDER_GDRIVE_64("places__64__folder-gdrive.svg"),
-		FOLDER_GIT_64("places__64__folder-git.svg"),
-		FOLDER_GITHUB_64("places__64__folder-github.svg"),
-		FOLDER_GNOME_64("places__64__folder-gnome.svg"),
-		FOLDER_GREEN_64("places__64__folder-green.svg"),
-		FOLDER_GREY_64("places__64__folder-grey.svg"),
-		FOLDER_HTML_64("places__64__folder-html.svg"),
-		FOLDER_IMAGE_PEOPLE_64("places__64__folder-image-people.svg"),
-		FOLDER_IMAGE_64("places__64__folder-image.svg"),
-		FOLDER_IMAGES_64("places__64__folder-images.svg"),
-		FOLDER_IMPORTANT_64("places__64__folder-important.svg"),
-		FOLDER_KAOS_64("places__64__folder-kaos.svg"),
-		FOLDER_LOCKED_64("places__64__folder-locked.svg"),
-		FOLDER_MAGENTA_64("places__64__folder-magenta.svg"),
-		FOLDER_MAIL_64("places__64__folder-mail.svg"),
-		FOLDER_MUSIC_64("places__64__folder-music.svg"),
-		FOLDER_NETWORK_64("places__64__folder-network.svg"),
-		FOLDER_OPEN_64("places__64__folder-open.svg"),
-		FOLDER_ORANGE_64("places__64__folder-orange.svg"),
-		FOLDER_OWNCLOUD_64("places__64__folder-owncloud.svg"),
-		FOLDER_PICTURE_64("places__64__folder-picture.svg"),
-		FOLDER_PICTURES_64("places__64__folder-pictures.svg"),
-		FOLDER_PRINT_64("places__64__folder-print.svg"),
-		FOLDER_PRIVATE_64("places__64__folder-private.svg"),
-		FOLDER_PUBLIC_64("places__64__folder-public.svg"),
-		FOLDER_PUBLICSHARE_64("places__64__folder-publicshare.svg"),
-		FOLDER_RED_64("places__64__folder-red.svg"),
-		FOLDER_REMOTE_64("places__64__folder-remote.svg"),
-		FOLDER_SCRIPT_64("places__64__folder-script.svg"),
-		FOLDER_SOUND_64("places__64__folder-sound.svg"),
-		FOLDER_TAR_64("places__64__folder-tar.svg"),
-		FOLDER_TEMP_64("places__64__folder-temp.svg"),
-		FOLDER_TEMPLATES_64("places__64__folder-templates.svg"),
-		FOLDER_TEXT_64("places__64__folder-text.svg"),
-		FOLDER_TORRENTS_64("places__64__folder-torrents.svg"),
-		FOLDER_TXT_64("places__64__folder-txt.svg"),
-		FOLDER_VBOX_64("places__64__folder-vbox.svg"),
-		FOLDER_VIDEO_64("places__64__folder-video.svg"),
-		FOLDER_VIDEOCAMERA_64("places__64__folder-videocamera.svg"),
-		FOLDER_VIDEOS_64("places__64__folder-videos.svg"),
-		FOLDER_VIOLET_64("places__64__folder-violet.svg"),
-		FOLDER_WIFI_64("places__64__folder-wifi.svg"),
-		FOLDER_YELLOW_64("places__64__folder-yellow.svg"),
-		FOLDER_64("places__64__folder.svg"),
-		LIBRARY_MUSIC_64("places__64__library-music.svg"),
-		NETWORK_SERVER_DATABASE_64("places__64__network-server-database.svg"),
-		NETWORK_SERVER_64("places__64__network-server.svg"),
-		NETWORK_WORKGROUP_64("places__64__network-workgroup.svg"),
-		REPOSITORY_64("places__64__repository.svg"),
-		SERVER_DATABASE_64("places__64__server-database.svg"),
-		START_HERE_ARCHLINUX_64("places__64__start-here-archlinux.svg"),
-		START_HERE_BLAG_64("places__64__start-here-blag.svg"),
-		START_HERE_CHAKRA_64("places__64__start-here-chakra.svg"),
-		START_HERE_DEBIAN_64("places__64__start-here-debian.svg"),
-		START_HERE_DRAGORA_64("places__64__start-here-dragora.svg"),
-		START_HERE_FEDORA_64("places__64__start-here-fedora.svg"),
-		START_HERE_FREEBSD_64("places__64__start-here-freebsd.svg"),
-		START_HERE_GENTOO_64("places__64__start-here-gentoo.svg"),
-		START_HERE_GUIX_64("places__64__start-here-guix.svg"),
-		START_HERE_KAOS_64("places__64__start-here-kaos.svg"),
-		START_HERE_KDE_64("places__64__start-here-kde.svg"),
-		START_HERE_KUBUNTU_64("places__64__start-here-kubuntu.svg"),
-		START_HERE_MAGEIA_64("places__64__start-here-mageia.svg"),
-		START_HERE_MANJARO_64("places__64__start-here-manjaro.svg"),
-		START_HERE_OPENSUSE_64("places__64__start-here-opensuse.svg"),
-		START_HERE_PARABOLA_64("places__64__start-here-parabola.svg"),
-		START_HERE_SLACKWARE_64("places__64__start-here-slackware.svg"),
-		START_HERE_TRISQUEL_64("places__64__start-here-trisquel.svg"),
-		START_HERE_UBUNTU_64("places__64__start-here-ubuntu.svg"),
-		START_HERE_64("places__64__start-here.svg"),
-		STOCK_FOLDER_64("places__64__stock_folder.svg"),
-		USER_DESKTOP_64("places__64__user-desktop.svg"),
-		USER_HOME_64("places__64__user-home.svg"),
-		USER_TRASH_FULL_64("places__64__user-trash-full.svg"),
-		USER_TRASH_64("places__64__user-trash.svg"),
-		;
-		private String name;
-
-		PLACES(String name) {
-			this.name = name;
-		}
-
-		@Override
-		public String getIconName() {
-			return name;
-		}
-
-		@Override
-		public String getIconLibraryId() {
-			return AntuIconProvider.LIBRARY_ID;
-		}
-
-		public Icon withStyle(IconStyle style) {
-			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
-		}
-	}
-
-	public enum STATUS implements SimpleIcon {
-		APPOINTMENT_RECURRING_64("status__64__appointment-recurring.svg"),
-		APPOINTMENT_REMINDER_64("status__64__appointment-reminder.svg"),
-		AUDIO_READY_22("status__22__audio-ready.svg"),
-		AUDIO_VOLUME_HIGH_22("status__22__audio-volume-high.svg"),
-		AUDIO_VOLUME_LOW_22("status__22__audio-volume-low.svg"),
-		AUDIO_VOLUME_MEDIUM_22("status__22__audio-volume-medium.svg"),
-		AUDIO_VOLUME_MUTED_22("status__22__audio-volume-muted.svg"),
-		BATTERY_040_64("status__64__battery-040.svg"),
-		BATTERY_060_64("status__64__battery-060.svg"),
-		BATTERY_080_64("status__64__battery-080.svg"),
-		BATTERY_100_64("status__64__battery-100.svg"),
-		BATTERY_CAUTION_64("status__64__  battery-caution.svg"),
-		BATTERY_CHARGING_040_64("status__64__battery-charging-040.svg"),
-		BATTERY_CHARGING_060_64("status__64__battery-charging-060.svg"),
-		BATTERY_CHARGING_080_64("status__64__battery-charging-080.svg"),
-		BATTERY_CHARGING_64("status__64__battery-charging.svg"),
-		BATTERY_CHARGING_CAUTION_64("status__64__battery-charging-caution.svg"),
-		BATTERY_CHARGING_LOW_64("status__64__battery-charging-low.svg"),
-		BATTERY_LOW_64("status__64__battery-low.svg"),
-		BATTERY_MISSING_64("status__64__battery-missing.svg"),
-		CAMERA_OFF_22("status__22__camera-off.svg"),
-		CAMERA_ON_22("status__22__camera-on.svg"),
-		CAMERA_READY_22("status__22__camera-ready.svg"),
-		CLOUDSTATUS_22("status__22__cloudstatus.svg"),
-		DIALOG_ERROR_64("status__64__dialog-error.svg"),
-		DIALOG_INFORMATION_16("status__16__dialog-information.svg"),
-		DIALOG_INFORMATION_22("status__22__dialog-information.svg"),
-		DIALOG_INFORMATION_64("status__64__dialog-information.svg"),
-		DIALOG_PASSWORD_64("status__64__dialog-password.svg"),
-		DIALOG_QUESTION_64("status__64__dialog-question.svg"),
-		DIALOG_WARNING_64("status__64__dialog-warning.svg"),
-		DROPBOXSTATUS_BUSY_22("status__22__dropboxstatus-busy.svg"),
-		DROPBOXSTATUS_BUSY2_22("status__22__dropboxstatus-busy2.svg"),
-		DROPBOXSTATUS_IDLE_22("status__22__dropboxstatus-idle.svg"),
-		DROPBOXSTATUS_LOGO_22("status__22__dropboxstatus-logo.svg"),
-		DROPBOXSTATUS_X_22("status__22__dropboxstatus-x.svg"),
-		FOLDER_CLOUD_22("status__22__folder-cloud.svg"),
-		FOLDER_OPEN_64("status__64__folder-open.svg"),
-		IMAGE_LOADING_64("status__64__image-loading.svg"),
-		IMAGE_MISSING_22("status__22__image-missing.svg"),
-		IRC_CHANNEL_JOINED_22("status__22__irc-channel-joined.svg"),
-		IRC_CHANNEL_PARTED_22("status__22__irc-channel-parted.svg"),
-		KDECONNECT_TRAY_16_16("status__16__kdeconnect-tray-16.svg"),
-		KDECONNECT_TRAY_22("status__22__kdeconnect-tray.svg"),
-		LAPTOP_CONNECTED_22("status__22__laptop-connected.svg"),
-		LAPTOP_DISCONNECTED_22("status__22__laptop-disconnected.svg"),
-		LAPTOP_TRUSTED_22("status__22__laptop-trusted.svg"),
-		MAIL_ATTACHMENT_22("status__22__mail-attachment.svg"),
-		MAIL_QUEUED_64("status__64__mail-queued.svg"),
-		MAIL_READ_64("status__64__mail-read.svg"),
-		MAIL_REPLIED_64("status__64__mail-replied.svg"),
-		MAIL_SENT_64("status__64__mail-sent.svg"),
-		MAIL_TAGGED_64("status__64__mail-tagged.svg"),
-		MAIL_TASK_64("status__64__mail-task.svg"),
-		MAIL_UNREAD_64("status__64__mail-unread.svg"),
-		MAIL_UNREAD_NEW_64("status__64__mail-unread-new.svg"),
-		MEDIA_PLAYLIST_REPEAT_64("status__64__media-playlist-repeat.svg"),
-		MEDIA_PLAYLIST_SHUFFLE_64("status__64__media-playlist-shuffle.svg"),
-		MEETING_CHAIR_64("status__64__meeting-chair.svg"),
-		MEETING_OBSERVER_64("status__64__meeting-observer.svg"),
-		MEETING_ORGANIZER_64("status__64__meeting-organizer.svg"),
-		MEETING_PARTICIPANT_64("status__64__meeting-participant.svg"),
-		MEETING_PARTICIPANT_OPTIONAL_64("status__64__meeting-participant-optional.svg"),
-		MEETING_PARTICIPANT_REPLY_64("status__64__meeting-participant-reply.svg"),
-		MIC_OFF_22("status__22__mic-off.svg"),
-		MIC_ON_22("status__22__mic-on.svg"),
-		MIC_READY_22("status__22__mic-ready.svg"),
-		OBJECT_LOCKED_64("status__64__object-locked.svg"),
-		OBJECT_UNLOCKED_64("status__64__object-unlocked.svg"),
-		PRINTER_ERROR_64("status__64__printer-error.svg"),
-		PRINTER_PRINTING_64("status__64__printer-printing.svg"),
-		SCRIPT_ERROR_22("status__22__script-error.svg"),
-		SECURITY_HIGH_22("status__22__security-high.svg"),
-		SECURITY_HIGH_64("status__64__security-high.svg"),
-		SECURITY_LOW_22 ("status__22__security-low.svg"),
-		SECURITY_LOW_64("status__64__security-low.svg"),
-		SECURITY_MEDIUM_22("status__22__security-medium.svg"),
-		SECURITY_MEDIUM_64("status__64__security-medium.svg"),
-		SMARTPHONE_CONNECTED_22("status__22__smartphone-connected.svg"),
-		SMARTPHONE_DISCONNECTED_22("status__22__smartphone-disconnected.svg"),
-		SMARTPHONE_TRUSTED_22("status__22__smartphone-trusted.svg"),
-		STATE_DOWNLOAD_22("status__22__state-download.svg"),
-		STATE_ERROR_22("status__22__state-error.svg"),
-		STATE_INFORMATION_22("status__22__state-information.svg"),
-		STATE_OFFLINE_22("status__22__state-offline.svg"),
-		STATE_OK_22("status__22__state-ok.svg"),
-		STATE_PAUSE_22("status__22__state-pause.svg"),
-		STATE_SYNC_22("status__22__state-sync.svg"),
-		STATE_WARNING_22("status__22__state-warning.svg"),
-		TABLET_CONNECTED_22("status__22__tablet-connected.svg"),
-		TABLET_DISCONNECTED_22("status__22__tablet-disconnected.svg"),
-		TABLET_TRUSTED_22("status__22__tablet-trusted.svg"),
-		TASK_ACCEPTED_64("status__64__task-accepted.svg"),
-		TASK_ATTEMPT_64("status__64__task-attempt.svg"),
-		TASK_ATTENTION_64("status__64__task-attention.svg"),
-		TASK_COMPLETE_64("status__64__task-complete.svg"),
-		TASK_DELEGATE_64("status__64__task-delegate.svg"),
-		TASK_ONGOING_64("status__64__task-ongoing.svg"),
-		TASK_RECURRING_64("status__64__task-recurring.svg"),
-		TASK_REJECT_64("status__64__task-reject.svg"),
-		TASK_REMINDER_64("status__64__task-reminder.svg"),
-		USER_AVAILABLE_22("status__22__user-available.svg"),
-		USER_AWAY_22("status__22__user-away.svg"),
-		USER_AWAY_EXTENDED_22("status__22__user-away-extended.svg"),
-		USER_BUSY_22("status__22__user-busy.svg"),
-		USER_IDLE_22("status__22__user-idle.svg"),
-		USER_INVISIBLE_22("status__22__user-invisible.svg"),
-		USER_OFFLINE_22("status__22__user-offline.svg"),
-		USER_ONLINE_22("status__22__user-online.svg"),
-		USER_TRASH_FULL_64("status__64__user-trash-full.svg"),
-		WALLET_CLOSED_64("status__64__wallet-closed.svg"),
-		WALLET_OPEN_64("status__64__wallet-open.svg"),
-		WEATHER_CLEAR_64("status__64__weather-clear.svg"),
-		WEATHER_CLEAR_NIGHT_64("status__64__weather-clear-night.svg"),
-		WEATHER_CLOUDS_64("status__64__weather-clouds.svg"),
-		WEATHER_CLOUDS_NIGHT_64("status__64__weather-clouds-night.svg"),
-		WEATHER_FEW_CLOUDS_64("status__64__weather-few-clouds.svg"),
-		WEATHER_FEW_CLOUDS_NIGHT_64("status__64__weather-few-clouds-night.svg"),
-		WEATHER_FREEZING_RAIN_64("status__64__weather-freezing-rain.svg"),
-		WEATHER_HAIL_64("status__64__weather-hail.svg"),
-		WEATHER_MANY_CLOUDS_64("status__64__weather-many-clouds.svg"),
-		WEATHER_MIST_64("status__64__weather-mist.svg"),
-		WEATHER_NONE_AVAILABLE_64("status__64__weather-none-available.svg"),
-		WEATHER_SHOWERS_64("status__64__weather-showers.svg"),
-		WEATHER_SHOWERS_DAY_64("status__64__weather-showers-day.svg"),
-		WEATHER_SHOWERS_NIGHT_64("status__64__weather-showers-night.svg"),
-		WEATHER_SHOWERS_SCATTERED_64("status__64__weather-showers-scattered.svg"),
-		WEATHER_SHOWERS_SCATTERED_DAY_64("status__64__weather-showers-scattered-day.svg"),
-		WEATHER_SHOWERS_SCATTERED_NIGHT_64("status__64__weather-showers-scattered-night.svg"),
-		WEATHER_SNOW_64("status__64__weather-snow.svg"),
-		WEATHER_SNOW_RAIN_64("status__64__weather-snow-rain.svg"),
-		WEATHER_SNOW_SCATTERED_64("status__64__weather-snow-scattered.svg"),
-		WEATHER_SNOW_SCATTERED_DAY_64("status__64__weather-snow-scattered-day.svg"),
-		WEATHER_SNOW_SCATTERED_NIGHT_64("status__64__weather-snow-scattered-night.svg"),
-		WEATHER_STORM_64("status__64__weather-storm.svg"),
-		WEATHER_STORM_DAY_64("status__64__weather-storm-day.svg"),
-		WEATHER_STORM_NIGHT_64("status__64__weather-storm-night.svg"),
-		WINDOW_SUPPRESSED_64("status__64__window-suppressed.svg"),
-		;
-		private String name;
-
-		STATUS(String name) {
-			this.name = name;
-		}
-
-		@Override
-		public String getIconName() {
-			return name;
-		}
-
-		@Override
-		public String getIconLibraryId() {
-			return AntuIconProvider.LIBRARY_ID;
-		}
-
-		public Icon withStyle(IconStyle style) {
-			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
-		}
-	}
-
-	public enum ACTION implements SimpleIcon {ACCEPT_SIGNAL_24("actions__24__accept_signal.svg"),
-		ACROBAT_24("actions__24__acrobat.svg"),
-		ACROBAT_32("actions__32__acrobat.svg"),
-		ACTION_ALBUMFOLDER_IMPORTDIR2_24("actions__24__action-albumfolder-importdir2.svg"),
-		ACTION_RSS_TAG_24("actions__24__action-rss_tag.svg"),
-		ADDRESS_BOOK_NEW_24("actions__24__address-book-new.svg"),
-		ADDRESS_BOOK_NEW_32("actions__32__address-book-new.svg"),
-		ADJUSTCURVES_24("actions__24__adjustcurves.svg"),
-		ADJUSTHSL_24("actions__24__adjusthsl.svg"),
-		ADJUSTLEVELS_24("actions__24__adjustlevels.svg"),
-		ADJUSTRGB_24("actions__24__adjustrgb.svg"),
-		ADRESS_BOOK_NEW_24("actions__24__adress-book-new.svg"),
-		AGGREGATION_24("actions__24__aggregation.svg"),
-		AKONADI_PHONE_HOME_24("actions__24__akonadi-phone-home.svg"),
-		AKONADICONSOLE_24("actions__24__akonadiconsole.svg"),
-		ALBUMFOLDER_IMPORTDIR_24("actions__24__albumfolder-importdir.svg"),
-		ALBUMFOLDER_IMPORTIMAGES_24("actions__24__albumfolder-importimages.svg"),
-		ALBUMFOLDER_NEW_24("actions__24__albumfolder-new.svg"),
-		ALBUMFOLDER_PROPERTIES_24("actions__24__albumfolder-properties.svg"),
-		ALBUMFOLDER_USER_TRASH_24("actions__24__albumfolder-user-trash.svg"),
-		ALIGN_HORIZONTAL_BASELINE_24("actions__24__align-horizontal-baseline.svg"),
-		ALIGN_HORIZONTAL_BOTTOM_OUT_24("actions__24__align-horizontal-bottom-out.svg"),
-		ALIGN_HORIZONTAL_BOTTOM_OUT_32("actions__32__align-horizontal-bottom-out.svg"),
-		ALIGN_HORIZONTAL_CENTER_24("actions__24__align-horizontal-center.svg"),
-		ALIGN_HORIZONTAL_CENTER_32("actions__32__align-horizontal-center.svg"),
-		ALIGN_HORIZONTAL_LEFT_24("actions__24__align-horizontal-left.svg"),
-		ALIGN_HORIZONTAL_LEFT_32("actions__32__align-horizontal-left.svg"),
-		ALIGN_HORIZONTAL_LEFT_OUT_24("actions__24__align-horizontal-left-out.svg"),
-		ALIGN_HORIZONTAL_LEFT_OUT_32("actions__32__align-horizontal-left-out.svg"),
-		ALIGN_HORIZONTAL_LEFT_TO_ANCHOR_24("actions__24__align-horizontal-left-to-anchor.svg"),
-		ALIGN_HORIZONTAL_LEFT_TO_ANCHOR_32("actions__32__align-horizontal-left-to-anchor.svg"),
-		ALIGN_HORIZONTAL_RIGHT_24("actions__24__align-horizontal-right.svg"),
-		ALIGN_HORIZONTAL_RIGHT_32("actions__32__align-horizontal-right.svg"),
-		ALIGN_HORIZONTAL_RIGHT_OUT_24("actions__24__align-horizontal-right-out.svg"),
-		ALIGN_HORIZONTAL_RIGHT_OUT_32("actions__32__align-horizontal-right-out.svg"),
-		ALIGN_HORIZONTAL_RIGHT_TO_ANCHOR_24("actions__24__align-horizontal-right-to-anchor.svg"),
-		ALIGN_HORIZONTAL_RIGHT_TO_ANCHOR_32("actions__32__align-horizontal-right-to-anchor.svg"),
-		ALIGN_HORIZONTAL_TOP_OUT_24("actions__24__align-horizontal-top-out.svg"),
-		ALIGN_HORIZONTAL_TOP_OUT_32("actions__32__align-horizontal-top-out.svg"),
-		ALIGN_VERTICAL_BASELINE_24("actions__24__align-vertical-baseline.svg"),
-		ALIGN_VERTICAL_BOTTOM_24("actions__24__align-vertical-bottom.svg"),
-		ALIGN_VERTICAL_BOTTOM_32("actions__32__align-vertical-bottom.svg"),
-		ALIGN_VERTICAL_BOTTOM_OUT_24("actions__24__align-vertical-bottom-out.svg"),
-		ALIGN_VERTICAL_BOTTOM_OUT_32("actions__32__align-vertical-bottom-out.svg"),
-		ALIGN_VERTICAL_BOTTOM_TO_ANCHOR_24("actions__24__align-vertical-bottom-to-anchor.svg"),
-		ALIGN_VERTICAL_BOTTOM_TO_ANCHOR_32("actions__32__align-vertical-bottom-to-anchor.svg"),
-		ALIGN_VERTICAL_CENTER_24("actions__24__align-vertical-center.svg"),
-		ALIGN_VERTICAL_CENTER_32("actions__32__align-vertical-center.svg"),
-		ALIGN_VERTICAL_TOP_24("actions__24__align-vertical-top.svg"),
-		ALIGN_VERTICAL_TOP_32("actions__32__align-vertical-top.svg"),
-		ALIGN_VERTICAL_TOP_OUT_24("actions__24__align-vertical-top-out.svg"),
-		ALIGN_VERTICAL_TOP_OUT_32("actions__32__align-vertical-top-out.svg"),
-		ALIGN_VERTICAL_TOP_TO_ANCHOR_24("actions__24__align-vertical-top-to-anchor.svg"),
-		ALIGN_VERTICAL_TOP_TO_ANCHOR_32("actions__32__align-vertical-top-to-anchor.svg"),
-		AMAROK_ARTIST_24("actions__24__amarok_artist.svg"),
-		AMAROK_CART_ADD_24("actions__24__amarok_cart_add.svg"),
-		AMAROK_CART_REMOVE_24("actions__24__amarok_cart_remove.svg"),
-		AMAROK_CART_VIEW_24("actions__24__amarok_cart_view.svg"),
-		AMAROK_CHANGE_LANGUAGE_24("actions__24__amarok_change_language.svg"),
-		AMAROK_CLOCK_24("actions__24__amarok_clock.svg"),
-		AMAROK_LYRICS_24("actions__24__amarok_lyrics.svg"),
-		AMAROK_PLAYCOUNT_24("actions__24__amarok_playcount.svg"),
-		AMAROK_PLAYLIST_24("actions__24__amarok_playlist.svg"),
-		AMAROK_PLAYLIST_REFRESH_24("actions__24__amarok_playlist_refresh.svg"),
-		AMAROK_SCRIPTS_24("actions__24__amarok_scripts.svg"),
-		ANCHOR_24("actions__24__anchor.svg"),
-		ANTIVIGNETTING_24("actions__24__antivignetting.svg"),
-		APPLICATION_EXIT_24("actions__24__application-exit.svg"),
-		APPLICATION_MENU_24("actions__24__application-menu.svg"),
-		APPLICATIONS_SYSTEM_24("actions__24__applications-system.svg"),
-		APPOINTMENT_NEW_24("actions__24__appointment-new.svg"),
-		APPOINTMENT_NEW_32("actions__32__appointment-new.svg"),
-		ARCHIVE_EXTRACT_24("actions__24__archive-extract.svg"),
-		ARCHIVE_EXTRACT_32("actions__32__archive-extract.svg"),
-		ARCHIVE_INSERT_24("actions__24__archive-insert.svg"),
-		ARCHIVE_INSERT_32("actions__32__archive-insert.svg"),
-		ARCHIVE_INSERT_DIRECTORY_24("actions__24__archive-insert-directory.svg"),
-		ARCHIVE_INSERT_DIRECTORY_32("actions__32__archive-insert-directory.svg"),
-		ARCHIVE_REMOVE_24("actions__24__archive-remove.svg"),
-		ARCHIVE_REMOVE_32("actions__32__archive-remove.svg"),
-		ARROW_DOWN_24("actions__24__arrow-down.svg"),
-		ARROW_DOWN_DOUBLE_24("actions__24__arrow-down-double.svg"),
-		ARROW_LEFT_24("actions__24__arrow-left.svg"),
-		ARROW_LEFT_DOUBLE_24("actions__24__arrow-left-double.svg"),
-		ARROW_LEFT_DOUBLE_32("actions__32__arrow-left-double.svg"),
-		ARROW_RIGHT_24("actions__24__arrow-right.svg"),
-		ARROW_RIGHT_DOUBLE_24("actions__24__arrow-right-double.svg"),
-		ARROW_RIGHT_DOUBLE_32("actions__32__arrow-right-double.svg"),
-		ARROW_UP_24("actions__24__arrow-up.svg"),
-		ARROW_UP_DOUBLE_24("actions__24__arrow-up-double.svg"),
-		ARTIFACT_24("actions__24__artifact.svg"),
-		ASSOCIATION_24("actions__24__association.svg"),
-		ATMOSPHERE_24("actions__24__atmosphere.svg"),
-		AUDIO_OFF_24("actions__24__audio-off.svg"),
-		AUDIO_ON_24("actions__24__audio-on.svg"),
-		AUDIO_READY_24("actions__24__audio-ready.svg"),
-		AUTO_SCALE_ALL_24("actions__24__auto-scale-all.svg"),
-		AUTO_SCALE_X_24("actions__24__auto-scale-x.svg"),
-		AUTO_SCALE_Y_24("actions__24__auto-scale-y.svg"),
-		AUTO_TYPE_24("actions__24__auto-type.svg"),
-		AUTOCORRECTION_24("actions__24__autocorrection.svg"),
-		AUTOCORRECTION_32("actions__32__autocorrection.svg"),
-		AUTOMATED_TASKS_24("actions__24__automated-tasks.svg"),
-		AXIS_HORIZONTAL_24("actions__24__axis-horizontal.svg"),
-		AXIS_VERTICAL_24("actions__24__axis-vertical.svg"),
-		BITMAP_TRACE_24("actions__24__bitmap-trace.svg"),
-		BLURFX_24("actions__24__blurfx.svg"),
-		BLURIMAGE_24("actions__24__blurimage.svg"),
-		BLURIMAGE_32("actions__32__blurimage.svg"),
-		BOOKMARK_NEW_24("actions__24__bookmark-new.svg"),
-		BOOKMARK_NEW_32("actions__32__bookmark-new.svg"),
-		BOOKMARK_NEW_LIST_24("actions__24__bookmark-new-list.svg"),
-		BOOKMARK_REMOVE_24("actions__24__bookmark-remove.svg"),
-		BOOKMARK_REMOVE_32("actions__32__bookmark-remove.svg"),
-		BOOKMARK_TOOLBAR_24("actions__24__bookmark-toolbar.svg"),
-		BOOKMARKS_24("actions__24__bookmarks.svg"),
-		BOOKMARKS_48("actions__48__bookmarks.svg"),
-		BOOKMARKS_ORGANIZE_24("actions__24__bookmarks-organize.svg"),
-		BORDERTOOL_24("actions__24__bordertool.svg"),
-		BORDERTOOL_32("actions__32__bordertool.svg"),
-		BQM_ADD_24("actions__24__bqm-add.svg"),
-		BQM_ADDQUEUE_24("actions__24__bqm-addqueue.svg"),
-		BQM_COMMIT_24("actions__24__bqm-commit.svg"),
-		BQM_DIFF_24("actions__24__bqm-diff.svg"),
-		BQM_REMOVE_24("actions__24__bqm-remove.svg"),
-		BQM_RMQUEUE_24("actions__24__bqm-rmqueue.svg"),
-		BQM_UPDATE_24("actions__24__bqm-update.svg"),
-		BWTONAL_24("actions__24__bwtonal.svg"),
-		CALL_START_24("actions__24__call-start.svg"),
-		CALL_START_32("actions__32__call-start.svg"),
-		CALL_STOP_24("actions__24__call-stop.svg"),
-		CALL_STOP_32("actions__32__call-stop.svg"),
-		CAMERA_OFF_24("actions__24__camera-off.svg"),
-		CAMERA_ON_24("actions__24__camera-on.svg"),
-		CAMERA_READY_24("actions__24__camera-ready.svg"),
-		CARTESIAN_PLOT_FOUR_AXES_24("actions__24__cartesian-plot-four-axes.svg"),
-		CARTESIAN_PLOT_TWO_AXES_24("actions__24__cartesian-plot-two-axes.svg"),
-		CARTESIAN_PLOT_TWO_AXES_CENTERED_24("actions__24__cartesian-plot-two-axes-centered.svg"),
-		CARTESIAN_PLOT_TWO_AXES_CENTERED_ORIGIN_24("actions__24__cartesian-plot-two-axes-centered-origin.svg"),
-		CATEGORY_24("actions__24__category.svg"),
-		CATEGORY2PARENT_24("actions__24__category2parent.svg"),
-		CHANNELMIXER_24("actions__24__channelmixer.svg"),
-		CHARACTER_SET_24("actions__24__character-set.svg"),
-		CHARCOALTOOL_24("actions__24__charcoaltool.svg"),
-		CHECK_CONSTRAINT_24("actions__24__check_constraint.svg"),
-		CHECKBOX_24("actions__24__checkbox.svg"),
-		CHECKMARK_24("actions__24__checkmark.svg"),
-		CHILD2CATEGORY_24("actions__24__child2category.svg"),
-		CHOICE_RHOMB_24("actions__24__choice-rhomb.svg"),
-		CHOICE_ROUND_24("actions__24__choice-round.svg"),
-		CHRONOMETER_24("actions__24__chronometer.svg"),
-		CHRONOMETER_48("actions__48__chronometer.svg"),
-		CHRONOMETER_LAP_24("actions__24__chronometer-lap.svg"),
-		CHRONOMETER_PAUSE_24("actions__24__chronometer-pause.svg"),
-		CHRONOMETER_RESET_24("actions__24__chronometer-reset.svg"),
-		CHRONOMETER_START_24("actions__24__chronometer-start.svg"),
-		CODE_BLOCK_24("actions__24__code-block.svg"),
-		CODE_CLASS_24("actions__24__code-class.svg"),
-		CODE_CONTEXT_24("actions__24__code-context.svg"),
-		CODE_FUNCTION_24("actions__24__code-function.svg"),
-		CODE_TYPEDEF_24("actions__24__code-typedef.svg"),
-		CODE_VARIABLE_24("actions__24__code-variable.svg"),
-		COLLECTION_RESCAN_AMAROK_24("actions__24__collection-rescan-amarok.svg"),
-		COLOR_FILL_24("actions__24__color-fill.svg"),
-		COLOR_GRADIENT_24("actions__24__color-gradient.svg"),
-		COLOR_MANAGEMENT_24("actions__24__color-management.svg"),
-		COLOR_MANAGEMENT_32("actions__32__color-management.svg"),
-		COLOR_PICKER_24("actions__24__color-picker.svg"),
-		COLOR_PICKER_32("actions__32__color-picker.svg"),
-		COLOR_PICKER_BLACK_24("actions__24__color-picker-black.svg"),
-		COLOR_PICKER_BLACK_32("actions__32__color-picker-black.svg"),
-		COLOR_PICKER_GREY_24("actions__24__color-picker-grey.svg"),
-		COLOR_PICKER_GREY_32("actions__32__color-picker-grey.svg"),
-		COLOR_PICKER_WHITE_24("actions__24__color-picker-white.svg"),
-		COLOR_PICKER_WHITE_32("actions__32__color-picker-white.svg"),
-		COLORFX_24("actions__24__colorfx.svg"),
-		COLORMANAGEMENT_24("actions__24__colormanagement.svg"),
-		COLORNEG_24("actions__24__colorneg.svg"),
-		COLORS_CHROMABLUE_24("actions__24__colors-chromablue.svg"),
-		COLORS_CHROMABLUE_32("actions__32__colors-chromablue.svg"),
-		COLORS_CHROMAGREEN_24("actions__24__colors-chromagreen.svg"),
-		COLORS_CHROMAGREEN_32("actions__32__colors-chromagreen.svg"),
-		COLORS_CHROMARED_24("actions__24__colors-chromared.svg"),
-		COLORS_CHROMARED_32("actions__32__colors-chromared.svg"),
-		COLORS_LUMA_24("actions__24__colors-luma.svg"),
-		COLORS_LUMA_32("actions__32__colors-luma.svg"),
-		COMBINED_FRAGMENT_24("actions__24__combined_fragment.svg"),
-		COMPASS_24("actions__24__compass.svg"),
-		COMPASS_32("actions__32__compass.svg"),
-		COMPOSITION_24("actions__24__composition.svg"),
-		CONFIGURE_24("actions__24__configure.svg"),
-		CONFIGURE_32("actions__32__configure.svg"),
-		CONFIGURE_SHORTCUTS_24("actions__24__configure-shortcuts.svg"),
-		CONFIGURE_TOOLBARS_24("actions__24__configure-toolbars.svg"),
-		CONTACT_NEW_24("actions__24__contact-new.svg"),
-		CONTAINMENT_24("actions__24__containment.svg"),
-		CONTRAST_24("actions__24__contrast.svg"),
-		COORDINATE_24("actions__24__coordinate.svg"),
-		COPY_COORDINATES_24("actions__24__copy-coordinates.svg"),
-		CROSSHAIRS_24("actions__24__crosshairs.svg"),
-		CURSOR_ARROW_24("actions__24__cursor-arrow.svg"),
-		CURVE_CONNECTOR_24("actions__24__curve-connector.svg"),
-		DASHBOARD_SHOW_24("actions__24__dashboard-show.svg"),
-		DATABASE_CHANGE_KEY_24("actions__24__database-change-key.svg"),
-		DATABASE_INDEX_24("actions__24__database-index.svg"),
-		DEBUG_EXECUTE_FROM_CURSOR_24("actions__24__debug-execute-from-cursor.svg"),
-		DEBUG_EXECUTE_TO_CURSOR_24("actions__24__debug-execute-to-cursor.svg"),
-		DEBUG_RUN_24("actions__24__debug-run.svg"),
-		DEBUG_RUN_CURSOR_24("actions__24__debug-run-cursor.svg"),
-		DEBUG_STEP_INSTRUCTION_24("actions__24__debug-step-instruction.svg"),
-		DEBUG_STEP_INTO_24("actions__24__debug-step-into.svg"),
-		DEBUG_STEP_INTO_INSTRUCTION_24("actions__24__debug-step-into-instruction.svg"),
-		DEBUG_STEP_OUT_24("actions__24__debug-step-out.svg"),
-		DEBUG_STEP_OVER_24("actions__24__debug-step-over.svg"),
-		DEEP_HISTORY_24("actions__24__deep-history.svg"),
-		DELETE_COMMENT_24("actions__24__delete-comment.svg"),
-		DEPENDENCY_24("actions__24__dependency.svg"),
-		DEPTH16TO8_24("actions__24__depth16to8.svg"),
-		DEPTH8TO16_24("actions__24__depth8to16.svg"),
-		DIALOG_ALIGN_AND_DISTRIBUTE_24("actions__24__dialog-align-and-distribute.svg"),
-		DIALOG_CANCEL_24("actions__24__dialog-cancel.svg"),
-		DIALOG_CANCEL_32("actions__32__dialog-cancel.svg"),
-		DIALOG_CLOSE_24("actions__24__dialog-close.svg"),
-		DIALOG_FILL_AND_STROKE_24("actions__24__dialog-fill-and-stroke.svg"),
-		DIALOG_FILTERS_24("actions__24__dialog-filters.svg"),
-		DIALOG_ICON_PREVIEW_24("actions__24__dialog-icon-preview.svg"),
-		DIALOG_INPUT_DEVICES_24("actions__24__dialog-input-devices.svg"),
-		DIALOG_LAYERS_24("actions__24__dialog-layers.svg"),
-		DIALOG_MEMORY_24("actions__24__dialog-memory.svg"),
-		DIALOG_MESSAGES_24("actions__24__dialog-messages.svg"),
-		DIALOG_MESSAGES_32("actions__32__dialog-messages.svg"),
-		DIALOG_OBJECT_PROPERTIES_24("actions__24__dialog-object-properties.svg"),
-		DIALOG_OK_24("actions__24__dialog-ok.svg"),
-		DIALOG_OK_APPLY_24("actions__24__dialog-ok-apply.svg"),
-		DIALOG_OK_APPLY_32("actions__32__dialog-ok-apply.svg"),
-		DIALOG_ROWS_AND_COLUMNS_24("actions__24__dialog-rows-and-columns.svg"),
-		DIALOG_SCRIPTS_24("actions__24__dialog-scripts.svg"),
-		DIALOG_TEXT_AND_FONT_24("actions__24__dialog-text-and-font.svg"),
-		DIALOG_TILE_CLONES_24("actions__24__dialog-tile-clones.svg"),
-		DIALOG_TRANSFORM_24("actions__24__dialog-transform.svg"),
-		DIALOG_XML_EDITOR_24("actions__24__dialog-xml-editor.svg"),
-		DIRSYNC_24("actions__24__dirsync.svg"),
-		DISTORTIONFX_24("actions__24__distortionfx.svg"),
-		DISTRIBUTE_GRAPH_24("actions__24__distribute-graph.svg"),
-		DISTRIBUTE_GRAPH_DIRECTED_24("actions__24__distribute-graph-directed.svg"),
-		DISTRIBUTE_HORIZONTAL_24("actions__24__distribute-horizontal.svg"),
-		DISTRIBUTE_HORIZONTAL_BASELINE_24("actions__24__distribute-horizontal-baseline.svg"),
-		DISTRIBUTE_HORIZONTAL_CENTER_24("actions__24__distribute-horizontal-center.svg"),
-		DISTRIBUTE_HORIZONTAL_EQUAL_24("actions__24__distribute-horizontal-equal.svg"),
-		DISTRIBUTE_HORIZONTAL_GAPS_24("actions__24__distribute-horizontal-gaps.svg"),
-		DISTRIBUTE_HORIZONTAL_LEFT_24("actions__24__distribute-horizontal-left.svg"),
-		DISTRIBUTE_HORIZONTAL_MARGIN_24("actions__24__distribute-horizontal-margin.svg"),
-		DISTRIBUTE_HORIZONTAL_PAGE_24("actions__24__distribute-horizontal-page.svg"),
-		DISTRIBUTE_HORIZONTAL_RIGHT_24("actions__24__distribute-horizontal-right.svg"),
-		DISTRIBUTE_HORIZONTAL_X_24("actions__24__distribute-horizontal-x.svg"),
-		DISTRIBUTE_RANDOMIZE_24("actions__24__distribute-randomize.svg"),
-		DISTRIBUTE_REMOVE_OVERLAPS_24("actions__24__distribute-remove-overlaps.svg"),
-		DISTRIBUTE_UNCLUMP_24("actions__24__distribute-unclump.svg"),
-		DISTRIBUTE_VERTICAL_24("actions__24__distribute-vertical.svg"),
-		DISTRIBUTE_VERTICAL_BASELINE_24("actions__24__distribute-vertical-baseline.svg"),
-		DISTRIBUTE_VERTICAL_BOTTOM_24("actions__24__distribute-vertical-bottom.svg"),
-		DISTRIBUTE_VERTICAL_CENTER_24("actions__24__distribute-vertical-center.svg"),
-		DISTRIBUTE_VERTICAL_EQUAL_24("actions__24__distribute-vertical-equal.svg"),
-		DISTRIBUTE_VERTICAL_GAPS_24("actions__24__distribute-vertical-gaps.svg"),
-		DISTRIBUTE_VERTICAL_MARGIN_24("actions__24__distribute-vertical-margin.svg"),
-		DISTRIBUTE_VERTICAL_PAGE_24("actions__24__distribute-vertical-page.svg"),
-		DISTRIBUTE_VERTICAL_TOP_24("actions__24__distribute-vertical-top.svg"),
-		DISTRIBUTE_VERTICAL_Y_24("actions__24__distribute-vertical-y.svg"),
-		DOCUMENT_CLEANUP_24("actions__24__document-cleanup.svg"),
-		DOCUMENT_CLOSE_24("actions__24__document-close.svg"),
-		DOCUMENT_CLOSE_32("actions__32__document-close.svg"),
-		DOCUMENT_DECRYPT_24("actions__24__document-decrypt.svg"),
-		DOCUMENT_DECRYPT_32("actions__32__document-decrypt.svg"),
-		DOCUMENT_EDIT_24("actions__24__document-edit.svg"),
-		DOCUMENT_EDIT_32("actions__32__document-edit.svg"),
-		DOCUMENT_EDIT_DECRYPT_24("actions__24__document-edit-decrypt.svg"),
-		DOCUMENT_EDIT_DECRYPT_32("actions__32__document-edit-decrypt.svg"),
-		DOCUMENT_EDIT_DECRYPT_VERIFY_24("actions__24__document-edit-decrypt-verify.svg"),
-		DOCUMENT_EDIT_DECRYPT_VERIFY_32("actions__32__document-edit-decrypt-verify.svg"),
-		DOCUMENT_EDIT_ENCRYPT_24("actions__24__document-edit-encrypt.svg"),
-		DOCUMENT_EDIT_ENCRYPT_32("actions__32__document-edit-encrypt.svg"),
-		DOCUMENT_EDIT_SIGN_24("actions__24__document-edit-sign.svg"),
-		DOCUMENT_EDIT_SIGN_32("actions__32__document-edit-sign.svg"),
-		DOCUMENT_EDIT_SIGN_ENCRYPT_24("actions__24__document-edit-sign-encrypt.svg"),
-		DOCUMENT_EDIT_SIGN_ENCRYPT_32("actions__32__document-edit-sign-encrypt.svg"),
-		DOCUMENT_EDIT_VERIFY_24("actions__24__document-edit-verify.svg"),
-		DOCUMENT_EDIT_VERIFY_32("actions__32__document-edit-verify.svg"),
-		DOCUMENT_ENCRYPT_24("actions__24__document-encrypt.svg"),
-		DOCUMENT_ENCRYPTED_24("actions__24__document-encrypted.svg"),
-		DOCUMENT_ENCRYPTED_32("actions__32__document-encrypted.svg"),
-		DOCUMENT_EXPORT_24("actions__24__document-export.svg"),
-		DOCUMENT_EXPORT_32("actions__32__document-export.svg"),
-		DOCUMENT_EXPORT_OCAL_24("actions__24__document-export-ocal.svg"),
-		DOCUMENT_EXPORT_TABLE_24("actions__24__document-export-table.svg"),
-		DOCUMENT_IMPORT_24("actions__24__document-import.svg"),
-		DOCUMENT_IMPORT_32("actions__32__document-import.svg"),
-		DOCUMENT_IMPORT_OCAL_24("actions__24__document-import-ocal.svg"),
-		DOCUMENT_MULTIPLE_24("actions__24__document-multiple.svg"),
-		DOCUMENT_NEW_24("actions__24__document-new.svg"),
-		DOCUMENT_NEW_32("actions__32__document-new.svg"),
-		DOCUMENT_NEW_FROM_TEMPLATE_24("actions__24__document-new-from-template.svg"),
-		DOCUMENT_NEW_FROM_TEMPLATE_32("actions__32__document-new-from-template.svg"),
-		DOCUMENT_OPEN_24("actions__24__document-open.svg"),
-		DOCUMENT_OPEN_32("actions__32__document-open.svg"),
-		DOCUMENT_OPEN_DATA_24("actions__24__document-open-data.svg"),
-		DOCUMENT_OPEN_FOLDER_24("actions__24__document-open-folder.svg"),
-		DOCUMENT_OPEN_RECENT_24("actions__24__document-open-recent.svg"),
-		DOCUMENT_OPEN_RECENT_32("actions__32__document-open-recent.svg"),
-		DOCUMENT_OPEN_RECENT_48("actions__48__document-open-recent.svg"),
-		DOCUMENT_OPEN_REMOTE_24("actions__24__document-open-remote.svg"),
-		DOCUMENT_OPEN_REMOTE_32("actions__32__document-open-remote.svg"),
-		DOCUMENT_PREVIEW_24("actions__24__document-preview.svg"),
-		DOCUMENT_PREVIEW_32("actions__32__document-preview.svg"),
-		DOCUMENT_PREVIEW_ARCHIVE_24("actions__24__document-preview-archive.svg"),
-		DOCUMENT_PREVIEW_ARCHIVE_32("actions__32__document-preview-archive.svg"),
-		DOCUMENT_PRINT_24("actions__24__document-print.svg"),
-		DOCUMENT_PRINT_32("actions__32__document-print.svg"),
-		DOCUMENT_PRINT_DIRECT_24("actions__24__document-print-direct.svg"),
-		DOCUMENT_PRINT_DIRECT_32("actions__32__document-print-direct.svg"),
-		DOCUMENT_PRINT_FRAME_24("actions__24__document-print-frame.svg"),
-		DOCUMENT_PRINT_PREVIEW_24("actions__24__document-print-preview.svg"),
-		DOCUMENT_PROPERTIES_24("actions__24__document-properties.svg"),
-		DOCUMENT_REVERT_24("actions__24__document-revert.svg"),
-		DOCUMENT_REVERT_32("actions__32__document-revert.svg"),
-		DOCUMENT_SAVE_24("actions__24__document-save.svg"),
-		DOCUMENT_SAVE_32("actions__32__document-save.svg"),
-		DOCUMENT_SAVE_ALL_24("actions__24__document-save-all.svg"),
-		DOCUMENT_SAVE_ALL_32("actions__32__document-save-all.svg"),
-		DOCUMENT_SAVE_AS_24("actions__24__document-save-as.svg"),
-		DOCUMENT_SAVE_AS_32("actions__32__document-save-as.svg"),
-		DOCUMENT_SAVE_AS_TEMPLATE_24("actions__24__document-save-as-template.svg"),
-		DOCUMENT_SHARE_24("actions__24__document-share.svg"),
-		DOCUMENT_SHARE_32("actions__32__document-share.svg"),
-		DOCUMENT_SIGN_24("actions__24__document-sign.svg"),
-		DOCUMENT_SWAP_24("actions__24__document-swap.svg"),
-		DOCUMENTATION_24("actions__24__documentation.svg"),
-		DOCUMENTINFO_24("actions__24__documentinfo.svg"),
-		DOWNLOAD_24("actions__24__download.svg"),
-		DOWNLOAD_AMAROK_24("actions__24__download-amarok.svg"),
-		DOWNLOAD_LATER_24("actions__24__download-later.svg"),
-		DRAW_ARROW_BACK_24("actions__24__draw-arrow-back.svg"),
-		DRAW_ARROW_DOWN_24("actions__24__draw-arrow-down.svg"),
-		DRAW_ARROW_FORWARD_24("actions__24__draw-arrow-forward.svg"),
-		DRAW_ARROW_UP_24("actions__24__draw-arrow-up.svg"),
-		DRAW_BEZIER_CURVES_24("actions__24__draw-bezier-curves.svg"),
-		DRAW_BRUSH_24("actions__24__draw-brush.svg"),
-		DRAW_CALLIGRAPHIC_24("actions__24__draw-calligraphic.svg"),
-		DRAW_CIRCLE_24("actions__24__draw-circle.svg"),
-		DRAW_CONNECTOR_24("actions__24__draw-connector.svg"),
-		DRAW_CROSS_24("actions__24__draw-cross.svg"),
-		DRAW_CUBOID_24("actions__24__draw-cuboid.svg"),
-		DRAW_DONUT_24("actions__24__draw-donut.svg"),
-		DRAW_ELLIPSE_24("actions__24__draw-ellipse.svg"),
-		DRAW_ELLIPSE_ARC_24("actions__24__draw-ellipse-arc.svg"),
-		DRAW_ELLIPSE_SEGMENT_24("actions__24__draw-ellipse-segment.svg"),
-		DRAW_ELLIPSE_WHOLE_24("actions__24__draw-ellipse-whole.svg"),
-		DRAW_ERASER_24("actions__24__draw-eraser.svg"),
-		DRAW_FREEHAND_24("actions__24__draw-freehand.svg"),
-		DRAW_FREEHAND_48("actions__48__draw-freehand.svg"),
-		DRAW_HALFCIRCLE1_24("actions__24__draw-halfcircle1.svg"),
-		DRAW_HALFCIRCLE2_24("actions__24__draw-halfcircle2.svg"),
-		DRAW_HALFCIRCLE3_24("actions__24__draw-halfcircle3.svg"),
-		DRAW_HALFCIRCLE4_24("actions__24__draw-halfcircle4.svg"),
-		DRAW_LINE_24("actions__24__draw-line.svg"),
-		DRAW_PATH_24("actions__24__draw-path.svg"),
-		DRAW_POLYGON_24("actions__24__draw-polygon.svg"),
-		DRAW_POLYGON_STAR_24("actions__24__draw-polygon-star.svg"),
-		DRAW_POLYLINE_24("actions__24__draw-polyline.svg"),
-		DRAW_RECTANGLE_24("actions__24__draw-rectangle.svg"),
-		DRAW_SPIRAL_24("actions__24__draw-spiral.svg"),
-		DRAW_SQUARE_INVERTED_CORNERS_24("actions__24__draw-square-inverted-corners.svg"),
-		DRAW_STAR_24("actions__24__draw-star.svg"),
-		DRAW_TEXT_24("actions__24__draw-text.svg"),
-		DRAW_TRIANGLE_24("actions__24__draw-triangle.svg"),
-		DRAW_TRIANGLE1_24("actions__24__draw-triangle1.svg"),
-		DRAW_TRIANGLE2_24("actions__24__draw-triangle2.svg"),
-		DRAW_TRIANGLE3_24("actions__24__draw-triangle3.svg"),
-		DRAW_TRIANGLE4_24("actions__24__draw-triangle4.svg"),
-		DRAW_WATERCOLOR_24("actions__24__draw-watercolor.svg"),
-		DYNAMIC_AMAROK_24("actions__24__dynamic-amarok.svg"),
-		EARTHQUAKE_24("actions__24__earthquake.svg"),
-		EDIT_BOMB_24("actions__24__edit-bomb.svg"),
-		EDIT_CLEAR_24("actions__24__edit-clear.svg"),
-		EDIT_CLEAR_HISTORY_24("actions__24__edit-clear-history.svg"),
-		EDIT_CLEAR_LIST_24("actions__24__edit-clear-list.svg"),
-		EDIT_CLEAR_LOCATIONBAR_LTR_24("actions__24__edit-clear-locationbar-ltr.svg"),
-		EDIT_CLEAR_LOCATIONBAR_RTL_24("actions__24__edit-clear-locationbar-rtl.svg"),
-		EDIT_CLONE_24("actions__24__edit-clone.svg"),
-		EDIT_CLONE_UNLINK_24("actions__24__edit-clone-unlink.svg"),
-		EDIT_COPY_24("actions__24__edit-copy.svg"),
-		EDIT_CUT_24("actions__24__edit-cut.svg"),
-		EDIT_DELETE_24("actions__24__edit-delete.svg"),
-		EDIT_DELETE_32("actions__32__edit-delete.svg"),
-		EDIT_DELETE_SHRED_24("actions__24__edit-delete-shred.svg"),
-		EDIT_DOWNLOAD_24("actions__24__edit-download.svg"),
-		EDIT_DUPLICATE_24("actions__24__edit-duplicate.svg"),
-		EDIT_FIND_24("actions__24__edit-find.svg"),
-		EDIT_FIND_MAIL_24("actions__24__edit-find-mail.svg"),
-		EDIT_FIND_PROJECT_24("actions__24__edit-find-project.svg"),
-		EDIT_FIND_REPLACE_24("actions__24__edit-find-replace.svg"),
-		EDIT_FIND_USER_24("actions__24__edit-find-user.svg"),
-		EDIT_GUIDES_24("actions__24__edit-guides.svg"),
-		EDIT_IMAGE_FACE_ADD_24("actions__24__edit-image-face-add.svg"),
-		EDIT_IMAGE_FACE_DETECT_24("actions__24__edit-image-face-detect.svg"),
-		EDIT_IMAGE_FACE_RECOGNIZE_24("actions__24__edit-image-face-recognize.svg"),
-		EDIT_IMAGE_FACE_SHOW_24("actions__24__edit-image-face-show.svg"),
-		EDIT_LINK_24("actions__24__edit-link.svg"),
-		EDIT_NODE_24("actions__24__edit-node.svg"),
-		EDIT_PASTE_24("actions__24__edit-paste.svg"),
-		EDIT_PASTE_IN_PLACE_24("actions__24__edit-paste-in-place.svg"),
-		EDIT_PASTE_STYLE_24("actions__24__edit-paste-style.svg"),
-		EDIT_REDO_24("actions__24__edit-redo.svg"),
-		EDIT_REDO_32("actions__32__edit-redo.svg"),
-		EDIT_RENAME_24("actions__24__edit-rename.svg"),
-		EDIT_SELECT_24("actions__24__edit-select.svg"),
-		EDIT_SELECT_ALL_24("actions__24__edit-select-all.svg"),
-		EDIT_SELECT_ALL_LAYERS_24("actions__24__edit-select-all-layers.svg"),
-		EDIT_SELECT_INVERT_24("actions__24__edit-select-invert.svg"),
-		EDIT_SELECT_LASSO_24("actions__24__edit-select-lasso.svg"),
-		EDIT_SELECT_NONE_24("actions__24__edit-select-none.svg"),
-		EDIT_SELECT_ORIGINAL_24("actions__24__edit-select-original.svg"),
-		EDIT_TABLE_CELL_MERGE_24("actions__24__edit-table-cell-merge.svg"),
-		EDIT_TABLE_CELL_SPLIT_24("actions__24__edit-table-cell-split.svg"),
-		EDIT_TABLE_DELETE_COLUMN_24("actions__24__edit-table-delete-column.svg"),
-		EDIT_TABLE_DELETE_ROW_24("actions__24__edit-table-delete-row.svg"),
-		EDIT_TABLE_INSERT_COLUMN_LEFT_24("actions__24__edit-table-insert-column-left.svg"),
-		EDIT_TABLE_INSERT_COLUMN_RIGHT_24("actions__24__edit-table-insert-column-right.svg"),
-		EDIT_TABLE_INSERT_ROW_ABOVE_24("actions__24__edit-table-insert-row-above.svg"),
-		EDIT_TABLE_INSERT_ROW_BELOW_24("actions__24__edit-table-insert-row-below.svg"),
-		EDIT_TABLE_INSERT_ROW_UNDER_24("actions__24__edit-table-insert-row-under.svg"),
-		EDIT_TEXT_FRAME_UPDATE_24("actions__24__edit-text-frame-update.svg"),
-		EDIT_UNDO_24("actions__24__edit-undo.svg"),
-		EDIT_UNDO_32("actions__32__edit-undo.svg"),
-		EDIT_UNDO_HISTORY_24("actions__24__edit-undo-history.svg"),
-		EDITIMAGE_24("actions__24__editimage.svg"),
-		EMBOSSTOOL_24("actions__24__embosstool.svg"),
-		END_STATE_24("actions__24__end_state.svg"),
-		ENTITY_24("actions__24__entity.svg"),
-		ENTRY_NEW_24("actions__24__entry-new.svg"),
-		ESCAPE_DIRECTION_ALL_24("actions__24__escape-direction-all.svg"),
-		ESCAPE_DIRECTION_DOWN_24("actions__24__escape-direction-down.svg"),
-		ESCAPE_DIRECTION_HORIZONTAL_24("actions__24__escape-direction-horizontal.svg"),
-		ESCAPE_DIRECTION_LEFT_24("actions__24__escape-direction-left.svg"),
-		ESCAPE_DIRECTION_RIGHT_24("actions__24__escape-direction-right.svg"),
-		ESCAPE_DIRECTION_UP_24("actions__24__escape-direction-up.svg"),
-		ESCAPE_DIRECTION_VERTICAL_24("actions__24__escape-direction-vertical.svg"),
-		EXCEPTION_24("actions__24__exception.svg"),
-		EXCHANGE_POSITIONS_24("actions__24__exchange-positions.svg"),
-		EXCHANGE_POSITIONS_CLOCKWISE_24("actions__24__exchange-positions-clockwise.svg"),
-		EXCHANGE_POSITIONS_ZORDER_24("actions__24__exchange-positions-zorder.svg"),
-		EXIFINFO_24("actions__24__exifinfo.svg"),
-		FAVORITE_GENRES_AMAROK_24("actions__24__favorite-genres-amarok.svg"),
-		FEED_SUBSCRIBE_24("actions__24__feed-subscribe.svg"),
-		FILE_ZOOM_IN_24("actions__24__file-zoom-in.svg"),
-		FILE_ZOOM_OUT_24("actions__24__file-zoom-out.svg"),
-		FILENAME_ALBUM_AMAROK_24("actions__24__filename-album-amarok.svg"),
-		FILENAME_AND_AMAROK_24("actions__24__filename-and-amarok.svg"),
-		FILENAME_ARTIST_AMAROK_24("actions__24__filename-artist-amarok.svg"),
-		FILENAME_BPM_AMAROK_24("actions__24__filename-bpm-amarok.svg"),
-		FILENAME_COMMENT_AMAROK_24("actions__24__filename-comment-amarok.svg"),
-		FILENAME_COMPOSER_AMAROK_24("actions__24__filename-composer-amarok.svg"),
-		FILENAME_DASH_AMAROK_24("actions__24__filename-dash-amarok.svg"),
-		FILENAME_DISCNUMBER_AMAROK_24("actions__24__filename-discnumber-amarok.svg"),
-		FILENAME_DIVIDER_24("actions__24__filename-divider.svg"),
-		FILENAME_DOT_AMAROK_24("actions__24__filename-dot-amarok.svg"),
-		FILENAME_FILETYPE_AMAROK_24("actions__24__filename-filetype-amarok.svg"),
-		FILENAME_GENRE_AMAROK_24("actions__24__filename-genre-amarok.svg"),
-		FILENAME_GROUP_LENGTH_24("actions__24__filename-group-length.svg"),
-		FILENAME_GROUP_TRACKS_24("actions__24__filename-group-tracks.svg"),
-		FILENAME_IGNORE_AMAROK_24("actions__24__filename-ignore-amarok.svg"),
-		FILENAME_INITIAL_AMAROK_24("actions__24__filename-initial-amarok.svg"),
-		FILENAME_LAST_PLAYED_24("actions__24__filename-last-played.svg"),
-		FILENAME_MOODBAR_24("actions__24__filename-moodbar.svg"),
-		FILENAME_SAMPLE_RATE_24("actions__24__filename-sample-rate.svg"),
-		FILENAME_SLASH_AMAROK_24("actions__24__filename-slash-amarok.svg"),
-		FILENAME_SPACE_AMAROK_24("actions__24__filename-space-amarok.svg"),
-		FILENAME_TITLE_AMAROK_24("actions__24__filename-title-amarok.svg"),
-		FILENAME_TRACK_AMAROK_24("actions__24__filename-track-amarok.svg"),
-		FILENAME_UNDERSCORE_AMAROK_24("actions__24__filename-underscore-amarok.svg"),
-		FILENAME_YEAR_AMAROK_24("actions__24__filename-year-amarok.svg"),
-		FILEVIEW_PREVIEW_24("actions__24__fileview-preview.svg"),
-		FILL_COLOR_24("actions__24__fill-color.svg"),
-		FILL_RULE_EVEN_ODD_24("actions__24__fill-rule-even-odd.svg"),
-		FILL_RULE_NONZERO_24("actions__24__fill-rule-nonzero.svg"),
-		FILMGRAIN_24("actions__24__filmgrain.svg"),
-		FINAL_ACTIVITY_24("actions__24__final_activity.svg"),
-		FLAG_24("actions__24__flag.svg"),
-		FLAG_BLACK_24("actions__24__flag-black.svg"),
-		FLAG_BLUE_24("actions__24__flag-blue.svg"),
-		FLAG_GREEN_24("actions__24__flag-green.svg"),
-		FLAG_RED_24("actions__24__flag-red.svg"),
-		FLAG_YELLOW_24("actions__24__flag-yellow.svg"),
-		FOLDER_NEW_24("actions__24__folder-new.svg"),
-		FOLDER_NEW_32("actions__32__folder-new.svg"),
-		FOLDER_SYNC_24("actions__24__folder-sync.svg"),
-		FOLDER_SYNC_32("actions__32__folder-sync.svg"),
-		FOLLOWMOUSE_24("actions__24__followmouse.svg"),
-		FOREIGNKEY_CONSTRAINT_24("actions__24__foreignkey_constraint.svg"),
-		FORK_24("actions__24__fork.svg"),
-		FORMAT_ADD_NODE_24("actions__24__format-add-node.svg"),
-		FORMAT_ALIGN_VERTICAL_BOTTOM_24("actions__24__format-align-vertical-bottom.svg"),
-		FORMAT_ALIGN_VERTICAL_CENTER_24("actions__24__format-align-vertical-center.svg"),
-		FORMAT_ALIGN_VERTICAL_TOP_24("actions__24__format-align-vertical-top.svg"),
-		FORMAT_BORDER_SET_ALL_24("actions__24__format-border-set-all.svg"),
-		FORMAT_BORDER_SET_BOTTOM_24("actions__24__format-border-set-bottom.svg"),
-		FORMAT_BORDER_SET_DIAGONAL_BL_TR_24("actions__24__format-border-set-diagonal-bl-tr.svg"),
-		FORMAT_BORDER_SET_DIAGONAL_TL_BR_24("actions__24__format-border-set-diagonal-tl-br.svg"),
-		FORMAT_BORDER_SET_EXTERNAL_24("actions__24__format-border-set-external.svg"),
-		FORMAT_BORDER_SET_INTERNAL_24("actions__24__format-border-set-internal.svg"),
-		FORMAT_BORDER_SET_INTERNAL_HORIZONTAL_24("actions__24__format-border-set-internal-horizontal.svg"),
-		FORMAT_BORDER_SET_INTERNAL_VERTICAL_24("actions__24__format-border-set-internal-vertical.svg"),
-		FORMAT_BORDER_SET_LEFT_24("actions__24__format-border-set-left.svg"),
-		FORMAT_BORDER_SET_NONE_24("actions__24__format-border-set-none.svg"),
-		FORMAT_BORDER_SET_RIGHT_24("actions__24__format-border-set-right.svg"),
-		FORMAT_BORDER_SET_TOP_24("actions__24__format-border-set-top.svg"),
-		FORMAT_BORDER_STYLE_24("actions__24__format-border-style.svg"),
-		FORMAT_BREAK_NODE_24("actions__24__format-break-node.svg"),
-		FORMAT_CONNECT_NODE_24("actions__24__format-connect-node.svg"),
-		FORMAT_CONVERT_TO_PATH_24("actions__24__format-convert-to-path.svg"),
-		FORMAT_CURRENCY_24("actions__24__format-currency.svg"),
-		FORMAT_DISCONNECT_NODE_24("actions__24__format-disconnect-node.svg"),
-		FORMAT_FILL_COLOR_24("actions__24__format-fill-color.svg"),
-		FORMAT_FONT_SIZE_LESS_24("actions__24__format-font-size-less.svg"),
-		FORMAT_FONT_SIZE_MORE_24("actions__24__format-font-size-more.svg"),
-		FORMAT_INDENT_LESS_24("actions__24__format-indent-less.svg"),
-		FORMAT_INDENT_MORE_24("actions__24__format-indent-more.svg"),
-		FORMAT_INSERT_NODE_24("actions__24__format-insert-node.svg"),
-		FORMAT_JOIN_NODE_24("actions__24__format-join-node.svg"),
-		FORMAT_JUSTIFY_CENTER_24("actions__24__format-justify-center.svg"),
-		FORMAT_JUSTIFY_FILL_24("actions__24__format-justify-fill.svg"),
-		FORMAT_JUSTIFY_LEFT_24("actions__24__format-justify-left.svg"),
-		FORMAT_JUSTIFY_RIGHT_24("actions__24__format-justify-right.svg"),
-		FORMAT_LINE_SPACING_DOUBLE_24("actions__24__format-line-spacing-double.svg"),
-		FORMAT_LINE_SPACING_NORMAL_24("actions__24__format-line-spacing-normal.svg"),
-		FORMAT_LINE_SPACING_TRIPLE_24("actions__24__format-line-spacing-triple.svg"),
-		FORMAT_LIST_ORDERED_24("actions__24__format-list-ordered.svg"),
-		FORMAT_LIST_UNORDERED_24("actions__24__format-list-unordered.svg"),
-		FORMAT_NODE_CORNER_24("actions__24__format-node-corner.svg"),
-		FORMAT_NODE_CURVE_24("actions__24__format-node-curve.svg"),
-		FORMAT_NODE_LINE_24("actions__24__format-node-line.svg"),
-		FORMAT_NODE_SMOOTH_24("actions__24__format-node-smooth.svg"),
-		FORMAT_NODE_SYMMETRIC_24("actions__24__format-node-symmetric.svg"),
-		FORMAT_NUMBER_PERCENT_24("actions__24__format-number-percent.svg"),
-		FORMAT_PRECISION_LESS_24("actions__24__format-precision-less.svg"),
-		FORMAT_PRECISION_MORE_24("actions__24__format-precision-more.svg"),
-		FORMAT_REMOVE_NODE_24("actions__24__format-remove-node.svg"),
-		FORMAT_SEGMENT_CURVE_24("actions__24__format-segment-curve.svg"),
-		FORMAT_SEGMENT_LINE_24("actions__24__format-segment-line.svg"),
-		FORMAT_STROKE_COLOR_24("actions__24__format-stroke-color.svg"),
-		FORMAT_STROKE_COLOR_32("actions__32__format-stroke-color.svg"),
-		FORMAT_TEXT_BLOCKQUOTE_24("actions__24__format-text-blockquote.svg"),
-		FORMAT_TEXT_BOLD_24("actions__24__format-text-bold.svg"),
-		FORMAT_TEXT_CAPITALIZE_24("actions__24__format-text-capitalize.svg"),
-		FORMAT_TEXT_CODE_24("actions__24__format-text-code.svg"),
-		FORMAT_TEXT_COLOR_24("actions__24__format-text-color.svg"),
-		FORMAT_TEXT_DIRECTION_HORIZONTAL_24("actions__24__format-text-direction-horizontal.svg"),
-		FORMAT_TEXT_DIRECTION_LTR_24("actions__24__format-text-direction-ltr.svg"),
-		FORMAT_TEXT_DIRECTION_RTL_24("actions__24__format-text-direction-rtl.svg"),
-		FORMAT_TEXT_DIRECTION_VERTICAL_24("actions__24__format-text-direction-vertical.svg"),
-		FORMAT_TEXT_ITALIC_24("actions__24__format-text-italic.svg"),
-		FORMAT_TEXT_LOWERCASE_24("actions__24__format-text-lowercase.svg"),
-		FORMAT_TEXT_STRIKETHROUGH_24("actions__24__format-text-strikethrough.svg"),
-		FORMAT_TEXT_SUBSCRIPT_24("actions__24__format-text-subscript.svg"),
-		FORMAT_TEXT_SUPERSCRIPT_24("actions__24__format-text-superscript.svg"),
-		FORMAT_TEXT_SYMBOL_24("actions__24__format-text-symbol.svg"),
-		FORMAT_TEXT_UNDERLINE_24("actions__24__format-text-underline.svg"),
-		FORMAT_TEXT_UPPERCASE_24("actions__24__format-text-uppercase.svg"),
-		FORMULA_24("actions__24__formula.svg"),
-		FREEROTATION_24("actions__24__freerotation.svg"),
-		GAMES_ACHIEVEMENTS_24("actions__24__games-achievements.svg"),
-		GAMES_CONFIG_BACKGROUND_24("actions__24__games-config-background.svg"),
-		GAMES_CONFIG_BOARD_24("actions__24__games-config-board.svg"),
-		GAMES_CONFIG_CUSTOM_24("actions__24__games-config-custom.svg"),
-		GAMES_CONFIG_OPTIONS_24("actions__24__games-config-options.svg"),
-		GAMES_CONFIG_THEME_24("actions__24__games-config-theme.svg"),
-		GAMES_CONFIG_TILES_24("actions__24__games-config-tiles.svg"),
-		GAMES_DIFFICULT_24("actions__24__games-difficult.svg"),
-		GAMES_ENDTURN_24("actions__24__games-endturn.svg"),
-		GAMES_HIGHSCORES_24("actions__24__games-highscores.svg"),
-		GAMES_HINT_24("actions__24__games-hint.svg"),
-		GAMES_SOLVE_24("actions__24__games-solve.svg"),
-		GEANY_BUILD_24("actions__24__geany-build.svg"),
-		GEANY_CLOSE_ALL_24("actions__24__geany-close-all.svg"),
-		GEANY_SAVE_ALL_24("actions__24__geany-save-all.svg"),
-		GENERALISE_24("actions__24__generalise.svg"),
-		GET_HOT_NEW_STUFF_24("actions__24__get-hot-new-stuff.svg"),
-		GO_BOTTOM_24("actions__24__go-bottom.svg"),
-		GO_DOWN_24("actions__24__go-down.svg"),
-		GO_DOWN_SEARCH_24("actions__24__go-down-search.svg"),
-		GO_FIRST_24("actions__24__go-first.svg"),
-		GO_FIRST_VIEW_24("actions__24__go-first-view.svg"),
-		GO_FIRST_VIEW_PAGE_24("actions__24__go-first-view-page.svg"),
-		GO_HOME_24("actions__24__go-home.svg"),
-		GO_JUMP_24("actions__24__go-jump.svg"),
-		GO_JUMP_DECLARATION_24("actions__24__go-jump-declaration.svg"),
-		GO_JUMP_DEFINITION_24("actions__24__go-jump-definition.svg"),
-		GO_JUMP_LOCATIONBAR_24("actions__24__go-jump-locationbar.svg"),
-		GO_JUMP_TODAY_24("actions__24__go-jump-today.svg"),
-		GO_LAST_24("actions__24__go-last.svg"),
-		GO_LAST_VIEW_24("actions__24__go-last-view.svg"),
-		GO_LAST_VIEW_PAGE_24("actions__24__go-last-view-page.svg"),
-		GO_NEXT_24("actions__24__go-next.svg"),
-		GO_NEXT_CONTEXT_24("actions__24__go-next-context.svg"),
-		GO_NEXT_USE_24("actions__24__go-next-use.svg"),
-		GO_NEXT_VIEW_24("actions__24__go-next-view.svg"),
-		GO_NEXT_VIEW_PAGE_24("actions__24__go-next-view-page.svg"),
-		GO_PARENT_FOLDER_24("actions__24__go-parent-folder.svg"),
-		GO_PARENT_FOLDER_32("actions__32__go-parent-folder.svg"),
-		GO_PREVIOUS_24("actions__24__go-previous.svg"),
-		GO_PREVIOUS_CONTEXT_24("actions__24__go-previous-context.svg"),
-		GO_PREVIOUS_USE_24("actions__24__go-previous-use.svg"),
-		GO_PREVIOUS_VIEW_24("actions__24__go-previous-view.svg"),
-		GO_PREVIOUS_VIEW_PAGE_24("actions__24__go-previous-view-page.svg"),
-		GO_TOP_24("actions__24__go-top.svg"),
-		GO_UP_24("actions__24__go-up.svg"),
-		GO_UP_SEARCH_24("actions__24__go-up-search.svg"),
-		GPG_24("actions__24__gpg.svg"),
-		GPGSM_24("actions__24__gpgsm.svg"),
-		GRID_AXONOMETRIC_24("actions__24__grid-axonometric.svg"),
-		GRID_RECTANGULAR_24("actions__24__grid-rectangular.svg"),
-		GTK_ADD_24("actions__24__gtk-add.svg"),
-		GTK_APPLY_24("actions__24__gtk-apply.svg"),
-		GTK_AUTHENTICATION_24("actions__24__gtk-authentication.svg"),
-		GTK_BOLD_24("actions__24__gtk-bold.svg"),
-		GTK_CANCEL_24("actions__24__gtk-cancel.svg"),
-		GTK_CDROM_24("actions__24__gtk-cdrom.svg"),
-		GTK_CLEAR_24("actions__24__gtk-clear.svg"),
-		GTK_CLOSE_24("actions__24__gtk-close.svg"),
-		GTK_COLOR_PICKER_24("actions__24__gtk-color-picker.svg"),
-		GTK_CONNECT_24("actions__24__gtk-connect.svg"),
-		GTK_CONVERT_24("actions__24__gtk-convert.svg"),
-		GTK_DISCONNECT_24("actions__24__gtk-disconnect.svg"),
-		GTK_EDIT_24("actions__24__gtk-edit.svg"),
-		GTK_EXECUTE_24("actions__24__gtk-execute.svg"),
-		GTK_FLOPPY_24("actions__24__gtk-floppy.svg"),
-		GTK_INDEX_24("actions__24__gtk-index.svg"),
-		GTK_NO_24("actions__24__gtk-no.svg"),
-		GTK_OK_24("actions__24__gtk-ok.svg"),
-		GTK_PREFERENCES_24("actions__24__gtk-preferences.svg"),
-		GTK_PROPERTIES_24("actions__24__gtk-properties.svg"),
-		GTK_QUIT_24("actions__24__gtk-quit.svg"),
-		GTK_SELECT_COLOR_24("actions__24__gtk-select-color.svg"),
-		GTK_SELECT_FONT_24("actions__24__gtk-select-font.svg"),
-		GTK_STOP_24("actions__24__gtk-stop.svg"),
-		GTK_TAB_DUPLICATE_24("actions__24__gtk-tab-duplicate.svg"),
-		GTK_TAB_NEW_24("actions__24__gtk-tab-new.svg"),
-		GTK_UNDELETE_LTR_24("actions__24__gtk-undelete-ltr.svg"),
-		GTK_UNDELETE_RTL_24("actions__24__gtk-undelete-rtl.svg"),
-		GTK_YES_24("actions__24__gtk-yes.svg"),
-		HELP_ABOUT_24("actions__24__help-about.svg"),
-		HELP_ABOUT_32("actions__32__help-about.svg"),
-		HELP_CONTENTS_24("actions__24__help-contents.svg"),
-		HELP_CONTEXTUAL_24("actions__24__help-contextual.svg"),
-		HELP_DONATE_24("actions__24__help-donate.svg"),
-		HELP_FEEDBACK_24("actions__24__help-feedback.svg"),
-		HELP_HINT_24("actions__24__help-hint.svg"),
-		HELP_KEYBORD_SHORTCUTS_24("actions__24__help-keybord-shortcuts.svg"),
-		HELP_WHATSTHIS_24("actions__24__help-whatsthis.svg"),
-		HELP_WHATSTHIS_32("actions__32__help-whatsthis.svg"),
-		HIDEMOUSE_24("actions__24__hidemouse.svg"),
-		HINT_24("actions__24__hint.svg"),
-		HOTPIXELS_24("actions__24__hotpixels.svg"),
-		IDENTITY_24("actions__24__identity.svg"),
-		IM_AIM_24("actions__24__im-aim.svg"),
-		IM_BAN_KICK_USER_24("actions__24__im-ban-kick-user.svg"),
-		IM_BAN_USER_24("actions__24__im-ban-user.svg"),
-		IM_FACEBOOK_24("actions__24__im-facebook.svg"),
-		IM_GADUGADU_24("actions__24__im-gadugadu.svg"),
-		IM_GOOGLE_24("actions__24__im-google.svg"),
-		IM_GOOGLE_TALK_24("actions__24__im-google-talk.svg"),
-		IM_ICQ_24("actions__24__im-icq.svg"),
-		IM_IDENTICA_24("actions__24__im-identi.ca.svg"),
-		IM_INVISIBLE_USER_24("actions__24__im-invisible-user.svg"),
-		IM_IRC_24("actions__24__im-irc.svg"),
-		IM_JABBER_24("actions__24__im-jabber.svg"),
-		IM_KICK_USER_24("actions__24__im-kick-user.svg"),
-		IM_MSN_24("actions__24__im-msn.svg"),
-		IM_QQ_24("actions__24__im-qq.svg"),
-		IM_SKYPE_24("actions__24__im-skype.svg"),
-		IM_TWITTER_24("actions__24__im-twitter.svg"),
-		IM_USER_24("actions__24__im-user.svg"),
-		IM_USER_AWAY_24("actions__24__im-user-away.svg"),
-		IM_USER_BUSY_24("actions__24__im-user-busy.svg"),
-		IM_USER_OFFLINE_24("actions__24__im-user-offline.svg"),
-		IM_USER_ONLINE_24("actions__24__im-user-online.svg"),
-		IM_YAHOO_24("actions__24__im-yahoo.svg"),
-		IMAGECOMMENT_24("actions__24__imagecomment.svg"),
-		INFO_AMAROK_24("actions__24__Info-amarok.svg"),
-		INITIAL_STATE_24("actions__24__initial_state.svg"),
-		INPAINTING_24("actions__24__inpainting.svg"),
-		INSERT_BUTTON_24("actions__24__insert-button.svg"),
-		INSERT_ENDNOTE_24("actions__24__insert-endnote.svg"),
-		INSERT_FOOTNOTE_24("actions__24__insert-footnote.svg"),
-		INSERT_HORIZONTAL_RULE_24("actions__24__insert-horizontal-rule.svg"),
-		INSERT_IMAGE_24("actions__24__insert-image.svg"),
-		INSERT_LINK_24("actions__24__insert-link.svg"),
-		INSERT_MATH_EXPRESSION_24("actions__24__insert-math-expression.svg"),
-		INSERT_MORE_MARK_24("actions__24__insert-more-mark.svg"),
-		INSERT_PAGE_BREAK_24("actions__24__insert-page-break.svg"),
-		INSERT_TABLE_24("actions__24__insert-table.svg"),
-		INSERT_TABLE_OF_CONTENTS_24("actions__24__insert-table-of-contents.svg"),
-		INSERT_TABLEOFCONTENTS_24("actions__24__insert-tableofcontents.svg"),
-		INSERT_TEXT_24("actions__24__insert-text.svg"),
-		INSERT_TEXT_FRAME_24("actions__24__insert-text-frame.svg"),
-		INTERNET_AMAROK_24("actions__24__internet-amarok.svg"),
-		INVERTIMAGE_24("actions__24__invertimage.svg"),
-		IRC_CHANNEL_ACTIVE_24("actions__24__irc-channel-active.svg"),
-		IRC_CHANNEL_INACTIVE_24("actions__24__irc-channel-inactive.svg"),
-		IRC_CLOSE_CHANNEL_24("actions__24__irc-close-channel.svg"),
-		IRC_JOIN_CHANNEL_24("actions__24__irc-join-channel.svg"),
-		IRC_OPERATOR_24("actions__24__irc-operator.svg"),
-		IRC_REMOVE_OPERATOR_24("actions__24__irc-remove-operator.svg"),
-		IRC_UNVOICE_24("actions__24__irc-unvoice.svg"),
-		IRC_VOICE_24("actions__24__irc-voice.svg"),
-		JOIN_24("actions__24__join.svg"),
-		JOURNAL_NEW_24("actions__24__journal-new.svg"),
-		JUMP_TODAY_24("actions__24__jump-today.svg"),
-		JUNCTION_24("actions__24__junction.svg"),
-		KDENLIVE_ADD_CLIP_24("actions__24__kdenlive-add-clip.svg"),
-		KDENLIVE_ADD_COLOR_CLIP_24("actions__24__kdenlive-add-color-clip.svg"),
-		KDENLIVE_ADD_SLIDE_CLIP_24("actions__24__kdenlive-add-slide-clip.svg"),
-		KDENLIVE_ADD_TEXT_CLIP_24("actions__24__kdenlive-add-text-clip.svg"),
-		KDENLIVE_ALIGN_BOTTOM_24("actions__24__kdenlive-align-bottom.svg"),
-		KDENLIVE_ALIGN_HOR_24("actions__24__kdenlive-align-hor.svg"),
-		KDENLIVE_ALIGN_LEFT_24("actions__24__kdenlive-align-left.svg"),
-		KDENLIVE_ALIGN_NONE_24("actions__24__kdenlive-align-none.svg"),
-		KDENLIVE_ALIGN_RIGHT_24("actions__24__kdenlive-align-right.svg"),
-		KDENLIVE_ALIGN_TOP_24("actions__24__kdenlive-align-top.svg"),
-		KDENLIVE_ALIGN_VERT_24("actions__24__kdenlive-align-vert.svg"),
-		KDENLIVE_CUSTOM_EFFECT_24("actions__24__kdenlive-custom-effect.svg"),
-		KDENLIVE_DELEFFECT_24("actions__24__kdenlive-deleffect.svg"),
-		KDENLIVE_DOWN_24("actions__24__kdenlive-down.svg"),
-		KDENLIVE_HIDE_AUDIO_24("actions__24__kdenlive-hide-audio.svg"),
-		KDENLIVE_HIDE_VIDEO_24("actions__24__kdenlive-hide-video.svg"),
-		KDENLIVE_INSERT_EDIT_24("actions__24__kdenlive-insert-edit.svg"),
-		KDENLIVE_INSERT_RECT_24("actions__24__kdenlive-insert-rect.svg"),
-		KDENLIVE_INSERT_UNICODE_24("actions__24__kdenlive-insert-unicode.svg"),
-		KDENLIVE_LOCK_24("actions__24__kdenlive-lock.svg"),
-		KDENLIVE_MENU_24("actions__24__kdenlive-menu.svg"),
-		KDENLIVE_NORMAL_EDIT_24("actions__24__kdenlive-normal-edit.svg"),
-		KDENLIVE_OBJECT_HEIGHT_24("actions__24__kdenlive-object-height.svg"),
-		KDENLIVE_OBJECT_WIDTH_24("actions__24__kdenlive-object-width.svg"),
-		KDENLIVE_OVERWRITE_EDIT_24("actions__24__kdenlive-overwrite-edit.svg"),
-		KDENLIVE_SELECT_ALL_24("actions__24__kdenlive-select-all.svg"),
-		KDENLIVE_SELECT_IMAGES_24("actions__24__kdenlive-select-images.svg"),
-		KDENLIVE_SELECT_RECTS_24("actions__24__kdenlive-select-rects.svg"),
-		KDENLIVE_SELECT_TEXTS_24("actions__24__kdenlive-select-texts.svg"),
-		KDENLIVE_SELECT_TOOL_24("actions__24__kdenlive-select-tool.svg"),
-		KDENLIVE_SHOW_AUDIO_24("actions__24__kdenlive-show-audio.svg"),
-		KDENLIVE_SHOW_AUDIOTHUMB_24("actions__24__kdenlive-show-audiothumb.svg"),
-		KDENLIVE_SHOW_MARKERS_24("actions__24__kdenlive-show-markers.svg"),
-		KDENLIVE_SHOW_VIDEO_24("actions__24__kdenlive-show-video.svg"),
-		KDENLIVE_SHOW_VIDEOTHUMB_24("actions__24__kdenlive-show-videothumb.svg"),
-		KDENLIVE_SNAP_24("actions__24__kdenlive-snap.svg"),
-		KDENLIVE_SPACER_TOOL_24("actions__24__kdenlive-spacer-tool.svg"),
-		KDENLIVE_SPLIT_AUDIO_24("actions__24__kdenlive-split-audio.svg"),
-		KDENLIVE_TRACK_HAS_EFFECT_24("actions__24__kdenlive-track_has_effect.svg"),
-		KDENLIVE_UNLOCK_24("actions__24__kdenlive-unlock.svg"),
-		KDENLIVE_UNSELECT_ALL_24("actions__24__kdenlive-unselect-all.svg"),
-		KDENLIVE_UP_24("actions__24__kdenlive-up.svg"),
-		KDENLIVE_ZINDEX_BOTTOM_24("actions__24__kdenlive-zindex-bottom.svg"),
-		KDENLIVE_ZINDEX_DOWN_24("actions__24__kdenlive-zindex-down.svg"),
-		KDENLIVE_ZINDEX_TOP_24("actions__24__kdenlive-zindex-top.svg"),
-		KDENLIVE_ZINDEX_UP_24("actions__24__kdenlive-zindex-up.svg"),
-		KDENLIVE_ZONE_END_24("actions__24__kdenlive-zone-end.svg"),
-		KDENLIVE_ZONE_START_24("actions__24__kdenlive-zone-start.svg"),
-		KDENLIVE_ZOOM_LARGE_24("actions__24__kdenlive-zoom-large.svg"),
-		KDENLIVE_ZOOM_SMALL_24("actions__24__kdenlive-zoom-small.svg"),
-		KEY_ENTER_24("actions__24__key-enter.svg"),
-		KMOUTH_PHRASE_24("actions__24__kmouth-phrase.svg"),
-		KMOUTH_PHRASE_NEW_24("actions__24__kmouth-phrase-new.svg"),
-		KMOUTH_PHRASEBOOK_24("actions__24__kmouth-phrasebook.svg"),
-		KMOUTH_PHRESEBOOK_NEW_24("actions__24__kmouth-phresebook-new.svg"),
-		KNOTES_ALARM_24("actions__24__knotes_alarm.svg"),
-		KNOTES_DATE_24("actions__24__knotes_date.svg"),
-		KNOTES_DELETE_24("actions__24__knotes_delete.svg"),
-		KONTES_CLOSE_24("actions__24__kontes_close.svg"),
-		KR_COMBINE_24("actions__24__kr_combine.svg"),
-		KR_COMPAREDIRS_24("actions__24__kr_comparedirs.svg"),
-		KR_DISKUSAGE_24("actions__24__kr_diskusage.svg"),
-		KR_JUMPBACK_24("actions__24__kr_jumpback.svg"),
-		KR_MOUNTMAN_24("actions__24__kr_mountman.svg"),
-		KR_SETJUMPBACK_24("actions__24__kr_setjumpback.svg"),
-		KR_SYNCBROWSE_OFF_24("actions__24__kr_syncbrowse_off.svg"),
-		KR_SYNCBROWSE_ON_24("actions__24__kr_syncbrowse_on.svg"),
-		KR_UNSELECT_24("actions__24__kr_unselect.svg"),
-		KSTARS_CBOUND_24("actions__24__kstars_cbound.svg"),
-		KSTARS_CLINES_24("actions__24__kstars_clines.svg"),
-		KSTARS_CNAMES_24("actions__24__kstars_cnames.svg"),
-		KSTARS_DEEPSKY_24("actions__24__kstars_deepsky.svg"),
-		KSTARS_EKOS_24("actions__24__kstars_ekos.svg"),
-		KSTARS_FITSVIEWER_24("actions__24__kstars_fitsviewer.svg"),
-		KSTARS_GRID_24("actions__24__kstars_grid.svg"),
-		KSTARS_HGRID_24("actions__24__kstars_hgrid.svg"),
-		KSTARS_HORIZON_24("actions__24__kstars_horizon.svg"),
-		KSTARS_INDI_24("actions__24__kstars_indi.svg"),
-		KSTARS_MW_24("actions__24__kstars_mw.svg"),
-		KSTARS_SATELLITES_24("actions__24__kstars_satellites.svg"),
-		KSTARS_SOLARSYSTEM_24("actions__24__kstars_solarsystem.svg"),
-		KSTARS_SUPERNOVAE_24("actions__24__kstars_supernovae.svg"),
-		KT_ADD_FEEDS_24("actions__24__kt-add-feeds.svg"),
-		KT_ADD_FILTERS_24("actions__24__kt-add-filters.svg"),
-		KT_BANDWIDTH_SCHEDULER_24("actions__24__kt-bandwidth-scheduler.svg"),
-		KT_CHANGE_TRACKER_24("actions__24__kt-change-tracker.svg"),
-		KT_CHECK_DATA_24("actions__24__kt-check-data.svg"),
-		KT_CHUNKS_24("actions__24__kt-chunks.svg"),
-		KT_ENCRYPTED_24("actions__24__kt-encrypted.svg"),
-		KT_INFO_WIDGET_24("actions__24__kt-info-widget.svg"),
-		KT_MAGNET_24("actions__24__kt-magnet.svg"),
-		KT_PAUSE_24("actions__24__kt-pause.svg"),
-		KT_PLUGINS_24("actions__24__kt-plugins.svg"),
-		KT_QUEUE_MANAGER_24("actions__24__kt-queue-manager.svg"),
-		KT_REMOVE_24("actions__24__kt-remove.svg"),
-		KT_REMOVE_FEEDS_24("actions__24__kt-remove-feeds.svg"),
-		KT_REMOVE_FILTERS_24("actions__24__kt-remove-filters.svg"),
-		KT_RESTORE_DEFAULTS_24("actions__24__kt-restore-defaults.svg"),
-		KT_SET_MAX_DOWNLOAD_SPEED_24("actions__24__kt-set-max-download-speed.svg"),
-		KT_SET_MAX_UPLOAD_SPEED_24("actions__24__kt-set-max-upload-speed.svg"),
-		KT_SHOW_STATUSBAR_24("actions__24__kt-show-statusbar.svg"),
-		KT_SPEED_LIMITS_24("actions__24__kt-speed-limits.svg"),
-		KT_START_24("actions__24__kt-start.svg"),
-		KT_START_ALL_24("actions__24__kt-start-all.svg"),
-		KT_STOP_24("actions__24__kt-stop.svg"),
-		KT_STOP_ALL_24("actions__24__kt-stop-all.svg"),
-		KTNEF_EXTRACT_TO_24("actions__24__ktnef_extract_to.svg"),
-		LABEL_AMAROK_24("actions__24__label-amarok.svg"),
-		LABPLOT_AXIS_HORIZONTAL_24("actions__24__labplot-axis-horizontal.svg"),
-		LABPLOT_AXIS_VERTICAL_24("actions__24__labplot-axis-vertical.svg"),
-		LABPLOT_SHIFT_DOWN_Y_24("actions__24__labplot-shift-down-y.svg"),
-		LABPLOT_SHIFT_LEFT_X_24("actions__24__labplot-shift-left-x.svg"),
-		LABPLOT_SHIFT_RIGHT_X_24("actions__24__labplot-shift-right-x.svg"),
-		LABPLOT_SHIFT_UP_Y_24("actions__24__labplot-shift-up-y.svg"),
-		LABPLOT_TEX_LOGO_24("actions__24__labplot-TeX-logo.svg"),
-		LABPLOT_XY_CURVE_24("actions__24__labplot-xy-curve.svg"),
-		LABPLOT_XY_EQUATION_CURVE_24("actions__24__labplot-xy-equation-curve.svg"),
-		LABPLOT_XY_FIT_CURVE_24("actions__24__labplot-xy-fit-curve.svg"),
-		LABPLOT_XY_PLOT_FOUR_AXES_24("actions__24__labplot-xy-plot-four-axes.svg"),
-		LABPLOT_XY_PLOT_TWO_AXES_24("actions__24__labplot-xy-plot-two-axes.svg"),
-		LABPLOT_XY_PLOT_TWO_AXES_CENTERED_24("actions__24__labplot-xy-plot-two-axes-centered.svg"),
-		LABPLOT_XY_PLOT_TWO_AXES_CENTERED_ORIGIN_24("actions__24__labplot-xy-plot-two-axes-centered-origin.svg"),
-		LABPLOT_ZOOM_IN_X_24("actions__24__labplot-zoom-in-x.svg"),
-		LABPLOT_ZOOM_IN_Y_24("actions__24__labplot-zoom-in-y.svg"),
-		LABPLOT_ZOOM_OUT_X_24("actions__24__labplot-zoom-out-x.svg"),
-		LABPLOT_ZOOM_OUT_Y_24("actions__24__labplot-zoom-out-y.svg"),
-		LAYER_BOTTOM_24("actions__24__layer-bottom.svg"),
-		LAYER_DELETE_24("actions__24__layer-delete.svg"),
-		LAYER_DUPLICATE_24("actions__24__layer-duplicate.svg"),
-		LAYER_LOWER_24("actions__24__layer-lower.svg"),
-		LAYER_NEW_24("actions__24__layer-new.svg"),
-		LAYER_NEXT_24("actions__24__layer-next.svg"),
-		LAYER_PREVIOUS_24("actions__24__layer-previous.svg"),
-		LAYER_RAISE_24("actions__24__layer-raise.svg"),
-		LAYER_RENAME_24("actions__24__layer-rename.svg"),
-		LAYER_TOP_24("actions__24__layer-top.svg"),
-		LAYER_VISIBLE_OFF_24("actions__24__layer-visible-off.svg"),
-		LAYER_VISIBLE_ON_24("actions__24__layer-visible-on.svg"),
-		LENSAUTOFIX_24("actions__24__lensautofix.svg"),
-		LENSDISTORTION_24("actions__24__lensdistortion.svg"),
-		LICENSE_24("actions__24__license.svg"),
-		LIGHTTABLE_24("actions__24__lighttable.svg"),
-		LIGHTTABLEADD_24("actions__24__lighttableadd.svg"),
-		LINES_CONNECTOR_24("actions__24__lines-connector.svg"),
-		LIST_ADD_24("actions__24__list-add.svg"),
-		LIST_ADD_FONT_24("actions__24__list-add-font.svg"),
-		LIST_ADD_USER_24("actions__24__list-add-user.svg"),
-		LIST_REMOVE_24("actions__24__list-remove.svg"),
-		LIST_REMOVE_USER_24("actions__24__list-remove-user.svg"),
-		LIST_RESOURCE_ADD_24("actions__24__list-resource-add.svg"),
-		LOVE_AMAROK_24("actions__24__love-amarok.svg"),
-		MAIL_ATTACHMENT_24("actions__24__mail-attachment.svg"),
-		MAIL_ENCRYPTED_24("actions__24__mail-encrypted.svg"),
-		MAIL_ENCRYPTED_FULL_24("actions__24__mail-encrypted-full.svg"),
-		MAIL_ENCRYPTED_PART_24("actions__24__mail-encrypted-part.svg"),
-		MAIL_FLAG_24("actions__24__mail-flag.svg"),
-		MAIL_FORWARD_24("actions__24__mail-forward.svg"),
-		MAIL_FORWARDED_24("actions__24__mail-forwarded.svg"),
-		MAIL_FORWARDED_REPLIED_24("actions__24__mail-forwarded-replied.svg"),
-		MAIL_INVITATION_24("actions__24__mail-invitation.svg"),
-		MAIL_MARK_IMPORTANT_24("actions__24__mail-mark-important.svg"),
-		MAIL_MARK_JUNK_24("actions__24__mail-mark-junk.svg"),
-		MAIL_MARK_NOTJUNK_24("actions__24__mail-mark-notjunk.svg"),
-		MAIL_MARK_READ_24("actions__24__mail-mark-read.svg"),
-		MAIL_MARK_TASK_24("actions__24__mail-mark-task.svg"),
-		MAIL_MARK_UNREAD_24("actions__24__mail-mark-unread.svg"),
-		MAIL_MARK_UNREAD_NEW_24("actions__24__mail-mark-unread-new.svg"),
-		MAIL_MEETING_REQUEST_REPLY_24("actions__24__mail-meeting-request-reply.svg"),
-		MAIL_MESSAGE_NEW_24("actions__24__mail-message-new.svg"),
-		MAIL_MESSAGE_NEW_LIST_24("actions__24__mail-message-new-list.svg"),
-		MAIL_QUEUE_24("actions__24__mail-queue.svg"),
-		MAIL_RECEIVE_24("actions__24__mail-receive.svg"),
-		MAIL_REPLIED_24("actions__24__mail-replied.svg"),
-		MAIL_REPLY_ALL_24("actions__24__mail-reply-all.svg"),
-		MAIL_REPLY_CUSTOM_24("actions__24__mail-reply-custom.svg"),
-		MAIL_REPLY_CUSTOM_ALL_24("actions__24__mail-reply-custom-all.svg"),
-		MAIL_REPLY_LIST_24("actions__24__mail-reply-list.svg"),
-		MAIL_REPLY_SENDER_24("actions__24__mail-reply-sender.svg"),
-		MAIL_SEND_24("actions__24__mail-send.svg"),
-		MAIL_SIGNATURE_UNKNOWN_24("actions__24__mail-signature-unknown.svg"),
-		MAIL_SIGNED_24("actions__24__mail-signed.svg"),
-		MAIL_SIGNED_FULL_24("actions__24__mail-signed-full.svg"),
-		MAIL_SIGNED_FULLY_24("actions__24__mail-signed-fully.svg"),
-		MAIL_SIGNED_PART_24("actions__24__mail-signed-part.svg"),
-		MAIL_SIGNED_VERIFIED_24("actions__24__mail-signed-verified.svg"),
-		MAIL_TAGGED_24("actions__24__mail-tagged.svg"),
-		MAP_FLAT_24("actions__24__map-flat.svg"),
-		MAP_GLOBE_24("actions__24__map-globe.svg"),
-		MAP_GNOMONIC_24("actions__24__map-gnomonic.svg"),
-		MAP_MERCATOR_24("actions__24__map-mercator.svg"),
-		MEASURE_24("actions__24__measure.svg"),
-		MEDIA_ALBUM_COVER_24("actions__24__media-album-cover.svg"),
-		MEDIA_ALBUM_COVER_MANAGER_AMAROK_24("actions__24__media-album-cover-manager-amarok.svg"),
-		MEDIA_ALBUM_REPEAT_AMAROK_24("actions__24__media-album-repeat-amarok.svg"),
-		MEDIA_ALBUM_TRACK_24("actions__24__media-album-track.svg"),
-		MEDIA_EJECT_24("actions__24__media-eject.svg"),
-		MEDIA_EJECT_32("actions__32__media-eject.svg"),
-		MEDIA_PLAYBACK_PAUSE_24("actions__24__media-playback-pause.svg"),
-		MEDIA_PLAYBACK_PAUSE_32("actions__32__media-playback-pause.svg"),
-		MEDIA_PLAYBACK_START_24("actions__24__media-playback-start.svg"),
-		MEDIA_PLAYBACK_START_32("actions__32__media-playback-start.svg"),
-		MEDIA_PLAYBACK_STOP_24("actions__24__media-playback-stop.svg"),
-		MEDIA_PLAYBACK_STOP_32("actions__32__media-playback-stop.svg"),
-		MEDIA_PLAYLIST_REPEAT_24("actions__24__media-playlist-repeat.svg"),
-		MEDIA_PLAYLIST_REPEAT_32("actions__32__media-playlist-repeat.svg"),
-		MEDIA_PLAYLIST_REPEAT_AMAROK_24("actions__24__media-playlist-repeat-amarok.svg"),
-		MEDIA_PLAYLIST_SHUFFLE_24("actions__24__media-playlist-shuffle.svg"),
-		MEDIA_PLAYLIST_SHUFFLE_32("actions__32__media-playlist-shuffle.svg"),
-		MEDIA_RANDOM_ALBUMS_AMAROK_24("actions__24__media-random-albums-amarok.svg"),
-		MEDIA_RANDOM_TRACKS_AMAROK_24("actions__24__media-random-tracks-amarok.svg"),
-		MEDIA_RECORD_24("actions__24__media-record.svg"),
-		MEDIA_RECORD_32("actions__32__media-record.svg"),
-		MEDIA_REPEAT_ALBUM_AMAROK_24("actions__24__media-repeat-album-amarok.svg"),
-		MEDIA_REPEAT_PLAYLIST_AMAROK_24("actions__24__media-repeat-playlist-amarok.svg"),
-		MEDIA_REPEAT_TRACK_AMAROK_24("actions__24__media-repeat-track-amarok.svg"),
-		MEDIA_SEEK_BACKWARD_24("actions__24__media-seek-backward.svg"),
-		MEDIA_SEEK_BACKWARD_32("actions__32__media-seek-backward.svg"),
-		MEDIA_SEEK_FORWARD_24("actions__24__media-seek-forward.svg"),
-		MEDIA_SEEK_FORWARD_32("actions__32__media-seek-forward.svg"),
-		MEDIA_SHOW_ACTIVE_TRACK_AMAROK_24("actions__24__media-show-active-track-amarok.svg"),
-		MEDIA_SKIP_BACKWARD_24("actions__24__media-skip-backward.svg"),
-		MEDIA_SKIP_BACKWARD_32("actions__32__media-skip-backward.svg"),
-		MEDIA_SKIP_FORWARD_24("actions__24__media-skip-forward.svg"),
-		MEDIA_SKIP_FORWARD_32("actions__32__media-skip-forward.svg"),
-		MEDIA_STANDARD_TRACK_PROGRESSION_AMAROK_24("actions__24__media-standard-track-progression-amarok.svg"),
-		MEDIA_TRACK_ADD_AMAROK_24("actions__24__media-track-add-amarok.svg"),
-		MEDIA_TRACK_EDIT_AMAROK_24("actions__24__media-track-edit-amarok.svg"),
-		MEDIA_TRACK_QUEUE_AMAROK_24("actions__24__media-track-queue-amarok.svg"),
-		MEDIA_TRACK_REMOVE_AMAROK_24("actions__24__media-track-remove-amarok.svg"),
-		MEETING_ATTENDING_24("actions__24__meeting-attending.svg"),
-		MEETING_ATTENDING_48("actions__48__meeting-attending.svg"),
-		MEETING_ATTENDING_TENTATIVE_24("actions__24__meeting-attending-tentative.svg"),
-		MEETING_PARTICIPANT_NO_RESPONSE_24("actions__24__meeting-participant-no-response.svg"),
-		MEETING_PARTICIPANT_REQUEST_RESPONSE_24("actions__24__meeting-participant-request-response.svg"),
-		MENU_NEW_24("actions__24__menu_new.svg"),
-		MENU_NEW_SEP_24("actions__24__menu_new_sep.svg"),
-		MERGE_24("actions__24__merge.svg"),
-		MESSAGEBOX_WARNING_24("actions__24__messagebox_warning.svg"),
-		MIC_OFF_24("actions__24__mic-off.svg"),
-		MIC_ON_24("actions__24__mic-on.svg"),
-		MIC_READY_24("actions__24__mic-ready.svg"),
-		MILESTONE_24("actions__24__milestone.svg"),
-		MUSIC_AMAROK_24("actions__24__music-amarok.svg"),
-		NETWORK_CONNECT_24("actions__24__network-connect.svg"),
-		NETWORK_DISCONNECT_24("actions__24__network-disconnect.svg"),
-		NEW_AUDIO_ALARM_24("actions__24__new-audio-alarm.svg"),
-		NEWS_SUBSCRIBE_24("actions__24__news-subscribe.svg"),
-		NEWS_UNSUBSCRIBE_24("actions__24__news-unsubscribe.svg"),
-		NOCOVER_24("actions__24__nocover.svg"),
-		NODE_24("actions__24__node.svg"),
-		NODE_SEGMENT_CURVE_24("actions__24__node-segment-curve.svg"),
-		NODE_SEGMENT_LINE_24("actions__24__node-segment-line.svg"),
-		NODE_TRANSFORM_24("actions__24__node-transform.svg"),
-		NODE_TYPE_AUTO_SMOOTH_24("actions__24__node-type-auto-smooth.svg"),
-		NODE_TYPE_CUSP_24("actions__24__node-type-cusp.svg"),
-		NODE_TYPE_SMOOTH_24("actions__24__node-type-smooth.svg"),
-		NODE_TYPE_SYMMETRIC_24("actions__24__node-type-symmetric.svg"),
-		NOISEREDUCTION_24("actions__24__noisereduction.svg"),
-		OBJECT_ALIGN_HORIZONTAL_CENTER_CALLIGRA_24("actions__24__object-align-horizontal-center-calligra.svg"),
-		OBJECT_ALIGN_HORIZONTAL_LEFT_CALLIGRA_24("actions__24__object-align-horizontal-left-calligra.svg"),
-		OBJECT_ALIGN_HORIZONTAL_RIGHT_CALLIGRA_24("actions__24__object-align-horizontal-right-calligra.svg"),
-		OBJECT_ALIGN_VERTICAL_BOTTOM_CALLIGRA_24("actions__24__object-align-vertical-bottom-calligra.svg"),
-		OBJECT_ALIGN_VERTICAL_BOTTOM_TOP_CALLIGRA_24("actions__24__object-align-vertical-bottom-top-calligra.svg"),
-		OBJECT_ALIGN_VERTICAL_CENTER_CALLIGRA_24("actions__24__object-align-vertical-center-calligra.svg"),
-		OBJECT_ALIGN_VERTICAL_TOP_CALLIGRA_24("actions__24__object-align-vertical-top-calligra.svg"),
-		OBJECT_COLUMNS_24("actions__24__object-columns.svg"),
-		OBJECT_FILL_24("actions__24__object-fill.svg"),
-		OBJECT_FLIP_HORIZONTAL_24("actions__24__object-flip-horizontal.svg"),
-		OBJECT_FLIP_VERTICAL_24("actions__24__object-flip-vertical.svg"),
-		OBJECT_GROUP_24("actions__24__object-group.svg"),
-		OBJECT_GROUP_CALLIGRA_24("actions__24__object-group-calligra.svg"),
-		OBJECT_HIDDEN_24("actions__24__object-hidden.svg"),
-		OBJECT_LOCKED_24("actions__24__object-locked.svg"),
-		OBJECT_ORDER_BACK_24("actions__24__object-order-back.svg"),
-		OBJECT_ORDER_BACK_32("actions__32__object-order-back.svg"),
-		OBJECT_ORDER_BACK_CALLIGRA_24("actions__24__object-order-back-calligra.svg"),
-		OBJECT_ORDER_FRONT_24("actions__24__object-order-front.svg"),
-		OBJECT_ORDER_FRONT_32("actions__32__object-order-front.svg"),
-		OBJECT_ORDER_FRONT_CALLIGRA_24("actions__24__object-order-front-calligra.svg"),
-		OBJECT_ORDER_LOWER_24("actions__24__object-order-lower.svg"),
-		OBJECT_ORDER_LOWER_32("actions__32__object-order-lower.svg"),
-		OBJECT_ORDER_LOWER_CALLIGRA_24("actions__24__object-order-lower-calligra.svg"),
-		OBJECT_ORDER_RAISE_24("actions__24__object-order-raise.svg"),
-		OBJECT_ORDER_RAISE_32("actions__32__object-order-raise.svg"),
-		OBJECT_ORDER_RAISE_CALLIGRA_24("actions__24__object-order-raise-calligra.svg"),
-		OBJECT_ROTATE_LEFT_24("actions__24__object-rotate-left.svg"),
-		OBJECT_ROTATE_RIGHT_24("actions__24__object-rotate-right.svg"),
-		OBJECT_ROWS_24("actions__24__object-rows.svg"),
-		OBJECT_STROKE_24("actions__24__object-stroke.svg"),
-		OBJECT_STROKE_STYLE_24("actions__24__object-stroke-style.svg"),
-		OBJECT_TO_PATH_24("actions__24__object-to-path.svg"),
-		OBJECT_UNGROUP_24("actions__24__object-ungroup.svg"),
-		OBJECT_UNGROUP_CALLIGRA_24("actions__24__object-ungroup-calligra.svg"),
-		OBJECT_UNLOCKED_24("actions__24__object-unlocked.svg"),
-		OBJECT_VISIBLE_24("actions__24__object-visible.svg"),
-		OFFICE_CHART_AREA_24("actions__24__office-chart-area.svg"),
-		OFFICE_CHART_AREA_FOCUS_PEAK_NODE_24("actions__24__office-chart-area-focus-peak-node.svg"),
-		OFFICE_CHART_AREA_PERCENTAGE_24("actions__24__office-chart-area-percentage.svg"),
-		OFFICE_CHART_AREA_STACKED_24("actions__24__office-chart-area-stacked.svg"),
-		OFFICE_CHART_BAR_24("actions__24__office-chart-bar.svg"),
-		OFFICE_CHART_BAR_PERCENTAGE_24("actions__24__office-chart-bar-percentage.svg"),
-		OFFICE_CHART_BAR_STACKED_24("actions__24__office-chart-bar-stacked.svg"),
-		OFFICE_CHART_LINE_24("actions__24__office-chart-line.svg"),
-		OFFICE_CHART_LINE_PERCENTAGE_24("actions__24__office-chart-line-percentage.svg"),
-		OFFICE_CHART_LINE_STACKED_24("actions__24__office-chart-line-stacked.svg"),
-		OFFICE_CHART_PIE_24("actions__24__office-chart-pie.svg"),
-		OFFICE_CHART_POLAR_24("actions__24__office-chart-polar.svg"),
-		OFFICE_CHART_POLAR_STACKED_24("actions__24__office-chart-polar-stacked.svg"),
-		OFFICE_CHART_RING_24("actions__24__office-chart-ring.svg"),
-		OFFICE_CHART_SCATTER_24("actions__24__office-chart-scatter.svg"),
-		OFFLINE_SETTINGS_24("actions__24__offline-settings.svg"),
-		OILPAINT_24("actions__24__oilpaint.svg"),
-		OVEREXPOSURE_24("actions__24__overexposure.svg"),
-		PAGE_2SIDES_24("actions__24__page-2sides.svg"),
-		PAGE_3SIDES_24("actions__24__page-3sides.svg"),
-		PAGE_4SIDES_24("actions__24__page-4sides.svg"),
-		PAGE_SIMPLE_24("actions__24__page-simple.svg"),
-		PAGE_ZOOM_24("actions__24__page-zoom.svg"),
-		PAINT_GRADIENT_LINEAR_24("actions__24__paint-gradient-linear.svg"),
-		PAINT_GRADIENT_RADIAL_24("actions__24__paint-gradient-radial.svg"),
-		PAINT_NONE_24("actions__24__paint-none.svg"),
-		PAINT_PATTERN_24("actions__24__paint-pattern.svg"),
-		PAINT_SOLID_24("actions__24__paint-solid.svg"),
-		PAINT_SWATCH_24("actions__24__paint-swatch.svg"),
-		PAINT_UNKNOWN_24("actions__24__paint-unknown.svg"),
-		PASSWORD_COPY_24("actions__24__password-copy.svg"),
-		PATH_BREAK_APART_24("actions__24__path-break-apart.svg"),
-		PATH_CLIP_EDIT_24("actions__24__path-clip-edit.svg"),
-		PATH_COMBINE_24("actions__24__path-combine.svg"),
-		PATH_CUT_24("actions__24__path-cut.svg"),
-		PATH_DIFFERENCE_24("actions__24__path-difference.svg"),
-		PATH_DIVISION_24("actions__24__path-division.svg"),
-		PATH_EFFECT_PARAMETER_NEXT_24("actions__24__path-effect-parameter-next.svg"),
-		PATH_EXCLUSION_24("actions__24__path-exclusion.svg"),
-		PATH_INSET_24("actions__24__path-inset.svg"),
-		PATH_INTERSECTION_24("actions__24__path-intersection.svg"),
-		PATH_MASK_EDIT_24("actions__24__path-mask-edit.svg"),
-		PATH_MODE_POLYLINE_24("actions__24__path-mode-polyline.svg"),
-		PATH_MODE_POLYLINE_PARAXIAL_24("actions__24__path-mode-polyline-paraxial.svg"),
-		PATH_OFFSET_DYNAMIC_24("actions__24__path-offset-dynamic.svg"),
-		PATH_OFFSET_LINKED_24("actions__24__path-offset-linked.svg"),
-		PATH_OUTSET_24("actions__24__path-outset.svg"),
-		PATH_REVERSE_24("actions__24__path-reverse.svg"),
-		PATH_SIMPLIFY_24("actions__24__path-simplify.svg"),
-		PATH_UNION_24("actions__24__path-union.svg"),
-		PDF_ANNOTATIONS_24("actions__24__pdf-annotations.svg"),
-		PERCENT_24("actions__24__percent.svg"),
-		PERCENT_32("actions__32__percent.svg"),
-		PERSPECTIVE_24("actions__24__perspective.svg"),
-		PHOTOS_AMAROK_24("actions__24__photos-amarok.svg"),
-		PIXELART_TRACE_24("actions__24__pixelart-trace.svg"),
-		PLAYER_TIME_24("actions__24__player-time.svg"),
-		PLAYER_VOLUME_24("actions__24__player-volume.svg"),
-		PLAYER_VOLUME_MUTED_24("actions__24__player-volume-muted.svg"),
-		PLAYLIST_GENERATOR_24("actions__24__playlist-generator.svg"),
-		PLAYLIST_SORT_24("actions__24__playlist-sort.svg"),
-		PLUGINS_24("actions__24__plugins.svg"),
-		PODCAST_AMAROK_24("actions__24__podcast-amarok.svg"),
-		PORT_24("actions__24__port.svg"),
-		PRECONDITION_24("actions__24__precondition.svg"),
-		PREFERENCES_ACTIVITIES_24("actions__24__preferences-activities.svg"),
-		PREFERENCES_ACTIVITIES_48("actions__48__preferences-activities.svg"),
-		PREFERENCES_INDICATOR_AMAROK_24("actions__24__preferences-indicator-amarok.svg"),
-		PREFERENCES_MEDIA_PLAYBACK_AMAROK_24("actions__24__preferences-media-playback-amarok.svg"),
-		PREFERENCES_OTHER_24("actions__24__preferences-other.svg"),
-		PREFLIGHT_VERIFIER_24("actions__24__preflight-verifier.svg"),
-		PREPOSTCONDITION_24("actions__24__PrePostCondition.svg"),
-		PRIMARYKEY_CONSTRAINT_24("actions__24__primarykey_constraint.svg"),
-		PROCESS_STOP_24("actions__24__process-stop.svg"),
-		PROJECT_DEVELOPMENT_24("actions__24__project-development.svg"),
-		PROJECT_DEVELOPMENT_CLOSE_24("actions__24__project-development-close.svg"),
-		PROJECT_DEVELOPMENT_CLOSE_ALL_24("actions__24__project-development-close-all.svg"),
-		PROJECT_DEVELOPMENT_NEW_TEMPLATE_24("actions__24__project-development-new-template.svg"),
-		PROJECT_OPEN_24("actions__24__project-open.svg"),
-		QUICKOPEN_24("actions__24__quickopen.svg"),
-		QUICKOPEN_CLASS_24("actions__24__quickopen-class.svg"),
-		QUICKOPEN_FILE_24("actions__24__quickopen-file.svg"),
-		QUICKOPEN_FUNCTION_24("actions__24__quickopen-function.svg"),
-		QUICKVIEW_24("actions__24__quickview.svg"),
-		RAINDROP_24("actions__24__raindrop.svg"),
-		RATING_24("actions__24__rating.svg"),
-		RATING_UNRATED_24("actions__24__rating-unrated.svg"),
-		RATIOCROP_24("actions__24__ratiocrop.svg"),
-		REALIZATION_24("actions__24__realization.svg"),
-		RECTANGLE_MAKE_CORNERS_SHARP_24("actions__24__rectangle-make-corners-sharp.svg"),
-		REDEYES_24("actions__24__redeyes.svg"),
-		REMOVE_AMAROK_24("actions__24__remove-amarok.svg"),
-		REMOVE_LINK_24("actions__24__remove-link.svg"),
-		RESOURCE_CALENDAR_CHILD_24("actions__24__resource-calendar-child.svg"),
-		RESOURCE_CALENDAR_CHILD_INSERT_24("actions__24__resource-calendar-child-insert.svg"),
-		RESOURCE_CALENDAR_INSERT_24("actions__24__resource-calendar-insert.svg"),
-		RESOURCE_GROUP_24("actions__24__resource-group.svg"),
-		RESOURCE_GROUP_NEW_24("actions__24__resource-group-new.svg"),
-		RESTORATION_24("actions__24__restoration.svg"),
-		RETWEET_24("actions__24__retweet.svg"),
-		REVERSE_24("actions__24__reverse.svg"),
-		ROLL_24("actions__24__roll.svg"),
-		RUN_BUILD_24("actions__24__run-build.svg"),
-		RUN_BUILD_CLEAN_24("actions__24__run-build-clean.svg"),
-		RUN_BUILD_CONFIGURE_24("actions__24__run-build-configure.svg"),
-		RUN_BUILD_FILE_24("actions__24__run-build-file.svg"),
-		RUN_BUILD_INSTALL_24("actions__24__run-build-install.svg"),
-		RUN_BUILD_INSTALL_ROOT_24("actions__24__run-build-install-root.svg"),
-		RUN_BUILD_PRUNE_24("actions__24__run-build-prune.svg"),
-		RUN_CLEAN_24("actions__24__run-clean.svg"),
-		RUN_INSTALL_24("actions__24__run-install.svg"),
-		SEARCH_24("actions__24__search.svg"),
-		SELECT_RECTANGULAR_24("actions__24__select-rectangular.svg"),
-		SELECTION_BOTTOM_24("actions__24__selection-bottom.svg"),
-		SELECTION_LOWER_24("actions__24__selection-lower.svg"),
-		SELECTION_MAKE_BITMAP_COPY_24("actions__24__selection-make-bitmap-copy.svg"),
-		SELECTION_MOVE_TO_LAYER_ABOVE_24("actions__24__selection-move-to-layer-above.svg"),
-		SELECTION_MOVE_TO_LAYER_BELOW_24("actions__24__selection-move-to-layer-below.svg"),
-		SELECTION_RAISE_24("actions__24__selection-raise.svg"),
-		SELECTION_TOP_24("actions__24__selection-top.svg"),
-		SEND_SIGNAL_24("actions__24__send_signal.svg"),
-		SERVICES_24("actions__24__services.svg"),
-		SHAPE_CHOOSE_24("actions__24__shape-choose.svg"),
-		SHAPES_24("actions__24__shapes.svg"),
-		SHARPENIMAGE_24("actions__24__sharpenimage.svg"),
-		SHEAR_24("actions__24__shear.svg"),
-		SHIFT_DOWN_Y_24("actions__24__shift-down-y.svg"),
-		SHIFT_LEFT_X_24("actions__24__shift-left-x.svg"),
-		SHIFT_RIGHT_X_24("actions__24__shift-right-x.svg"),
-		SHIFT_UP_Y_24("actions__24__shift-up-y.svg"),
-		SHOW_DIALOGS_24("actions__24__show-dialogs.svg"),
-		SHOW_GRID_24("actions__24__show-grid.svg"),
-		SHOW_GUIDES_24("actions__24__show-guides.svg"),
-		SHOW_MENU_24("actions__24__show-menu.svg"),
-		SHOW_NODE_HANDLES_24("actions__24__show-node-handles.svg"),
-		SHOW_OFFLINE_24("actions__24__show-offline.svg"),
-		SHOW_PATH_OUTLINE_24("actions__24__show-path-outline.svg"),
-		SIMILARARTISTS_AMAROK_24("actions__24__similarartists-amarok.svg"),
-		SKG_CHART_BUBBLE_24("actions__24__skg-chart-bubble.svg"),
-		SKROOGE_CREDIT_CARD_24("actions__24__skrooge_credit_card.svg"),
-		SKROOGE_LESS_24("actions__24__skrooge_less.svg"),
-		SKROOGE_MORE_24("actions__24__skrooge_more.svg"),
-		SKROOGE_MUCH_LESS_24("actions__24__skrooge_much_less.svg"),
-		SKROOGE_MUCH_MORE_24("actions__24__skrooge_much_more.svg"),
-		SKROOGE_TYPE_24("actions__24__skrooge_type.svg"),
-		SMALLCLOCK_24("actions__24__smallclock.svg"),
-		SNAP_24("actions__24__snap.svg"),
-		SNAP_BOUNDING_BOX_CENTER_24("actions__24__snap-bounding-box-center.svg"),
-		SNAP_BOUNDING_BOX_CORNERS_24("actions__24__snap-bounding-box-corners.svg"),
-		SNAP_BOUNDING_BOX_EDGES_24("actions__24__snap-bounding-box-edges.svg"),
-		SNAP_BOUNDING_BOX_MIDPOINTS_24("actions__24__snap-bounding-box-midpoints.svg"),
-		SNAP_EXTENSION_24("actions__24__snap-extension.svg"),
-		SNAP_GRID_GUIDE_INTERSECTIONS_24("actions__24__snap-grid-guide-intersections.svg"),
-		SNAP_GUIDELINE_24("actions__24__snap-guideline.svg"),
-		SNAP_INTERSECTION_24("actions__24__snap-intersection.svg"),
-		SNAP_NODE_24("actions__24__snap-node.svg"),
-		SNAP_NODES_CENTER_24("actions__24__snap-nodes-center.svg"),
-		SNAP_NODES_CUSP_24("actions__24__snap-nodes-cusp.svg"),
-		SNAP_NODES_INTERSECTION_24("actions__24__snap-nodes-intersection.svg"),
-		SNAP_NODES_MIDPOINT_24("actions__24__snap-nodes-midpoint.svg"),
-		SNAP_NODES_PATH_24("actions__24__snap-nodes-path.svg"),
-		SNAP_NODES_ROTATION_CENTER_24("actions__24__snap-nodes-rotation-center.svg"),
-		SNAP_NODES_SMOOTH_24("actions__24__snap-nodes-smooth.svg"),
-		SNAP_ORTHOGONAL_24("actions__24__snap-orthogonal.svg"),
-		SNAP_PAGE_24("actions__24__snap-page.svg"),
-		SNAP_TEXT_BASELINE_24("actions__24__snap-text-baseline.svg"),
-		SORT_NAME_24("actions__24__sort-name.svg"),
-		SORT_PRESENCE_24("actions__24__sort-presence.svg"),
-		SPEAKER_24("actions__24__speaker.svg"),
-		SPLIT_24("actions__24__split.svg"),
-		STANDARD_CONNECTOR_24("actions__24__standard-connector.svg"),
-		STATE_FORK_24("actions__24__state-fork.svg"),
-		STICKY_ZOOM_24("actions__24__sticky_zoom.svg"),
-		STORY_EDITOR_24("actions__24__story-editor.svg"),
-		STRAIGHT_CONNECTOR_24("actions__24__straight-connector.svg"),
-		STROKE_CAP_BEVEL_24("actions__24__stroke-cap-bevel.svg"),
-		STROKE_CAP_BUTT_24("actions__24__stroke-cap-butt.svg"),
-		STROKE_CAP_MITER_24("actions__24__stroke-cap-miter.svg"),
-		STROKE_CAP_ROUND_24("actions__24__stroke-cap-round.svg"),
-		STROKE_CAP_SQUARE_24("actions__24__stroke-cap-square.svg"),
-		STROKE_JOIN_BEVEL_24("actions__24__stroke-join-bevel.svg"),
-		STROKE_JOIN_MITER_24("actions__24__stroke-join-miter.svg"),
-		STROKE_JOIN_ROUND_24("actions__24__stroke-join-round.svg"),
-		STROKE_TO_PATH_24("actions__24__stroke-to-path.svg"),
-		SVN_COMMIT_24("actions__24__svn-commit.svg"),
-		SVN_UPDATE_24("actions__24__svn-update.svg"),
-		SYMBOLS_24("actions__24__symbols.svg"),
-		SYSTEM_RUN_24("actions__24__system-run.svg"),
-		SYSTEM_SEARCH_24("actions__24__system-search.svg"),
-		TAB_CLOSE_24("actions__24__tab-close.svg"),
-		TAB_CLOSE_OTHER_24("actions__24__tab-close-other.svg"),
-		TAB_DETACH_24("actions__24__tab-detach.svg"),
-		TAB_DUPLICATE_24("actions__24__tab-duplicate.svg"),
-		TAB_NEW_24("actions__24__tab-new.svg"),
-		TAB_NEW_48("actions__48__tab-new.svg"),
-		TAB_NEW_BACKGROUND_24("actions__24__tab-new-background.svg"),
-		TABLE_24("actions__24__table.svg"),
-		TAG_24("actions__24__tag.svg"),
-		TAG_ADDRESSBOOK_24("actions__24__tag-addressbook.svg"),
-		TAG_ASSIGNED_24("actions__24__tag-assigned.svg"),
-		TAG_DELETE_24("actions__24__tag-delete.svg"),
-		TAG_EVENTS_24("actions__24__tag-events.svg"),
-		TAG_FOLDER_24("actions__24__tag-folder.svg"),
-		TAG_NEW_24("actions__24__tag-new.svg"),
-		TAG_PEOPLE_24("actions__24__tag-people.svg"),
-		TAG_PLACES_24("actions__24__tag-places.svg"),
-		TAG_PROPERTIES_24("actions__24__tag-properties.svg"),
-		TAG_RECENTS_24("actions__24__tag-recents.svg"),
-		TAG_RESET_24("actions__24__tag-reset.svg"),
-		TASK_NEW_24("actions__24__task-new.svg"),
-		TAXES_FINANCES_24("actions__24__taxes-finances.svg"),
-		TEX_LOGO_24("actions__24__TeX_logo.svg"),
-		TEXT_FIELD_24("actions__24__text-field.svg"),
-		TEXT_FLOW_INTO_FRAME_24("actions__24__text-flow-into-frame.svg"),
-		TEXT_FRAME_LINK_24("actions__24__text-frame-link.svg"),
-		TEXT_FRAME_UNLINK_24("actions__24__text-frame-unlink.svg"),
-		TEXT_HORZ_KERN_24("actions__24__text_horz_kern.svg"),
-		TEXT_LETTER_SPACING_24("actions__24__text_letter_spacing.svg"),
-		TEXT_LINE_SPACING_24("actions__24__text_line_spacing.svg"),
-		TEXT_PUT_ON_PATH_24("actions__24__text-put-on-path.svg"),
-		TEXT_REMOVE_FROM_PATH_24("actions__24__text-remove-from-path.svg"),
-		TEXT_REMOVE_KERNS_24("actions__24__text_remove_kerns.svg"),
-		TEXT_ROTATION_24("actions__24__text_rotation.svg"),
-		TEXT_SPEAK_24("actions__24__text-speak.svg"),
-		TEXT_SUBSCRIPT_24("actions__24__text_subscript.svg"),
-		TEXT_SUPERSCRIPT_24("actions__24__text_superscript.svg"),
-		TEXT_UNFLOW_24("actions__24__text-unflow.svg"),
-		TEXT_UNKERN_24("actions__24__text-unkern.svg"),
-		TEXT_VERT_KERN_24("actions__24__text_vert_kern.svg"),
-		TEXT_WORD_SPACING_24("actions__24__text_word_spacing.svg"),
-		TEXT_WRAP_24("actions__24__text-wrap.svg"),
-		TEXTURE_24("actions__24__texture.svg"),
-		TOOL_ANIMATOR_24("actions__24__tool-animator.svg"),
-		TOOL_COLOR_ERASER_24("actions__24__tool_color_eraser.svg"),
-		TOOL_CURVE_24("actions__24__tool_curve.svg"),
-		TOOL_ELLIPTICAL_SELECTION_24("actions__24__tool_elliptical_selection.svg"),
-		TOOL_MEASURE_24("actions__24__tool-measure.svg"),
-		TOOL_NODE_EDITOR_24("actions__24__tool-node-editor.svg"),
-		TOOL_POINTER_24("actions__24__tool-pointer.svg"),
-		TOOL_POLYGON_24("actions__24__tool_polygon.svg"),
-		TOOL_ROUNDED_RECTANGLE_24("actions__24__tool_rounded_rectangle.svg"),
-		TOOL_SPRAY_24("actions__24__tool-spray.svg"),
-		TOOL_TWEAK_24("actions__24__tool-tweak.svg"),
-		TOOLS_CHECK_SPELLING_24("actions__24__tools-check-spelling.svg"),
-		TOOLS_MEDIA_OPTICAL_BURN_24("actions__24__tools-media-optical-burn.svg"),
-		TOOLS_MEDIA_OPTICAL_BURN_IMAGE_24("actions__24__tools-media-optical-burn-image.svg"),
-		TOOLS_MEDIA_OPTICAL_COPY_24("actions__24__tools-media-optical-copy.svg"),
-		TOOLS_MEDIA_OPTICAL_ERASE_24("actions__24__tools-media-optical-erase.svg"),
-		TOOLS_MEDIA_OPTICAL_FORMAT_24("actions__24__tools-media-optical-format.svg"),
-		TOOLS_REPORT_BUG_24("actions__24__tools-report-bug.svg"),
-		TOOLS_RIP_AUDIO_CD_24("actions__24__tools-rip-audio-cd.svg"),
-		TOOLS_RIP_VIDEO_CD_24("actions__24__tools-rip-video-cd.svg"),
-		TOOLS_RIP_VIDEO_DVD_24("actions__24__tools-rip-video-dvd.svg"),
-		TOOLS_WIZARD_24("actions__24__tools-wizard.svg"),
-		TRANSFORM_AFFECT_GRADIENT_24("actions__24__transform-affect-gradient.svg"),
-		TRANSFORM_AFFECT_PATTERN_24("actions__24__transform-affect-pattern.svg"),
-		TRANSFORM_AFFECT_ROUNDED_CORNERS_24("actions__24__transform-affect-rounded-corners.svg"),
-		TRANSFORM_AFFECT_STROKE_24("actions__24__transform-affect-stroke.svg"),
-		TRANSFORM_CROP_24("actions__24__transform-crop.svg"),
-		TRANSFORM_CROP_AND_RESIZE_24("actions__24__transform-crop-and-resize.svg"),
-		TRANSFORM_MIRROR_HORIZONTAL_24("actions__24__transform-mirror-horizontal.svg"),
-		TRANSFORM_MIRROR_VERTICAL_24("actions__24__transform-mirror-vertical.svg"),
-		TRANSFORM_MOVE_24("actions__24__transform-move.svg"),
-		TRANSFORM_MOVE_HORIZONTAL_24("actions__24__transform-move-horizontal.svg"),
-		TRANSFORM_MOVE_VERTICAL_24("actions__24__transform-move-vertical.svg"),
-		TRANSFORM_ROTATE_24("actions__24__transform-rotate.svg"),
-		TRANSFORM_SCALE_24("actions__24__transform-scale.svg"),
-		TRANSFORM_SCALE_TEXTBOX_POINTS_24("actions__24__transform-scale-textbox-points.svg"),
-		TRANSFORM_SHEAR_DOWN_24("actions__24__transform-shear-down.svg"),
-		TRANSFORM_SHEAR_LEFT_24("actions__24__transform-shear-left.svg"),
-		TRANSFORM_SHEAR_RIGHT_24("actions__24__transform-shear-right.svg"),
-		TRANSFORM_SHEAR_UP_24("actions__24__transform-shear-up.svg"),
-		TRASH_EMPTY_24("actions__24__trash-empty.svg"),
-		UMBRELLO_DIAGRAM_DEPLOYMENT_24("actions__24__umbrello_diagram_deployment.svg"),
-		UNDEREXPOSURE_24("actions__24__underexposure.svg"),
-		UNIASSOCIATION_24("actions__24__uniassociation.svg"),
-		UNIQUE_CONSTRAINT_24("actions__24__unique_constraint.svg"),
-		UPCOMINGEVENTS_AMAROK_24("actions__24__upcomingevents-amarok.svg"),
-		UPINDICATOR_24("actions__24__upindicator.svg"),
-		UPLOAD_MEDIA_24("actions__24__upload-media.svg"),
-		USER_GROUP_DELETE_24("actions__24__user-group-delete.svg"),
-		USER_GROUP_NEW_24("actions__24__user-group-new.svg"),
-		USER_GROUP_PROPERTIES_24("actions__24__user-group-properties.svg"),
-		USER_IDENTITY_24("actions__24__user-identity.svg"),
-		USER_PROPERTIES_24("actions__24__user-properties.svg"),
-		USERNAME_COPY_24("actions__24__username-copy.svg"),
-		VIDEOCLIP_AMAROK_24("actions__24__videoclip-amarok.svg"),
-		VIEW_BANK_24("actions__24__view-bank.svg"),
-		VIEW_BANK_ACCOUNT_24("actions__24__view-bank-account.svg"),
-		VIEW_BANK_ACCOUNT_CHECKING_24("actions__24__view-bank-account-checking.svg"),
-		VIEW_BANK_ACCOUNT_SAVINGS_24("actions__24__view-bank-account-savings.svg"),
-		VIEW_BARCODE_24("actions__24__view-barcode.svg"),
-		VIEW_BARCODE_ADD_24("actions__24__view-barcode-add.svg"),
-		VIEW_CALENDAR_24("actions__24__view-calendar.svg"),
-		VIEW_CALENDAR_AGENDA_24("actions__24__view-calendar-agenda.svg"),
-		VIEW_CALENDAR_BIRTHDAY_24("actions__24__view-calendar-birthday.svg"),
-		VIEW_CALENDAR_DAY_24("actions__24__view-calendar-day.svg"),
-		VIEW_CALENDAR_HOLIDAY_24("actions__24__view-calendar-holiday.svg"),
-		VIEW_CALENDAR_JOURNAL_24("actions__24__view-calendar-journal.svg"),
-		VIEW_CALENDAR_LIST_24("actions__24__view-calendar-list.svg"),
-		VIEW_CALENDAR_MONTH_24("actions__24__view-calendar-month.svg"),
-		VIEW_CALENDAR_SPECIAL_OCCASION_24("actions__24__view-calendar-special-occasion.svg"),
-		VIEW_CALENDAR_TASKS_24("actions__24__view-calendar-tasks.svg"),
-		VIEW_CALENDAR_TIME_SPENT_24("actions__24__view-calendar-time-spent.svg"),
-		VIEW_CALENDAR_TIMELINE_24("actions__24__view-calendar-timeline.svg"),
-		VIEW_CALENDAR_UPCOMING_DAYS_24("actions__24__view-calendar-upcoming-days.svg"),
-		VIEW_CALENDAR_UPCOMING_EVENTS_24("actions__24__view-calendar-upcoming-events.svg"),
-		VIEW_CALENDAR_WEDDING_ANNIVERSARY_24("actions__24__view-calendar-wedding-anniversary.svg"),
-		VIEW_CALENDAR_WEEK_24("actions__24__view-calendar-week.svg"),
-		VIEW_CALENDAR_WHATSNEXT_24("actions__24__view-calendar-whatsnext.svg"),
-		VIEW_CALENDAR_WORKWEEK_24("actions__24__view-calendar-workweek.svg"),
-		VIEW_CATALOG_24("actions__24__view-catalog.svg"),
-		VIEW_CATEGORIES_24("actions__24__view-categories.svg"),
-		VIEW_CATEGORIES_EXPENDITURES_24("actions__24__view-categories-expenditures.svg"),
-		VIEW_CATEGORIES_INCOMES_24("actions__24__view-categories-incomes.svg"),
-		VIEW_CERTIFICATE_24("actions__24__view-certificate.svg"),
-		VIEW_CERTIFICATE_ADD_24("actions__24__view-certificate-add.svg"),
-		VIEW_CERTIFICATE_EXPORT_24("actions__24__view-certificate-export.svg"),
-		VIEW_CERTIFICATE_EXPORT_SECRET_24("actions__24__view-certificate-export-secret.svg"),
-		VIEW_CERTIFICATE_EXPORT_SERVER_24("actions__24__view-certificate-export-server.svg"),
-		VIEW_CERTIFICATE_IMPORT_24("actions__24__view-certificate-import.svg"),
-		VIEW_CERTIFICATE_SERVER_CONFIGURE_24("actions__24__view-certificate-server-configure.svg"),
-		VIEW_CERTIFICATE_SIGN_24("actions__24__view-certificate-sign.svg"),
-		VIEW_CHOOSE_24("actions__24__view-choose.svg"),
-		VIEW_CLOSE_24("actions__24__view-close.svg"),
-		VIEW_CONVERSATION_BALLOON_24("actions__24__view-conversation-balloon.svg"),
-		VIEW_FILE_COLUMNS_24("actions__24__view-file-columns.svg"),
-		VIEW_FILTER_24("actions__24__view-filter.svg"),
-		VIEW_FILTER_32("actions__32__view-filter.svg"),
-		VIEW_FORM_24("actions__24__view-form.svg"),
-		VIEW_FORM_ACTION_24("actions__24__view-form-action.svg"),
-		VIEW_FULLSCREEN_24("actions__24__view-fullscreen.svg"),
-		VIEW_GRID_24("actions__24__view-grid.svg"),
-		VIEW_GROUP_24("actions__24__view-group.svg"),
-		VIEW_GROUP_32("actions__32__view-group.svg"),
-		VIEW_HISTORY_24("actions__24__view-history.svg"),
-		VIEW_LEFT_CLOSE_24("actions__24__view-left-close.svg"),
-		VIEW_LEFT_CLOSE_32("actions__32__view-left-close.svg"),
-		VIEW_LIST_DETAILS_24("actions__24__view-list-details.svg"),
-		VIEW_LIST_DETAILS_32("actions__32__view-list-details.svg"),
-		VIEW_LIST_ICONS_24("actions__24__view-list-icons.svg"),
-		VIEW_LIST_ICONS_32("actions__32__view-list-icons.svg"),
-		VIEW_LIST_TEXT_24("actions__24__view-list-text.svg"),
-		VIEW_LIST_TEXT_32("actions__32__view-list-text.svg"),
-		VIEW_LIST_TREE_24("actions__24__view-list-tree.svg"),
-		VIEW_LIST_TREE_32("actions__32__view-list-tree.svg"),
-		VIEW_MEDIA_ARTIST_24("actions__24__view-media-artist.svg"),
-		VIEW_MEDIA_EQUALIZER_24("actions__24__view-media-equalizer.svg"),
-		VIEW_MEDIA_LYRICS_24("actions__24__view-media-lyrics.svg"),
-		VIEW_MEDIA_PLAYLIST_24("actions__24__view-media-playlist.svg"),
-		VIEW_MEDIA_VISUALIZATION_24("actions__24__view-media-visualization.svg"),
-		VIEW_MULTIPLE_OBJECTS_24("actions__24__view-multiple-objects.svg"),
-		VIEW_OBJECT_HISTOGRAM_LINEAR_24("actions__24__view-object-histogram-linear.svg"),
-		VIEW_OBJECT_HISTOGRAM_LOGARITHMIC_24("actions__24__view-object-histogram-logarithmic.svg"),
-		VIEW_PIM_CALENDAR_24("actions__24__view-pim-calendar.svg"),
-		VIEW_PIM_CONTACTS_24("actions__24__view-pim-contacts.svg"),
-		VIEW_PIM_JOURNAL_24("actions__24__view-pim-journal.svg"),
-		VIEW_PIM_MAIL_24("actions__24__view-pim-mail.svg"),
-		VIEW_PIM_NEWS_24("actions__24__view-pim-news.svg"),
-		VIEW_PIM_NOTES_24("actions__24__view-pim-notes.svg"),
-		VIEW_PIM_TASKS_24("actions__24__view-pim-tasks.svg"),
-		VIEW_PIM_TASKS_PENDING_24("actions__24__view-pim-tasks-pending.svg"),
-		VIEW_PRESENTATION_24("actions__24__view-presentation.svg"),
-		VIEW_PREVIEW_24("actions__24__view-preview.svg"),
-		VIEW_PREVIEW_32("actions__32__view-preview.svg"),
-		VIEW_PROCESS_ALL_24("actions__24__view-process-all.svg"),
-		VIEW_PROCESS_ALL_TREE_24("actions__24__view-process-all-tree.svg"),
-		VIEW_PROCESS_OWN_24("actions__24__view-process-own.svg"),
-		VIEW_PROCESS_SYSTEM_24("actions__24__view-process-system.svg"),
-		VIEW_PROCESS_TREE_24("actions__24__view-process-tree.svg"),
-		VIEW_PROCESS_USERS_24("actions__24__view-process-users.svg"),
-		VIEW_READERMODE_24("actions__24__view-readermode.svg"),
-		VIEW_READERMODE_ACTIVE_24("actions__24__view-readermode-active.svg"),
-		VIEW_REFRESH_24("actions__24__view-refresh.svg"),
-		VIEW_REFRESH_32("actions__32__view-refresh.svg"),
-		VIEW_RESOURCE_CALENDAR_24("actions__24__view-resource-calendar.svg"),
-		VIEW_RESTORE_24("actions__24__view-restore.svg"),
-		VIEW_RIGHT_CLOSE_24("actions__24__view-right-close.svg"),
-		VIEW_RIGHT_CLOSE_32("actions__32__view-right-close.svg"),
-		VIEW_RIGHT_NEW_24("actions__24__view-right-new.svg"),
-		VIEW_RIGHT_NEW_32("actions__32__view-right-new.svg"),
-		VIEW_SERVICES_SCRIPTED_AMAROK_24("actions__24__view-services-scripted-amarok.svg"),
-		VIEW_SIDETREE_24("actions__24__view-sidetree.svg"),
-		VIEW_SORT_ASCENDING_24("actions__24__view-sort-ascending.svg"),
-		VIEW_SORT_ASCENDING_32("actions__32__view-sort-ascending.svg"),
-		VIEW_SORT_DESCENDING_24("actions__24__view-sort-descending.svg"),
-		VIEW_SORT_DESCENDING_32("actions__32__view-sort-descending.svg"),
-		VIEW_SPLIT_LEFT_RIGHT_24("actions__24__view-split-left-right.svg"),
-		VIEW_SPLIT_TOP_BOTTOM_24("actions__24__view-split-top-bottom.svg"),
-		VIEW_STATISTICS_24("actions__24__view-statistics.svg"),
-		VIEW_STATISTICS_48("actions__48__view-statistics.svg"),
-		VIEW_TABLE_OF_CONTENTS_LTR_24("actions__24__view-table-of-contents-ltr.svg"),
-		VIEW_TABLE_OF_CONTENTS_RTL_24("actions__24__view-table-of-contents-rtl.svg"),
-		VIEW_TASK_24("actions__24__view-task.svg"),
-		VIEW_TASK_ADD_24("actions__24__view-task-add.svg"),
-		VIEW_TASK_CHILD_24("actions__24__view-task-child.svg"),
-		VIEW_TASK_CHILD_ADD_24("actions__24__view-task-child-add.svg"),
-		VIEW_TIME_SCHEDULE_24("actions__24__view-time-schedule.svg"),
-		VIEW_TIME_SCHEDULE_BASELINED_24("actions__24__view-time-schedule-baselined.svg"),
-		VIEW_TIME_SCHEDULE_BASELINED_ADD_24("actions__24__view-time-schedule-baselined-add.svg"),
-		VIEW_TIME_SCHEDULE_BASELINED_REMOVE_24("actions__24__view-time-schedule-baselined-remove.svg"),
-		VIEW_TIME_SCHEDULE_CALCULUS_24("actions__24__view-time-schedule-calculus.svg"),
-		VIEW_TIME_SCHEDULE_CHILD_INSERT_24("actions__24__view-time-schedule-child-insert.svg"),
-		VIEW_TIME_SCHEDULE_EDIT_24("actions__24__view-time-schedule-edit.svg"),
-		VIEW_TIME_SCHEDULE_INSERT_24("actions__24__view-time-schedule-insert.svg"),
-		VIEW_WEB_BROWSER_DOM_TREE_24("actions__24__view-web-browser-dom-tree.svg"),
-		VIEWIMAGE_24("actions__24__viewimage.svg"),
-		VISIBILITY_24("actions__24__visibility.svg"),
-		WHITEBALANCE_24("actions__24__whitebalance.svg"),
-		WINDOW_24("actions__24__window.svg"),
-		WINDOW_CLOSE_24("actions__24__window-close.svg"),
-		WINDOW_CLOSE_32("actions__32__window-close.svg"),
-		WINDOW_DUPLICATE_24("actions__24__window-duplicate.svg"),
-		WINDOW_NEW_24("actions__24__window-new.svg"),
-		WINDOW_NEXT_24("actions__24__window-next.svg"),
-		WINDOW_PREVIOUS_24("actions__24__window-previous.svg"),
-		X_CLEMENTINE_ARTIST_24("actions__24__x-clementine-artist.svg"),
-		X_SHAPE_CONNECTION_24("actions__24__x-shape-connection.svg"),
-		X_SHAPE_FORMULA_24("actions__24__x-shape-formula.svg"),
-		X_SHAPE_IMAGE_24("actions__24__x-shape-image.svg"),
-		X_SHAPE_TEXT_24("actions__24__x-shape-text.svg"),
-		X_ZOOM_IN_24("actions__24__x-zoom-in.svg"),
-		X_ZOOM_OUT_24("actions__24__x-zoom-out.svg"),
-		XML_ATTRIBUTE_DELETE_24("actions__24__xml-attribute-delete.svg"),
-		XML_ELEMENT_NEW_24("actions__24__xml-element-new.svg"),
-		XML_NODE_DELETE_24("actions__24__xml-node-delete.svg"),
-		XML_NODE_DUPLICATE_24("actions__24__xml-node-duplicate.svg"),
-		XML_TEXT_NEW_24("actions__24__xml-text-new.svg"),
-		XY_CURVE_24("actions__24__xy-curve.svg"),
-		XY_EQUATION_CURVE_24("actions__24__xy-equation-curve.svg"),
-		XY_FIT_CURVE_24("actions__24__xy-fit-curve.svg"),
-		Y_ZOOM_IN_24("actions__24__y-zoom-in.svg"),
-		Y_ZOOM_OUT_24("actions__24__y-zoom-out.svg"),
-		ZOOM_1_TO_2_24("actions__24__zoom-1-to-2.svg"),
-		ZOOM_2_TO_1_24("actions__24__zoom-2-to-1.svg"),
-		ZOOM_24("actions__24__zoom.svg"),
-		ZOOM_DOUBLE_SIZE_24("actions__24__zoom-double-size.svg"),
-		ZOOM_DRAW_24("actions__24__zoom-draw.svg"),
-		ZOOM_FIT_BEST_24("actions__24__zoom-fit-best.svg"),
-		ZOOM_FIT_DRAWING_24("actions__24__zoom-fit-drawing.svg"),
-		ZOOM_FIT_HEIGHT_24("actions__24__zoom-fit-height.svg"),
-		ZOOM_FIT_PAGE_24("actions__24__zoom-fit-page.svg"),
-		ZOOM_FIT_SELECTION_24("actions__24__zoom-fit-selection.svg"),
-		ZOOM_FIT_WIDTH_24("actions__24__zoom-fit-width.svg"),
-		ZOOM_HALF_SIZE_24("actions__24__zoom-half-size.svg"),
-		ZOOM_IN_24("actions__24__zoom-in.svg"),
-		ZOOM_IN_X_24("actions__24__zoom-in-x.svg"),
-		ZOOM_IN_Y_24("actions__24__zoom-in-y.svg"),
-		ZOOM_NEXT_24("actions__24__zoom-next.svg"),
-		ZOOM_ORIGINAL_24("actions__24__zoom-original.svg"),
-		ZOOM_OUT_24("actions__24__zoom-out.svg"),
-		ZOOM_OUT_X_24("actions__24__zoom-out-x.svg"),
-		ZOOM_OUT_Y_24("actions__24__zoom-out-y.svg"),
-		ZOOM_PREVIOUS_24("actions__24__zoom-previous.svg"),
-		ZOOM_SELECT_24("actions__24__zoom-select.svg"),
-		ZOOM_SELECT_FIT_24("actions__24__zoom-select-fit.svg"),
-		ZOOM_SELECT_X_24("actions__24__zoom-select-x.svg"),
-		ZOOM_SELECT_Y_24("actions__24__zoom-select-y.svg"),
-
-		;
-		private String name;
-
-		ACTION(String name) {
-			this.name = name;
-		}
-
-		@Override
-		public String getIconName() {
-			return name;
-		}
-
-		@Override
-		public String getIconLibraryId() {
-			return AntuIconProvider.LIBRARY_ID;
-		}
-
-		public Icon withStyle(IconStyle style) {
-			return new StyledIcon(getIconLibraryId(), style.getStyleId(), getIconName());
-		}
-	}
+    // CATEGORIES
+    public static final AntuIcon CATEGORY_APPLICATIONS_DEVELOPMENT_22 = create("categories__22__applications-development");
+    public static final AntuIcon CATEGORY_APPLICATIONS_ACCESSORIES_32 = create("categories__32__applications-accessories");
+    public static final AntuIcon CATEGORY_APPLICATIONS_DEVELOPMENT_TRANSLATION_32 = create("categories__32__applications-development-translation");
+    public static final AntuIcon CATEGORY_APPLICATIONS_DEVELOPMENT_WEB_32 = create("categories__32__applications-development-web");
+    public static final AntuIcon CATEGORY_APPLICATIONS_DEVELOPMENT_32 = create("categories__32__applications-development");
+    public static final AntuIcon CATEGORY_APPLICATIONS_EDUCATION_LANGUAGE_32 = create("categories__32__applications-education-language");
+    public static final AntuIcon CATEGORY_APPLICATIONS_EDUCATION_MATHEMATICS_32 = create("categories__32__applications-education-mathematics");
+    public static final AntuIcon CATEGORY_APPLICATIONS_EDUCATION_MISCELLANEOUS_32 = create("categories__32__applications-education-miscellaneous");
+    public static final AntuIcon CATEGORY_APPLICATIONS_EDUCATION_PRESCHOOL_32 = create("categories__32__applications-education-preschool");
+    public static final AntuIcon CATEGORY_APPLICATIONS_EDUCATION_SCHOOL_32 = create("categories__32__applications-education-school");
+    public static final AntuIcon CATEGORY_APPLICATIONS_EDUCATION_SCIENCE_32 = create("categories__32__applications-education-science");
+    public static final AntuIcon CATEGORY_APPLICATIONS_EDUCATION_UNIVERSITY_32 = create("categories__32__applications-education-university");
+    public static final AntuIcon CATEGORY_APPLICATIONS_EDUCATION_32 = create("categories__32__applications-education");
+    public static final AntuIcon CATEGORY_APPLICATIONS_ENGINEERING_32 = create("categories__32__applications-engineering");
+    public static final AntuIcon CATEGORY_APPLICATIONS_GAMES_32 = create("categories__32__applications-games");
+    public static final AntuIcon CATEGORY_APPLICATIONS_GRAPHICS_32 = create("categories__32__applications-graphics");
+    public static final AntuIcon CATEGORY_APPLICATIONS_INTERNET_32 = create("categories__32__applications-internet");
+    public static final AntuIcon CATEGORY_APPLICATIONS_MULTIMEDIA_32 = create("categories__32__applications-multimedia");
+    public static final AntuIcon CATEGORY_APPLICATIONS_OFFICE_32 = create("categories__32__applications-office");
+    public static final AntuIcon CATEGORY_APPLICATIONS_OTHER_32 = create("categories__32__applications-other");
+    public static final AntuIcon CATEGORY_APPLICATIONS_SCIENCE_32 = create("categories__32__applications-science");
+    public static final AntuIcon CATEGORY_APPLICATIONS_SYSTEM_32 = create("categories__32__applications-system");
+    public static final AntuIcon CATEGORY_APPLICATIONS_TOYS_32 = create("categories__32__applications-toys");
+    public static final AntuIcon CATEGORY_APPLICATIONS_UTILITIES_32 = create("categories__32__applications-utilities");
+    public static final AntuIcon CATEGORY_PREFERENCES_DESKTOP_PERIPHERALS_32 = create("categories__32__preferences-desktop-peripherals");
+    public static final AntuIcon CATEGORY_PREFERENCES_DESKTOP_PERSONAL_32 = create("categories__32__preferences-desktop-personal");
+    public static final AntuIcon CATEGORY_PREFERENCES_DESKTOP_32 = create("categories__32__preferences-desktop");
+    public static final AntuIcon CATEGORY_PREFERENCES_OTHER_32 = create("categories__32__preferences-other");
+    public static final AntuIcon CATEGORY_PREFERENCES_SYSTEM_NETWORK_32 = create("categories__32__preferences-system-network");
+    public static final AntuIcon CATEGORY_PREFERENCES_SYSTEM_32 = create("categories__32__preferences-system");
+    public static final AntuIcon CATEGORY_SYSTEM_HELP_32 = create("categories__32__system-help");
+    public static final AntuIcon CATEGORY_APPLICATIONS_OTHER_48 = create("categories__48__applications-other");
 
 
+    // DEVICES
+    public static final AntuIcon DEVICE_CAMERA_PHOTO_22 = create("devices__22__camera-photo");
+    public static final AntuIcon DEVICE_COMPUTER_LAPTOP_22 = create("devices__22__computer-laptop");
+    public static final AntuIcon DEVICE_COMPUTER_22 = create("devices__22__computer");
+    public static final AntuIcon DEVICE_DRIVE_HARDDISK_22 = create("devices__22__drive-harddisk");
+    public static final AntuIcon DEVICE_DRIVE_REMOVABLE_MEDIA_USB_PENDRIVE_22 = create("devices__22__drive-removable-media-usb-pendrive");
+    public static final AntuIcon DEVICE_DRIVE_REMOVABLE_MEDIA_USB_22 = create("devices__22__drive-removable-media-usb");
+    public static final AntuIcon DEVICE_DRIVE_REMOVABLE_MEDIA_22 = create("devices__22__drive-removable-media");
+    public static final AntuIcon DEVICE_KDECONNECT_22 = create("devices__22__kdeconnect");
+    public static final AntuIcon DEVICE_MEDIA_FLOPPY_22 = create("devices__22__media-floppy");
+    public static final AntuIcon DEVICE_MEDIA_OPTICAL_AUDIO_22 = create("devices__22__media-optical-audio");
+    public static final AntuIcon DEVICE_MEDIA_OPTICAL_DATA_22 = create("devices__22__media-optical-data");
+    public static final AntuIcon DEVICE_MEDIA_OPTICAL_MIXED_CD_22 = create("devices__22__media-optical-mixed-cd");
+    public static final AntuIcon DEVICE_MEDIA_OPTICAL_RECORDABLE_22 = create("devices__22__media-optical-recordable");
+    public static final AntuIcon DEVICE_MEDIA_OPTICAL_VIDEO_22 = create("devices__22__media-optical-video");
+    public static final AntuIcon DEVICE_MEDIA_OPTICAL_22 = create("devices__22__media-optical");
+    public static final AntuIcon DEVICE_MULTIMEDIA_PLAYER_IPOD_MINI_BLUE_22 = create("devices__22__multimedia-player-ipod-mini-blue");
+    public static final AntuIcon DEVICE_MULTIMEDIA_PLAYER_22 = create("devices__22__multimedia-player");
+    public static final AntuIcon DEVICE_NETWORK_BLUETOOTH_22 = create("devices__22__network-bluetooth");
+    public static final AntuIcon DEVICE_NETWORK_MODEM_22 = create("devices__22__network-modem");
+    public static final AntuIcon DEVICE_NETWORK_VPN_22 = create("devices__22__network-vpn");
+    public static final AntuIcon DEVICE_NETWORK_WIRED_ACTIVATED_22 = create("devices__22__network-wired-activated");
+    public static final AntuIcon DEVICE_NETWORK_WIRED_UNAVAILABLE_22 = create("devices__22__network-wired-unavailable");
+    public static final AntuIcon DEVICE_NETWORK_WIRED_22 = create("devices__22__network-wired");
+    public static final AntuIcon DEVICE_NETWORK_WIRELESS_CONNECTED_00_22 = create("devices__22__network-wireless-connected-00");
+    public static final AntuIcon DEVICE_NETWORK_WIRELESS_CONNECTED_100_22 = create("devices__22__network-wireless-connected-100");
+    public static final AntuIcon DEVICE_NETWORK_WIRELESS_CONNECTED_25_22 = create("devices__22__network-wireless-connected-25");
+    public static final AntuIcon DEVICE_NETWORK_WIRELESS_CONNECTED_50_22 = create("devices__22__network-wireless-connected-50");
+    public static final AntuIcon DEVICE_NETWORK_WIRELESS_CONNECTED_75_22 = create("devices__22__network-wireless-connected-75");
+    public static final AntuIcon DEVICE_NETWORK_WIRELESS_DISCONNECTED_22 = create("devices__22__network-wireless-disconnected");
+    public static final AntuIcon DEVICE_NETWORK_WIRELESS_22 = create("devices__22__network-wireless");
+    public static final AntuIcon DEVICE_PHONE_22 = create("devices__22__phone");
+    public static final AntuIcon DEVICE_SMARTPHONE_22 = create("devices__22__smartphone");
+    public static final AntuIcon DEVICE_TABLET_22 = create("devices__22__tablet");
+    public static final AntuIcon DEVICE_COMPUTER_48 = create("devices__48__computer");
+    public static final AntuIcon DEVICE_AUDIO_CARD_64 = create("devices__64__audio-card");
+    public static final AntuIcon DEVICE_AUDIO_HEADPHONES_64 = create("devices__64__audio-headphones");
+    public static final AntuIcon DEVICE_BATTERY_64 = create("devices__64__battery");
+    public static final AntuIcon DEVICE_CAMERA_PHOTO_64 = create("devices__64__camera-photo");
+    public static final AntuIcon DEVICE_CAMERA_WEB_64 = create("devices__64__camera-web");
+    public static final AntuIcon DEVICE_COMPUTER_LAPTOP_64 = create("devices__64__computer-laptop");
+    public static final AntuIcon DEVICE_COMPUTER_64 = create("devices__64__computer");
+    public static final AntuIcon DEVICE_CPU_64 = create("devices__64__cpu");
+    public static final AntuIcon DEVICE_DRIVE_HARDDISK_64 = create("devices__64__drive-harddisk");
+    public static final AntuIcon DEVICE_DRIVE_REMOVABLE_MEDIA_PENDRIVE_64 = create("devices__64__drive-removable-media-pendrive");
+    public static final AntuIcon DEVICE_DRIVE_REMOVABLE_MEDIA_USB_64 = create("devices__64__drive-removable-media-usb");
+    public static final AntuIcon DEVICE_DRIVE_REMOVABLE_MEDIA_64 = create("devices__64__drive-removable-media");
+    public static final AntuIcon DEVICE_INPUT_GAMING_64 = create("devices__64__input-gaming");
+    public static final AntuIcon DEVICE_INPUT_KEYBOARD_64 = create("devices__64__input-keyboard");
+    public static final AntuIcon DEVICE_INPUT_MOUSE_64 = create("devices__64__input-mouse");
+    public static final AntuIcon DEVICE_INPUT_TOUCHPAD_64 = create("devices__64__input-touchpad");
+    public static final AntuIcon DEVICE_MEDIA_FLASH_MEMORY_STICK_64 = create("devices__64__media-flash-memory-stick");
+    public static final AntuIcon DEVICE_MEDIA_FLASH_SD_MMC_64 = create("devices__64__media-flash-sd-mmc");
+    public static final AntuIcon DEVICE_MEDIA_FLASH_SMART_MEDIA_64 = create("devices__64__media-flash-smart-media");
+    public static final AntuIcon DEVICE_MEDIA_FLASH_64 = create("devices__64__media-flash");
+    public static final AntuIcon DEVICE_MEDIA_OPTICAL_AUDIO_64 = create("devices__64__media-optical-audio");
+    public static final AntuIcon DEVICE_MEDIA_OPTICAL_BLU_RAY_64 = create("devices__64__media-optical-blu-ray");
+    public static final AntuIcon DEVICE_MEDIA_OPTICAL_DATA_64 = create("devices__64__media-optical-data");
+    public static final AntuIcon DEVICE_MEDIA_OPTICAL_DVD_64 = create("devices__64__media-optical-dvd");
+    public static final AntuIcon DEVICE_MEDIA_OPTICAL_RECORDABLE_64 = create("devices__64__media-optical-recordable");
+    public static final AntuIcon DEVICE_MEDIA_OPTICAL_VIDEO_64 = create("devices__64__media-optical-video");
+    public static final AntuIcon DEVICE_MEDIA_OPTICAL_64 = create("devices__64__media-optical");
+    public static final AntuIcon DEVICE_MULTIMEDIA_PLAYER_64 = create("devices__64__multimedia-player");
+    public static final AntuIcon DEVICE_NETWORK_CARD_64 = create("devices__64__network-card");
+    public static final AntuIcon DEVICE_PHONE_64 = create("devices__64__phone");
+    public static final AntuIcon DEVICE_PRINTER_64 = create("devices__64__printer");
+    public static final AntuIcon DEVICE_SCANNER_64 = create("devices__64__scanner");
+    public static final AntuIcon DEVICE_SMARTPHONE_64 = create("devices__64__smartphone");
+    public static final AntuIcon DEVICE_TABLET_64 = create("devices__64__tablet");
+    public static final AntuIcon DEVICE_VIDEO_DISPLAY_64 = create("devices__64__video-display");
+    public static final AntuIcon DEVICE_VIDEO_TELEVISION_64 = create("devices__64__video-television");
+
+    // EMBLEMS
+    public static final AntuIcon EMBLEM_SYMBOLIC_LINK_16 = create("emblems__16__emblem-symbolic-link");
+    public static final AntuIcon EMBLEM_VCS_ADDED_16 = create("emblems__16__vcs-added");
+    public static final AntuIcon EMBLEM_VCS_CONFLICTING_16 = create("emblems__16__vcs-conflicting");
+    public static final AntuIcon EMBLEM_VCS_LOCALLY_MODIFIED_UNSTAGED_16 = create("emblems__16__vcs-locally-modified-unstaged");
+    public static final AntuIcon EMBLEM_VCS_LOCALLY_MODIFIED_16 = create("emblems__16__vcs-locally-modified");
+    public static final AntuIcon EMBLEM_VCS_NORMAL_16 = create("emblems__16__vcs-normal");
+    public static final AntuIcon EMBLEM_VCS_REMOVED_16 = create("emblems__16__vcs-removed");
+    public static final AntuIcon EMBLEM_VCS_UPDATE_REQUIRED_16 = create("emblems__16__vcs-update-required");
+    public static final AntuIcon EMBLEM_FAVORITE_22 = create("emblems__22__emblem-favorite");
+    public static final AntuIcon EMBLEM_IMPORTANT_22 = create("emblems__22__emblem-important");
+    public static final AntuIcon EMBLEM_LOCKED_22 = create("emblems__22__emblem-locked");
+    public static final AntuIcon EMBLEM_SYMBOLIC_LINK_22 = create("emblems__22__emblem-symbolic-link");
+    public static final AntuIcon EMBLEM_UNLOCKED_22 = create("emblems__22__emblem-unlocked");
+    public static final AntuIcon EMBLEM_CHECKMARK_8 = create("emblems__8__checkmark");
+    public static final AntuIcon EMBLEM_CHECKED_8 = create("emblems__8__emblem-checked");
+    public static final AntuIcon EMBLEM_LOCKED_8 = create("emblems__8__emblem-locked");
+    public static final AntuIcon EMBLEM_MOUNTED_8 = create("emblems__8__emblem-mounted");
+    public static final AntuIcon EMBLEM_PAUSE_8 = create("emblems__8__emblem-pause");
+    public static final AntuIcon EMBLEM_UNAVAILABLE_8 = create("emblems__8__emblem-unavailable");
+    public static final AntuIcon EMBLEM_UNLOCKED_8 = create("emblems__8__emblem-unlocked");
+    public static final AntuIcon EMBLEM_UNMOUNTED_8 = create("emblems__8__emblem-unmounted");
+
+    // EMOTES
+    public static final AntuIcon EMOTE_DRINK_BEER_22 = create("emotes__22__drink-beer");
+    public static final AntuIcon EMOTE_DRINK_MARTINI_22 = create("emotes__22__drink-martini");
+    public static final AntuIcon EMOTE_FACE_ANGEL_22 = create("emotes__22__face-angel");
+    public static final AntuIcon EMOTE_FACE_ANGRY_22 = create("emotes__22__face-angry");
+    public static final AntuIcon EMOTE_FACE_CLOWN_22 = create("emotes__22__face-clown");
+    public static final AntuIcon EMOTE_FACE_CONFUSED_22 = create("emotes__22__face-confused");
+    public static final AntuIcon EMOTE_FACE_COOL_22 = create("emotes__22__face-cool");
+    public static final AntuIcon EMOTE_FACE_CRYING_22 = create("emotes__22__face-crying");
+    public static final AntuIcon EMOTE_FACE_DEVILISH_22 = create("emotes__22__face-devilish");
+    public static final AntuIcon EMOTE_FACE_EMBARRASSED_22 = create("emotes__22__face-embarrassed");
+    public static final AntuIcon EMOTE_FACE_GLASSES_22 = create("emotes__22__face-glasses");
+    public static final AntuIcon EMOTE_FACE_IN_LOVE_22 = create("emotes__22__face-in-love");
+    public static final AntuIcon EMOTE_FACE_KISS_22 = create("emotes__22__face-kiss");
+    public static final AntuIcon EMOTE_FACE_LAUGHING_22 = create("emotes__22__face-laughing");
+    public static final AntuIcon EMOTE_FACE_NINJA_22 = create("emotes__22__face-ninja");
+    public static final AntuIcon EMOTE_FACE_PIRATE_22 = create("emotes__22__face-pirate");
+    public static final AntuIcon EMOTE_FACE_PLAIN_22 = create("emotes__22__face-plain");
+    public static final AntuIcon EMOTE_FACE_QUIET_22 = create("emotes__22__face-quiet");
+    public static final AntuIcon EMOTE_FACE_RASPBERRY_22 = create("emotes__22__face-raspberry");
+    public static final AntuIcon EMOTE_FACE_SAD_22 = create("emotes__22__face-sad");
+    public static final AntuIcon EMOTE_FACE_SICK_22 = create("emotes__22__face-sick");
+    public static final AntuIcon EMOTE_FACE_SLEEPING_22 = create("emotes__22__face-sleeping");
+    public static final AntuIcon EMOTE_FACE_SMILE_BIG_22 = create("emotes__22__face-smile-big");
+    public static final AntuIcon EMOTE_FACE_SMILE_GRIN_22 = create("emotes__22__face-smile-grin");
+    public static final AntuIcon EMOTE_FACE_SMILE_22 = create("emotes__22__face-smile");
+    public static final AntuIcon EMOTE_FACE_SMIRK_22 = create("emotes__22__face-smirk");
+    public static final AntuIcon EMOTE_FACE_SURPRISE_22 = create("emotes__22__face-surprise");
+    public static final AntuIcon EMOTE_FACE_UNCERTAIN_22 = create("emotes__22__face-uncertain");
+    public static final AntuIcon EMOTE_FACE_WINK_22 = create("emotes__22__face-wink");
+    public static final AntuIcon EMOTE_FACE_WORRIED_22 = create("emotes__22__face-worried");
+    public static final AntuIcon EMOTE_FACE_YAWN_22 = create("emotes__22__face-yawn");
+    public static final AntuIcon EMOTE_FOOD_CAKE_22 = create("emotes__22__food-cake");
+
+    // PLACES
+    public static final AntuIcon PLACE_BOOKMARKS_22 = create("places__22__bookmarks");
+    public static final AntuIcon PLACE_CERTIFICATE_SERVER_22 = create("places__22__certificate-server");
+    public static final AntuIcon PLACE_DOCUMENT_MULTIPLE_22 = create("places__22__document-multiple");
+    public static final AntuIcon PLACE_FAVORITES_22 = create("places__22__favorites");
+    public static final AntuIcon PLACE_FOLDER_ACTIVITIES_22 = create("places__22__folder-activities");
+    public static final AntuIcon PLACE_FOLDER_ADD_22 = create("places__22__folder-add");
+    public static final AntuIcon PLACE_FOLDER_BLACK_22 = create("places__22__folder-black");
+    public static final AntuIcon PLACE_FOLDER_BLUE_22 = create("places__22__folder-blue");
+    public static final AntuIcon PLACE_FOLDER_BOOKMARK_22 = create("places__22__folder-bookmark");
+    public static final AntuIcon PLACE_FOLDER_BROWN_22 = create("places__22__folder-brown");
+    public static final AntuIcon PLACE_FOLDER_CAMERA_22 = create("places__22__folder-camera");
+    public static final AntuIcon PLACE_FOLDER_CHAKRA_22 = create("places__22__folder-chakra");
+    public static final AntuIcon PLACE_FOLDER_CLOUD_22 = create("places__22__folder-cloud");
+    public static final AntuIcon PLACE_FOLDER_CYAN_22 = create("places__22__folder-cyan");
+    public static final AntuIcon PLACE_FOLDER_DEVELOPMENT_22 = create("places__22__folder-development");
+    public static final AntuIcon PLACE_FOLDER_DOCUMENTS_22 = create("places__22__folder-documents");
+    public static final AntuIcon PLACE_FOLDER_DOWNLOAD_22 = create("places__22__folder-download");
+    public static final AntuIcon PLACE_FOLDER_DOWNLOADS_22 = create("places__22__folder-downloads");
+    public static final AntuIcon PLACE_FOLDER_DROPBOX_22 = create("places__22__folder-dropbox");
+    public static final AntuIcon PLACE_FOLDER_FAVORITES_22 = create("places__22__folder-favorites");
+    public static final AntuIcon PLACE_FOLDER_GAMES_22 = create("places__22__folder-games");
+    public static final AntuIcon PLACE_FOLDER_GDRIVE_22 = create("places__22__folder-gdrive");
+    public static final AntuIcon PLACE_FOLDER_GIT_22 = create("places__22__folder-git");
+    public static final AntuIcon PLACE_FOLDER_GITHUB_22 = create("places__22__folder-github");
+    public static final AntuIcon PLACE_FOLDER_GNOME_22 = create("places__22__folder-gnome");
+    public static final AntuIcon PLACE_FOLDER_GREEN_22 = create("places__22__folder-green");
+    public static final AntuIcon PLACE_FOLDER_GREY_22 = create("places__22__folder-grey");
+    public static final AntuIcon PLACE_FOLDER_HTML_22 = create("places__22__folder-html");
+    public static final AntuIcon PLACE_FOLDER_IMAGE_PEOPLE_22 = create("places__22__folder-image-people");
+    public static final AntuIcon PLACE_FOLDER_IMAGE_22 = create("places__22__folder-image");
+    public static final AntuIcon PLACE_FOLDER_IMAGES_22 = create("places__22__folder-images");
+    public static final AntuIcon PLACE_FOLDER_IMPORTANT_22 = create("places__22__folder-important");
+    public static final AntuIcon PLACE_FOLDER_KAOS_22 = create("places__22__folder-kaos");
+    public static final AntuIcon PLACE_FOLDER_LOCKED_22 = create("places__22__folder-locked");
+    public static final AntuIcon PLACE_FOLDER_MAGENTA_22 = create("places__22__folder-magenta");
+    public static final AntuIcon PLACE_FOLDER_MAIL_22 = create("places__22__folder-mail");
+    public static final AntuIcon PLACE_FOLDER_MUSIC_22 = create("places__22__folder-music");
+    public static final AntuIcon PLACE_FOLDER_NETWORK_22 = create("places__22__folder-network");
+    public static final AntuIcon PLACE_FOLDER_OPEN_22 = create("places__22__folder-open");
+    public static final AntuIcon PLACE_FOLDER_ORANGE_22 = create("places__22__folder-orange");
+    public static final AntuIcon PLACE_FOLDER_OWNCLOUD_22 = create("places__22__folder-owncloud");
+    public static final AntuIcon PLACE_FOLDER_PICTURE_22 = create("places__22__folder-picture");
+    public static final AntuIcon PLACE_FOLDER_PICTURES_22 = create("places__22__folder-pictures");
+    public static final AntuIcon PLACE_FOLDER_PRINT_22 = create("places__22__folder-print");
+    public static final AntuIcon PLACE_FOLDER_PRIVATE_22 = create("places__22__folder-private");
+    public static final AntuIcon PLACE_FOLDER_PUBLIC_22 = create("places__22__folder-public");
+    public static final AntuIcon PLACE_FOLDER_PUBLICSHARE_22 = create("places__22__folder-publicshare");
+    public static final AntuIcon PLACE_FOLDER_RED_22 = create("places__22__folder-red");
+    public static final AntuIcon PLACE_FOLDER_REMOTE_22 = create("places__22__folder-remote");
+    public static final AntuIcon PLACE_FOLDER_SCRIPT_22 = create("places__22__folder-script");
+    public static final AntuIcon PLACE_FOLDER_SOUND_22 = create("places__22__folder-sound");
+    public static final AntuIcon PLACE_FOLDER_TAR_22 = create("places__22__folder-tar");
+    public static final AntuIcon PLACE_FOLDER_TEMP_22 = create("places__22__folder-temp");
+    public static final AntuIcon PLACE_FOLDER_TEMPLATES_22 = create("places__22__folder-templates");
+    public static final AntuIcon PLACE_FOLDER_TEXT_22 = create("places__22__folder-text");
+    public static final AntuIcon PLACE_FOLDER_TORRENTS_22 = create("places__22__folder-torrents");
+    public static final AntuIcon PLACE_FOLDER_TXT_22 = create("places__22__folder-txt");
+    public static final AntuIcon PLACE_FOLDER_VBOX_22 = create("places__22__folder-vbox");
+    public static final AntuIcon PLACE_FOLDER_VIDEO_22 = create("places__22__folder-video");
+    public static final AntuIcon PLACE_FOLDER_VIDEOCAMERA_22 = create("places__22__folder-videocamera");
+    public static final AntuIcon PLACE_FOLDER_VIDEOS_22 = create("places__22__folder-videos");
+    public static final AntuIcon PLACE_FOLDER_VIOLET_22 = create("places__22__folder-violet");
+    public static final AntuIcon PLACE_FOLDER_WIFI_22 = create("places__22__folder-wifi");
+    public static final AntuIcon PLACE_FOLDER_YELLOW_22 = create("places__22__folder-yellow");
+    public static final AntuIcon PLACE_FOLDER_22 = create("places__22__folder");
+    public static final AntuIcon PLACE_LIBRARY_MUSIC_22 = create("places__22__library-music");
+    public static final AntuIcon PLACE_MAIL_FOLDER_INBOX_22 = create("places__22__mail-folder-inbox");
+    public static final AntuIcon PLACE_MAIL_FOLDER_OUTBOX_22 = create("places__22__mail-folder-outbox");
+    public static final AntuIcon PLACE_MAIL_FOLDER_SENT_22 = create("places__22__mail-folder-sent");
+    public static final AntuIcon PLACE_MAIL_MESSAGE_22 = create("places__22__mail-message");
+    public static final AntuIcon PLACE_NETWORK_SERVER_DATABASE_22 = create("places__22__network-server-database");
+    public static final AntuIcon PLACE_NETWORK_SERVER_22 = create("places__22__network-server");
+    public static final AntuIcon PLACE_NETWORK_WORKGROUP_22 = create("places__22__network-workgroup");
+    public static final AntuIcon PLACE_REPOSITORY_22 = create("places__22__repository");
+    public static final AntuIcon PLACE_SERVER_DATABASE_22 = create("places__22__server-database");
+    public static final AntuIcon PLACE_START_HERE_KDE_22 = create("places__22__start-here-kde");
+    public static final AntuIcon PLACE_STOCK_FOLDER_22 = create("places__22__stock_folder");
+    public static final AntuIcon PLACE_USER_DESKTOP_22 = create("places__22__user-desktop");
+    public static final AntuIcon PLACE_USER_HOME_22 = create("places__22__user-home");
+    public static final AntuIcon PLACE_USER_TRASH_FULL_22 = create("places__22__user-trash-full");
+    public static final AntuIcon PLACE_USER_TRASH_22 = create("places__22__user-trash");
+    public static final AntuIcon PLACE_BOOKMARKS_32 = create("places__32__bookmarks");
+    public static final AntuIcon PLACE_CERTIFICATE_SERVER_32 = create("places__32__certificate-server");
+    public static final AntuIcon PLACE_FAVORITES_32 = create("places__32__favorites");
+    public static final AntuIcon PLACE_FOLDER_ACTIVITIES_32 = create("places__32__folder-activities");
+    public static final AntuIcon PLACE_FOLDER_BLACK_32 = create("places__32__folder-black");
+    public static final AntuIcon PLACE_FOLDER_BLUE_32 = create("places__32__folder-blue");
+    public static final AntuIcon PLACE_FOLDER_BOOKMARK_32 = create("places__32__folder-bookmark");
+    public static final AntuIcon PLACE_FOLDER_BROWN_32 = create("places__32__folder-brown");
+    public static final AntuIcon PLACE_FOLDER_CAMERA_32 = create("places__32__folder-camera");
+    public static final AntuIcon PLACE_FOLDER_CHAKRA_32 = create("places__32__folder-chakra");
+    public static final AntuIcon PLACE_FOLDER_CLOUD_32 = create("places__32__folder-cloud");
+    public static final AntuIcon PLACE_FOLDER_CLOUDS_32 = create("places__32__folder-clouds");
+    public static final AntuIcon PLACE_FOLDER_CYAN_32 = create("places__32__folder-cyan");
+    public static final AntuIcon PLACE_FOLDER_DEVELOPMENT_32 = create("places__32__folder-development");
+    public static final AntuIcon PLACE_FOLDER_DOCUMENTS_32 = create("places__32__folder-documents");
+    public static final AntuIcon PLACE_FOLDER_DOWNLOAD_32 = create("places__32__folder-download");
+    public static final AntuIcon PLACE_FOLDER_DOWNLOADS_32 = create("places__32__folder-downloads");
+    public static final AntuIcon PLACE_FOLDER_DROPBOX_32 = create("places__32__folder-dropbox");
+    public static final AntuIcon PLACE_FOLDER_FAVORITES_32 = create("places__32__folder-favorites");
+    public static final AntuIcon PLACE_FOLDER_GAMES_32 = create("places__32__folder-games");
+    public static final AntuIcon PLACE_FOLDER_GDRIVE_32 = create("places__32__folder-gdrive");
+    public static final AntuIcon PLACE_FOLDER_GIT_32 = create("places__32__folder-git");
+    public static final AntuIcon PLACE_FOLDER_GITHUB_32 = create("places__32__folder-github");
+    public static final AntuIcon PLACE_FOLDER_GNOME_32 = create("places__32__folder-gnome");
+    public static final AntuIcon PLACE_FOLDER_GREEN_32 = create("places__32__folder-green");
+    public static final AntuIcon PLACE_FOLDER_GREY_32 = create("places__32__folder-grey");
+    public static final AntuIcon PLACE_FOLDER_HTML_32 = create("places__32__folder-html");
+    public static final AntuIcon PLACE_FOLDER_IMAGE_PEOPLE_32 = create("places__32__folder-image-people");
+    public static final AntuIcon PLACE_FOLDER_IMAGE_32 = create("places__32__folder-image");
+    public static final AntuIcon PLACE_FOLDER_IMAGES_32 = create("places__32__folder-images");
+    public static final AntuIcon PLACE_FOLDER_IMPORTANT_32 = create("places__32__folder-important");
+    public static final AntuIcon PLACE_FOLDER_KAOS_32 = create("places__32__folder-kaos");
+    public static final AntuIcon PLACE_FOLDER_LOCKED_32 = create("places__32__folder-locked");
+    public static final AntuIcon PLACE_FOLDER_MAGENTA_32 = create("places__32__folder-magenta");
+    public static final AntuIcon PLACE_FOLDER_MAIL_32 = create("places__32__folder-mail");
+    public static final AntuIcon PLACE_FOLDER_MUSIC_32 = create("places__32__folder-music");
+    public static final AntuIcon PLACE_FOLDER_NETWORK_32 = create("places__32__folder-network");
+    public static final AntuIcon PLACE_FOLDER_OPEN_32 = create("places__32__folder-open");
+    public static final AntuIcon PLACE_FOLDER_ORANGE_32 = create("places__32__folder-orange");
+    public static final AntuIcon PLACE_FOLDER_OWNCLOUD_32 = create("places__32__folder-owncloud");
+    public static final AntuIcon PLACE_FOLDER_PICTURE_32 = create("places__32__folder-picture");
+    public static final AntuIcon PLACE_FOLDER_PICTURES_32 = create("places__32__folder-pictures");
+    public static final AntuIcon PLACE_FOLDER_PRINT_32 = create("places__32__folder-print");
+    public static final AntuIcon PLACE_FOLDER_PRIVATE_32 = create("places__32__folder-private");
+    public static final AntuIcon PLACE_FOLDER_PUBLIC_32 = create("places__32__folder-public");
+    public static final AntuIcon PLACE_FOLDER_PUBLICSHARE_32 = create("places__32__folder-publicshare");
+    public static final AntuIcon PLACE_FOLDER_RED_32 = create("places__32__folder-red");
+    public static final AntuIcon PLACE_FOLDER_REMOTE_32 = create("places__32__folder-remote");
+    public static final AntuIcon PLACE_FOLDER_SCRIPT_32 = create("places__32__folder-script");
+    public static final AntuIcon PLACE_FOLDER_SOUND_32 = create("places__32__folder-sound");
+    public static final AntuIcon PLACE_FOLDER_TAR_32 = create("places__32__folder-tar");
+    public static final AntuIcon PLACE_FOLDER_TEMP_32 = create("places__32__folder-temp");
+    public static final AntuIcon PLACE_FOLDER_TEMPLATES_32 = create("places__32__folder-templates");
+    public static final AntuIcon PLACE_FOLDER_TEXT_32 = create("places__32__folder-text");
+    public static final AntuIcon PLACE_FOLDER_TORRENTS_32 = create("places__32__folder-torrents");
+    public static final AntuIcon PLACE_FOLDER_TXT_32 = create("places__32__folder-txt");
+    public static final AntuIcon PLACE_FOLDER_VBOX_32 = create("places__32__folder-vbox");
+    public static final AntuIcon PLACE_FOLDER_VIDEO_32 = create("places__32__folder-video");
+    public static final AntuIcon PLACE_FOLDER_VIDEOCAMERA_32 = create("places__32__folder-videocamera");
+    public static final AntuIcon PLACE_FOLDER_VIDEOS_32 = create("places__32__folder-videos");
+    public static final AntuIcon PLACE_FOLDER_VIOLET_32 = create("places__32__folder-violet");
+    public static final AntuIcon PLACE_FOLDER_WIFI_32 = create("places__32__folder-wifi");
+    public static final AntuIcon PLACE_FOLDER_YELLOW_32 = create("places__32__folder-yellow");
+    public static final AntuIcon PLACE_FOLDER_32 = create("places__32__folder");
+    public static final AntuIcon PLACE_LIBRARY_MUSIC_32 = create("places__32__library-music");
+    public static final AntuIcon PLACE_NETWORK_SERVER_DATABASE_32 = create("places__32__network-server-database");
+    public static final AntuIcon PLACE_NETWORK_SERVER_32 = create("places__32__network-server");
+    public static final AntuIcon PLACE_NETWORK_WORKGROUP_32 = create("places__32__network-workgroup");
+    public static final AntuIcon PLACE_REPOSITORY_32 = create("places__32__repository");
+    public static final AntuIcon PLACE_SERVER_DATABASE_32 = create("places__32__server-database");
+    public static final AntuIcon PLACE_STOCK_FOLDER_32 = create("places__32__stock_folder");
+    public static final AntuIcon PLACE_USER_DESKTOP_32 = create("places__32__user-desktop");
+    public static final AntuIcon PLACE_USER_HOME_32 = create("places__32__user-home");
+    public static final AntuIcon PLACE_USER_TRASH_FULL_32 = create("places__32__user-trash-full");
+    public static final AntuIcon PLACE_USER_TRASH_32 = create("places__32__user-trash");
+    public static final AntuIcon PLACE_BOOKMARKS_64 = create("places__64__bookmarks");
+    public static final AntuIcon PLACE_CERTIFICATE_SERVER_64 = create("places__64__certificate-server");
+    public static final AntuIcon PLACE_DATABASE_CHAKRA_64 = create("places__64__database-chakra");
+    public static final AntuIcon PLACE_DISTRIBUTOR_LOGO_ARCHLINUX_64 = create("places__64__distributor-logo-archlinux");
+    public static final AntuIcon PLACE_DISTRIBUTOR_LOGO_BLAG_64 = create("places__64__distributor-logo-blag");
+    public static final AntuIcon PLACE_DISTRIBUTOR_LOGO_CHAKRA_64 = create("places__64__distributor-logo-chakra");
+    public static final AntuIcon PLACE_DISTRIBUTOR_LOGO_DEBIAN_64 = create("places__64__distributor-logo-debian");
+    public static final AntuIcon PLACE_DISTRIBUTOR_LOGO_DRAGORA_64 = create("places__64__distributor-logo-dragora");
+    public static final AntuIcon PLACE_DISTRIBUTOR_LOGO_FEDORA_64 = create("places__64__distributor-logo-fedora");
+    public static final AntuIcon PLACE_DISTRIBUTOR_LOGO_FREEBSD_64 = create("places__64__distributor-logo-freebsd");
+    public static final AntuIcon PLACE_DISTRIBUTOR_LOGO_GENTOO_64 = create("places__64__distributor-logo-gentoo");
+    public static final AntuIcon PLACE_DISTRIBUTOR_LOGO_GUIX_64 = create("places__64__distributor-logo-guix");
+    public static final AntuIcon PLACE_DISTRIBUTOR_LOGO_KAOS_64 = create("places__64__distributor-logo-kaos");
+    public static final AntuIcon PLACE_DISTRIBUTOR_LOGO_KUBUNTU_64 = create("places__64__distributor-logo-kubuntu");
+    public static final AntuIcon PLACE_DISTRIBUTOR_LOGO_MAGEIA_64 = create("places__64__distributor-logo-mageia");
+    public static final AntuIcon PLACE_DISTRIBUTOR_LOGO_MANJARO_64 = create("places__64__distributor-logo-manjaro");
+    public static final AntuIcon PLACE_DISTRIBUTOR_LOGO_OPENSUSE_64 = create("places__64__distributor-logo-opensuse");
+    public static final AntuIcon PLACE_DISTRIBUTOR_LOGO_PARABOLA_64 = create("places__64__distributor-logo-parabola");
+    public static final AntuIcon PLACE_DISTRIBUTOR_LOGO_SLACKWARE_64 = create("places__64__distributor-logo-slackware");
+    public static final AntuIcon PLACE_DISTRIBUTOR_LOGO_TRISQUEL_64 = create("places__64__distributor-logo-trisquel");
+    public static final AntuIcon PLACE_DISTRIBUTOR_LOGO_UBUNTU_64 = create("places__64__distributor-logo-ubuntu");
+    public static final AntuIcon PLACE_DISTRIBUTOR_LOGO_64 = create("places__64__distributor-logo");
+    public static final AntuIcon PLACE_FAVORITES_64 = create("places__64__favorites");
+    public static final AntuIcon PLACE_FOLDER_ACTIVITIES_64 = create("places__64__folder-activities");
+    public static final AntuIcon PLACE_FOLDER_BLACK_64 = create("places__64__folder-black");
+    public static final AntuIcon PLACE_FOLDER_BLUE_64 = create("places__64__folder-blue");
+    public static final AntuIcon PLACE_FOLDER_BOOKMARK_64 = create("places__64__folder-bookmark");
+    public static final AntuIcon PLACE_FOLDER_BROWN_64 = create("places__64__folder-brown");
+    public static final AntuIcon PLACE_FOLDER_CAMERA_64 = create("places__64__folder-camera");
+    public static final AntuIcon PLACE_FOLDER_CHAKRA_64 = create("places__64__folder-chakra");
+    public static final AntuIcon PLACE_FOLDER_CLOUD_64 = create("places__64__folder-cloud");
+    public static final AntuIcon PLACE_FOLDER_CYAN_64 = create("places__64__folder-cyan");
+    public static final AntuIcon PLACE_FOLDER_DEVELOPMENT_64 = create("places__64__folder-development");
+    public static final AntuIcon PLACE_FOLDER_DOCUMENTS_64 = create("places__64__folder-documents");
+    public static final AntuIcon PLACE_FOLDER_DOWNLOAD_64 = create("places__64__folder-download");
+    public static final AntuIcon PLACE_FOLDER_DOWNLOADS_64 = create("places__64__folder-downloads");
+    public static final AntuIcon PLACE_FOLDER_DROPBOX_64 = create("places__64__folder-dropbox");
+    public static final AntuIcon PLACE_FOLDER_FAVORITES_64 = create("places__64__folder-favorites");
+    public static final AntuIcon PLACE_FOLDER_GAMES_64 = create("places__64__folder-games");
+    public static final AntuIcon PLACE_FOLDER_GDRIVE_64 = create("places__64__folder-gdrive");
+    public static final AntuIcon PLACE_FOLDER_GIT_64 = create("places__64__folder-git");
+    public static final AntuIcon PLACE_FOLDER_GITHUB_64 = create("places__64__folder-github");
+    public static final AntuIcon PLACE_FOLDER_GNOME_64 = create("places__64__folder-gnome");
+    public static final AntuIcon PLACE_FOLDER_GREEN_64 = create("places__64__folder-green");
+    public static final AntuIcon PLACE_FOLDER_GREY_64 = create("places__64__folder-grey");
+    public static final AntuIcon PLACE_FOLDER_HTML_64 = create("places__64__folder-html");
+    public static final AntuIcon PLACE_FOLDER_IMAGE_PEOPLE_64 = create("places__64__folder-image-people");
+    public static final AntuIcon PLACE_FOLDER_IMAGE_64 = create("places__64__folder-image");
+    public static final AntuIcon PLACE_FOLDER_IMAGES_64 = create("places__64__folder-images");
+    public static final AntuIcon PLACE_FOLDER_IMPORTANT_64 = create("places__64__folder-important");
+    public static final AntuIcon PLACE_FOLDER_KAOS_64 = create("places__64__folder-kaos");
+    public static final AntuIcon PLACE_FOLDER_LOCKED_64 = create("places__64__folder-locked");
+    public static final AntuIcon PLACE_FOLDER_MAGENTA_64 = create("places__64__folder-magenta");
+    public static final AntuIcon PLACE_FOLDER_MAIL_64 = create("places__64__folder-mail");
+    public static final AntuIcon PLACE_FOLDER_MUSIC_64 = create("places__64__folder-music");
+    public static final AntuIcon PLACE_FOLDER_NETWORK_64 = create("places__64__folder-network");
+    public static final AntuIcon PLACE_FOLDER_OPEN_64 = create("places__64__folder-open");
+    public static final AntuIcon PLACE_FOLDER_ORANGE_64 = create("places__64__folder-orange");
+    public static final AntuIcon PLACE_FOLDER_OWNCLOUD_64 = create("places__64__folder-owncloud");
+    public static final AntuIcon PLACE_FOLDER_PICTURE_64 = create("places__64__folder-picture");
+    public static final AntuIcon PLACE_FOLDER_PICTURES_64 = create("places__64__folder-pictures");
+    public static final AntuIcon PLACE_FOLDER_PRINT_64 = create("places__64__folder-print");
+    public static final AntuIcon PLACE_FOLDER_PRIVATE_64 = create("places__64__folder-private");
+    public static final AntuIcon PLACE_FOLDER_PUBLIC_64 = create("places__64__folder-public");
+    public static final AntuIcon PLACE_FOLDER_PUBLICSHARE_64 = create("places__64__folder-publicshare");
+    public static final AntuIcon PLACE_FOLDER_RED_64 = create("places__64__folder-red");
+    public static final AntuIcon PLACE_FOLDER_REMOTE_64 = create("places__64__folder-remote");
+    public static final AntuIcon PLACE_FOLDER_SCRIPT_64 = create("places__64__folder-script");
+    public static final AntuIcon PLACE_FOLDER_SOUND_64 = create("places__64__folder-sound");
+    public static final AntuIcon PLACE_FOLDER_TAR_64 = create("places__64__folder-tar");
+    public static final AntuIcon PLACE_FOLDER_TEMP_64 = create("places__64__folder-temp");
+    public static final AntuIcon PLACE_FOLDER_TEMPLATES_64 = create("places__64__folder-templates");
+    public static final AntuIcon PLACE_FOLDER_TEXT_64 = create("places__64__folder-text");
+    public static final AntuIcon PLACE_FOLDER_TORRENTS_64 = create("places__64__folder-torrents");
+    public static final AntuIcon PLACE_FOLDER_TXT_64 = create("places__64__folder-txt");
+    public static final AntuIcon PLACE_FOLDER_VBOX_64 = create("places__64__folder-vbox");
+    public static final AntuIcon PLACE_FOLDER_VIDEO_64 = create("places__64__folder-video");
+    public static final AntuIcon PLACE_FOLDER_VIDEOCAMERA_64 = create("places__64__folder-videocamera");
+    public static final AntuIcon PLACE_FOLDER_VIDEOS_64 = create("places__64__folder-videos");
+    public static final AntuIcon PLACE_FOLDER_VIOLET_64 = create("places__64__folder-violet");
+    public static final AntuIcon PLACE_FOLDER_WIFI_64 = create("places__64__folder-wifi");
+    public static final AntuIcon PLACE_FOLDER_YELLOW_64 = create("places__64__folder-yellow");
+    public static final AntuIcon PLACE_FOLDER_64 = create("places__64__folder");
+    public static final AntuIcon PLACE_LIBRARY_MUSIC_64 = create("places__64__library-music");
+    public static final AntuIcon PLACE_NETWORK_SERVER_DATABASE_64 = create("places__64__network-server-database");
+    public static final AntuIcon PLACE_NETWORK_SERVER_64 = create("places__64__network-server");
+    public static final AntuIcon PLACE_NETWORK_WORKGROUP_64 = create("places__64__network-workgroup");
+    public static final AntuIcon PLACE_REPOSITORY_64 = create("places__64__repository");
+    public static final AntuIcon PLACE_SERVER_DATABASE_64 = create("places__64__server-database");
+    public static final AntuIcon PLACE_START_HERE_ARCHLINUX_64 = create("places__64__start-here-archlinux");
+    public static final AntuIcon PLACE_START_HERE_BLAG_64 = create("places__64__start-here-blag");
+    public static final AntuIcon PLACE_START_HERE_CHAKRA_64 = create("places__64__start-here-chakra");
+    public static final AntuIcon PLACE_START_HERE_DEBIAN_64 = create("places__64__start-here-debian");
+    public static final AntuIcon PLACE_START_HERE_DRAGORA_64 = create("places__64__start-here-dragora");
+    public static final AntuIcon PLACE_START_HERE_FEDORA_64 = create("places__64__start-here-fedora");
+    public static final AntuIcon PLACE_START_HERE_FREEBSD_64 = create("places__64__start-here-freebsd");
+    public static final AntuIcon PLACE_START_HERE_GENTOO_64 = create("places__64__start-here-gentoo");
+    public static final AntuIcon PLACE_START_HERE_GUIX_64 = create("places__64__start-here-guix");
+    public static final AntuIcon PLACE_START_HERE_KAOS_64 = create("places__64__start-here-kaos");
+    public static final AntuIcon PLACE_START_HERE_KDE_64 = create("places__64__start-here-kde");
+    public static final AntuIcon PLACE_START_HERE_KUBUNTU_64 = create("places__64__start-here-kubuntu");
+    public static final AntuIcon PLACE_START_HERE_MAGEIA_64 = create("places__64__start-here-mageia");
+    public static final AntuIcon PLACE_START_HERE_MANJARO_64 = create("places__64__start-here-manjaro");
+    public static final AntuIcon PLACE_START_HERE_OPENSUSE_64 = create("places__64__start-here-opensuse");
+    public static final AntuIcon PLACE_START_HERE_PARABOLA_64 = create("places__64__start-here-parabola");
+    public static final AntuIcon PLACE_START_HERE_SLACKWARE_64 = create("places__64__start-here-slackware");
+    public static final AntuIcon PLACE_START_HERE_TRISQUEL_64 = create("places__64__start-here-trisquel");
+    public static final AntuIcon PLACE_START_HERE_UBUNTU_64 = create("places__64__start-here-ubuntu");
+    public static final AntuIcon PLACE_START_HERE_64 = create("places__64__start-here");
+    public static final AntuIcon PLACE_STOCK_FOLDER_64 = create("places__64__stock_folder");
+    public static final AntuIcon PLACE_USER_DESKTOP_64 = create("places__64__user-desktop");
+    public static final AntuIcon PLACE_USER_HOME_64 = create("places__64__user-home");
+    public static final AntuIcon PLACE_USER_TRASH_FULL_64 = create("places__64__user-trash-full");
+    public static final AntuIcon PLACE_USER_TRASH_64 = create("places__64__user-trash");
+
+    // STATUS
+    public static final AntuIcon STATUS_APPOINTMENT_RECURRING_64 = create("status__64__appointment-recurring");
+    public static final AntuIcon STATUS_APPOINTMENT_REMINDER_64 = create("status__64__appointment-reminder");
+    public static final AntuIcon STATUS_AUDIO_READY_22 = create("status__22__audio-ready");
+    public static final AntuIcon STATUS_AUDIO_VOLUME_HIGH_22 = create("status__22__audio-volume-high");
+    public static final AntuIcon STATUS_AUDIO_VOLUME_LOW_22 = create("status__22__audio-volume-low");
+    public static final AntuIcon STATUS_AUDIO_VOLUME_MEDIUM_22 = create("status__22__audio-volume-medium");
+    public static final AntuIcon STATUS_AUDIO_VOLUME_MUTED_22 = create("status__22__audio-volume-muted");
+    public static final AntuIcon STATUS_BATTERY_040_64 = create("status__64__battery-040");
+    public static final AntuIcon STATUS_BATTERY_060_64 = create("status__64__battery-060");
+    public static final AntuIcon STATUS_BATTERY_080_64 = create("status__64__battery-080");
+    public static final AntuIcon STATUS_BATTERY_100_64 = create("status__64__battery-100");
+    public static final AntuIcon STATUS_BATTERY_CAUTION_64 = create("status__64__  battery-caution");
+    public static final AntuIcon STATUS_BATTERY_CHARGING_040_64 = create("status__64__battery-charging-040");
+    public static final AntuIcon STATUS_BATTERY_CHARGING_060_64 = create("status__64__battery-charging-060");
+    public static final AntuIcon STATUS_BATTERY_CHARGING_080_64 = create("status__64__battery-charging-080");
+    public static final AntuIcon STATUS_BATTERY_CHARGING_64 = create("status__64__battery-charging");
+    public static final AntuIcon STATUS_BATTERY_CHARGING_CAUTION_64 = create("status__64__battery-charging-caution");
+    public static final AntuIcon STATUS_BATTERY_CHARGING_LOW_64 = create("status__64__battery-charging-low");
+    public static final AntuIcon STATUS_BATTERY_LOW_64 = create("status__64__battery-low");
+    public static final AntuIcon STATUS_BATTERY_MISSING_64 = create("status__64__battery-missing");
+    public static final AntuIcon STATUS_CAMERA_OFF_22 = create("status__22__camera-off");
+    public static final AntuIcon STATUS_CAMERA_ON_22 = create("status__22__camera-on");
+    public static final AntuIcon STATUS_CAMERA_READY_22 = create("status__22__camera-ready");
+    public static final AntuIcon STATUS_CLOUDSTATUS_22 = create("status__22__cloudstatus");
+    public static final AntuIcon STATUS_DIALOG_ERROR_64 = create("status__64__dialog-error");
+    public static final AntuIcon STATUS_DIALOG_INFORMATION_16 = create("status__16__dialog-information");
+    public static final AntuIcon STATUS_DIALOG_INFORMATION_22 = create("status__22__dialog-information");
+    public static final AntuIcon STATUS_DIALOG_INFORMATION_64 = create("status__64__dialog-information");
+    public static final AntuIcon STATUS_DIALOG_PASSWORD_64 = create("status__64__dialog-password");
+    public static final AntuIcon STATUS_DIALOG_QUESTION_64 = create("status__64__dialog-question");
+    public static final AntuIcon STATUS_DIALOG_WARNING_64 = create("status__64__dialog-warning");
+    public static final AntuIcon STATUS_DROPBOXSTATUS_BUSY_22 = create("status__22__dropboxstatus-busy");
+    public static final AntuIcon STATUS_DROPBOXSTATUS_BUSY2_22 = create("status__22__dropboxstatus-busy2");
+    public static final AntuIcon STATUS_DROPBOXSTATUS_IDLE_22 = create("status__22__dropboxstatus-idle");
+    public static final AntuIcon STATUS_DROPBOXSTATUS_LOGO_22 = create("status__22__dropboxstatus-logo");
+    public static final AntuIcon STATUS_DROPBOXSTATUS_X_22 = create("status__22__dropboxstatus-x");
+    public static final AntuIcon STATUS_FOLDER_CLOUD_22 = create("status__22__folder-cloud");
+    public static final AntuIcon STATUS_FOLDER_OPEN_64 = create("status__64__folder-open");
+    public static final AntuIcon STATUS_IMAGE_LOADING_64 = create("status__64__image-loading");
+    public static final AntuIcon STATUS_IMAGE_MISSING_22 = create("status__22__image-missing");
+    public static final AntuIcon STATUS_IRC_CHANNEL_JOINED_22 = create("status__22__irc-channel-joined");
+    public static final AntuIcon STATUS_IRC_CHANNEL_PARTED_22 = create("status__22__irc-channel-parted");
+    public static final AntuIcon STATUS_KDECONNECT_TRAY_16_16 = create("status__16__kdeconnect-tray-16");
+    public static final AntuIcon STATUS_KDECONNECT_TRAY_22 = create("status__22__kdeconnect-tray");
+    public static final AntuIcon STATUS_LAPTOP_CONNECTED_22 = create("status__22__laptop-connected");
+    public static final AntuIcon STATUS_LAPTOP_DISCONNECTED_22 = create("status__22__laptop-disconnected");
+    public static final AntuIcon STATUS_LAPTOP_TRUSTED_22 = create("status__22__laptop-trusted");
+    public static final AntuIcon STATUS_MAIL_ATTACHMENT_22 = create("status__22__mail-attachment");
+    public static final AntuIcon STATUS_MAIL_QUEUED_64 = create("status__64__mail-queued");
+    public static final AntuIcon STATUS_MAIL_READ_64 = create("status__64__mail-read");
+    public static final AntuIcon STATUS_MAIL_REPLIED_64 = create("status__64__mail-replied");
+    public static final AntuIcon STATUS_MAIL_SENT_64 = create("status__64__mail-sent");
+    public static final AntuIcon STATUS_MAIL_TAGGED_64 = create("status__64__mail-tagged");
+    public static final AntuIcon STATUS_MAIL_TASK_64 = create("status__64__mail-task");
+    public static final AntuIcon STATUS_MAIL_UNREAD_64 = create("status__64__mail-unread");
+    public static final AntuIcon STATUS_MAIL_UNREAD_NEW_64 = create("status__64__mail-unread-new");
+    public static final AntuIcon STATUS_MEDIA_PLAYLIST_REPEAT_64 = create("status__64__media-playlist-repeat");
+    public static final AntuIcon STATUS_MEDIA_PLAYLIST_SHUFFLE_64 = create("status__64__media-playlist-shuffle");
+    public static final AntuIcon STATUS_MEETING_CHAIR_64 = create("status__64__meeting-chair");
+    public static final AntuIcon STATUS_MEETING_OBSERVER_64 = create("status__64__meeting-observer");
+    public static final AntuIcon STATUS_MEETING_ORGANIZER_64 = create("status__64__meeting-organizer");
+    public static final AntuIcon STATUS_MEETING_PARTICIPANT_64 = create("status__64__meeting-participant");
+    public static final AntuIcon STATUS_MEETING_PARTICIPANT_OPTIONAL_64 = create("status__64__meeting-participant-optional");
+    public static final AntuIcon STATUS_MEETING_PARTICIPANT_REPLY_64 = create("status__64__meeting-participant-reply");
+    public static final AntuIcon STATUS_MIC_OFF_22 = create("status__22__mic-off");
+    public static final AntuIcon STATUS_MIC_ON_22 = create("status__22__mic-on");
+    public static final AntuIcon STATUS_MIC_READY_22 = create("status__22__mic-ready");
+    public static final AntuIcon STATUS_OBJECT_LOCKED_64 = create("status__64__object-locked");
+    public static final AntuIcon STATUS_OBJECT_UNLOCKED_64 = create("status__64__object-unlocked");
+    public static final AntuIcon STATUS_PRINTER_ERROR_64 = create("status__64__printer-error");
+    public static final AntuIcon STATUS_PRINTER_PRINTING_64 = create("status__64__printer-printing");
+    public static final AntuIcon STATUS_SCRIPT_ERROR_22 = create("status__22__script-error");
+    public static final AntuIcon STATUS_SECURITY_HIGH_22 = create("status__22__security-high");
+    public static final AntuIcon STATUS_SECURITY_HIGH_64 = create("status__64__security-high");
+    public static final AntuIcon STATUS_SECURITY_LOW_22  = create("status__22__security-low");
+    public static final AntuIcon STATUS_SECURITY_LOW_64 = create("status__64__security-low");
+    public static final AntuIcon STATUS_SECURITY_MEDIUM_22 = create("status__22__security-medium");
+    public static final AntuIcon STATUS_SECURITY_MEDIUM_64 = create("status__64__security-medium");
+    public static final AntuIcon STATUS_SMARTPHONE_CONNECTED_22 = create("status__22__smartphone-connected");
+    public static final AntuIcon STATUS_SMARTPHONE_DISCONNECTED_22 = create("status__22__smartphone-disconnected");
+    public static final AntuIcon STATUS_SMARTPHONE_TRUSTED_22 = create("status__22__smartphone-trusted");
+    public static final AntuIcon STATUS_STATE_DOWNLOAD_22 = create("status__22__state-download");
+    public static final AntuIcon STATUS_STATE_ERROR_22 = create("status__22__state-error");
+    public static final AntuIcon STATUS_STATE_INFORMATION_22 = create("status__22__state-information");
+    public static final AntuIcon STATUS_STATE_OFFLINE_22 = create("status__22__state-offline");
+    public static final AntuIcon STATUS_STATE_OK_22 = create("status__22__state-ok");
+    public static final AntuIcon STATUS_STATE_PAUSE_22 = create("status__22__state-pause");
+    public static final AntuIcon STATUS_STATE_SYNC_22 = create("status__22__state-sync");
+    public static final AntuIcon STATUS_STATE_WARNING_22 = create("status__22__state-warning");
+    public static final AntuIcon STATUS_TABLET_CONNECTED_22 = create("status__22__tablet-connected");
+    public static final AntuIcon STATUS_TABLET_DISCONNECTED_22 = create("status__22__tablet-disconnected");
+    public static final AntuIcon STATUS_TABLET_TRUSTED_22 = create("status__22__tablet-trusted");
+    public static final AntuIcon STATUS_TASK_ACCEPTED_64 = create("status__64__task-accepted");
+    public static final AntuIcon STATUS_TASK_ATTEMPT_64 = create("status__64__task-attempt");
+    public static final AntuIcon STATUS_TASK_ATTENTION_64 = create("status__64__task-attention");
+    public static final AntuIcon STATUS_TASK_COMPLETE_64 = create("status__64__task-complete");
+    public static final AntuIcon STATUS_TASK_DELEGATE_64 = create("status__64__task-delegate");
+    public static final AntuIcon STATUS_TASK_ONGOING_64 = create("status__64__task-ongoing");
+    public static final AntuIcon STATUS_TASK_RECURRING_64 = create("status__64__task-recurring");
+    public static final AntuIcon STATUS_TASK_REJECT_64 = create("status__64__task-reject");
+    public static final AntuIcon STATUS_TASK_REMINDER_64 = create("status__64__task-reminder");
+    public static final AntuIcon STATUS_USER_AVAILABLE_22 = create("status__22__user-available");
+    public static final AntuIcon STATUS_USER_AWAY_22 = create("status__22__user-away");
+    public static final AntuIcon STATUS_USER_AWAY_EXTENDED_22 = create("status__22__user-away-extended");
+    public static final AntuIcon STATUS_USER_BUSY_22 = create("status__22__user-busy");
+    public static final AntuIcon STATUS_USER_IDLE_22 = create("status__22__user-idle");
+    public static final AntuIcon STATUS_USER_INVISIBLE_22 = create("status__22__user-invisible");
+    public static final AntuIcon STATUS_USER_OFFLINE_22 = create("status__22__user-offline");
+    public static final AntuIcon STATUS_USER_ONLINE_22 = create("status__22__user-online");
+    public static final AntuIcon STATUS_USER_TRASH_FULL_64 = create("status__64__user-trash-full");
+    public static final AntuIcon STATUS_WALLET_CLOSED_64 = create("status__64__wallet-closed");
+    public static final AntuIcon STATUS_WALLET_OPEN_64 = create("status__64__wallet-open");
+    public static final AntuIcon STATUS_WEATHER_CLEAR_64 = create("status__64__weather-clear");
+    public static final AntuIcon STATUS_WEATHER_CLEAR_NIGHT_64 = create("status__64__weather-clear-night");
+    public static final AntuIcon STATUS_WEATHER_CLOUDS_64 = create("status__64__weather-clouds");
+    public static final AntuIcon STATUS_WEATHER_CLOUDS_NIGHT_64 = create("status__64__weather-clouds-night");
+    public static final AntuIcon STATUS_WEATHER_FEW_CLOUDS_64 = create("status__64__weather-few-clouds");
+    public static final AntuIcon STATUS_WEATHER_FEW_CLOUDS_NIGHT_64 = create("status__64__weather-few-clouds-night");
+    public static final AntuIcon STATUS_WEATHER_FREEZING_RAIN_64 = create("status__64__weather-freezing-rain");
+    public static final AntuIcon STATUS_WEATHER_HAIL_64 = create("status__64__weather-hail");
+    public static final AntuIcon STATUS_WEATHER_MANY_CLOUDS_64 = create("status__64__weather-many-clouds");
+    public static final AntuIcon STATUS_WEATHER_MIST_64 = create("status__64__weather-mist");
+    public static final AntuIcon STATUS_WEATHER_NONE_AVAILABLE_64 = create("status__64__weather-none-available");
+    public static final AntuIcon STATUS_WEATHER_SHOWERS_64 = create("status__64__weather-showers");
+    public static final AntuIcon STATUS_WEATHER_SHOWERS_DAY_64 = create("status__64__weather-showers-day");
+    public static final AntuIcon STATUS_WEATHER_SHOWERS_NIGHT_64 = create("status__64__weather-showers-night");
+    public static final AntuIcon STATUS_WEATHER_SHOWERS_SCATTERED_64 = create("status__64__weather-showers-scattered");
+    public static final AntuIcon STATUS_WEATHER_SHOWERS_SCATTERED_DAY_64 = create("status__64__weather-showers-scattered-day");
+    public static final AntuIcon STATUS_WEATHER_SHOWERS_SCATTERED_NIGHT_64 = create("status__64__weather-showers-scattered-night");
+    public static final AntuIcon STATUS_WEATHER_SNOW_64 = create("status__64__weather-snow");
+    public static final AntuIcon STATUS_WEATHER_SNOW_RAIN_64 = create("status__64__weather-snow-rain");
+    public static final AntuIcon STATUS_WEATHER_SNOW_SCATTERED_64 = create("status__64__weather-snow-scattered");
+    public static final AntuIcon STATUS_WEATHER_SNOW_SCATTERED_DAY_64 = create("status__64__weather-snow-scattered-day");
+    public static final AntuIcon STATUS_WEATHER_SNOW_SCATTERED_NIGHT_64 = create("status__64__weather-snow-scattered-night");
+    public static final AntuIcon STATUS_WEATHER_STORM_64 = create("status__64__weather-storm");
+    public static final AntuIcon STATUS_WEATHER_STORM_DAY_64 = create("status__64__weather-storm-day");
+    public static final AntuIcon STATUS_WEATHER_STORM_NIGHT_64 = create("status__64__weather-storm-night");
+    public static final AntuIcon STATUS_WINDOW_SUPPRESSED_64 = create("status__64__window-suppressed");
+
+    // ACTIONS
+    public static final AntuIcon ACTION_ACCEPT_SIGNAL_24 = create("actions__24__accept_signal");
+    public static final AntuIcon ACTION_ACROBAT_24 = create("actions__24__acrobat");
+    public static final AntuIcon ACTION_ACROBAT_32 = create("actions__32__acrobat");
+    public static final AntuIcon ACTION_ACTION_ALBUMFOLDER_IMPORTDIR2_24 = create("actions__24__action-albumfolder-importdir2");
+    public static final AntuIcon ACTION_ACTION_RSS_TAG_24 = create("actions__24__action-rss_tag");
+    public static final AntuIcon ACTION_ADDRESS_BOOK_NEW_24 = create("actions__24__address-book-new");
+    public static final AntuIcon ACTION_ADDRESS_BOOK_NEW_32 = create("actions__32__address-book-new");
+    public static final AntuIcon ACTION_ADJUSTCURVES_24 = create("actions__24__adjustcurves");
+    public static final AntuIcon ACTION_ADJUSTHSL_24 = create("actions__24__adjusthsl");
+    public static final AntuIcon ACTION_ADJUSTLEVELS_24 = create("actions__24__adjustlevels");
+    public static final AntuIcon ACTION_ADJUSTRGB_24 = create("actions__24__adjustrgb");
+    public static final AntuIcon ACTION_ADRESS_BOOK_NEW_24 = create("actions__24__adress-book-new");
+    public static final AntuIcon ACTION_AGGREGATION_24 = create("actions__24__aggregation");
+    public static final AntuIcon ACTION_AKONADI_PHONE_HOME_24 = create("actions__24__akonadi-phone-home");
+    public static final AntuIcon ACTION_AKONADICONSOLE_24 = create("actions__24__akonadiconsole");
+    public static final AntuIcon ACTION_ALBUMFOLDER_IMPORTDIR_24 = create("actions__24__albumfolder-importdir");
+    public static final AntuIcon ACTION_ALBUMFOLDER_IMPORTIMAGES_24 = create("actions__24__albumfolder-importimages");
+    public static final AntuIcon ACTION_ALBUMFOLDER_NEW_24 = create("actions__24__albumfolder-new");
+    public static final AntuIcon ACTION_ALBUMFOLDER_PROPERTIES_24 = create("actions__24__albumfolder-properties");
+    public static final AntuIcon ACTION_ALBUMFOLDER_USER_TRASH_24 = create("actions__24__albumfolder-user-trash");
+    public static final AntuIcon ACTION_ALIGN_HORIZONTAL_BASELINE_24 = create("actions__24__align-horizontal-baseline");
+    public static final AntuIcon ACTION_ALIGN_HORIZONTAL_BOTTOM_OUT_24 = create("actions__24__align-horizontal-bottom-out");
+    public static final AntuIcon ACTION_ALIGN_HORIZONTAL_BOTTOM_OUT_32 = create("actions__32__align-horizontal-bottom-out");
+    public static final AntuIcon ACTION_ALIGN_HORIZONTAL_CENTER_24 = create("actions__24__align-horizontal-center");
+    public static final AntuIcon ACTION_ALIGN_HORIZONTAL_CENTER_32 = create("actions__32__align-horizontal-center");
+    public static final AntuIcon ACTION_ALIGN_HORIZONTAL_LEFT_24 = create("actions__24__align-horizontal-left");
+    public static final AntuIcon ACTION_ALIGN_HORIZONTAL_LEFT_32 = create("actions__32__align-horizontal-left");
+    public static final AntuIcon ACTION_ALIGN_HORIZONTAL_LEFT_OUT_24 = create("actions__24__align-horizontal-left-out");
+    public static final AntuIcon ACTION_ALIGN_HORIZONTAL_LEFT_OUT_32 = create("actions__32__align-horizontal-left-out");
+    public static final AntuIcon ACTION_ALIGN_HORIZONTAL_LEFT_TO_ANCHOR_24 = create("actions__24__align-horizontal-left-to-anchor");
+    public static final AntuIcon ACTION_ALIGN_HORIZONTAL_LEFT_TO_ANCHOR_32 = create("actions__32__align-horizontal-left-to-anchor");
+    public static final AntuIcon ACTION_ALIGN_HORIZONTAL_RIGHT_24 = create("actions__24__align-horizontal-right");
+    public static final AntuIcon ACTION_ALIGN_HORIZONTAL_RIGHT_32 = create("actions__32__align-horizontal-right");
+    public static final AntuIcon ACTION_ALIGN_HORIZONTAL_RIGHT_OUT_24 = create("actions__24__align-horizontal-right-out");
+    public static final AntuIcon ACTION_ALIGN_HORIZONTAL_RIGHT_OUT_32 = create("actions__32__align-horizontal-right-out");
+    public static final AntuIcon ACTION_ALIGN_HORIZONTAL_RIGHT_TO_ANCHOR_24 = create("actions__24__align-horizontal-right-to-anchor");
+    public static final AntuIcon ACTION_ALIGN_HORIZONTAL_RIGHT_TO_ANCHOR_32 = create("actions__32__align-horizontal-right-to-anchor");
+    public static final AntuIcon ACTION_ALIGN_HORIZONTAL_TOP_OUT_24 = create("actions__24__align-horizontal-top-out");
+    public static final AntuIcon ACTION_ALIGN_HORIZONTAL_TOP_OUT_32 = create("actions__32__align-horizontal-top-out");
+    public static final AntuIcon ACTION_ALIGN_VERTICAL_BASELINE_24 = create("actions__24__align-vertical-baseline");
+    public static final AntuIcon ACTION_ALIGN_VERTICAL_BOTTOM_24 = create("actions__24__align-vertical-bottom");
+    public static final AntuIcon ACTION_ALIGN_VERTICAL_BOTTOM_32 = create("actions__32__align-vertical-bottom");
+    public static final AntuIcon ACTION_ALIGN_VERTICAL_BOTTOM_OUT_24 = create("actions__24__align-vertical-bottom-out");
+    public static final AntuIcon ACTION_ALIGN_VERTICAL_BOTTOM_OUT_32 = create("actions__32__align-vertical-bottom-out");
+    public static final AntuIcon ACTION_ALIGN_VERTICAL_BOTTOM_TO_ANCHOR_24 = create("actions__24__align-vertical-bottom-to-anchor");
+    public static final AntuIcon ACTION_ALIGN_VERTICAL_BOTTOM_TO_ANCHOR_32 = create("actions__32__align-vertical-bottom-to-anchor");
+    public static final AntuIcon ACTION_ALIGN_VERTICAL_CENTER_24 = create("actions__24__align-vertical-center");
+    public static final AntuIcon ACTION_ALIGN_VERTICAL_CENTER_32 = create("actions__32__align-vertical-center");
+    public static final AntuIcon ACTION_ALIGN_VERTICAL_TOP_24 = create("actions__24__align-vertical-top");
+    public static final AntuIcon ACTION_ALIGN_VERTICAL_TOP_32 = create("actions__32__align-vertical-top");
+    public static final AntuIcon ACTION_ALIGN_VERTICAL_TOP_OUT_24 = create("actions__24__align-vertical-top-out");
+    public static final AntuIcon ACTION_ALIGN_VERTICAL_TOP_OUT_32 = create("actions__32__align-vertical-top-out");
+    public static final AntuIcon ACTION_ALIGN_VERTICAL_TOP_TO_ANCHOR_24 = create("actions__24__align-vertical-top-to-anchor");
+    public static final AntuIcon ACTION_ALIGN_VERTICAL_TOP_TO_ANCHOR_32 = create("actions__32__align-vertical-top-to-anchor");
+    public static final AntuIcon ACTION_AMAROK_ARTIST_24 = create("actions__24__amarok_artist");
+    public static final AntuIcon ACTION_AMAROK_CART_ADD_24 = create("actions__24__amarok_cart_add");
+    public static final AntuIcon ACTION_AMAROK_CART_REMOVE_24 = create("actions__24__amarok_cart_remove");
+    public static final AntuIcon ACTION_AMAROK_CART_VIEW_24 = create("actions__24__amarok_cart_view");
+    public static final AntuIcon ACTION_AMAROK_CHANGE_LANGUAGE_24 = create("actions__24__amarok_change_language");
+    public static final AntuIcon ACTION_AMAROK_CLOCK_24 = create("actions__24__amarok_clock");
+    public static final AntuIcon ACTION_AMAROK_LYRICS_24 = create("actions__24__amarok_lyrics");
+    public static final AntuIcon ACTION_AMAROK_PLAYCOUNT_24 = create("actions__24__amarok_playcount");
+    public static final AntuIcon ACTION_AMAROK_PLAYLIST_24 = create("actions__24__amarok_playlist");
+    public static final AntuIcon ACTION_AMAROK_PLAYLIST_REFRESH_24 = create("actions__24__amarok_playlist_refresh");
+    public static final AntuIcon ACTION_AMAROK_SCRIPTS_24 = create("actions__24__amarok_scripts");
+    public static final AntuIcon ACTION_ANCHOR_24 = create("actions__24__anchor");
+    public static final AntuIcon ACTION_ANTIVIGNETTING_24 = create("actions__24__antivignetting");
+    public static final AntuIcon ACTION_APPLICATION_EXIT_24 = create("actions__24__application-exit");
+    public static final AntuIcon ACTION_APPLICATION_MENU_24 = create("actions__24__application-menu");
+    public static final AntuIcon ACTION_APPLICATIONS_SYSTEM_24 = create("actions__24__applications-system");
+    public static final AntuIcon ACTION_APPOINTMENT_NEW_24 = create("actions__24__appointment-new");
+    public static final AntuIcon ACTION_APPOINTMENT_NEW_32 = create("actions__32__appointment-new");
+    public static final AntuIcon ACTION_ARCHIVE_EXTRACT_24 = create("actions__24__archive-extract");
+    public static final AntuIcon ACTION_ARCHIVE_EXTRACT_32 = create("actions__32__archive-extract");
+    public static final AntuIcon ACTION_ARCHIVE_INSERT_24 = create("actions__24__archive-insert");
+    public static final AntuIcon ACTION_ARCHIVE_INSERT_32 = create("actions__32__archive-insert");
+    public static final AntuIcon ACTION_ARCHIVE_INSERT_DIRECTORY_24 = create("actions__24__archive-insert-directory");
+    public static final AntuIcon ACTION_ARCHIVE_INSERT_DIRECTORY_32 = create("actions__32__archive-insert-directory");
+    public static final AntuIcon ACTION_ARCHIVE_REMOVE_24 = create("actions__24__archive-remove");
+    public static final AntuIcon ACTION_ARCHIVE_REMOVE_32 = create("actions__32__archive-remove");
+    public static final AntuIcon ACTION_ARROW_DOWN_24 = create("actions__24__arrow-down");
+    public static final AntuIcon ACTION_ARROW_DOWN_DOUBLE_24 = create("actions__24__arrow-down-double");
+    public static final AntuIcon ACTION_ARROW_LEFT_24 = create("actions__24__arrow-left");
+    public static final AntuIcon ACTION_ARROW_LEFT_DOUBLE_24 = create("actions__24__arrow-left-double");
+    public static final AntuIcon ACTION_ARROW_LEFT_DOUBLE_32 = create("actions__32__arrow-left-double");
+    public static final AntuIcon ACTION_ARROW_RIGHT_24 = create("actions__24__arrow-right");
+    public static final AntuIcon ACTION_ARROW_RIGHT_DOUBLE_24 = create("actions__24__arrow-right-double");
+    public static final AntuIcon ACTION_ARROW_RIGHT_DOUBLE_32 = create("actions__32__arrow-right-double");
+    public static final AntuIcon ACTION_ARROW_UP_24 = create("actions__24__arrow-up");
+    public static final AntuIcon ACTION_ARROW_UP_DOUBLE_24 = create("actions__24__arrow-up-double");
+    public static final AntuIcon ACTION_ARTIFACT_24 = create("actions__24__artifact");
+    public static final AntuIcon ACTION_ASSOCIATION_24 = create("actions__24__association");
+    public static final AntuIcon ACTION_ATMOSPHERE_24 = create("actions__24__atmosphere");
+    public static final AntuIcon ACTION_AUDIO_OFF_24 = create("actions__24__audio-off");
+    public static final AntuIcon ACTION_AUDIO_ON_24 = create("actions__24__audio-on");
+    public static final AntuIcon ACTION_AUDIO_READY_24 = create("actions__24__audio-ready");
+    public static final AntuIcon ACTION_AUTO_SCALE_ALL_24 = create("actions__24__auto-scale-all");
+    public static final AntuIcon ACTION_AUTO_SCALE_X_24 = create("actions__24__auto-scale-x");
+    public static final AntuIcon ACTION_AUTO_SCALE_Y_24 = create("actions__24__auto-scale-y");
+    public static final AntuIcon ACTION_AUTO_TYPE_24 = create("actions__24__auto-type");
+    public static final AntuIcon ACTION_AUTOCORRECTION_24 = create("actions__24__autocorrection");
+    public static final AntuIcon ACTION_AUTOCORRECTION_32 = create("actions__32__autocorrection");
+    public static final AntuIcon ACTION_AUTOMATED_TASKS_24 = create("actions__24__automated-tasks");
+    public static final AntuIcon ACTION_AXIS_HORIZONTAL_24 = create("actions__24__axis-horizontal");
+    public static final AntuIcon ACTION_AXIS_VERTICAL_24 = create("actions__24__axis-vertical");
+    public static final AntuIcon ACTION_BITMAP_TRACE_24 = create("actions__24__bitmap-trace");
+    public static final AntuIcon ACTION_BLURFX_24 = create("actions__24__blurfx");
+    public static final AntuIcon ACTION_BLURIMAGE_24 = create("actions__24__blurimage");
+    public static final AntuIcon ACTION_BLURIMAGE_32 = create("actions__32__blurimage");
+    public static final AntuIcon ACTION_BOOKMARK_NEW_24 = create("actions__24__bookmark-new");
+    public static final AntuIcon ACTION_BOOKMARK_NEW_32 = create("actions__32__bookmark-new");
+    public static final AntuIcon ACTION_BOOKMARK_NEW_LIST_24 = create("actions__24__bookmark-new-list");
+    public static final AntuIcon ACTION_BOOKMARK_REMOVE_24 = create("actions__24__bookmark-remove");
+    public static final AntuIcon ACTION_BOOKMARK_REMOVE_32 = create("actions__32__bookmark-remove");
+    public static final AntuIcon ACTION_BOOKMARK_TOOLBAR_24 = create("actions__24__bookmark-toolbar");
+    public static final AntuIcon ACTION_BOOKMARKS_24 = create("actions__24__bookmarks");
+    public static final AntuIcon ACTION_BOOKMARKS_48 = create("actions__48__bookmarks");
+    public static final AntuIcon ACTION_BOOKMARKS_ORGANIZE_24 = create("actions__24__bookmarks-organize");
+    public static final AntuIcon ACTION_BORDERTOOL_24 = create("actions__24__bordertool");
+    public static final AntuIcon ACTION_BORDERTOOL_32 = create("actions__32__bordertool");
+    public static final AntuIcon ACTION_BQM_ADD_24 = create("actions__24__bqm-add");
+    public static final AntuIcon ACTION_BQM_ADDQUEUE_24 = create("actions__24__bqm-addqueue");
+    public static final AntuIcon ACTION_BQM_COMMIT_24 = create("actions__24__bqm-commit");
+    public static final AntuIcon ACTION_BQM_DIFF_24 = create("actions__24__bqm-diff");
+    public static final AntuIcon ACTION_BQM_REMOVE_24 = create("actions__24__bqm-remove");
+    public static final AntuIcon ACTION_BQM_RMQUEUE_24 = create("actions__24__bqm-rmqueue");
+    public static final AntuIcon ACTION_BQM_UPDATE_24 = create("actions__24__bqm-update");
+    public static final AntuIcon ACTION_BWTONAL_24 = create("actions__24__bwtonal");
+    public static final AntuIcon ACTION_CALL_START_24 = create("actions__24__call-start");
+    public static final AntuIcon ACTION_CALL_START_32 = create("actions__32__call-start");
+    public static final AntuIcon ACTION_CALL_STOP_24 = create("actions__24__call-stop");
+    public static final AntuIcon ACTION_CALL_STOP_32 = create("actions__32__call-stop");
+    public static final AntuIcon ACTION_CAMERA_OFF_24 = create("actions__24__camera-off");
+    public static final AntuIcon ACTION_CAMERA_ON_24 = create("actions__24__camera-on");
+    public static final AntuIcon ACTION_CAMERA_READY_24 = create("actions__24__camera-ready");
+    public static final AntuIcon ACTION_CARTESIAN_PLOT_FOUR_AXES_24 = create("actions__24__cartesian-plot-four-axes");
+    public static final AntuIcon ACTION_CARTESIAN_PLOT_TWO_AXES_24 = create("actions__24__cartesian-plot-two-axes");
+    public static final AntuIcon ACTION_CARTESIAN_PLOT_TWO_AXES_CENTERED_24 = create("actions__24__cartesian-plot-two-axes-centered");
+    public static final AntuIcon ACTION_CARTESIAN_PLOT_TWO_AXES_CENTERED_ORIGIN_24 = create("actions__24__cartesian-plot-two-axes-centered-origin");
+    public static final AntuIcon ACTION_CATEGORY_24 = create("actions__24__category");
+    public static final AntuIcon ACTION_CATEGORY2PARENT_24 = create("actions__24__category2parent");
+    public static final AntuIcon ACTION_CHANNELMIXER_24 = create("actions__24__channelmixer");
+    public static final AntuIcon ACTION_CHARACTER_SET_24 = create("actions__24__character-set");
+    public static final AntuIcon ACTION_CHARCOALTOOL_24 = create("actions__24__charcoaltool");
+    public static final AntuIcon ACTION_CHECK_CONSTRAINT_24 = create("actions__24__check_constraint");
+    public static final AntuIcon ACTION_CHECKBOX_24 = create("actions__24__checkbox");
+    public static final AntuIcon ACTION_CHECKMARK_24 = create("actions__24__checkmark");
+    public static final AntuIcon ACTION_CHILD2CATEGORY_24 = create("actions__24__child2category");
+    public static final AntuIcon ACTION_CHOICE_RHOMB_24 = create("actions__24__choice-rhomb");
+    public static final AntuIcon ACTION_CHOICE_ROUND_24 = create("actions__24__choice-round");
+    public static final AntuIcon ACTION_CHRONOMETER_24 = create("actions__24__chronometer");
+    public static final AntuIcon ACTION_CHRONOMETER_48 = create("actions__48__chronometer");
+    public static final AntuIcon ACTION_CHRONOMETER_LAP_24 = create("actions__24__chronometer-lap");
+    public static final AntuIcon ACTION_CHRONOMETER_PAUSE_24 = create("actions__24__chronometer-pause");
+    public static final AntuIcon ACTION_CHRONOMETER_RESET_24 = create("actions__24__chronometer-reset");
+    public static final AntuIcon ACTION_CHRONOMETER_START_24 = create("actions__24__chronometer-start");
+    public static final AntuIcon ACTION_CODE_BLOCK_24 = create("actions__24__code-block");
+    public static final AntuIcon ACTION_CODE_CLASS_24 = create("actions__24__code-class");
+    public static final AntuIcon ACTION_CODE_CONTEXT_24 = create("actions__24__code-context");
+    public static final AntuIcon ACTION_CODE_FUNCTION_24 = create("actions__24__code-function");
+    public static final AntuIcon ACTION_CODE_TYPEDEF_24 = create("actions__24__code-typedef");
+    public static final AntuIcon ACTION_CODE_VARIABLE_24 = create("actions__24__code-variable");
+    public static final AntuIcon ACTION_COLLECTION_RESCAN_AMAROK_24 = create("actions__24__collection-rescan-amarok");
+    public static final AntuIcon ACTION_COLOR_FILL_24 = create("actions__24__color-fill");
+    public static final AntuIcon ACTION_COLOR_GRADIENT_24 = create("actions__24__color-gradient");
+    public static final AntuIcon ACTION_COLOR_MANAGEMENT_24 = create("actions__24__color-management");
+    public static final AntuIcon ACTION_COLOR_MANAGEMENT_32 = create("actions__32__color-management");
+    public static final AntuIcon ACTION_COLOR_PICKER_24 = create("actions__24__color-picker");
+    public static final AntuIcon ACTION_COLOR_PICKER_32 = create("actions__32__color-picker");
+    public static final AntuIcon ACTION_COLOR_PICKER_BLACK_24 = create("actions__24__color-picker-black");
+    public static final AntuIcon ACTION_COLOR_PICKER_BLACK_32 = create("actions__32__color-picker-black");
+    public static final AntuIcon ACTION_COLOR_PICKER_GREY_24 = create("actions__24__color-picker-grey");
+    public static final AntuIcon ACTION_COLOR_PICKER_GREY_32 = create("actions__32__color-picker-grey");
+    public static final AntuIcon ACTION_COLOR_PICKER_WHITE_24 = create("actions__24__color-picker-white");
+    public static final AntuIcon ACTION_COLOR_PICKER_WHITE_32 = create("actions__32__color-picker-white");
+    public static final AntuIcon ACTION_COLORFX_24 = create("actions__24__colorfx");
+    public static final AntuIcon ACTION_COLORMANAGEMENT_24 = create("actions__24__colormanagement");
+    public static final AntuIcon ACTION_COLORNEG_24 = create("actions__24__colorneg");
+    public static final AntuIcon ACTION_COLORS_CHROMABLUE_24 = create("actions__24__colors-chromablue");
+    public static final AntuIcon ACTION_COLORS_CHROMABLUE_32 = create("actions__32__colors-chromablue");
+    public static final AntuIcon ACTION_COLORS_CHROMAGREEN_24 = create("actions__24__colors-chromagreen");
+    public static final AntuIcon ACTION_COLORS_CHROMAGREEN_32 = create("actions__32__colors-chromagreen");
+    public static final AntuIcon ACTION_COLORS_CHROMARED_24 = create("actions__24__colors-chromared");
+    public static final AntuIcon ACTION_COLORS_CHROMARED_32 = create("actions__32__colors-chromared");
+    public static final AntuIcon ACTION_COLORS_LUMA_24 = create("actions__24__colors-luma");
+    public static final AntuIcon ACTION_COLORS_LUMA_32 = create("actions__32__colors-luma");
+    public static final AntuIcon ACTION_COMBINED_FRAGMENT_24 = create("actions__24__combined_fragment");
+    public static final AntuIcon ACTION_COMPASS_24 = create("actions__24__compass");
+    public static final AntuIcon ACTION_COMPASS_32 = create("actions__32__compass");
+    public static final AntuIcon ACTION_COMPOSITION_24 = create("actions__24__composition");
+    public static final AntuIcon ACTION_CONFIGURE_24 = create("actions__24__configure");
+    public static final AntuIcon ACTION_CONFIGURE_32 = create("actions__32__configure");
+    public static final AntuIcon ACTION_CONFIGURE_SHORTCUTS_24 = create("actions__24__configure-shortcuts");
+    public static final AntuIcon ACTION_CONFIGURE_TOOLBARS_24 = create("actions__24__configure-toolbars");
+    public static final AntuIcon ACTION_CONTACT_NEW_24 = create("actions__24__contact-new");
+    public static final AntuIcon ACTION_CONTAINMENT_24 = create("actions__24__containment");
+    public static final AntuIcon ACTION_CONTRAST_24 = create("actions__24__contrast");
+    public static final AntuIcon ACTION_COORDINATE_24 = create("actions__24__coordinate");
+    public static final AntuIcon ACTION_COPY_COORDINATES_24 = create("actions__24__copy-coordinates");
+    public static final AntuIcon ACTION_CROSSHAIRS_24 = create("actions__24__crosshairs");
+    public static final AntuIcon ACTION_CURSOR_ARROW_24 = create("actions__24__cursor-arrow");
+    public static final AntuIcon ACTION_CURVE_CONNECTOR_24 = create("actions__24__curve-connector");
+    public static final AntuIcon ACTION_DASHBOARD_SHOW_24 = create("actions__24__dashboard-show");
+    public static final AntuIcon ACTION_DATABASE_CHANGE_KEY_24 = create("actions__24__database-change-key");
+    public static final AntuIcon ACTION_DATABASE_INDEX_24 = create("actions__24__database-index");
+    public static final AntuIcon ACTION_DEBUG_EXECUTE_FROM_CURSOR_24 = create("actions__24__debug-execute-from-cursor");
+    public static final AntuIcon ACTION_DEBUG_EXECUTE_TO_CURSOR_24 = create("actions__24__debug-execute-to-cursor");
+    public static final AntuIcon ACTION_DEBUG_RUN_24 = create("actions__24__debug-run");
+    public static final AntuIcon ACTION_DEBUG_RUN_CURSOR_24 = create("actions__24__debug-run-cursor");
+    public static final AntuIcon ACTION_DEBUG_STEP_INSTRUCTION_24 = create("actions__24__debug-step-instruction");
+    public static final AntuIcon ACTION_DEBUG_STEP_INTO_24 = create("actions__24__debug-step-into");
+    public static final AntuIcon ACTION_DEBUG_STEP_INTO_INSTRUCTION_24 = create("actions__24__debug-step-into-instruction");
+    public static final AntuIcon ACTION_DEBUG_STEP_OUT_24 = create("actions__24__debug-step-out");
+    public static final AntuIcon ACTION_DEBUG_STEP_OVER_24 = create("actions__24__debug-step-over");
+    public static final AntuIcon ACTION_DEEP_HISTORY_24 = create("actions__24__deep-history");
+    public static final AntuIcon ACTION_DELETE_COMMENT_24 = create("actions__24__delete-comment");
+    public static final AntuIcon ACTION_DEPENDENCY_24 = create("actions__24__dependency");
+    public static final AntuIcon ACTION_DEPTH16TO8_24 = create("actions__24__depth16to8");
+    public static final AntuIcon ACTION_DEPTH8TO16_24 = create("actions__24__depth8to16");
+    public static final AntuIcon ACTION_DIALOG_ALIGN_AND_DISTRIBUTE_24 = create("actions__24__dialog-align-and-distribute");
+    public static final AntuIcon ACTION_DIALOG_CANCEL_24 = create("actions__24__dialog-cancel");
+    public static final AntuIcon ACTION_DIALOG_CANCEL_32 = create("actions__32__dialog-cancel");
+    public static final AntuIcon ACTION_DIALOG_CLOSE_24 = create("actions__24__dialog-close");
+    public static final AntuIcon ACTION_DIALOG_FILL_AND_STROKE_24 = create("actions__24__dialog-fill-and-stroke");
+    public static final AntuIcon ACTION_DIALOG_FILTERS_24 = create("actions__24__dialog-filters");
+    public static final AntuIcon ACTION_DIALOG_ICON_PREVIEW_24 = create("actions__24__dialog-icon-preview");
+    public static final AntuIcon ACTION_DIALOG_INPUT_DEVICES_24 = create("actions__24__dialog-input-devices");
+    public static final AntuIcon ACTION_DIALOG_LAYERS_24 = create("actions__24__dialog-layers");
+    public static final AntuIcon ACTION_DIALOG_MEMORY_24 = create("actions__24__dialog-memory");
+    public static final AntuIcon ACTION_DIALOG_MESSAGES_24 = create("actions__24__dialog-messages");
+    public static final AntuIcon ACTION_DIALOG_MESSAGES_32 = create("actions__32__dialog-messages");
+    public static final AntuIcon ACTION_DIALOG_OBJECT_PROPERTIES_24 = create("actions__24__dialog-object-properties");
+    public static final AntuIcon ACTION_DIALOG_OK_24 = create("actions__24__dialog-ok");
+    public static final AntuIcon ACTION_DIALOG_OK_APPLY_24 = create("actions__24__dialog-ok-apply");
+    public static final AntuIcon ACTION_DIALOG_OK_APPLY_32 = create("actions__32__dialog-ok-apply");
+    public static final AntuIcon ACTION_DIALOG_ROWS_AND_COLUMNS_24 = create("actions__24__dialog-rows-and-columns");
+    public static final AntuIcon ACTION_DIALOG_SCRIPTS_24 = create("actions__24__dialog-scripts");
+    public static final AntuIcon ACTION_DIALOG_TEXT_AND_FONT_24 = create("actions__24__dialog-text-and-font");
+    public static final AntuIcon ACTION_DIALOG_TILE_CLONES_24 = create("actions__24__dialog-tile-clones");
+    public static final AntuIcon ACTION_DIALOG_TRANSFORM_24 = create("actions__24__dialog-transform");
+    public static final AntuIcon ACTION_DIALOG_XML_EDITOR_24 = create("actions__24__dialog-xml-editor");
+    public static final AntuIcon ACTION_DIRSYNC_24 = create("actions__24__dirsync");
+    public static final AntuIcon ACTION_DISTORTIONFX_24 = create("actions__24__distortionfx");
+    public static final AntuIcon ACTION_DISTRIBUTE_GRAPH_24 = create("actions__24__distribute-graph");
+    public static final AntuIcon ACTION_DISTRIBUTE_GRAPH_DIRECTED_24 = create("actions__24__distribute-graph-directed");
+    public static final AntuIcon ACTION_DISTRIBUTE_HORIZONTAL_24 = create("actions__24__distribute-horizontal");
+    public static final AntuIcon ACTION_DISTRIBUTE_HORIZONTAL_BASELINE_24 = create("actions__24__distribute-horizontal-baseline");
+    public static final AntuIcon ACTION_DISTRIBUTE_HORIZONTAL_CENTER_24 = create("actions__24__distribute-horizontal-center");
+    public static final AntuIcon ACTION_DISTRIBUTE_HORIZONTAL_EQUAL_24 = create("actions__24__distribute-horizontal-equal");
+    public static final AntuIcon ACTION_DISTRIBUTE_HORIZONTAL_GAPS_24 = create("actions__24__distribute-horizontal-gaps");
+    public static final AntuIcon ACTION_DISTRIBUTE_HORIZONTAL_LEFT_24 = create("actions__24__distribute-horizontal-left");
+    public static final AntuIcon ACTION_DISTRIBUTE_HORIZONTAL_MARGIN_24 = create("actions__24__distribute-horizontal-margin");
+    public static final AntuIcon ACTION_DISTRIBUTE_HORIZONTAL_PAGE_24 = create("actions__24__distribute-horizontal-page");
+    public static final AntuIcon ACTION_DISTRIBUTE_HORIZONTAL_RIGHT_24 = create("actions__24__distribute-horizontal-right");
+    public static final AntuIcon ACTION_DISTRIBUTE_HORIZONTAL_X_24 = create("actions__24__distribute-horizontal-x");
+    public static final AntuIcon ACTION_DISTRIBUTE_RANDOMIZE_24 = create("actions__24__distribute-randomize");
+    public static final AntuIcon ACTION_DISTRIBUTE_REMOVE_OVERLAPS_24 = create("actions__24__distribute-remove-overlaps");
+    public static final AntuIcon ACTION_DISTRIBUTE_UNCLUMP_24 = create("actions__24__distribute-unclump");
+    public static final AntuIcon ACTION_DISTRIBUTE_VERTICAL_24 = create("actions__24__distribute-vertical");
+    public static final AntuIcon ACTION_DISTRIBUTE_VERTICAL_BASELINE_24 = create("actions__24__distribute-vertical-baseline");
+    public static final AntuIcon ACTION_DISTRIBUTE_VERTICAL_BOTTOM_24 = create("actions__24__distribute-vertical-bottom");
+    public static final AntuIcon ACTION_DISTRIBUTE_VERTICAL_CENTER_24 = create("actions__24__distribute-vertical-center");
+    public static final AntuIcon ACTION_DISTRIBUTE_VERTICAL_EQUAL_24 = create("actions__24__distribute-vertical-equal");
+    public static final AntuIcon ACTION_DISTRIBUTE_VERTICAL_GAPS_24 = create("actions__24__distribute-vertical-gaps");
+    public static final AntuIcon ACTION_DISTRIBUTE_VERTICAL_MARGIN_24 = create("actions__24__distribute-vertical-margin");
+    public static final AntuIcon ACTION_DISTRIBUTE_VERTICAL_PAGE_24 = create("actions__24__distribute-vertical-page");
+    public static final AntuIcon ACTION_DISTRIBUTE_VERTICAL_TOP_24 = create("actions__24__distribute-vertical-top");
+    public static final AntuIcon ACTION_DISTRIBUTE_VERTICAL_Y_24 = create("actions__24__distribute-vertical-y");
+    public static final AntuIcon ACTION_DOCUMENT_CLEANUP_24 = create("actions__24__document-cleanup");
+    public static final AntuIcon ACTION_DOCUMENT_CLOSE_24 = create("actions__24__document-close");
+    public static final AntuIcon ACTION_DOCUMENT_CLOSE_32 = create("actions__32__document-close");
+    public static final AntuIcon ACTION_DOCUMENT_DECRYPT_24 = create("actions__24__document-decrypt");
+    public static final AntuIcon ACTION_DOCUMENT_DECRYPT_32 = create("actions__32__document-decrypt");
+    public static final AntuIcon ACTION_DOCUMENT_EDIT_24 = create("actions__24__document-edit");
+    public static final AntuIcon ACTION_DOCUMENT_EDIT_32 = create("actions__32__document-edit");
+    public static final AntuIcon ACTION_DOCUMENT_EDIT_DECRYPT_24 = create("actions__24__document-edit-decrypt");
+    public static final AntuIcon ACTION_DOCUMENT_EDIT_DECRYPT_32 = create("actions__32__document-edit-decrypt");
+    public static final AntuIcon ACTION_DOCUMENT_EDIT_DECRYPT_VERIFY_24 = create("actions__24__document-edit-decrypt-verify");
+    public static final AntuIcon ACTION_DOCUMENT_EDIT_DECRYPT_VERIFY_32 = create("actions__32__document-edit-decrypt-verify");
+    public static final AntuIcon ACTION_DOCUMENT_EDIT_ENCRYPT_24 = create("actions__24__document-edit-encrypt");
+    public static final AntuIcon ACTION_DOCUMENT_EDIT_ENCRYPT_32 = create("actions__32__document-edit-encrypt");
+    public static final AntuIcon ACTION_DOCUMENT_EDIT_SIGN_24 = create("actions__24__document-edit-sign");
+    public static final AntuIcon ACTION_DOCUMENT_EDIT_SIGN_32 = create("actions__32__document-edit-sign");
+    public static final AntuIcon ACTION_DOCUMENT_EDIT_SIGN_ENCRYPT_24 = create("actions__24__document-edit-sign-encrypt");
+    public static final AntuIcon ACTION_DOCUMENT_EDIT_SIGN_ENCRYPT_32 = create("actions__32__document-edit-sign-encrypt");
+    public static final AntuIcon ACTION_DOCUMENT_EDIT_VERIFY_24 = create("actions__24__document-edit-verify");
+    public static final AntuIcon ACTION_DOCUMENT_EDIT_VERIFY_32 = create("actions__32__document-edit-verify");
+    public static final AntuIcon ACTION_DOCUMENT_ENCRYPT_24 = create("actions__24__document-encrypt");
+    public static final AntuIcon ACTION_DOCUMENT_ENCRYPTED_24 = create("actions__24__document-encrypted");
+    public static final AntuIcon ACTION_DOCUMENT_ENCRYPTED_32 = create("actions__32__document-encrypted");
+    public static final AntuIcon ACTION_DOCUMENT_EXPORT_24 = create("actions__24__document-export");
+    public static final AntuIcon ACTION_DOCUMENT_EXPORT_32 = create("actions__32__document-export");
+    public static final AntuIcon ACTION_DOCUMENT_EXPORT_OCAL_24 = create("actions__24__document-export-ocal");
+    public static final AntuIcon ACTION_DOCUMENT_EXPORT_TABLE_24 = create("actions__24__document-export-table");
+    public static final AntuIcon ACTION_DOCUMENT_IMPORT_24 = create("actions__24__document-import");
+    public static final AntuIcon ACTION_DOCUMENT_IMPORT_32 = create("actions__32__document-import");
+    public static final AntuIcon ACTION_DOCUMENT_IMPORT_OCAL_24 = create("actions__24__document-import-ocal");
+    public static final AntuIcon ACTION_DOCUMENT_MULTIPLE_24 = create("actions__24__document-multiple");
+    public static final AntuIcon ACTION_DOCUMENT_NEW_24 = create("actions__24__document-new");
+    public static final AntuIcon ACTION_DOCUMENT_NEW_32 = create("actions__32__document-new");
+    public static final AntuIcon ACTION_DOCUMENT_NEW_FROM_TEMPLATE_24 = create("actions__24__document-new-from-template");
+    public static final AntuIcon ACTION_DOCUMENT_NEW_FROM_TEMPLATE_32 = create("actions__32__document-new-from-template");
+    public static final AntuIcon ACTION_DOCUMENT_OPEN_24 = create("actions__24__document-open");
+    public static final AntuIcon ACTION_DOCUMENT_OPEN_32 = create("actions__32__document-open");
+    public static final AntuIcon ACTION_DOCUMENT_OPEN_DATA_24 = create("actions__24__document-open-data");
+    public static final AntuIcon ACTION_DOCUMENT_OPEN_FOLDER_24 = create("actions__24__document-open-folder");
+    public static final AntuIcon ACTION_DOCUMENT_OPEN_RECENT_24 = create("actions__24__document-open-recent");
+    public static final AntuIcon ACTION_DOCUMENT_OPEN_RECENT_32 = create("actions__32__document-open-recent");
+    public static final AntuIcon ACTION_DOCUMENT_OPEN_RECENT_48 = create("actions__48__document-open-recent");
+    public static final AntuIcon ACTION_DOCUMENT_OPEN_REMOTE_24 = create("actions__24__document-open-remote");
+    public static final AntuIcon ACTION_DOCUMENT_OPEN_REMOTE_32 = create("actions__32__document-open-remote");
+    public static final AntuIcon ACTION_DOCUMENT_PREVIEW_24 = create("actions__24__document-preview");
+    public static final AntuIcon ACTION_DOCUMENT_PREVIEW_32 = create("actions__32__document-preview");
+    public static final AntuIcon ACTION_DOCUMENT_PREVIEW_ARCHIVE_24 = create("actions__24__document-preview-archive");
+    public static final AntuIcon ACTION_DOCUMENT_PREVIEW_ARCHIVE_32 = create("actions__32__document-preview-archive");
+    public static final AntuIcon ACTION_DOCUMENT_PRINT_24 = create("actions__24__document-print");
+    public static final AntuIcon ACTION_DOCUMENT_PRINT_32 = create("actions__32__document-print");
+    public static final AntuIcon ACTION_DOCUMENT_PRINT_DIRECT_24 = create("actions__24__document-print-direct");
+    public static final AntuIcon ACTION_DOCUMENT_PRINT_DIRECT_32 = create("actions__32__document-print-direct");
+    public static final AntuIcon ACTION_DOCUMENT_PRINT_FRAME_24 = create("actions__24__document-print-frame");
+    public static final AntuIcon ACTION_DOCUMENT_PRINT_PREVIEW_24 = create("actions__24__document-print-preview");
+    public static final AntuIcon ACTION_DOCUMENT_PROPERTIES_24 = create("actions__24__document-properties");
+    public static final AntuIcon ACTION_DOCUMENT_REVERT_24 = create("actions__24__document-revert");
+    public static final AntuIcon ACTION_DOCUMENT_REVERT_32 = create("actions__32__document-revert");
+    public static final AntuIcon ACTION_DOCUMENT_SAVE_24 = create("actions__24__document-save");
+    public static final AntuIcon ACTION_DOCUMENT_SAVE_32 = create("actions__32__document-save");
+    public static final AntuIcon ACTION_DOCUMENT_SAVE_ALL_24 = create("actions__24__document-save-all");
+    public static final AntuIcon ACTION_DOCUMENT_SAVE_ALL_32 = create("actions__32__document-save-all");
+    public static final AntuIcon ACTION_DOCUMENT_SAVE_AS_24 = create("actions__24__document-save-as");
+    public static final AntuIcon ACTION_DOCUMENT_SAVE_AS_32 = create("actions__32__document-save-as");
+    public static final AntuIcon ACTION_DOCUMENT_SAVE_AS_TEMPLATE_24 = create("actions__24__document-save-as-template");
+    public static final AntuIcon ACTION_DOCUMENT_SHARE_24 = create("actions__24__document-share");
+    public static final AntuIcon ACTION_DOCUMENT_SHARE_32 = create("actions__32__document-share");
+    public static final AntuIcon ACTION_DOCUMENT_SIGN_24 = create("actions__24__document-sign");
+    public static final AntuIcon ACTION_DOCUMENT_SWAP_24 = create("actions__24__document-swap");
+    public static final AntuIcon ACTION_DOCUMENTATION_24 = create("actions__24__documentation");
+    public static final AntuIcon ACTION_DOCUMENTINFO_24 = create("actions__24__documentinfo");
+    public static final AntuIcon ACTION_DOWNLOAD_24 = create("actions__24__download");
+    public static final AntuIcon ACTION_DOWNLOAD_AMAROK_24 = create("actions__24__download-amarok");
+    public static final AntuIcon ACTION_DOWNLOAD_LATER_24 = create("actions__24__download-later");
+    public static final AntuIcon ACTION_DRAW_ARROW_BACK_24 = create("actions__24__draw-arrow-back");
+    public static final AntuIcon ACTION_DRAW_ARROW_DOWN_24 = create("actions__24__draw-arrow-down");
+    public static final AntuIcon ACTION_DRAW_ARROW_FORWARD_24 = create("actions__24__draw-arrow-forward");
+    public static final AntuIcon ACTION_DRAW_ARROW_UP_24 = create("actions__24__draw-arrow-up");
+    public static final AntuIcon ACTION_DRAW_BEZIER_CURVES_24 = create("actions__24__draw-bezier-curves");
+    public static final AntuIcon ACTION_DRAW_BRUSH_24 = create("actions__24__draw-brush");
+    public static final AntuIcon ACTION_DRAW_CALLIGRAPHIC_24 = create("actions__24__draw-calligraphic");
+    public static final AntuIcon ACTION_DRAW_CIRCLE_24 = create("actions__24__draw-circle");
+    public static final AntuIcon ACTION_DRAW_CONNECTOR_24 = create("actions__24__draw-connector");
+    public static final AntuIcon ACTION_DRAW_CROSS_24 = create("actions__24__draw-cross");
+    public static final AntuIcon ACTION_DRAW_CUBOID_24 = create("actions__24__draw-cuboid");
+    public static final AntuIcon ACTION_DRAW_DONUT_24 = create("actions__24__draw-donut");
+    public static final AntuIcon ACTION_DRAW_ELLIPSE_24 = create("actions__24__draw-ellipse");
+    public static final AntuIcon ACTION_DRAW_ELLIPSE_ARC_24 = create("actions__24__draw-ellipse-arc");
+    public static final AntuIcon ACTION_DRAW_ELLIPSE_SEGMENT_24 = create("actions__24__draw-ellipse-segment");
+    public static final AntuIcon ACTION_DRAW_ELLIPSE_WHOLE_24 = create("actions__24__draw-ellipse-whole");
+    public static final AntuIcon ACTION_DRAW_ERASER_24 = create("actions__24__draw-eraser");
+    public static final AntuIcon ACTION_DRAW_FREEHAND_24 = create("actions__24__draw-freehand");
+    public static final AntuIcon ACTION_DRAW_FREEHAND_48 = create("actions__48__draw-freehand");
+    public static final AntuIcon ACTION_DRAW_HALFCIRCLE1_24 = create("actions__24__draw-halfcircle1");
+    public static final AntuIcon ACTION_DRAW_HALFCIRCLE2_24 = create("actions__24__draw-halfcircle2");
+    public static final AntuIcon ACTION_DRAW_HALFCIRCLE3_24 = create("actions__24__draw-halfcircle3");
+    public static final AntuIcon ACTION_DRAW_HALFCIRCLE4_24 = create("actions__24__draw-halfcircle4");
+    public static final AntuIcon ACTION_DRAW_LINE_24 = create("actions__24__draw-line");
+    public static final AntuIcon ACTION_DRAW_PATH_24 = create("actions__24__draw-path");
+    public static final AntuIcon ACTION_DRAW_POLYGON_24 = create("actions__24__draw-polygon");
+    public static final AntuIcon ACTION_DRAW_POLYGON_STAR_24 = create("actions__24__draw-polygon-star");
+    public static final AntuIcon ACTION_DRAW_POLYLINE_24 = create("actions__24__draw-polyline");
+    public static final AntuIcon ACTION_DRAW_RECTANGLE_24 = create("actions__24__draw-rectangle");
+    public static final AntuIcon ACTION_DRAW_SPIRAL_24 = create("actions__24__draw-spiral");
+    public static final AntuIcon ACTION_DRAW_SQUARE_INVERTED_CORNERS_24 = create("actions__24__draw-square-inverted-corners");
+    public static final AntuIcon ACTION_DRAW_STAR_24 = create("actions__24__draw-star");
+    public static final AntuIcon ACTION_DRAW_TEXT_24 = create("actions__24__draw-text");
+    public static final AntuIcon ACTION_DRAW_TRIANGLE_24 = create("actions__24__draw-triangle");
+    public static final AntuIcon ACTION_DRAW_TRIANGLE1_24 = create("actions__24__draw-triangle1");
+    public static final AntuIcon ACTION_DRAW_TRIANGLE2_24 = create("actions__24__draw-triangle2");
+    public static final AntuIcon ACTION_DRAW_TRIANGLE3_24 = create("actions__24__draw-triangle3");
+    public static final AntuIcon ACTION_DRAW_TRIANGLE4_24 = create("actions__24__draw-triangle4");
+    public static final AntuIcon ACTION_DRAW_WATERCOLOR_24 = create("actions__24__draw-watercolor");
+    public static final AntuIcon ACTION_DYNAMIC_AMAROK_24 = create("actions__24__dynamic-amarok");
+    public static final AntuIcon ACTION_EARTHQUAKE_24 = create("actions__24__earthquake");
+    public static final AntuIcon ACTION_EDIT_BOMB_24 = create("actions__24__edit-bomb");
+    public static final AntuIcon ACTION_EDIT_CLEAR_24 = create("actions__24__edit-clear");
+    public static final AntuIcon ACTION_EDIT_CLEAR_HISTORY_24 = create("actions__24__edit-clear-history");
+    public static final AntuIcon ACTION_EDIT_CLEAR_LIST_24 = create("actions__24__edit-clear-list");
+    public static final AntuIcon ACTION_EDIT_CLEAR_LOCATIONBAR_LTR_24 = create("actions__24__edit-clear-locationbar-ltr");
+    public static final AntuIcon ACTION_EDIT_CLEAR_LOCATIONBAR_RTL_24 = create("actions__24__edit-clear-locationbar-rtl");
+    public static final AntuIcon ACTION_EDIT_CLONE_24 = create("actions__24__edit-clone");
+    public static final AntuIcon ACTION_EDIT_CLONE_UNLINK_24 = create("actions__24__edit-clone-unlink");
+    public static final AntuIcon ACTION_EDIT_COPY_24 = create("actions__24__edit-copy");
+    public static final AntuIcon ACTION_EDIT_CUT_24 = create("actions__24__edit-cut");
+    public static final AntuIcon ACTION_EDIT_DELETE_24 = create("actions__24__edit-delete");
+    public static final AntuIcon ACTION_EDIT_DELETE_32 = create("actions__32__edit-delete");
+    public static final AntuIcon ACTION_EDIT_DELETE_SHRED_24 = create("actions__24__edit-delete-shred");
+    public static final AntuIcon ACTION_EDIT_DOWNLOAD_24 = create("actions__24__edit-download");
+    public static final AntuIcon ACTION_EDIT_DUPLICATE_24 = create("actions__24__edit-duplicate");
+    public static final AntuIcon ACTION_EDIT_FIND_24 = create("actions__24__edit-find");
+    public static final AntuIcon ACTION_EDIT_FIND_MAIL_24 = create("actions__24__edit-find-mail");
+    public static final AntuIcon ACTION_EDIT_FIND_PROJECT_24 = create("actions__24__edit-find-project");
+    public static final AntuIcon ACTION_EDIT_FIND_REPLACE_24 = create("actions__24__edit-find-replace");
+    public static final AntuIcon ACTION_EDIT_FIND_USER_24 = create("actions__24__edit-find-user");
+    public static final AntuIcon ACTION_EDIT_GUIDES_24 = create("actions__24__edit-guides");
+    public static final AntuIcon ACTION_EDIT_IMAGE_FACE_ADD_24 = create("actions__24__edit-image-face-add");
+    public static final AntuIcon ACTION_EDIT_IMAGE_FACE_DETECT_24 = create("actions__24__edit-image-face-detect");
+    public static final AntuIcon ACTION_EDIT_IMAGE_FACE_RECOGNIZE_24 = create("actions__24__edit-image-face-recognize");
+    public static final AntuIcon ACTION_EDIT_IMAGE_FACE_SHOW_24 = create("actions__24__edit-image-face-show");
+    public static final AntuIcon ACTION_EDIT_LINK_24 = create("actions__24__edit-link");
+    public static final AntuIcon ACTION_EDIT_NODE_24 = create("actions__24__edit-node");
+    public static final AntuIcon ACTION_EDIT_PASTE_24 = create("actions__24__edit-paste");
+    public static final AntuIcon ACTION_EDIT_PASTE_IN_PLACE_24 = create("actions__24__edit-paste-in-place");
+    public static final AntuIcon ACTION_EDIT_PASTE_STYLE_24 = create("actions__24__edit-paste-style");
+    public static final AntuIcon ACTION_EDIT_REDO_24 = create("actions__24__edit-redo");
+    public static final AntuIcon ACTION_EDIT_REDO_32 = create("actions__32__edit-redo");
+    public static final AntuIcon ACTION_EDIT_RENAME_24 = create("actions__24__edit-rename");
+    public static final AntuIcon ACTION_EDIT_SELECT_24 = create("actions__24__edit-select");
+    public static final AntuIcon ACTION_EDIT_SELECT_ALL_24 = create("actions__24__edit-select-all");
+    public static final AntuIcon ACTION_EDIT_SELECT_ALL_LAYERS_24 = create("actions__24__edit-select-all-layers");
+    public static final AntuIcon ACTION_EDIT_SELECT_INVERT_24 = create("actions__24__edit-select-invert");
+    public static final AntuIcon ACTION_EDIT_SELECT_LASSO_24 = create("actions__24__edit-select-lasso");
+    public static final AntuIcon ACTION_EDIT_SELECT_NONE_24 = create("actions__24__edit-select-none");
+    public static final AntuIcon ACTION_EDIT_SELECT_ORIGINAL_24 = create("actions__24__edit-select-original");
+    public static final AntuIcon ACTION_EDIT_TABLE_CELL_MERGE_24 = create("actions__24__edit-table-cell-merge");
+    public static final AntuIcon ACTION_EDIT_TABLE_CELL_SPLIT_24 = create("actions__24__edit-table-cell-split");
+    public static final AntuIcon ACTION_EDIT_TABLE_DELETE_COLUMN_24 = create("actions__24__edit-table-delete-column");
+    public static final AntuIcon ACTION_EDIT_TABLE_DELETE_ROW_24 = create("actions__24__edit-table-delete-row");
+    public static final AntuIcon ACTION_EDIT_TABLE_INSERT_COLUMN_LEFT_24 = create("actions__24__edit-table-insert-column-left");
+    public static final AntuIcon ACTION_EDIT_TABLE_INSERT_COLUMN_RIGHT_24 = create("actions__24__edit-table-insert-column-right");
+    public static final AntuIcon ACTION_EDIT_TABLE_INSERT_ROW_ABOVE_24 = create("actions__24__edit-table-insert-row-above");
+    public static final AntuIcon ACTION_EDIT_TABLE_INSERT_ROW_BELOW_24 = create("actions__24__edit-table-insert-row-below");
+    public static final AntuIcon ACTION_EDIT_TABLE_INSERT_ROW_UNDER_24 = create("actions__24__edit-table-insert-row-under");
+    public static final AntuIcon ACTION_EDIT_TEXT_FRAME_UPDATE_24 = create("actions__24__edit-text-frame-update");
+    public static final AntuIcon ACTION_EDIT_UNDO_24 = create("actions__24__edit-undo");
+    public static final AntuIcon ACTION_EDIT_UNDO_32 = create("actions__32__edit-undo");
+    public static final AntuIcon ACTION_EDIT_UNDO_HISTORY_24 = create("actions__24__edit-undo-history");
+    public static final AntuIcon ACTION_EDITIMAGE_24 = create("actions__24__editimage");
+    public static final AntuIcon ACTION_EMBOSSTOOL_24 = create("actions__24__embosstool");
+    public static final AntuIcon ACTION_END_STATE_24 = create("actions__24__end_state");
+    public static final AntuIcon ACTION_ENTITY_24 = create("actions__24__entity");
+    public static final AntuIcon ACTION_ENTRY_NEW_24 = create("actions__24__entry-new");
+    public static final AntuIcon ACTION_ESCAPE_DIRECTION_ALL_24 = create("actions__24__escape-direction-all");
+    public static final AntuIcon ACTION_ESCAPE_DIRECTION_DOWN_24 = create("actions__24__escape-direction-down");
+    public static final AntuIcon ACTION_ESCAPE_DIRECTION_HORIZONTAL_24 = create("actions__24__escape-direction-horizontal");
+    public static final AntuIcon ACTION_ESCAPE_DIRECTION_LEFT_24 = create("actions__24__escape-direction-left");
+    public static final AntuIcon ACTION_ESCAPE_DIRECTION_RIGHT_24 = create("actions__24__escape-direction-right");
+    public static final AntuIcon ACTION_ESCAPE_DIRECTION_UP_24 = create("actions__24__escape-direction-up");
+    public static final AntuIcon ACTION_ESCAPE_DIRECTION_VERTICAL_24 = create("actions__24__escape-direction-vertical");
+    public static final AntuIcon ACTION_EXCEPTION_24 = create("actions__24__exception");
+    public static final AntuIcon ACTION_EXCHANGE_POSITIONS_24 = create("actions__24__exchange-positions");
+    public static final AntuIcon ACTION_EXCHANGE_POSITIONS_CLOCKWISE_24 = create("actions__24__exchange-positions-clockwise");
+    public static final AntuIcon ACTION_EXCHANGE_POSITIONS_ZORDER_24 = create("actions__24__exchange-positions-zorder");
+    public static final AntuIcon ACTION_EXIFINFO_24 = create("actions__24__exifinfo");
+    public static final AntuIcon ACTION_FAVORITE_GENRES_AMAROK_24 = create("actions__24__favorite-genres-amarok");
+    public static final AntuIcon ACTION_FEED_SUBSCRIBE_24 = create("actions__24__feed-subscribe");
+    public static final AntuIcon ACTION_FILE_ZOOM_IN_24 = create("actions__24__file-zoom-in");
+    public static final AntuIcon ACTION_FILE_ZOOM_OUT_24 = create("actions__24__file-zoom-out");
+    public static final AntuIcon ACTION_FILENAME_ALBUM_AMAROK_24 = create("actions__24__filename-album-amarok");
+    public static final AntuIcon ACTION_FILENAME_AND_AMAROK_24 = create("actions__24__filename-and-amarok");
+    public static final AntuIcon ACTION_FILENAME_ARTIST_AMAROK_24 = create("actions__24__filename-artist-amarok");
+    public static final AntuIcon ACTION_FILENAME_BPM_AMAROK_24 = create("actions__24__filename-bpm-amarok");
+    public static final AntuIcon ACTION_FILENAME_COMMENT_AMAROK_24 = create("actions__24__filename-comment-amarok");
+    public static final AntuIcon ACTION_FILENAME_COMPOSER_AMAROK_24 = create("actions__24__filename-composer-amarok");
+    public static final AntuIcon ACTION_FILENAME_DASH_AMAROK_24 = create("actions__24__filename-dash-amarok");
+    public static final AntuIcon ACTION_FILENAME_DISCNUMBER_AMAROK_24 = create("actions__24__filename-discnumber-amarok");
+    public static final AntuIcon ACTION_FILENAME_DIVIDER_24 = create("actions__24__filename-divider");
+    public static final AntuIcon ACTION_FILENAME_DOT_AMAROK_24 = create("actions__24__filename-dot-amarok");
+    public static final AntuIcon ACTION_FILENAME_FILETYPE_AMAROK_24 = create("actions__24__filename-filetype-amarok");
+    public static final AntuIcon ACTION_FILENAME_GENRE_AMAROK_24 = create("actions__24__filename-genre-amarok");
+    public static final AntuIcon ACTION_FILENAME_GROUP_LENGTH_24 = create("actions__24__filename-group-length");
+    public static final AntuIcon ACTION_FILENAME_GROUP_TRACKS_24 = create("actions__24__filename-group-tracks");
+    public static final AntuIcon ACTION_FILENAME_IGNORE_AMAROK_24 = create("actions__24__filename-ignore-amarok");
+    public static final AntuIcon ACTION_FILENAME_INITIAL_AMAROK_24 = create("actions__24__filename-initial-amarok");
+    public static final AntuIcon ACTION_FILENAME_LAST_PLAYED_24 = create("actions__24__filename-last-played");
+    public static final AntuIcon ACTION_FILENAME_MOODBAR_24 = create("actions__24__filename-moodbar");
+    public static final AntuIcon ACTION_FILENAME_SAMPLE_RATE_24 = create("actions__24__filename-sample-rate");
+    public static final AntuIcon ACTION_FILENAME_SLASH_AMAROK_24 = create("actions__24__filename-slash-amarok");
+    public static final AntuIcon ACTION_FILENAME_SPACE_AMAROK_24 = create("actions__24__filename-space-amarok");
+    public static final AntuIcon ACTION_FILENAME_TITLE_AMAROK_24 = create("actions__24__filename-title-amarok");
+    public static final AntuIcon ACTION_FILENAME_TRACK_AMAROK_24 = create("actions__24__filename-track-amarok");
+    public static final AntuIcon ACTION_FILENAME_UNDERSCORE_AMAROK_24 = create("actions__24__filename-underscore-amarok");
+    public static final AntuIcon ACTION_FILENAME_YEAR_AMAROK_24 = create("actions__24__filename-year-amarok");
+    public static final AntuIcon ACTION_FILEVIEW_PREVIEW_24 = create("actions__24__fileview-preview");
+    public static final AntuIcon ACTION_FILL_COLOR_24 = create("actions__24__fill-color");
+    public static final AntuIcon ACTION_FILL_RULE_EVEN_ODD_24 = create("actions__24__fill-rule-even-odd");
+    public static final AntuIcon ACTION_FILL_RULE_NONZERO_24 = create("actions__24__fill-rule-nonzero");
+    public static final AntuIcon ACTION_FILMGRAIN_24 = create("actions__24__filmgrain");
+    public static final AntuIcon ACTION_FINAL_ACTIVITY_24 = create("actions__24__final_activity");
+    public static final AntuIcon ACTION_FLAG_24 = create("actions__24__flag");
+    public static final AntuIcon ACTION_FLAG_BLACK_24 = create("actions__24__flag-black");
+    public static final AntuIcon ACTION_FLAG_BLUE_24 = create("actions__24__flag-blue");
+    public static final AntuIcon ACTION_FLAG_GREEN_24 = create("actions__24__flag-green");
+    public static final AntuIcon ACTION_FLAG_RED_24 = create("actions__24__flag-red");
+    public static final AntuIcon ACTION_FLAG_YELLOW_24 = create("actions__24__flag-yellow");
+    public static final AntuIcon ACTION_FOLDER_NEW_24 = create("actions__24__folder-new");
+    public static final AntuIcon ACTION_FOLDER_NEW_32 = create("actions__32__folder-new");
+    public static final AntuIcon ACTION_FOLDER_SYNC_24 = create("actions__24__folder-sync");
+    public static final AntuIcon ACTION_FOLDER_SYNC_32 = create("actions__32__folder-sync");
+    public static final AntuIcon ACTION_FOLLOWMOUSE_24 = create("actions__24__followmouse");
+    public static final AntuIcon ACTION_FOREIGNKEY_CONSTRAINT_24 = create("actions__24__foreignkey_constraint");
+    public static final AntuIcon ACTION_FORK_24 = create("actions__24__fork");
+    public static final AntuIcon ACTION_FORMAT_ADD_NODE_24 = create("actions__24__format-add-node");
+    public static final AntuIcon ACTION_FORMAT_ALIGN_VERTICAL_BOTTOM_24 = create("actions__24__format-align-vertical-bottom");
+    public static final AntuIcon ACTION_FORMAT_ALIGN_VERTICAL_CENTER_24 = create("actions__24__format-align-vertical-center");
+    public static final AntuIcon ACTION_FORMAT_ALIGN_VERTICAL_TOP_24 = create("actions__24__format-align-vertical-top");
+    public static final AntuIcon ACTION_FORMAT_BORDER_SET_ALL_24 = create("actions__24__format-border-set-all");
+    public static final AntuIcon ACTION_FORMAT_BORDER_SET_BOTTOM_24 = create("actions__24__format-border-set-bottom");
+    public static final AntuIcon ACTION_FORMAT_BORDER_SET_DIAGONAL_BL_TR_24 = create("actions__24__format-border-set-diagonal-bl-tr");
+    public static final AntuIcon ACTION_FORMAT_BORDER_SET_DIAGONAL_TL_BR_24 = create("actions__24__format-border-set-diagonal-tl-br");
+    public static final AntuIcon ACTION_FORMAT_BORDER_SET_EXTERNAL_24 = create("actions__24__format-border-set-external");
+    public static final AntuIcon ACTION_FORMAT_BORDER_SET_INTERNAL_24 = create("actions__24__format-border-set-internal");
+    public static final AntuIcon ACTION_FORMAT_BORDER_SET_INTERNAL_HORIZONTAL_24 = create("actions__24__format-border-set-internal-horizontal");
+    public static final AntuIcon ACTION_FORMAT_BORDER_SET_INTERNAL_VERTICAL_24 = create("actions__24__format-border-set-internal-vertical");
+    public static final AntuIcon ACTION_FORMAT_BORDER_SET_LEFT_24 = create("actions__24__format-border-set-left");
+    public static final AntuIcon ACTION_FORMAT_BORDER_SET_NONE_24 = create("actions__24__format-border-set-none");
+    public static final AntuIcon ACTION_FORMAT_BORDER_SET_RIGHT_24 = create("actions__24__format-border-set-right");
+    public static final AntuIcon ACTION_FORMAT_BORDER_SET_TOP_24 = create("actions__24__format-border-set-top");
+    public static final AntuIcon ACTION_FORMAT_BORDER_STYLE_24 = create("actions__24__format-border-style");
+    public static final AntuIcon ACTION_FORMAT_BREAK_NODE_24 = create("actions__24__format-break-node");
+    public static final AntuIcon ACTION_FORMAT_CONNECT_NODE_24 = create("actions__24__format-connect-node");
+    public static final AntuIcon ACTION_FORMAT_CONVERT_TO_PATH_24 = create("actions__24__format-convert-to-path");
+    public static final AntuIcon ACTION_FORMAT_CURRENCY_24 = create("actions__24__format-currency");
+    public static final AntuIcon ACTION_FORMAT_DISCONNECT_NODE_24 = create("actions__24__format-disconnect-node");
+    public static final AntuIcon ACTION_FORMAT_FILL_COLOR_24 = create("actions__24__format-fill-color");
+    public static final AntuIcon ACTION_FORMAT_FONT_SIZE_LESS_24 = create("actions__24__format-font-size-less");
+    public static final AntuIcon ACTION_FORMAT_FONT_SIZE_MORE_24 = create("actions__24__format-font-size-more");
+    public static final AntuIcon ACTION_FORMAT_INDENT_LESS_24 = create("actions__24__format-indent-less");
+    public static final AntuIcon ACTION_FORMAT_INDENT_MORE_24 = create("actions__24__format-indent-more");
+    public static final AntuIcon ACTION_FORMAT_INSERT_NODE_24 = create("actions__24__format-insert-node");
+    public static final AntuIcon ACTION_FORMAT_JOIN_NODE_24 = create("actions__24__format-join-node");
+    public static final AntuIcon ACTION_FORMAT_JUSTIFY_CENTER_24 = create("actions__24__format-justify-center");
+    public static final AntuIcon ACTION_FORMAT_JUSTIFY_FILL_24 = create("actions__24__format-justify-fill");
+    public static final AntuIcon ACTION_FORMAT_JUSTIFY_LEFT_24 = create("actions__24__format-justify-left");
+    public static final AntuIcon ACTION_FORMAT_JUSTIFY_RIGHT_24 = create("actions__24__format-justify-right");
+    public static final AntuIcon ACTION_FORMAT_LINE_SPACING_DOUBLE_24 = create("actions__24__format-line-spacing-double");
+    public static final AntuIcon ACTION_FORMAT_LINE_SPACING_NORMAL_24 = create("actions__24__format-line-spacing-normal");
+    public static final AntuIcon ACTION_FORMAT_LINE_SPACING_TRIPLE_24 = create("actions__24__format-line-spacing-triple");
+    public static final AntuIcon ACTION_FORMAT_LIST_ORDERED_24 = create("actions__24__format-list-ordered");
+    public static final AntuIcon ACTION_FORMAT_LIST_UNORDERED_24 = create("actions__24__format-list-unordered");
+    public static final AntuIcon ACTION_FORMAT_NODE_CORNER_24 = create("actions__24__format-node-corner");
+    public static final AntuIcon ACTION_FORMAT_NODE_CURVE_24 = create("actions__24__format-node-curve");
+    public static final AntuIcon ACTION_FORMAT_NODE_LINE_24 = create("actions__24__format-node-line");
+    public static final AntuIcon ACTION_FORMAT_NODE_SMOOTH_24 = create("actions__24__format-node-smooth");
+    public static final AntuIcon ACTION_FORMAT_NODE_SYMMETRIC_24 = create("actions__24__format-node-symmetric");
+    public static final AntuIcon ACTION_FORMAT_NUMBER_PERCENT_24 = create("actions__24__format-number-percent");
+    public static final AntuIcon ACTION_FORMAT_PRECISION_LESS_24 = create("actions__24__format-precision-less");
+    public static final AntuIcon ACTION_FORMAT_PRECISION_MORE_24 = create("actions__24__format-precision-more");
+    public static final AntuIcon ACTION_FORMAT_REMOVE_NODE_24 = create("actions__24__format-remove-node");
+    public static final AntuIcon ACTION_FORMAT_SEGMENT_CURVE_24 = create("actions__24__format-segment-curve");
+    public static final AntuIcon ACTION_FORMAT_SEGMENT_LINE_24 = create("actions__24__format-segment-line");
+    public static final AntuIcon ACTION_FORMAT_STROKE_COLOR_24 = create("actions__24__format-stroke-color");
+    public static final AntuIcon ACTION_FORMAT_STROKE_COLOR_32 = create("actions__32__format-stroke-color");
+    public static final AntuIcon ACTION_FORMAT_TEXT_BLOCKQUOTE_24 = create("actions__24__format-text-blockquote");
+    public static final AntuIcon ACTION_FORMAT_TEXT_BOLD_24 = create("actions__24__format-text-bold");
+    public static final AntuIcon ACTION_FORMAT_TEXT_CAPITALIZE_24 = create("actions__24__format-text-capitalize");
+    public static final AntuIcon ACTION_FORMAT_TEXT_CODE_24 = create("actions__24__format-text-code");
+    public static final AntuIcon ACTION_FORMAT_TEXT_COLOR_24 = create("actions__24__format-text-color");
+    public static final AntuIcon ACTION_FORMAT_TEXT_DIRECTION_HORIZONTAL_24 = create("actions__24__format-text-direction-horizontal");
+    public static final AntuIcon ACTION_FORMAT_TEXT_DIRECTION_LTR_24 = create("actions__24__format-text-direction-ltr");
+    public static final AntuIcon ACTION_FORMAT_TEXT_DIRECTION_RTL_24 = create("actions__24__format-text-direction-rtl");
+    public static final AntuIcon ACTION_FORMAT_TEXT_DIRECTION_VERTICAL_24 = create("actions__24__format-text-direction-vertical");
+    public static final AntuIcon ACTION_FORMAT_TEXT_ITALIC_24 = create("actions__24__format-text-italic");
+    public static final AntuIcon ACTION_FORMAT_TEXT_LOWERCASE_24 = create("actions__24__format-text-lowercase");
+    public static final AntuIcon ACTION_FORMAT_TEXT_STRIKETHROUGH_24 = create("actions__24__format-text-strikethrough");
+    public static final AntuIcon ACTION_FORMAT_TEXT_SUBSCRIPT_24 = create("actions__24__format-text-subscript");
+    public static final AntuIcon ACTION_FORMAT_TEXT_SUPERSCRIPT_24 = create("actions__24__format-text-superscript");
+    public static final AntuIcon ACTION_FORMAT_TEXT_SYMBOL_24 = create("actions__24__format-text-symbol");
+    public static final AntuIcon ACTION_FORMAT_TEXT_UNDERLINE_24 = create("actions__24__format-text-underline");
+    public static final AntuIcon ACTION_FORMAT_TEXT_UPPERCASE_24 = create("actions__24__format-text-uppercase");
+    public static final AntuIcon ACTION_FORMULA_24 = create("actions__24__formula");
+    public static final AntuIcon ACTION_FREEROTATION_24 = create("actions__24__freerotation");
+    public static final AntuIcon ACTION_GAMES_ACHIEVEMENTS_24 = create("actions__24__games-achievements");
+    public static final AntuIcon ACTION_GAMES_CONFIG_BACKGROUND_24 = create("actions__24__games-config-background");
+    public static final AntuIcon ACTION_GAMES_CONFIG_BOARD_24 = create("actions__24__games-config-board");
+    public static final AntuIcon ACTION_GAMES_CONFIG_CUSTOM_24 = create("actions__24__games-config-custom");
+    public static final AntuIcon ACTION_GAMES_CONFIG_OPTIONS_24 = create("actions__24__games-config-options");
+    public static final AntuIcon ACTION_GAMES_CONFIG_THEME_24 = create("actions__24__games-config-theme");
+    public static final AntuIcon ACTION_GAMES_CONFIG_TILES_24 = create("actions__24__games-config-tiles");
+    public static final AntuIcon ACTION_GAMES_DIFFICULT_24 = create("actions__24__games-difficult");
+    public static final AntuIcon ACTION_GAMES_ENDTURN_24 = create("actions__24__games-endturn");
+    public static final AntuIcon ACTION_GAMES_HIGHSCORES_24 = create("actions__24__games-highscores");
+    public static final AntuIcon ACTION_GAMES_HINT_24 = create("actions__24__games-hint");
+    public static final AntuIcon ACTION_GAMES_SOLVE_24 = create("actions__24__games-solve");
+    public static final AntuIcon ACTION_GEANY_BUILD_24 = create("actions__24__geany-build");
+    public static final AntuIcon ACTION_GEANY_CLOSE_ALL_24 = create("actions__24__geany-close-all");
+    public static final AntuIcon ACTION_GEANY_SAVE_ALL_24 = create("actions__24__geany-save-all");
+    public static final AntuIcon ACTION_GENERALISE_24 = create("actions__24__generalise");
+    public static final AntuIcon ACTION_GET_HOT_NEW_STUFF_24 = create("actions__24__get-hot-new-stuff");
+    public static final AntuIcon ACTION_GO_BOTTOM_24 = create("actions__24__go-bottom");
+    public static final AntuIcon ACTION_GO_DOWN_24 = create("actions__24__go-down");
+    public static final AntuIcon ACTION_GO_DOWN_SEARCH_24 = create("actions__24__go-down-search");
+    public static final AntuIcon ACTION_GO_FIRST_24 = create("actions__24__go-first");
+    public static final AntuIcon ACTION_GO_FIRST_VIEW_24 = create("actions__24__go-first-view");
+    public static final AntuIcon ACTION_GO_FIRST_VIEW_PAGE_24 = create("actions__24__go-first-view-page");
+    public static final AntuIcon ACTION_GO_HOME_24 = create("actions__24__go-home");
+    public static final AntuIcon ACTION_GO_JUMP_24 = create("actions__24__go-jump");
+    public static final AntuIcon ACTION_GO_JUMP_DECLARATION_24 = create("actions__24__go-jump-declaration");
+    public static final AntuIcon ACTION_GO_JUMP_DEFINITION_24 = create("actions__24__go-jump-definition");
+    public static final AntuIcon ACTION_GO_JUMP_LOCATIONBAR_24 = create("actions__24__go-jump-locationbar");
+    public static final AntuIcon ACTION_GO_JUMP_TODAY_24 = create("actions__24__go-jump-today");
+    public static final AntuIcon ACTION_GO_LAST_24 = create("actions__24__go-last");
+    public static final AntuIcon ACTION_GO_LAST_VIEW_24 = create("actions__24__go-last-view");
+    public static final AntuIcon ACTION_GO_LAST_VIEW_PAGE_24 = create("actions__24__go-last-view-page");
+    public static final AntuIcon ACTION_GO_NEXT_24 = create("actions__24__go-next");
+    public static final AntuIcon ACTION_GO_NEXT_CONTEXT_24 = create("actions__24__go-next-context");
+    public static final AntuIcon ACTION_GO_NEXT_USE_24 = create("actions__24__go-next-use");
+    public static final AntuIcon ACTION_GO_NEXT_VIEW_24 = create("actions__24__go-next-view");
+    public static final AntuIcon ACTION_GO_NEXT_VIEW_PAGE_24 = create("actions__24__go-next-view-page");
+    public static final AntuIcon ACTION_GO_PARENT_FOLDER_24 = create("actions__24__go-parent-folder");
+    public static final AntuIcon ACTION_GO_PARENT_FOLDER_32 = create("actions__32__go-parent-folder");
+    public static final AntuIcon ACTION_GO_PREVIOUS_24 = create("actions__24__go-previous");
+    public static final AntuIcon ACTION_GO_PREVIOUS_CONTEXT_24 = create("actions__24__go-previous-context");
+    public static final AntuIcon ACTION_GO_PREVIOUS_USE_24 = create("actions__24__go-previous-use");
+    public static final AntuIcon ACTION_GO_PREVIOUS_VIEW_24 = create("actions__24__go-previous-view");
+    public static final AntuIcon ACTION_GO_PREVIOUS_VIEW_PAGE_24 = create("actions__24__go-previous-view-page");
+    public static final AntuIcon ACTION_GO_TOP_24 = create("actions__24__go-top");
+    public static final AntuIcon ACTION_GO_UP_24 = create("actions__24__go-up");
+    public static final AntuIcon ACTION_GO_UP_SEARCH_24 = create("actions__24__go-up-search");
+    public static final AntuIcon ACTION_GPG_24 = create("actions__24__gpg");
+    public static final AntuIcon ACTION_GPGSM_24 = create("actions__24__gpgsm");
+    public static final AntuIcon ACTION_GRID_AXONOMETRIC_24 = create("actions__24__grid-axonometric");
+    public static final AntuIcon ACTION_GRID_RECTANGULAR_24 = create("actions__24__grid-rectangular");
+    public static final AntuIcon ACTION_GTK_ADD_24 = create("actions__24__gtk-add");
+    public static final AntuIcon ACTION_GTK_APPLY_24 = create("actions__24__gtk-apply");
+    public static final AntuIcon ACTION_GTK_AUTHENTICATION_24 = create("actions__24__gtk-authentication");
+    public static final AntuIcon ACTION_GTK_BOLD_24 = create("actions__24__gtk-bold");
+    public static final AntuIcon ACTION_GTK_CANCEL_24 = create("actions__24__gtk-cancel");
+    public static final AntuIcon ACTION_GTK_CDROM_24 = create("actions__24__gtk-cdrom");
+    public static final AntuIcon ACTION_GTK_CLEAR_24 = create("actions__24__gtk-clear");
+    public static final AntuIcon ACTION_GTK_CLOSE_24 = create("actions__24__gtk-close");
+    public static final AntuIcon ACTION_GTK_COLOR_PICKER_24 = create("actions__24__gtk-color-picker");
+    public static final AntuIcon ACTION_GTK_CONNECT_24 = create("actions__24__gtk-connect");
+    public static final AntuIcon ACTION_GTK_CONVERT_24 = create("actions__24__gtk-convert");
+    public static final AntuIcon ACTION_GTK_DISCONNECT_24 = create("actions__24__gtk-disconnect");
+    public static final AntuIcon ACTION_GTK_EDIT_24 = create("actions__24__gtk-edit");
+    public static final AntuIcon ACTION_GTK_EXECUTE_24 = create("actions__24__gtk-execute");
+    public static final AntuIcon ACTION_GTK_FLOPPY_24 = create("actions__24__gtk-floppy");
+    public static final AntuIcon ACTION_GTK_INDEX_24 = create("actions__24__gtk-index");
+    public static final AntuIcon ACTION_GTK_NO_24 = create("actions__24__gtk-no");
+    public static final AntuIcon ACTION_GTK_OK_24 = create("actions__24__gtk-ok");
+    public static final AntuIcon ACTION_GTK_PREFERENCES_24 = create("actions__24__gtk-preferences");
+    public static final AntuIcon ACTION_GTK_PROPERTIES_24 = create("actions__24__gtk-properties");
+    public static final AntuIcon ACTION_GTK_QUIT_24 = create("actions__24__gtk-quit");
+    public static final AntuIcon ACTION_GTK_SELECT_COLOR_24 = create("actions__24__gtk-select-color");
+    public static final AntuIcon ACTION_GTK_SELECT_FONT_24 = create("actions__24__gtk-select-font");
+    public static final AntuIcon ACTION_GTK_STOP_24 = create("actions__24__gtk-stop");
+    public static final AntuIcon ACTION_GTK_TAB_DUPLICATE_24 = create("actions__24__gtk-tab-duplicate");
+    public static final AntuIcon ACTION_GTK_TAB_NEW_24 = create("actions__24__gtk-tab-new");
+    public static final AntuIcon ACTION_GTK_UNDELETE_LTR_24 = create("actions__24__gtk-undelete-ltr");
+    public static final AntuIcon ACTION_GTK_UNDELETE_RTL_24 = create("actions__24__gtk-undelete-rtl");
+    public static final AntuIcon ACTION_GTK_YES_24 = create("actions__24__gtk-yes");
+    public static final AntuIcon ACTION_HELP_ABOUT_24 = create("actions__24__help-about");
+    public static final AntuIcon ACTION_HELP_ABOUT_32 = create("actions__32__help-about");
+    public static final AntuIcon ACTION_HELP_CONTENTS_24 = create("actions__24__help-contents");
+    public static final AntuIcon ACTION_HELP_CONTEXTUAL_24 = create("actions__24__help-contextual");
+    public static final AntuIcon ACTION_HELP_DONATE_24 = create("actions__24__help-donate");
+    public static final AntuIcon ACTION_HELP_FEEDBACK_24 = create("actions__24__help-feedback");
+    public static final AntuIcon ACTION_HELP_HINT_24 = create("actions__24__help-hint");
+    public static final AntuIcon ACTION_HELP_KEYBORD_SHORTCUTS_24 = create("actions__24__help-keybord-shortcuts");
+    public static final AntuIcon ACTION_HELP_WHATSTHIS_24 = create("actions__24__help-whatsthis");
+    public static final AntuIcon ACTION_HELP_WHATSTHIS_32 = create("actions__32__help-whatsthis");
+    public static final AntuIcon ACTION_HIDEMOUSE_24 = create("actions__24__hidemouse");
+    public static final AntuIcon ACTION_HINT_24 = create("actions__24__hint");
+    public static final AntuIcon ACTION_HOTPIXELS_24 = create("actions__24__hotpixels");
+    public static final AntuIcon ACTION_IDENTITY_24 = create("actions__24__identity");
+    public static final AntuIcon ACTION_IM_AIM_24 = create("actions__24__im-aim");
+    public static final AntuIcon ACTION_IM_BAN_KICK_USER_24 = create("actions__24__im-ban-kick-user");
+    public static final AntuIcon ACTION_IM_BAN_USER_24 = create("actions__24__im-ban-user");
+    public static final AntuIcon ACTION_IM_FACEBOOK_24 = create("actions__24__im-facebook");
+    public static final AntuIcon ACTION_IM_GADUGADU_24 = create("actions__24__im-gadugadu");
+    public static final AntuIcon ACTION_IM_GOOGLE_24 = create("actions__24__im-google");
+    public static final AntuIcon ACTION_IM_GOOGLE_TALK_24 = create("actions__24__im-google-talk");
+    public static final AntuIcon ACTION_IM_ICQ_24 = create("actions__24__im-icq");
+    public static final AntuIcon ACTION_IM_IDENTICA_24 = create("actions__24__im-identi.ca");
+    public static final AntuIcon ACTION_IM_INVISIBLE_USER_24 = create("actions__24__im-invisible-user");
+    public static final AntuIcon ACTION_IM_IRC_24 = create("actions__24__im-irc");
+    public static final AntuIcon ACTION_IM_JABBER_24 = create("actions__24__im-jabber");
+    public static final AntuIcon ACTION_IM_KICK_USER_24 = create("actions__24__im-kick-user");
+    public static final AntuIcon ACTION_IM_MSN_24 = create("actions__24__im-msn");
+    public static final AntuIcon ACTION_IM_QQ_24 = create("actions__24__im-qq");
+    public static final AntuIcon ACTION_IM_SKYPE_24 = create("actions__24__im-skype");
+    public static final AntuIcon ACTION_IM_TWITTER_24 = create("actions__24__im-twitter");
+    public static final AntuIcon ACTION_IM_USER_24 = create("actions__24__im-user");
+    public static final AntuIcon ACTION_IM_USER_AWAY_24 = create("actions__24__im-user-away");
+    public static final AntuIcon ACTION_IM_USER_BUSY_24 = create("actions__24__im-user-busy");
+    public static final AntuIcon ACTION_IM_USER_OFFLINE_24 = create("actions__24__im-user-offline");
+    public static final AntuIcon ACTION_IM_USER_ONLINE_24 = create("actions__24__im-user-online");
+    public static final AntuIcon ACTION_IM_YAHOO_24 = create("actions__24__im-yahoo");
+    public static final AntuIcon ACTION_IMAGECOMMENT_24 = create("actions__24__imagecomment");
+    public static final AntuIcon ACTION_INFO_AMAROK_24 = create("actions__24__Info-amarok");
+    public static final AntuIcon ACTION_INITIAL_STATE_24 = create("actions__24__initial_state");
+    public static final AntuIcon ACTION_INPAINTING_24 = create("actions__24__inpainting");
+    public static final AntuIcon ACTION_INSERT_BUTTON_24 = create("actions__24__insert-button");
+    public static final AntuIcon ACTION_INSERT_ENDNOTE_24 = create("actions__24__insert-endnote");
+    public static final AntuIcon ACTION_INSERT_FOOTNOTE_24 = create("actions__24__insert-footnote");
+    public static final AntuIcon ACTION_INSERT_HORIZONTAL_RULE_24 = create("actions__24__insert-horizontal-rule");
+    public static final AntuIcon ACTION_INSERT_IMAGE_24 = create("actions__24__insert-image");
+    public static final AntuIcon ACTION_INSERT_LINK_24 = create("actions__24__insert-link");
+    public static final AntuIcon ACTION_INSERT_MATH_EXPRESSION_24 = create("actions__24__insert-math-expression");
+    public static final AntuIcon ACTION_INSERT_MORE_MARK_24 = create("actions__24__insert-more-mark");
+    public static final AntuIcon ACTION_INSERT_PAGE_BREAK_24 = create("actions__24__insert-page-break");
+    public static final AntuIcon ACTION_INSERT_TABLE_24 = create("actions__24__insert-table");
+    public static final AntuIcon ACTION_INSERT_TABLE_OF_CONTENTS_24 = create("actions__24__insert-table-of-contents");
+    public static final AntuIcon ACTION_INSERT_TABLEOFCONTENTS_24 = create("actions__24__insert-tableofcontents");
+    public static final AntuIcon ACTION_INSERT_TEXT_24 = create("actions__24__insert-text");
+    public static final AntuIcon ACTION_INSERT_TEXT_FRAME_24 = create("actions__24__insert-text-frame");
+    public static final AntuIcon ACTION_INTERNET_AMAROK_24 = create("actions__24__internet-amarok");
+    public static final AntuIcon ACTION_INVERTIMAGE_24 = create("actions__24__invertimage");
+    public static final AntuIcon ACTION_IRC_CHANNEL_ACTIVE_24 = create("actions__24__irc-channel-active");
+    public static final AntuIcon ACTION_IRC_CHANNEL_INACTIVE_24 = create("actions__24__irc-channel-inactive");
+    public static final AntuIcon ACTION_IRC_CLOSE_CHANNEL_24 = create("actions__24__irc-close-channel");
+    public static final AntuIcon ACTION_IRC_JOIN_CHANNEL_24 = create("actions__24__irc-join-channel");
+    public static final AntuIcon ACTION_IRC_OPERATOR_24 = create("actions__24__irc-operator");
+    public static final AntuIcon ACTION_IRC_REMOVE_OPERATOR_24 = create("actions__24__irc-remove-operator");
+    public static final AntuIcon ACTION_IRC_UNVOICE_24 = create("actions__24__irc-unvoice");
+    public static final AntuIcon ACTION_IRC_VOICE_24 = create("actions__24__irc-voice");
+    public static final AntuIcon ACTION_JOIN_24 = create("actions__24__join");
+    public static final AntuIcon ACTION_JOURNAL_NEW_24 = create("actions__24__journal-new");
+    public static final AntuIcon ACTION_JUMP_TODAY_24 = create("actions__24__jump-today");
+    public static final AntuIcon ACTION_JUNCTION_24 = create("actions__24__junction");
+    public static final AntuIcon ACTION_KDENLIVE_ADD_CLIP_24 = create("actions__24__kdenlive-add-clip");
+    public static final AntuIcon ACTION_KDENLIVE_ADD_COLOR_CLIP_24 = create("actions__24__kdenlive-add-color-clip");
+    public static final AntuIcon ACTION_KDENLIVE_ADD_SLIDE_CLIP_24 = create("actions__24__kdenlive-add-slide-clip");
+    public static final AntuIcon ACTION_KDENLIVE_ADD_TEXT_CLIP_24 = create("actions__24__kdenlive-add-text-clip");
+    public static final AntuIcon ACTION_KDENLIVE_ALIGN_BOTTOM_24 = create("actions__24__kdenlive-align-bottom");
+    public static final AntuIcon ACTION_KDENLIVE_ALIGN_HOR_24 = create("actions__24__kdenlive-align-hor");
+    public static final AntuIcon ACTION_KDENLIVE_ALIGN_LEFT_24 = create("actions__24__kdenlive-align-left");
+    public static final AntuIcon ACTION_KDENLIVE_ALIGN_NONE_24 = create("actions__24__kdenlive-align-none");
+    public static final AntuIcon ACTION_KDENLIVE_ALIGN_RIGHT_24 = create("actions__24__kdenlive-align-right");
+    public static final AntuIcon ACTION_KDENLIVE_ALIGN_TOP_24 = create("actions__24__kdenlive-align-top");
+    public static final AntuIcon ACTION_KDENLIVE_ALIGN_VERT_24 = create("actions__24__kdenlive-align-vert");
+    public static final AntuIcon ACTION_KDENLIVE_CUSTOM_EFFECT_24 = create("actions__24__kdenlive-custom-effect");
+    public static final AntuIcon ACTION_KDENLIVE_DELEFFECT_24 = create("actions__24__kdenlive-deleffect");
+    public static final AntuIcon ACTION_KDENLIVE_DOWN_24 = create("actions__24__kdenlive-down");
+    public static final AntuIcon ACTION_KDENLIVE_HIDE_AUDIO_24 = create("actions__24__kdenlive-hide-audio");
+    public static final AntuIcon ACTION_KDENLIVE_HIDE_VIDEO_24 = create("actions__24__kdenlive-hide-video");
+    public static final AntuIcon ACTION_KDENLIVE_INSERT_EDIT_24 = create("actions__24__kdenlive-insert-edit");
+    public static final AntuIcon ACTION_KDENLIVE_INSERT_RECT_24 = create("actions__24__kdenlive-insert-rect");
+    public static final AntuIcon ACTION_KDENLIVE_INSERT_UNICODE_24 = create("actions__24__kdenlive-insert-unicode");
+    public static final AntuIcon ACTION_KDENLIVE_LOCK_24 = create("actions__24__kdenlive-lock");
+    public static final AntuIcon ACTION_KDENLIVE_MENU_24 = create("actions__24__kdenlive-menu");
+    public static final AntuIcon ACTION_KDENLIVE_NORMAL_EDIT_24 = create("actions__24__kdenlive-normal-edit");
+    public static final AntuIcon ACTION_KDENLIVE_OBJECT_HEIGHT_24 = create("actions__24__kdenlive-object-height");
+    public static final AntuIcon ACTION_KDENLIVE_OBJECT_WIDTH_24 = create("actions__24__kdenlive-object-width");
+    public static final AntuIcon ACTION_KDENLIVE_OVERWRITE_EDIT_24 = create("actions__24__kdenlive-overwrite-edit");
+    public static final AntuIcon ACTION_KDENLIVE_SELECT_ALL_24 = create("actions__24__kdenlive-select-all");
+    public static final AntuIcon ACTION_KDENLIVE_SELECT_IMAGES_24 = create("actions__24__kdenlive-select-images");
+    public static final AntuIcon ACTION_KDENLIVE_SELECT_RECTS_24 = create("actions__24__kdenlive-select-rects");
+    public static final AntuIcon ACTION_KDENLIVE_SELECT_TEXTS_24 = create("actions__24__kdenlive-select-texts");
+    public static final AntuIcon ACTION_KDENLIVE_SELECT_TOOL_24 = create("actions__24__kdenlive-select-tool");
+    public static final AntuIcon ACTION_KDENLIVE_SHOW_AUDIO_24 = create("actions__24__kdenlive-show-audio");
+    public static final AntuIcon ACTION_KDENLIVE_SHOW_AUDIOTHUMB_24 = create("actions__24__kdenlive-show-audiothumb");
+    public static final AntuIcon ACTION_KDENLIVE_SHOW_MARKERS_24 = create("actions__24__kdenlive-show-markers");
+    public static final AntuIcon ACTION_KDENLIVE_SHOW_VIDEO_24 = create("actions__24__kdenlive-show-video");
+    public static final AntuIcon ACTION_KDENLIVE_SHOW_VIDEOTHUMB_24 = create("actions__24__kdenlive-show-videothumb");
+    public static final AntuIcon ACTION_KDENLIVE_SNAP_24 = create("actions__24__kdenlive-snap");
+    public static final AntuIcon ACTION_KDENLIVE_SPACER_TOOL_24 = create("actions__24__kdenlive-spacer-tool");
+    public static final AntuIcon ACTION_KDENLIVE_SPLIT_AUDIO_24 = create("actions__24__kdenlive-split-audio");
+    public static final AntuIcon ACTION_KDENLIVE_TRACK_HAS_EFFECT_24 = create("actions__24__kdenlive-track_has_effect");
+    public static final AntuIcon ACTION_KDENLIVE_UNLOCK_24 = create("actions__24__kdenlive-unlock");
+    public static final AntuIcon ACTION_KDENLIVE_UNSELECT_ALL_24 = create("actions__24__kdenlive-unselect-all");
+    public static final AntuIcon ACTION_KDENLIVE_UP_24 = create("actions__24__kdenlive-up");
+    public static final AntuIcon ACTION_KDENLIVE_ZINDEX_BOTTOM_24 = create("actions__24__kdenlive-zindex-bottom");
+    public static final AntuIcon ACTION_KDENLIVE_ZINDEX_DOWN_24 = create("actions__24__kdenlive-zindex-down");
+    public static final AntuIcon ACTION_KDENLIVE_ZINDEX_TOP_24 = create("actions__24__kdenlive-zindex-top");
+    public static final AntuIcon ACTION_KDENLIVE_ZINDEX_UP_24 = create("actions__24__kdenlive-zindex-up");
+    public static final AntuIcon ACTION_KDENLIVE_ZONE_END_24 = create("actions__24__kdenlive-zone-end");
+    public static final AntuIcon ACTION_KDENLIVE_ZONE_START_24 = create("actions__24__kdenlive-zone-start");
+    public static final AntuIcon ACTION_KDENLIVE_ZOOM_LARGE_24 = create("actions__24__kdenlive-zoom-large");
+    public static final AntuIcon ACTION_KDENLIVE_ZOOM_SMALL_24 = create("actions__24__kdenlive-zoom-small");
+    public static final AntuIcon ACTION_KEY_ENTER_24 = create("actions__24__key-enter");
+    public static final AntuIcon ACTION_KMOUTH_PHRASE_24 = create("actions__24__kmouth-phrase");
+    public static final AntuIcon ACTION_KMOUTH_PHRASE_NEW_24 = create("actions__24__kmouth-phrase-new");
+    public static final AntuIcon ACTION_KMOUTH_PHRASEBOOK_24 = create("actions__24__kmouth-phrasebook");
+    public static final AntuIcon ACTION_KMOUTH_PHRESEBOOK_NEW_24 = create("actions__24__kmouth-phresebook-new");
+    public static final AntuIcon ACTION_KNOTES_ALARM_24 = create("actions__24__knotes_alarm");
+    public static final AntuIcon ACTION_KNOTES_DATE_24 = create("actions__24__knotes_date");
+    public static final AntuIcon ACTION_KNOTES_DELETE_24 = create("actions__24__knotes_delete");
+    public static final AntuIcon ACTION_KONTES_CLOSE_24 = create("actions__24__kontes_close");
+    public static final AntuIcon ACTION_KR_COMBINE_24 = create("actions__24__kr_combine");
+    public static final AntuIcon ACTION_KR_COMPAREDIRS_24 = create("actions__24__kr_comparedirs");
+    public static final AntuIcon ACTION_KR_DISKUSAGE_24 = create("actions__24__kr_diskusage");
+    public static final AntuIcon ACTION_KR_JUMPBACK_24 = create("actions__24__kr_jumpback");
+    public static final AntuIcon ACTION_KR_MOUNTMAN_24 = create("actions__24__kr_mountman");
+    public static final AntuIcon ACTION_KR_SETJUMPBACK_24 = create("actions__24__kr_setjumpback");
+    public static final AntuIcon ACTION_KR_SYNCBROWSE_OFF_24 = create("actions__24__kr_syncbrowse_off");
+    public static final AntuIcon ACTION_KR_SYNCBROWSE_ON_24 = create("actions__24__kr_syncbrowse_on");
+    public static final AntuIcon ACTION_KR_UNSELECT_24 = create("actions__24__kr_unselect");
+    public static final AntuIcon ACTION_KSTARS_CBOUND_24 = create("actions__24__kstars_cbound");
+    public static final AntuIcon ACTION_KSTARS_CLINES_24 = create("actions__24__kstars_clines");
+    public static final AntuIcon ACTION_KSTARS_CNAMES_24 = create("actions__24__kstars_cnames");
+    public static final AntuIcon ACTION_KSTARS_DEEPSKY_24 = create("actions__24__kstars_deepsky");
+    public static final AntuIcon ACTION_KSTARS_EKOS_24 = create("actions__24__kstars_ekos");
+    public static final AntuIcon ACTION_KSTARS_FITSVIEWER_24 = create("actions__24__kstars_fitsviewer");
+    public static final AntuIcon ACTION_KSTARS_GRID_24 = create("actions__24__kstars_grid");
+    public static final AntuIcon ACTION_KSTARS_HGRID_24 = create("actions__24__kstars_hgrid");
+    public static final AntuIcon ACTION_KSTARS_HORIZON_24 = create("actions__24__kstars_horizon");
+    public static final AntuIcon ACTION_KSTARS_INDI_24 = create("actions__24__kstars_indi");
+    public static final AntuIcon ACTION_KSTARS_MW_24 = create("actions__24__kstars_mw");
+    public static final AntuIcon ACTION_KSTARS_SATELLITES_24 = create("actions__24__kstars_satellites");
+    public static final AntuIcon ACTION_KSTARS_SOLARSYSTEM_24 = create("actions__24__kstars_solarsystem");
+    public static final AntuIcon ACTION_KSTARS_SUPERNOVAE_24 = create("actions__24__kstars_supernovae");
+    public static final AntuIcon ACTION_KT_ADD_FEEDS_24 = create("actions__24__kt-add-feeds");
+    public static final AntuIcon ACTION_KT_ADD_FILTERS_24 = create("actions__24__kt-add-filters");
+    public static final AntuIcon ACTION_KT_BANDWIDTH_SCHEDULER_24 = create("actions__24__kt-bandwidth-scheduler");
+    public static final AntuIcon ACTION_KT_CHANGE_TRACKER_24 = create("actions__24__kt-change-tracker");
+    public static final AntuIcon ACTION_KT_CHECK_DATA_24 = create("actions__24__kt-check-data");
+    public static final AntuIcon ACTION_KT_CHUNKS_24 = create("actions__24__kt-chunks");
+    public static final AntuIcon ACTION_KT_ENCRYPTED_24 = create("actions__24__kt-encrypted");
+    public static final AntuIcon ACTION_KT_INFO_WIDGET_24 = create("actions__24__kt-info-widget");
+    public static final AntuIcon ACTION_KT_MAGNET_24 = create("actions__24__kt-magnet");
+    public static final AntuIcon ACTION_KT_PAUSE_24 = create("actions__24__kt-pause");
+    public static final AntuIcon ACTION_KT_PLUGINS_24 = create("actions__24__kt-plugins");
+    public static final AntuIcon ACTION_KT_QUEUE_MANAGER_24 = create("actions__24__kt-queue-manager");
+    public static final AntuIcon ACTION_KT_REMOVE_24 = create("actions__24__kt-remove");
+    public static final AntuIcon ACTION_KT_REMOVE_FEEDS_24 = create("actions__24__kt-remove-feeds");
+    public static final AntuIcon ACTION_KT_REMOVE_FILTERS_24 = create("actions__24__kt-remove-filters");
+    public static final AntuIcon ACTION_KT_RESTORE_DEFAULTS_24 = create("actions__24__kt-restore-defaults");
+    public static final AntuIcon ACTION_KT_SET_MAX_DOWNLOAD_SPEED_24 = create("actions__24__kt-set-max-download-speed");
+    public static final AntuIcon ACTION_KT_SET_MAX_UPLOAD_SPEED_24 = create("actions__24__kt-set-max-upload-speed");
+    public static final AntuIcon ACTION_KT_SHOW_STATUSBAR_24 = create("actions__24__kt-show-statusbar");
+    public static final AntuIcon ACTION_KT_SPEED_LIMITS_24 = create("actions__24__kt-speed-limits");
+    public static final AntuIcon ACTION_KT_START_24 = create("actions__24__kt-start");
+    public static final AntuIcon ACTION_KT_START_ALL_24 = create("actions__24__kt-start-all");
+    public static final AntuIcon ACTION_KT_STOP_24 = create("actions__24__kt-stop");
+    public static final AntuIcon ACTION_KT_STOP_ALL_24 = create("actions__24__kt-stop-all");
+    public static final AntuIcon ACTION_KTNEF_EXTRACT_TO_24 = create("actions__24__ktnef_extract_to");
+    public static final AntuIcon ACTION_LABEL_AMAROK_24 = create("actions__24__label-amarok");
+    public static final AntuIcon ACTION_LABPLOT_AXIS_HORIZONTAL_24 = create("actions__24__labplot-axis-horizontal");
+    public static final AntuIcon ACTION_LABPLOT_AXIS_VERTICAL_24 = create("actions__24__labplot-axis-vertical");
+    public static final AntuIcon ACTION_LABPLOT_SHIFT_DOWN_Y_24 = create("actions__24__labplot-shift-down-y");
+    public static final AntuIcon ACTION_LABPLOT_SHIFT_LEFT_X_24 = create("actions__24__labplot-shift-left-x");
+    public static final AntuIcon ACTION_LABPLOT_SHIFT_RIGHT_X_24 = create("actions__24__labplot-shift-right-x");
+    public static final AntuIcon ACTION_LABPLOT_SHIFT_UP_Y_24 = create("actions__24__labplot-shift-up-y");
+    public static final AntuIcon ACTION_LABPLOT_TEX_LOGO_24 = create("actions__24__labplot-TeX-logo");
+    public static final AntuIcon ACTION_LABPLOT_XY_CURVE_24 = create("actions__24__labplot-xy-curve");
+    public static final AntuIcon ACTION_LABPLOT_XY_EQUATION_CURVE_24 = create("actions__24__labplot-xy-equation-curve");
+    public static final AntuIcon ACTION_LABPLOT_XY_FIT_CURVE_24 = create("actions__24__labplot-xy-fit-curve");
+    public static final AntuIcon ACTION_LABPLOT_XY_PLOT_FOUR_AXES_24 = create("actions__24__labplot-xy-plot-four-axes");
+    public static final AntuIcon ACTION_LABPLOT_XY_PLOT_TWO_AXES_24 = create("actions__24__labplot-xy-plot-two-axes");
+    public static final AntuIcon ACTION_LABPLOT_XY_PLOT_TWO_AXES_CENTERED_24 = create("actions__24__labplot-xy-plot-two-axes-centered");
+    public static final AntuIcon ACTION_LABPLOT_XY_PLOT_TWO_AXES_CENTERED_ORIGIN_24 = create("actions__24__labplot-xy-plot-two-axes-centered-origin");
+    public static final AntuIcon ACTION_LABPLOT_ZOOM_IN_X_24 = create("actions__24__labplot-zoom-in-x");
+    public static final AntuIcon ACTION_LABPLOT_ZOOM_IN_Y_24 = create("actions__24__labplot-zoom-in-y");
+    public static final AntuIcon ACTION_LABPLOT_ZOOM_OUT_X_24 = create("actions__24__labplot-zoom-out-x");
+    public static final AntuIcon ACTION_LABPLOT_ZOOM_OUT_Y_24 = create("actions__24__labplot-zoom-out-y");
+    public static final AntuIcon ACTION_LAYER_BOTTOM_24 = create("actions__24__layer-bottom");
+    public static final AntuIcon ACTION_LAYER_DELETE_24 = create("actions__24__layer-delete");
+    public static final AntuIcon ACTION_LAYER_DUPLICATE_24 = create("actions__24__layer-duplicate");
+    public static final AntuIcon ACTION_LAYER_LOWER_24 = create("actions__24__layer-lower");
+    public static final AntuIcon ACTION_LAYER_NEW_24 = create("actions__24__layer-new");
+    public static final AntuIcon ACTION_LAYER_NEXT_24 = create("actions__24__layer-next");
+    public static final AntuIcon ACTION_LAYER_PREVIOUS_24 = create("actions__24__layer-previous");
+    public static final AntuIcon ACTION_LAYER_RAISE_24 = create("actions__24__layer-raise");
+    public static final AntuIcon ACTION_LAYER_RENAME_24 = create("actions__24__layer-rename");
+    public static final AntuIcon ACTION_LAYER_TOP_24 = create("actions__24__layer-top");
+    public static final AntuIcon ACTION_LAYER_VISIBLE_OFF_24 = create("actions__24__layer-visible-off");
+    public static final AntuIcon ACTION_LAYER_VISIBLE_ON_24 = create("actions__24__layer-visible-on");
+    public static final AntuIcon ACTION_LENSAUTOFIX_24 = create("actions__24__lensautofix");
+    public static final AntuIcon ACTION_LENSDISTORTION_24 = create("actions__24__lensdistortion");
+    public static final AntuIcon ACTION_LICENSE_24 = create("actions__24__license");
+    public static final AntuIcon ACTION_LIGHTTABLE_24 = create("actions__24__lighttable");
+    public static final AntuIcon ACTION_LIGHTTABLEADD_24 = create("actions__24__lighttableadd");
+    public static final AntuIcon ACTION_LINES_CONNECTOR_24 = create("actions__24__lines-connector");
+    public static final AntuIcon ACTION_LIST_ADD_24 = create("actions__24__list-add");
+    public static final AntuIcon ACTION_LIST_ADD_FONT_24 = create("actions__24__list-add-font");
+    public static final AntuIcon ACTION_LIST_ADD_USER_24 = create("actions__24__list-add-user");
+    public static final AntuIcon ACTION_LIST_REMOVE_24 = create("actions__24__list-remove");
+    public static final AntuIcon ACTION_LIST_REMOVE_USER_24 = create("actions__24__list-remove-user");
+    public static final AntuIcon ACTION_LIST_RESOURCE_ADD_24 = create("actions__24__list-resource-add");
+    public static final AntuIcon ACTION_LOVE_AMAROK_24 = create("actions__24__love-amarok");
+    public static final AntuIcon ACTION_MAIL_ATTACHMENT_24 = create("actions__24__mail-attachment");
+    public static final AntuIcon ACTION_MAIL_ENCRYPTED_24 = create("actions__24__mail-encrypted");
+    public static final AntuIcon ACTION_MAIL_ENCRYPTED_FULL_24 = create("actions__24__mail-encrypted-full");
+    public static final AntuIcon ACTION_MAIL_ENCRYPTED_PART_24 = create("actions__24__mail-encrypted-part");
+    public static final AntuIcon ACTION_MAIL_FLAG_24 = create("actions__24__mail-flag");
+    public static final AntuIcon ACTION_MAIL_FORWARD_24 = create("actions__24__mail-forward");
+    public static final AntuIcon ACTION_MAIL_FORWARDED_24 = create("actions__24__mail-forwarded");
+    public static final AntuIcon ACTION_MAIL_FORWARDED_REPLIED_24 = create("actions__24__mail-forwarded-replied");
+    public static final AntuIcon ACTION_MAIL_INVITATION_24 = create("actions__24__mail-invitation");
+    public static final AntuIcon ACTION_MAIL_MARK_IMPORTANT_24 = create("actions__24__mail-mark-important");
+    public static final AntuIcon ACTION_MAIL_MARK_JUNK_24 = create("actions__24__mail-mark-junk");
+    public static final AntuIcon ACTION_MAIL_MARK_NOTJUNK_24 = create("actions__24__mail-mark-notjunk");
+    public static final AntuIcon ACTION_MAIL_MARK_READ_24 = create("actions__24__mail-mark-read");
+    public static final AntuIcon ACTION_MAIL_MARK_TASK_24 = create("actions__24__mail-mark-task");
+    public static final AntuIcon ACTION_MAIL_MARK_UNREAD_24 = create("actions__24__mail-mark-unread");
+    public static final AntuIcon ACTION_MAIL_MARK_UNREAD_NEW_24 = create("actions__24__mail-mark-unread-new");
+    public static final AntuIcon ACTION_MAIL_MEETING_REQUEST_REPLY_24 = create("actions__24__mail-meeting-request-reply");
+    public static final AntuIcon ACTION_MAIL_MESSAGE_NEW_24 = create("actions__24__mail-message-new");
+    public static final AntuIcon ACTION_MAIL_MESSAGE_NEW_LIST_24 = create("actions__24__mail-message-new-list");
+    public static final AntuIcon ACTION_MAIL_QUEUE_24 = create("actions__24__mail-queue");
+    public static final AntuIcon ACTION_MAIL_RECEIVE_24 = create("actions__24__mail-receive");
+    public static final AntuIcon ACTION_MAIL_REPLIED_24 = create("actions__24__mail-replied");
+    public static final AntuIcon ACTION_MAIL_REPLY_ALL_24 = create("actions__24__mail-reply-all");
+    public static final AntuIcon ACTION_MAIL_REPLY_CUSTOM_24 = create("actions__24__mail-reply-custom");
+    public static final AntuIcon ACTION_MAIL_REPLY_CUSTOM_ALL_24 = create("actions__24__mail-reply-custom-all");
+    public static final AntuIcon ACTION_MAIL_REPLY_LIST_24 = create("actions__24__mail-reply-list");
+    public static final AntuIcon ACTION_MAIL_REPLY_SENDER_24 = create("actions__24__mail-reply-sender");
+    public static final AntuIcon ACTION_MAIL_SEND_24 = create("actions__24__mail-send");
+    public static final AntuIcon ACTION_MAIL_SIGNATURE_UNKNOWN_24 = create("actions__24__mail-signature-unknown");
+    public static final AntuIcon ACTION_MAIL_SIGNED_24 = create("actions__24__mail-signed");
+    public static final AntuIcon ACTION_MAIL_SIGNED_FULL_24 = create("actions__24__mail-signed-full");
+    public static final AntuIcon ACTION_MAIL_SIGNED_FULLY_24 = create("actions__24__mail-signed-fully");
+    public static final AntuIcon ACTION_MAIL_SIGNED_PART_24 = create("actions__24__mail-signed-part");
+    public static final AntuIcon ACTION_MAIL_SIGNED_VERIFIED_24 = create("actions__24__mail-signed-verified");
+    public static final AntuIcon ACTION_MAIL_TAGGED_24 = create("actions__24__mail-tagged");
+    public static final AntuIcon ACTION_MAP_FLAT_24 = create("actions__24__map-flat");
+    public static final AntuIcon ACTION_MAP_GLOBE_24 = create("actions__24__map-globe");
+    public static final AntuIcon ACTION_MAP_GNOMONIC_24 = create("actions__24__map-gnomonic");
+    public static final AntuIcon ACTION_MAP_MERCATOR_24 = create("actions__24__map-mercator");
+    public static final AntuIcon ACTION_MEASURE_24 = create("actions__24__measure");
+    public static final AntuIcon ACTION_MEDIA_ALBUM_COVER_24 = create("actions__24__media-album-cover");
+    public static final AntuIcon ACTION_MEDIA_ALBUM_COVER_MANAGER_AMAROK_24 = create("actions__24__media-album-cover-manager-amarok");
+    public static final AntuIcon ACTION_MEDIA_ALBUM_REPEAT_AMAROK_24 = create("actions__24__media-album-repeat-amarok");
+    public static final AntuIcon ACTION_MEDIA_ALBUM_TRACK_24 = create("actions__24__media-album-track");
+    public static final AntuIcon ACTION_MEDIA_EJECT_24 = create("actions__24__media-eject");
+    public static final AntuIcon ACTION_MEDIA_EJECT_32 = create("actions__32__media-eject");
+    public static final AntuIcon ACTION_MEDIA_PLAYBACK_PAUSE_24 = create("actions__24__media-playback-pause");
+    public static final AntuIcon ACTION_MEDIA_PLAYBACK_PAUSE_32 = create("actions__32__media-playback-pause");
+    public static final AntuIcon ACTION_MEDIA_PLAYBACK_START_24 = create("actions__24__media-playback-start");
+    public static final AntuIcon ACTION_MEDIA_PLAYBACK_START_32 = create("actions__32__media-playback-start");
+    public static final AntuIcon ACTION_MEDIA_PLAYBACK_STOP_24 = create("actions__24__media-playback-stop");
+    public static final AntuIcon ACTION_MEDIA_PLAYBACK_STOP_32 = create("actions__32__media-playback-stop");
+    public static final AntuIcon ACTION_MEDIA_PLAYLIST_REPEAT_24 = create("actions__24__media-playlist-repeat");
+    public static final AntuIcon ACTION_MEDIA_PLAYLIST_REPEAT_32 = create("actions__32__media-playlist-repeat");
+    public static final AntuIcon ACTION_MEDIA_PLAYLIST_REPEAT_AMAROK_24 = create("actions__24__media-playlist-repeat-amarok");
+    public static final AntuIcon ACTION_MEDIA_PLAYLIST_SHUFFLE_24 = create("actions__24__media-playlist-shuffle");
+    public static final AntuIcon ACTION_MEDIA_PLAYLIST_SHUFFLE_32 = create("actions__32__media-playlist-shuffle");
+    public static final AntuIcon ACTION_MEDIA_RANDOM_ALBUMS_AMAROK_24 = create("actions__24__media-random-albums-amarok");
+    public static final AntuIcon ACTION_MEDIA_RANDOM_TRACKS_AMAROK_24 = create("actions__24__media-random-tracks-amarok");
+    public static final AntuIcon ACTION_MEDIA_RECORD_24 = create("actions__24__media-record");
+    public static final AntuIcon ACTION_MEDIA_RECORD_32 = create("actions__32__media-record");
+    public static final AntuIcon ACTION_MEDIA_REPEAT_ALBUM_AMAROK_24 = create("actions__24__media-repeat-album-amarok");
+    public static final AntuIcon ACTION_MEDIA_REPEAT_PLAYLIST_AMAROK_24 = create("actions__24__media-repeat-playlist-amarok");
+    public static final AntuIcon ACTION_MEDIA_REPEAT_TRACK_AMAROK_24 = create("actions__24__media-repeat-track-amarok");
+    public static final AntuIcon ACTION_MEDIA_SEEK_BACKWARD_24 = create("actions__24__media-seek-backward");
+    public static final AntuIcon ACTION_MEDIA_SEEK_BACKWARD_32 = create("actions__32__media-seek-backward");
+    public static final AntuIcon ACTION_MEDIA_SEEK_FORWARD_24 = create("actions__24__media-seek-forward");
+    public static final AntuIcon ACTION_MEDIA_SEEK_FORWARD_32 = create("actions__32__media-seek-forward");
+    public static final AntuIcon ACTION_MEDIA_SHOW_ACTIVE_TRACK_AMAROK_24 = create("actions__24__media-show-active-track-amarok");
+    public static final AntuIcon ACTION_MEDIA_SKIP_BACKWARD_24 = create("actions__24__media-skip-backward");
+    public static final AntuIcon ACTION_MEDIA_SKIP_BACKWARD_32 = create("actions__32__media-skip-backward");
+    public static final AntuIcon ACTION_MEDIA_SKIP_FORWARD_24 = create("actions__24__media-skip-forward");
+    public static final AntuIcon ACTION_MEDIA_SKIP_FORWARD_32 = create("actions__32__media-skip-forward");
+    public static final AntuIcon ACTION_MEDIA_STANDARD_TRACK_PROGRESSION_AMAROK_24 = create("actions__24__media-standard-track-progression-amarok");
+    public static final AntuIcon ACTION_MEDIA_TRACK_ADD_AMAROK_24 = create("actions__24__media-track-add-amarok");
+    public static final AntuIcon ACTION_MEDIA_TRACK_EDIT_AMAROK_24 = create("actions__24__media-track-edit-amarok");
+    public static final AntuIcon ACTION_MEDIA_TRACK_QUEUE_AMAROK_24 = create("actions__24__media-track-queue-amarok");
+    public static final AntuIcon ACTION_MEDIA_TRACK_REMOVE_AMAROK_24 = create("actions__24__media-track-remove-amarok");
+    public static final AntuIcon ACTION_MEETING_ATTENDING_24 = create("actions__24__meeting-attending");
+    public static final AntuIcon ACTION_MEETING_ATTENDING_48 = create("actions__48__meeting-attending");
+    public static final AntuIcon ACTION_MEETING_ATTENDING_TENTATIVE_24 = create("actions__24__meeting-attending-tentative");
+    public static final AntuIcon ACTION_MEETING_PARTICIPANT_NO_RESPONSE_24 = create("actions__24__meeting-participant-no-response");
+    public static final AntuIcon ACTION_MEETING_PARTICIPANT_REQUEST_RESPONSE_24 = create("actions__24__meeting-participant-request-response");
+    public static final AntuIcon ACTION_MENU_NEW_24 = create("actions__24__menu_new");
+    public static final AntuIcon ACTION_MENU_NEW_SEP_24 = create("actions__24__menu_new_sep");
+    public static final AntuIcon ACTION_MERGE_24 = create("actions__24__merge");
+    public static final AntuIcon ACTION_MESSAGEBOX_WARNING_24 = create("actions__24__messagebox_warning");
+    public static final AntuIcon ACTION_MIC_OFF_24 = create("actions__24__mic-off");
+    public static final AntuIcon ACTION_MIC_ON_24 = create("actions__24__mic-on");
+    public static final AntuIcon ACTION_MIC_READY_24 = create("actions__24__mic-ready");
+    public static final AntuIcon ACTION_MILESTONE_24 = create("actions__24__milestone");
+    public static final AntuIcon ACTION_MUSIC_AMAROK_24 = create("actions__24__music-amarok");
+    public static final AntuIcon ACTION_NETWORK_CONNECT_24 = create("actions__24__network-connect");
+    public static final AntuIcon ACTION_NETWORK_DISCONNECT_24 = create("actions__24__network-disconnect");
+    public static final AntuIcon ACTION_NEW_AUDIO_ALARM_24 = create("actions__24__new-audio-alarm");
+    public static final AntuIcon ACTION_NEWS_SUBSCRIBE_24 = create("actions__24__news-subscribe");
+    public static final AntuIcon ACTION_NEWS_UNSUBSCRIBE_24 = create("actions__24__news-unsubscribe");
+    public static final AntuIcon ACTION_NOCOVER_24 = create("actions__24__nocover");
+    public static final AntuIcon ACTION_NODE_24 = create("actions__24__node");
+    public static final AntuIcon ACTION_NODE_SEGMENT_CURVE_24 = create("actions__24__node-segment-curve");
+    public static final AntuIcon ACTION_NODE_SEGMENT_LINE_24 = create("actions__24__node-segment-line");
+    public static final AntuIcon ACTION_NODE_TRANSFORM_24 = create("actions__24__node-transform");
+    public static final AntuIcon ACTION_NODE_TYPE_AUTO_SMOOTH_24 = create("actions__24__node-type-auto-smooth");
+    public static final AntuIcon ACTION_NODE_TYPE_CUSP_24 = create("actions__24__node-type-cusp");
+    public static final AntuIcon ACTION_NODE_TYPE_SMOOTH_24 = create("actions__24__node-type-smooth");
+    public static final AntuIcon ACTION_NODE_TYPE_SYMMETRIC_24 = create("actions__24__node-type-symmetric");
+    public static final AntuIcon ACTION_NOISEREDUCTION_24 = create("actions__24__noisereduction");
+    public static final AntuIcon ACTION_OBJECT_ALIGN_HORIZONTAL_CENTER_CALLIGRA_24 = create("actions__24__object-align-horizontal-center-calligra");
+    public static final AntuIcon ACTION_OBJECT_ALIGN_HORIZONTAL_LEFT_CALLIGRA_24 = create("actions__24__object-align-horizontal-left-calligra");
+    public static final AntuIcon ACTION_OBJECT_ALIGN_HORIZONTAL_RIGHT_CALLIGRA_24 = create("actions__24__object-align-horizontal-right-calligra");
+    public static final AntuIcon ACTION_OBJECT_ALIGN_VERTICAL_BOTTOM_CALLIGRA_24 = create("actions__24__object-align-vertical-bottom-calligra");
+    public static final AntuIcon ACTION_OBJECT_ALIGN_VERTICAL_BOTTOM_TOP_CALLIGRA_24 = create("actions__24__object-align-vertical-bottom-top-calligra");
+    public static final AntuIcon ACTION_OBJECT_ALIGN_VERTICAL_CENTER_CALLIGRA_24 = create("actions__24__object-align-vertical-center-calligra");
+    public static final AntuIcon ACTION_OBJECT_ALIGN_VERTICAL_TOP_CALLIGRA_24 = create("actions__24__object-align-vertical-top-calligra");
+    public static final AntuIcon ACTION_OBJECT_COLUMNS_24 = create("actions__24__object-columns");
+    public static final AntuIcon ACTION_OBJECT_FILL_24 = create("actions__24__object-fill");
+    public static final AntuIcon ACTION_OBJECT_FLIP_HORIZONTAL_24 = create("actions__24__object-flip-horizontal");
+    public static final AntuIcon ACTION_OBJECT_FLIP_VERTICAL_24 = create("actions__24__object-flip-vertical");
+    public static final AntuIcon ACTION_OBJECT_GROUP_24 = create("actions__24__object-group");
+    public static final AntuIcon ACTION_OBJECT_GROUP_CALLIGRA_24 = create("actions__24__object-group-calligra");
+    public static final AntuIcon ACTION_OBJECT_HIDDEN_24 = create("actions__24__object-hidden");
+    public static final AntuIcon ACTION_OBJECT_LOCKED_24 = create("actions__24__object-locked");
+    public static final AntuIcon ACTION_OBJECT_ORDER_BACK_24 = create("actions__24__object-order-back");
+    public static final AntuIcon ACTION_OBJECT_ORDER_BACK_32 = create("actions__32__object-order-back");
+    public static final AntuIcon ACTION_OBJECT_ORDER_BACK_CALLIGRA_24 = create("actions__24__object-order-back-calligra");
+    public static final AntuIcon ACTION_OBJECT_ORDER_FRONT_24 = create("actions__24__object-order-front");
+    public static final AntuIcon ACTION_OBJECT_ORDER_FRONT_32 = create("actions__32__object-order-front");
+    public static final AntuIcon ACTION_OBJECT_ORDER_FRONT_CALLIGRA_24 = create("actions__24__object-order-front-calligra");
+    public static final AntuIcon ACTION_OBJECT_ORDER_LOWER_24 = create("actions__24__object-order-lower");
+    public static final AntuIcon ACTION_OBJECT_ORDER_LOWER_32 = create("actions__32__object-order-lower");
+    public static final AntuIcon ACTION_OBJECT_ORDER_LOWER_CALLIGRA_24 = create("actions__24__object-order-lower-calligra");
+    public static final AntuIcon ACTION_OBJECT_ORDER_RAISE_24 = create("actions__24__object-order-raise");
+    public static final AntuIcon ACTION_OBJECT_ORDER_RAISE_32 = create("actions__32__object-order-raise");
+    public static final AntuIcon ACTION_OBJECT_ORDER_RAISE_CALLIGRA_24 = create("actions__24__object-order-raise-calligra");
+    public static final AntuIcon ACTION_OBJECT_ROTATE_LEFT_24 = create("actions__24__object-rotate-left");
+    public static final AntuIcon ACTION_OBJECT_ROTATE_RIGHT_24 = create("actions__24__object-rotate-right");
+    public static final AntuIcon ACTION_OBJECT_ROWS_24 = create("actions__24__object-rows");
+    public static final AntuIcon ACTION_OBJECT_STROKE_24 = create("actions__24__object-stroke");
+    public static final AntuIcon ACTION_OBJECT_STROKE_STYLE_24 = create("actions__24__object-stroke-style");
+    public static final AntuIcon ACTION_OBJECT_TO_PATH_24 = create("actions__24__object-to-path");
+    public static final AntuIcon ACTION_OBJECT_UNGROUP_24 = create("actions__24__object-ungroup");
+    public static final AntuIcon ACTION_OBJECT_UNGROUP_CALLIGRA_24 = create("actions__24__object-ungroup-calligra");
+    public static final AntuIcon ACTION_OBJECT_UNLOCKED_24 = create("actions__24__object-unlocked");
+    public static final AntuIcon ACTION_OBJECT_VISIBLE_24 = create("actions__24__object-visible");
+    public static final AntuIcon ACTION_OFFICE_CHART_AREA_24 = create("actions__24__office-chart-area");
+    public static final AntuIcon ACTION_OFFICE_CHART_AREA_FOCUS_PEAK_NODE_24 = create("actions__24__office-chart-area-focus-peak-node");
+    public static final AntuIcon ACTION_OFFICE_CHART_AREA_PERCENTAGE_24 = create("actions__24__office-chart-area-percentage");
+    public static final AntuIcon ACTION_OFFICE_CHART_AREA_STACKED_24 = create("actions__24__office-chart-area-stacked");
+    public static final AntuIcon ACTION_OFFICE_CHART_BAR_24 = create("actions__24__office-chart-bar");
+    public static final AntuIcon ACTION_OFFICE_CHART_BAR_PERCENTAGE_24 = create("actions__24__office-chart-bar-percentage");
+    public static final AntuIcon ACTION_OFFICE_CHART_BAR_STACKED_24 = create("actions__24__office-chart-bar-stacked");
+    public static final AntuIcon ACTION_OFFICE_CHART_LINE_24 = create("actions__24__office-chart-line");
+    public static final AntuIcon ACTION_OFFICE_CHART_LINE_PERCENTAGE_24 = create("actions__24__office-chart-line-percentage");
+    public static final AntuIcon ACTION_OFFICE_CHART_LINE_STACKED_24 = create("actions__24__office-chart-line-stacked");
+    public static final AntuIcon ACTION_OFFICE_CHART_PIE_24 = create("actions__24__office-chart-pie");
+    public static final AntuIcon ACTION_OFFICE_CHART_POLAR_24 = create("actions__24__office-chart-polar");
+    public static final AntuIcon ACTION_OFFICE_CHART_POLAR_STACKED_24 = create("actions__24__office-chart-polar-stacked");
+    public static final AntuIcon ACTION_OFFICE_CHART_RING_24 = create("actions__24__office-chart-ring");
+    public static final AntuIcon ACTION_OFFICE_CHART_SCATTER_24 = create("actions__24__office-chart-scatter");
+    public static final AntuIcon ACTION_OFFLINE_SETTINGS_24 = create("actions__24__offline-settings");
+    public static final AntuIcon ACTION_OILPAINT_24 = create("actions__24__oilpaint");
+    public static final AntuIcon ACTION_OVEREXPOSURE_24 = create("actions__24__overexposure");
+    public static final AntuIcon ACTION_PAGE_2SIDES_24 = create("actions__24__page-2sides");
+    public static final AntuIcon ACTION_PAGE_3SIDES_24 = create("actions__24__page-3sides");
+    public static final AntuIcon ACTION_PAGE_4SIDES_24 = create("actions__24__page-4sides");
+    public static final AntuIcon ACTION_PAGE_SIMPLE_24 = create("actions__24__page-simple");
+    public static final AntuIcon ACTION_PAGE_ZOOM_24 = create("actions__24__page-zoom");
+    public static final AntuIcon ACTION_PAINT_GRADIENT_LINEAR_24 = create("actions__24__paint-gradient-linear");
+    public static final AntuIcon ACTION_PAINT_GRADIENT_RADIAL_24 = create("actions__24__paint-gradient-radial");
+    public static final AntuIcon ACTION_PAINT_NONE_24 = create("actions__24__paint-none");
+    public static final AntuIcon ACTION_PAINT_PATTERN_24 = create("actions__24__paint-pattern");
+    public static final AntuIcon ACTION_PAINT_SOLID_24 = create("actions__24__paint-solid");
+    public static final AntuIcon ACTION_PAINT_SWATCH_24 = create("actions__24__paint-swatch");
+    public static final AntuIcon ACTION_PAINT_UNKNOWN_24 = create("actions__24__paint-unknown");
+    public static final AntuIcon ACTION_PASSWORD_COPY_24 = create("actions__24__password-copy");
+    public static final AntuIcon ACTION_PATH_BREAK_APART_24 = create("actions__24__path-break-apart");
+    public static final AntuIcon ACTION_PATH_CLIP_EDIT_24 = create("actions__24__path-clip-edit");
+    public static final AntuIcon ACTION_PATH_COMBINE_24 = create("actions__24__path-combine");
+    public static final AntuIcon ACTION_PATH_CUT_24 = create("actions__24__path-cut");
+    public static final AntuIcon ACTION_PATH_DIFFERENCE_24 = create("actions__24__path-difference");
+    public static final AntuIcon ACTION_PATH_DIVISION_24 = create("actions__24__path-division");
+    public static final AntuIcon ACTION_PATH_EFFECT_PARAMETER_NEXT_24 = create("actions__24__path-effect-parameter-next");
+    public static final AntuIcon ACTION_PATH_EXCLUSION_24 = create("actions__24__path-exclusion");
+    public static final AntuIcon ACTION_PATH_INSET_24 = create("actions__24__path-inset");
+    public static final AntuIcon ACTION_PATH_INTERSECTION_24 = create("actions__24__path-intersection");
+    public static final AntuIcon ACTION_PATH_MASK_EDIT_24 = create("actions__24__path-mask-edit");
+    public static final AntuIcon ACTION_PATH_MODE_POLYLINE_24 = create("actions__24__path-mode-polyline");
+    public static final AntuIcon ACTION_PATH_MODE_POLYLINE_PARAXIAL_24 = create("actions__24__path-mode-polyline-paraxial");
+    public static final AntuIcon ACTION_PATH_OFFSET_DYNAMIC_24 = create("actions__24__path-offset-dynamic");
+    public static final AntuIcon ACTION_PATH_OFFSET_LINKED_24 = create("actions__24__path-offset-linked");
+    public static final AntuIcon ACTION_PATH_OUTSET_24 = create("actions__24__path-outset");
+    public static final AntuIcon ACTION_PATH_REVERSE_24 = create("actions__24__path-reverse");
+    public static final AntuIcon ACTION_PATH_SIMPLIFY_24 = create("actions__24__path-simplify");
+    public static final AntuIcon ACTION_PATH_UNION_24 = create("actions__24__path-union");
+    public static final AntuIcon ACTION_PDF_ANNOTATIONS_24 = create("actions__24__pdf-annotations");
+    public static final AntuIcon ACTION_PERCENT_24 = create("actions__24__percent");
+    public static final AntuIcon ACTION_PERCENT_32 = create("actions__32__percent");
+    public static final AntuIcon ACTION_PERSPECTIVE_24 = create("actions__24__perspective");
+    public static final AntuIcon ACTION_PHOTOS_AMAROK_24 = create("actions__24__photos-amarok");
+    public static final AntuIcon ACTION_PIXELART_TRACE_24 = create("actions__24__pixelart-trace");
+    public static final AntuIcon ACTION_PLAYER_TIME_24 = create("actions__24__player-time");
+    public static final AntuIcon ACTION_PLAYER_VOLUME_24 = create("actions__24__player-volume");
+    public static final AntuIcon ACTION_PLAYER_VOLUME_MUTED_24 = create("actions__24__player-volume-muted");
+    public static final AntuIcon ACTION_PLAYLIST_GENERATOR_24 = create("actions__24__playlist-generator");
+    public static final AntuIcon ACTION_PLAYLIST_SORT_24 = create("actions__24__playlist-sort");
+    public static final AntuIcon ACTION_PLUGINS_24 = create("actions__24__plugins");
+    public static final AntuIcon ACTION_PODCAST_AMAROK_24 = create("actions__24__podcast-amarok");
+    public static final AntuIcon ACTION_PORT_24 = create("actions__24__port");
+    public static final AntuIcon ACTION_PRECONDITION_24 = create("actions__24__precondition");
+    public static final AntuIcon ACTION_PREFERENCES_ACTIVITIES_24 = create("actions__24__preferences-activities");
+    public static final AntuIcon ACTION_PREFERENCES_ACTIVITIES_48 = create("actions__48__preferences-activities");
+    public static final AntuIcon ACTION_PREFERENCES_INDICATOR_AMAROK_24 = create("actions__24__preferences-indicator-amarok");
+    public static final AntuIcon ACTION_PREFERENCES_MEDIA_PLAYBACK_AMAROK_24 = create("actions__24__preferences-media-playback-amarok");
+    public static final AntuIcon ACTION_PREFERENCES_OTHER_24 = create("actions__24__preferences-other");
+    public static final AntuIcon ACTION_PREFLIGHT_VERIFIER_24 = create("actions__24__preflight-verifier");
+    public static final AntuIcon ACTION_PREPOSTCONDITION_24 = create("actions__24__PrePostCondition");
+    public static final AntuIcon ACTION_PRIMARYKEY_CONSTRAINT_24 = create("actions__24__primarykey_constraint");
+    public static final AntuIcon ACTION_PROCESS_STOP_24 = create("actions__24__process-stop");
+    public static final AntuIcon ACTION_PROJECT_DEVELOPMENT_24 = create("actions__24__project-development");
+    public static final AntuIcon ACTION_PROJECT_DEVELOPMENT_CLOSE_24 = create("actions__24__project-development-close");
+    public static final AntuIcon ACTION_PROJECT_DEVELOPMENT_CLOSE_ALL_24 = create("actions__24__project-development-close-all");
+    public static final AntuIcon ACTION_PROJECT_DEVELOPMENT_NEW_TEMPLATE_24 = create("actions__24__project-development-new-template");
+    public static final AntuIcon ACTION_PROJECT_OPEN_24 = create("actions__24__project-open");
+    public static final AntuIcon ACTION_QUICKOPEN_24 = create("actions__24__quickopen");
+    public static final AntuIcon ACTION_QUICKOPEN_CLASS_24 = create("actions__24__quickopen-class");
+    public static final AntuIcon ACTION_QUICKOPEN_FILE_24 = create("actions__24__quickopen-file");
+    public static final AntuIcon ACTION_QUICKOPEN_FUNCTION_24 = create("actions__24__quickopen-function");
+    public static final AntuIcon ACTION_QUICKVIEW_24 = create("actions__24__quickview");
+    public static final AntuIcon ACTION_RAINDROP_24 = create("actions__24__raindrop");
+    public static final AntuIcon ACTION_RATING_24 = create("actions__24__rating");
+    public static final AntuIcon ACTION_RATING_UNRATED_24 = create("actions__24__rating-unrated");
+    public static final AntuIcon ACTION_RATIOCROP_24 = create("actions__24__ratiocrop");
+    public static final AntuIcon ACTION_REALIZATION_24 = create("actions__24__realization");
+    public static final AntuIcon ACTION_RECTANGLE_MAKE_CORNERS_SHARP_24 = create("actions__24__rectangle-make-corners-sharp");
+    public static final AntuIcon ACTION_REDEYES_24 = create("actions__24__redeyes");
+    public static final AntuIcon ACTION_REMOVE_AMAROK_24 = create("actions__24__remove-amarok");
+    public static final AntuIcon ACTION_REMOVE_LINK_24 = create("actions__24__remove-link");
+    public static final AntuIcon ACTION_RESOURCE_CALENDAR_CHILD_24 = create("actions__24__resource-calendar-child");
+    public static final AntuIcon ACTION_RESOURCE_CALENDAR_CHILD_INSERT_24 = create("actions__24__resource-calendar-child-insert");
+    public static final AntuIcon ACTION_RESOURCE_CALENDAR_INSERT_24 = create("actions__24__resource-calendar-insert");
+    public static final AntuIcon ACTION_RESOURCE_GROUP_24 = create("actions__24__resource-group");
+    public static final AntuIcon ACTION_RESOURCE_GROUP_NEW_24 = create("actions__24__resource-group-new");
+    public static final AntuIcon ACTION_RESTORATION_24 = create("actions__24__restoration");
+    public static final AntuIcon ACTION_RETWEET_24 = create("actions__24__retweet");
+    public static final AntuIcon ACTION_REVERSE_24 = create("actions__24__reverse");
+    public static final AntuIcon ACTION_ROLL_24 = create("actions__24__roll");
+    public static final AntuIcon ACTION_RUN_BUILD_24 = create("actions__24__run-build");
+    public static final AntuIcon ACTION_RUN_BUILD_CLEAN_24 = create("actions__24__run-build-clean");
+    public static final AntuIcon ACTION_RUN_BUILD_CONFIGURE_24 = create("actions__24__run-build-configure");
+    public static final AntuIcon ACTION_RUN_BUILD_FILE_24 = create("actions__24__run-build-file");
+    public static final AntuIcon ACTION_RUN_BUILD_INSTALL_24 = create("actions__24__run-build-install");
+    public static final AntuIcon ACTION_RUN_BUILD_INSTALL_ROOT_24 = create("actions__24__run-build-install-root");
+    public static final AntuIcon ACTION_RUN_BUILD_PRUNE_24 = create("actions__24__run-build-prune");
+    public static final AntuIcon ACTION_RUN_CLEAN_24 = create("actions__24__run-clean");
+    public static final AntuIcon ACTION_RUN_INSTALL_24 = create("actions__24__run-install");
+    public static final AntuIcon ACTION_SEARCH_24 = create("actions__24__search");
+    public static final AntuIcon ACTION_SELECT_RECTANGULAR_24 = create("actions__24__select-rectangular");
+    public static final AntuIcon ACTION_SELECTION_BOTTOM_24 = create("actions__24__selection-bottom");
+    public static final AntuIcon ACTION_SELECTION_LOWER_24 = create("actions__24__selection-lower");
+    public static final AntuIcon ACTION_SELECTION_MAKE_BITMAP_COPY_24 = create("actions__24__selection-make-bitmap-copy");
+    public static final AntuIcon ACTION_SELECTION_MOVE_TO_LAYER_ABOVE_24 = create("actions__24__selection-move-to-layer-above");
+    public static final AntuIcon ACTION_SELECTION_MOVE_TO_LAYER_BELOW_24 = create("actions__24__selection-move-to-layer-below");
+    public static final AntuIcon ACTION_SELECTION_RAISE_24 = create("actions__24__selection-raise");
+    public static final AntuIcon ACTION_SELECTION_TOP_24 = create("actions__24__selection-top");
+    public static final AntuIcon ACTION_SEND_SIGNAL_24 = create("actions__24__send_signal");
+    public static final AntuIcon ACTION_SERVICES_24 = create("actions__24__services");
+    public static final AntuIcon ACTION_SHAPE_CHOOSE_24 = create("actions__24__shape-choose");
+    public static final AntuIcon ACTION_SHAPES_24 = create("actions__24__shapes");
+    public static final AntuIcon ACTION_SHARPENIMAGE_24 = create("actions__24__sharpenimage");
+    public static final AntuIcon ACTION_SHEAR_24 = create("actions__24__shear");
+    public static final AntuIcon ACTION_SHIFT_DOWN_Y_24 = create("actions__24__shift-down-y");
+    public static final AntuIcon ACTION_SHIFT_LEFT_X_24 = create("actions__24__shift-left-x");
+    public static final AntuIcon ACTION_SHIFT_RIGHT_X_24 = create("actions__24__shift-right-x");
+    public static final AntuIcon ACTION_SHIFT_UP_Y_24 = create("actions__24__shift-up-y");
+    public static final AntuIcon ACTION_SHOW_DIALOGS_24 = create("actions__24__show-dialogs");
+    public static final AntuIcon ACTION_SHOW_GRID_24 = create("actions__24__show-grid");
+    public static final AntuIcon ACTION_SHOW_GUIDES_24 = create("actions__24__show-guides");
+    public static final AntuIcon ACTION_SHOW_MENU_24 = create("actions__24__show-menu");
+    public static final AntuIcon ACTION_SHOW_NODE_HANDLES_24 = create("actions__24__show-node-handles");
+    public static final AntuIcon ACTION_SHOW_OFFLINE_24 = create("actions__24__show-offline");
+    public static final AntuIcon ACTION_SHOW_PATH_OUTLINE_24 = create("actions__24__show-path-outline");
+    public static final AntuIcon ACTION_SIMILARARTISTS_AMAROK_24 = create("actions__24__similarartists-amarok");
+    public static final AntuIcon ACTION_SKG_CHART_BUBBLE_24 = create("actions__24__skg-chart-bubble");
+    public static final AntuIcon ACTION_SKROOGE_CREDIT_CARD_24 = create("actions__24__skrooge_credit_card");
+    public static final AntuIcon ACTION_SKROOGE_LESS_24 = create("actions__24__skrooge_less");
+    public static final AntuIcon ACTION_SKROOGE_MORE_24 = create("actions__24__skrooge_more");
+    public static final AntuIcon ACTION_SKROOGE_MUCH_LESS_24 = create("actions__24__skrooge_much_less");
+    public static final AntuIcon ACTION_SKROOGE_MUCH_MORE_24 = create("actions__24__skrooge_much_more");
+    public static final AntuIcon ACTION_SKROOGE_TYPE_24 = create("actions__24__skrooge_type");
+    public static final AntuIcon ACTION_SMALLCLOCK_24 = create("actions__24__smallclock");
+    public static final AntuIcon ACTION_SNAP_24 = create("actions__24__snap");
+    public static final AntuIcon ACTION_SNAP_BOUNDING_BOX_CENTER_24 = create("actions__24__snap-bounding-box-center");
+    public static final AntuIcon ACTION_SNAP_BOUNDING_BOX_CORNERS_24 = create("actions__24__snap-bounding-box-corners");
+    public static final AntuIcon ACTION_SNAP_BOUNDING_BOX_EDGES_24 = create("actions__24__snap-bounding-box-edges");
+    public static final AntuIcon ACTION_SNAP_BOUNDING_BOX_MIDPOINTS_24 = create("actions__24__snap-bounding-box-midpoints");
+    public static final AntuIcon ACTION_SNAP_EXTENSION_24 = create("actions__24__snap-extension");
+    public static final AntuIcon ACTION_SNAP_GRID_GUIDE_INTERSECTIONS_24 = create("actions__24__snap-grid-guide-intersections");
+    public static final AntuIcon ACTION_SNAP_GUIDELINE_24 = create("actions__24__snap-guideline");
+    public static final AntuIcon ACTION_SNAP_INTERSECTION_24 = create("actions__24__snap-intersection");
+    public static final AntuIcon ACTION_SNAP_NODE_24 = create("actions__24__snap-node");
+    public static final AntuIcon ACTION_SNAP_NODES_CENTER_24 = create("actions__24__snap-nodes-center");
+    public static final AntuIcon ACTION_SNAP_NODES_CUSP_24 = create("actions__24__snap-nodes-cusp");
+    public static final AntuIcon ACTION_SNAP_NODES_INTERSECTION_24 = create("actions__24__snap-nodes-intersection");
+    public static final AntuIcon ACTION_SNAP_NODES_MIDPOINT_24 = create("actions__24__snap-nodes-midpoint");
+    public static final AntuIcon ACTION_SNAP_NODES_PATH_24 = create("actions__24__snap-nodes-path");
+    public static final AntuIcon ACTION_SNAP_NODES_ROTATION_CENTER_24 = create("actions__24__snap-nodes-rotation-center");
+    public static final AntuIcon ACTION_SNAP_NODES_SMOOTH_24 = create("actions__24__snap-nodes-smooth");
+    public static final AntuIcon ACTION_SNAP_ORTHOGONAL_24 = create("actions__24__snap-orthogonal");
+    public static final AntuIcon ACTION_SNAP_PAGE_24 = create("actions__24__snap-page");
+    public static final AntuIcon ACTION_SNAP_TEXT_BASELINE_24 = create("actions__24__snap-text-baseline");
+    public static final AntuIcon ACTION_SORT_NAME_24 = create("actions__24__sort-name");
+    public static final AntuIcon ACTION_SORT_PRESENCE_24 = create("actions__24__sort-presence");
+    public static final AntuIcon ACTION_SPEAKER_24 = create("actions__24__speaker");
+    public static final AntuIcon ACTION_SPLIT_24 = create("actions__24__split");
+    public static final AntuIcon ACTION_STANDARD_CONNECTOR_24 = create("actions__24__standard-connector");
+    public static final AntuIcon ACTION_STATE_FORK_24 = create("actions__24__state-fork");
+    public static final AntuIcon ACTION_STICKY_ZOOM_24 = create("actions__24__sticky_zoom");
+    public static final AntuIcon ACTION_STORY_EDITOR_24 = create("actions__24__story-editor");
+    public static final AntuIcon ACTION_STRAIGHT_CONNECTOR_24 = create("actions__24__straight-connector");
+    public static final AntuIcon ACTION_STROKE_CAP_BEVEL_24 = create("actions__24__stroke-cap-bevel");
+    public static final AntuIcon ACTION_STROKE_CAP_BUTT_24 = create("actions__24__stroke-cap-butt");
+    public static final AntuIcon ACTION_STROKE_CAP_MITER_24 = create("actions__24__stroke-cap-miter");
+    public static final AntuIcon ACTION_STROKE_CAP_ROUND_24 = create("actions__24__stroke-cap-round");
+    public static final AntuIcon ACTION_STROKE_CAP_SQUARE_24 = create("actions__24__stroke-cap-square");
+    public static final AntuIcon ACTION_STROKE_JOIN_BEVEL_24 = create("actions__24__stroke-join-bevel");
+    public static final AntuIcon ACTION_STROKE_JOIN_MITER_24 = create("actions__24__stroke-join-miter");
+    public static final AntuIcon ACTION_STROKE_JOIN_ROUND_24 = create("actions__24__stroke-join-round");
+    public static final AntuIcon ACTION_STROKE_TO_PATH_24 = create("actions__24__stroke-to-path");
+    public static final AntuIcon ACTION_SVN_COMMIT_24 = create("actions__24__svn-commit");
+    public static final AntuIcon ACTION_SVN_UPDATE_24 = create("actions__24__svn-update");
+    public static final AntuIcon ACTION_SYMBOLS_24 = create("actions__24__symbols");
+    public static final AntuIcon ACTION_SYSTEM_RUN_24 = create("actions__24__system-run");
+    public static final AntuIcon ACTION_SYSTEM_SEARCH_24 = create("actions__24__system-search");
+    public static final AntuIcon ACTION_TAB_CLOSE_24 = create("actions__24__tab-close");
+    public static final AntuIcon ACTION_TAB_CLOSE_OTHER_24 = create("actions__24__tab-close-other");
+    public static final AntuIcon ACTION_TAB_DETACH_24 = create("actions__24__tab-detach");
+    public static final AntuIcon ACTION_TAB_DUPLICATE_24 = create("actions__24__tab-duplicate");
+    public static final AntuIcon ACTION_TAB_NEW_24 = create("actions__24__tab-new");
+    public static final AntuIcon ACTION_TAB_NEW_48 = create("actions__48__tab-new");
+    public static final AntuIcon ACTION_TAB_NEW_BACKGROUND_24 = create("actions__24__tab-new-background");
+    public static final AntuIcon ACTION_TABLE_24 = create("actions__24__table");
+    public static final AntuIcon ACTION_TAG_24 = create("actions__24__tag");
+    public static final AntuIcon ACTION_TAG_ADDRESSBOOK_24 = create("actions__24__tag-addressbook");
+    public static final AntuIcon ACTION_TAG_ASSIGNED_24 = create("actions__24__tag-assigned");
+    public static final AntuIcon ACTION_TAG_DELETE_24 = create("actions__24__tag-delete");
+    public static final AntuIcon ACTION_TAG_EVENTS_24 = create("actions__24__tag-events");
+    public static final AntuIcon ACTION_TAG_FOLDER_24 = create("actions__24__tag-folder");
+    public static final AntuIcon ACTION_TAG_NEW_24 = create("actions__24__tag-new");
+    public static final AntuIcon ACTION_TAG_PEOPLE_24 = create("actions__24__tag-people");
+    public static final AntuIcon ACTION_TAG_PLACES_24 = create("actions__24__tag-places");
+    public static final AntuIcon ACTION_TAG_PROPERTIES_24 = create("actions__24__tag-properties");
+    public static final AntuIcon ACTION_TAG_RECENTS_24 = create("actions__24__tag-recents");
+    public static final AntuIcon ACTION_TAG_RESET_24 = create("actions__24__tag-reset");
+    public static final AntuIcon ACTION_TASK_NEW_24 = create("actions__24__task-new");
+    public static final AntuIcon ACTION_TAXES_FINANCES_24 = create("actions__24__taxes-finances");
+    public static final AntuIcon ACTION_TEX_LOGO_24 = create("actions__24__TeX_logo");
+    public static final AntuIcon ACTION_TEXT_FIELD_24 = create("actions__24__text-field");
+    public static final AntuIcon ACTION_TEXT_FLOW_INTO_FRAME_24 = create("actions__24__text-flow-into-frame");
+    public static final AntuIcon ACTION_TEXT_FRAME_LINK_24 = create("actions__24__text-frame-link");
+    public static final AntuIcon ACTION_TEXT_FRAME_UNLINK_24 = create("actions__24__text-frame-unlink");
+    public static final AntuIcon ACTION_TEXT_HORZ_KERN_24 = create("actions__24__text_horz_kern");
+    public static final AntuIcon ACTION_TEXT_LETTER_SPACING_24 = create("actions__24__text_letter_spacing");
+    public static final AntuIcon ACTION_TEXT_LINE_SPACING_24 = create("actions__24__text_line_spacing");
+    public static final AntuIcon ACTION_TEXT_PUT_ON_PATH_24 = create("actions__24__text-put-on-path");
+    public static final AntuIcon ACTION_TEXT_REMOVE_FROM_PATH_24 = create("actions__24__text-remove-from-path");
+    public static final AntuIcon ACTION_TEXT_REMOVE_KERNS_24 = create("actions__24__text_remove_kerns");
+    public static final AntuIcon ACTION_TEXT_ROTATION_24 = create("actions__24__text_rotation");
+    public static final AntuIcon ACTION_TEXT_SPEAK_24 = create("actions__24__text-speak");
+    public static final AntuIcon ACTION_TEXT_SUBSCRIPT_24 = create("actions__24__text_subscript");
+    public static final AntuIcon ACTION_TEXT_SUPERSCRIPT_24 = create("actions__24__text_superscript");
+    public static final AntuIcon ACTION_TEXT_UNFLOW_24 = create("actions__24__text-unflow");
+    public static final AntuIcon ACTION_TEXT_UNKERN_24 = create("actions__24__text-unkern");
+    public static final AntuIcon ACTION_TEXT_VERT_KERN_24 = create("actions__24__text_vert_kern");
+    public static final AntuIcon ACTION_TEXT_WORD_SPACING_24 = create("actions__24__text_word_spacing");
+    public static final AntuIcon ACTION_TEXT_WRAP_24 = create("actions__24__text-wrap");
+    public static final AntuIcon ACTION_TEXTURE_24 = create("actions__24__texture");
+    public static final AntuIcon ACTION_TOOL_ANIMATOR_24 = create("actions__24__tool-animator");
+    public static final AntuIcon ACTION_TOOL_COLOR_ERASER_24 = create("actions__24__tool_color_eraser");
+    public static final AntuIcon ACTION_TOOL_CURVE_24 = create("actions__24__tool_curve");
+    public static final AntuIcon ACTION_TOOL_ELLIPTICAL_SELECTION_24 = create("actions__24__tool_elliptical_selection");
+    public static final AntuIcon ACTION_TOOL_MEASURE_24 = create("actions__24__tool-measure");
+    public static final AntuIcon ACTION_TOOL_NODE_EDITOR_24 = create("actions__24__tool-node-editor");
+    public static final AntuIcon ACTION_TOOL_POINTER_24 = create("actions__24__tool-pointer");
+    public static final AntuIcon ACTION_TOOL_POLYGON_24 = create("actions__24__tool_polygon");
+    public static final AntuIcon ACTION_TOOL_ROUNDED_RECTANGLE_24 = create("actions__24__tool_rounded_rectangle");
+    public static final AntuIcon ACTION_TOOL_SPRAY_24 = create("actions__24__tool-spray");
+    public static final AntuIcon ACTION_TOOL_TWEAK_24 = create("actions__24__tool-tweak");
+    public static final AntuIcon ACTION_TOOLS_CHECK_SPELLING_24 = create("actions__24__tools-check-spelling");
+    public static final AntuIcon ACTION_TOOLS_MEDIA_OPTICAL_BURN_24 = create("actions__24__tools-media-optical-burn");
+    public static final AntuIcon ACTION_TOOLS_MEDIA_OPTICAL_BURN_IMAGE_24 = create("actions__24__tools-media-optical-burn-image");
+    public static final AntuIcon ACTION_TOOLS_MEDIA_OPTICAL_COPY_24 = create("actions__24__tools-media-optical-copy");
+    public static final AntuIcon ACTION_TOOLS_MEDIA_OPTICAL_ERASE_24 = create("actions__24__tools-media-optical-erase");
+    public static final AntuIcon ACTION_TOOLS_MEDIA_OPTICAL_FORMAT_24 = create("actions__24__tools-media-optical-format");
+    public static final AntuIcon ACTION_TOOLS_REPORT_BUG_24 = create("actions__24__tools-report-bug");
+    public static final AntuIcon ACTION_TOOLS_RIP_AUDIO_CD_24 = create("actions__24__tools-rip-audio-cd");
+    public static final AntuIcon ACTION_TOOLS_RIP_VIDEO_CD_24 = create("actions__24__tools-rip-video-cd");
+    public static final AntuIcon ACTION_TOOLS_RIP_VIDEO_DVD_24 = create("actions__24__tools-rip-video-dvd");
+    public static final AntuIcon ACTION_TOOLS_WIZARD_24 = create("actions__24__tools-wizard");
+    public static final AntuIcon ACTION_TRANSFORM_AFFECT_GRADIENT_24 = create("actions__24__transform-affect-gradient");
+    public static final AntuIcon ACTION_TRANSFORM_AFFECT_PATTERN_24 = create("actions__24__transform-affect-pattern");
+    public static final AntuIcon ACTION_TRANSFORM_AFFECT_ROUNDED_CORNERS_24 = create("actions__24__transform-affect-rounded-corners");
+    public static final AntuIcon ACTION_TRANSFORM_AFFECT_STROKE_24 = create("actions__24__transform-affect-stroke");
+    public static final AntuIcon ACTION_TRANSFORM_CROP_24 = create("actions__24__transform-crop");
+    public static final AntuIcon ACTION_TRANSFORM_CROP_AND_RESIZE_24 = create("actions__24__transform-crop-and-resize");
+    public static final AntuIcon ACTION_TRANSFORM_MIRROR_HORIZONTAL_24 = create("actions__24__transform-mirror-horizontal");
+    public static final AntuIcon ACTION_TRANSFORM_MIRROR_VERTICAL_24 = create("actions__24__transform-mirror-vertical");
+    public static final AntuIcon ACTION_TRANSFORM_MOVE_24 = create("actions__24__transform-move");
+    public static final AntuIcon ACTION_TRANSFORM_MOVE_HORIZONTAL_24 = create("actions__24__transform-move-horizontal");
+    public static final AntuIcon ACTION_TRANSFORM_MOVE_VERTICAL_24 = create("actions__24__transform-move-vertical");
+    public static final AntuIcon ACTION_TRANSFORM_ROTATE_24 = create("actions__24__transform-rotate");
+    public static final AntuIcon ACTION_TRANSFORM_SCALE_24 = create("actions__24__transform-scale");
+    public static final AntuIcon ACTION_TRANSFORM_SCALE_TEXTBOX_POINTS_24 = create("actions__24__transform-scale-textbox-points");
+    public static final AntuIcon ACTION_TRANSFORM_SHEAR_DOWN_24 = create("actions__24__transform-shear-down");
+    public static final AntuIcon ACTION_TRANSFORM_SHEAR_LEFT_24 = create("actions__24__transform-shear-left");
+    public static final AntuIcon ACTION_TRANSFORM_SHEAR_RIGHT_24 = create("actions__24__transform-shear-right");
+    public static final AntuIcon ACTION_TRANSFORM_SHEAR_UP_24 = create("actions__24__transform-shear-up");
+    public static final AntuIcon ACTION_TRASH_EMPTY_24 = create("actions__24__trash-empty");
+    public static final AntuIcon ACTION_UMBRELLO_DIAGRAM_DEPLOYMENT_24 = create("actions__24__umbrello_diagram_deployment");
+    public static final AntuIcon ACTION_UNDEREXPOSURE_24 = create("actions__24__underexposure");
+    public static final AntuIcon ACTION_UNIASSOCIATION_24 = create("actions__24__uniassociation");
+    public static final AntuIcon ACTION_UNIQUE_CONSTRAINT_24 = create("actions__24__unique_constraint");
+    public static final AntuIcon ACTION_UPCOMINGEVENTS_AMAROK_24 = create("actions__24__upcomingevents-amarok");
+    public static final AntuIcon ACTION_UPINDICATOR_24 = create("actions__24__upindicator");
+    public static final AntuIcon ACTION_UPLOAD_MEDIA_24 = create("actions__24__upload-media");
+    public static final AntuIcon ACTION_USER_GROUP_DELETE_24 = create("actions__24__user-group-delete");
+    public static final AntuIcon ACTION_USER_GROUP_NEW_24 = create("actions__24__user-group-new");
+    public static final AntuIcon ACTION_USER_GROUP_PROPERTIES_24 = create("actions__24__user-group-properties");
+    public static final AntuIcon ACTION_USER_IDENTITY_24 = create("actions__24__user-identity");
+    public static final AntuIcon ACTION_USER_PROPERTIES_24 = create("actions__24__user-properties");
+    public static final AntuIcon ACTION_USERNAME_COPY_24 = create("actions__24__username-copy");
+    public static final AntuIcon ACTION_VIDEOCLIP_AMAROK_24 = create("actions__24__videoclip-amarok");
+    public static final AntuIcon ACTION_VIEW_BANK_24 = create("actions__24__view-bank");
+    public static final AntuIcon ACTION_VIEW_BANK_ACCOUNT_24 = create("actions__24__view-bank-account");
+    public static final AntuIcon ACTION_VIEW_BANK_ACCOUNT_CHECKING_24 = create("actions__24__view-bank-account-checking");
+    public static final AntuIcon ACTION_VIEW_BANK_ACCOUNT_SAVINGS_24 = create("actions__24__view-bank-account-savings");
+    public static final AntuIcon ACTION_VIEW_BARCODE_24 = create("actions__24__view-barcode");
+    public static final AntuIcon ACTION_VIEW_BARCODE_ADD_24 = create("actions__24__view-barcode-add");
+    public static final AntuIcon ACTION_VIEW_CALENDAR_24 = create("actions__24__view-calendar");
+    public static final AntuIcon ACTION_VIEW_CALENDAR_AGENDA_24 = create("actions__24__view-calendar-agenda");
+    public static final AntuIcon ACTION_VIEW_CALENDAR_BIRTHDAY_24 = create("actions__24__view-calendar-birthday");
+    public static final AntuIcon ACTION_VIEW_CALENDAR_DAY_24 = create("actions__24__view-calendar-day");
+    public static final AntuIcon ACTION_VIEW_CALENDAR_HOLIDAY_24 = create("actions__24__view-calendar-holiday");
+    public static final AntuIcon ACTION_VIEW_CALENDAR_JOURNAL_24 = create("actions__24__view-calendar-journal");
+    public static final AntuIcon ACTION_VIEW_CALENDAR_LIST_24 = create("actions__24__view-calendar-list");
+    public static final AntuIcon ACTION_VIEW_CALENDAR_MONTH_24 = create("actions__24__view-calendar-month");
+    public static final AntuIcon ACTION_VIEW_CALENDAR_SPECIAL_OCCASION_24 = create("actions__24__view-calendar-special-occasion");
+    public static final AntuIcon ACTION_VIEW_CALENDAR_TASKS_24 = create("actions__24__view-calendar-tasks");
+    public static final AntuIcon ACTION_VIEW_CALENDAR_TIME_SPENT_24 = create("actions__24__view-calendar-time-spent");
+    public static final AntuIcon ACTION_VIEW_CALENDAR_TIMELINE_24 = create("actions__24__view-calendar-timeline");
+    public static final AntuIcon ACTION_VIEW_CALENDAR_UPCOMING_DAYS_24 = create("actions__24__view-calendar-upcoming-days");
+    public static final AntuIcon ACTION_VIEW_CALENDAR_UPCOMING_EVENTS_24 = create("actions__24__view-calendar-upcoming-events");
+    public static final AntuIcon ACTION_VIEW_CALENDAR_WEDDING_ANNIVERSARY_24 = create("actions__24__view-calendar-wedding-anniversary");
+    public static final AntuIcon ACTION_VIEW_CALENDAR_WEEK_24 = create("actions__24__view-calendar-week");
+    public static final AntuIcon ACTION_VIEW_CALENDAR_WHATSNEXT_24 = create("actions__24__view-calendar-whatsnext");
+    public static final AntuIcon ACTION_VIEW_CALENDAR_WORKWEEK_24 = create("actions__24__view-calendar-workweek");
+    public static final AntuIcon ACTION_VIEW_CATALOG_24 = create("actions__24__view-catalog");
+    public static final AntuIcon ACTION_VIEW_CATEGORIES_24 = create("actions__24__view-categories");
+    public static final AntuIcon ACTION_VIEW_CATEGORIES_EXPENDITURES_24 = create("actions__24__view-categories-expenditures");
+    public static final AntuIcon ACTION_VIEW_CATEGORIES_INCOMES_24 = create("actions__24__view-categories-incomes");
+    public static final AntuIcon ACTION_VIEW_CERTIFICATE_24 = create("actions__24__view-certificate");
+    public static final AntuIcon ACTION_VIEW_CERTIFICATE_ADD_24 = create("actions__24__view-certificate-add");
+    public static final AntuIcon ACTION_VIEW_CERTIFICATE_EXPORT_24 = create("actions__24__view-certificate-export");
+    public static final AntuIcon ACTION_VIEW_CERTIFICATE_EXPORT_SECRET_24 = create("actions__24__view-certificate-export-secret");
+    public static final AntuIcon ACTION_VIEW_CERTIFICATE_EXPORT_SERVER_24 = create("actions__24__view-certificate-export-server");
+    public static final AntuIcon ACTION_VIEW_CERTIFICATE_IMPORT_24 = create("actions__24__view-certificate-import");
+    public static final AntuIcon ACTION_VIEW_CERTIFICATE_SERVER_CONFIGURE_24 = create("actions__24__view-certificate-server-configure");
+    public static final AntuIcon ACTION_VIEW_CERTIFICATE_SIGN_24 = create("actions__24__view-certificate-sign");
+    public static final AntuIcon ACTION_VIEW_CHOOSE_24 = create("actions__24__view-choose");
+    public static final AntuIcon ACTION_VIEW_CLOSE_24 = create("actions__24__view-close");
+    public static final AntuIcon ACTION_VIEW_CONVERSATION_BALLOON_24 = create("actions__24__view-conversation-balloon");
+    public static final AntuIcon ACTION_VIEW_FILE_COLUMNS_24 = create("actions__24__view-file-columns");
+    public static final AntuIcon ACTION_VIEW_FILTER_24 = create("actions__24__view-filter");
+    public static final AntuIcon ACTION_VIEW_FILTER_32 = create("actions__32__view-filter");
+    public static final AntuIcon ACTION_VIEW_FORM_24 = create("actions__24__view-form");
+    public static final AntuIcon ACTION_VIEW_FORM_ACTION_24 = create("actions__24__view-form-action");
+    public static final AntuIcon ACTION_VIEW_FULLSCREEN_24 = create("actions__24__view-fullscreen");
+    public static final AntuIcon ACTION_VIEW_GRID_24 = create("actions__24__view-grid");
+    public static final AntuIcon ACTION_VIEW_GROUP_24 = create("actions__24__view-group");
+    public static final AntuIcon ACTION_VIEW_GROUP_32 = create("actions__32__view-group");
+    public static final AntuIcon ACTION_VIEW_HISTORY_24 = create("actions__24__view-history");
+    public static final AntuIcon ACTION_VIEW_LEFT_CLOSE_24 = create("actions__24__view-left-close");
+    public static final AntuIcon ACTION_VIEW_LEFT_CLOSE_32 = create("actions__32__view-left-close");
+    public static final AntuIcon ACTION_VIEW_LIST_DETAILS_24 = create("actions__24__view-list-details");
+    public static final AntuIcon ACTION_VIEW_LIST_DETAILS_32 = create("actions__32__view-list-details");
+    public static final AntuIcon ACTION_VIEW_LIST_ICONS_24 = create("actions__24__view-list-icons");
+    public static final AntuIcon ACTION_VIEW_LIST_ICONS_32 = create("actions__32__view-list-icons");
+    public static final AntuIcon ACTION_VIEW_LIST_TEXT_24 = create("actions__24__view-list-text");
+    public static final AntuIcon ACTION_VIEW_LIST_TEXT_32 = create("actions__32__view-list-text");
+    public static final AntuIcon ACTION_VIEW_LIST_TREE_24 = create("actions__24__view-list-tree");
+    public static final AntuIcon ACTION_VIEW_LIST_TREE_32 = create("actions__32__view-list-tree");
+    public static final AntuIcon ACTION_VIEW_MEDIA_ARTIST_24 = create("actions__24__view-media-artist");
+    public static final AntuIcon ACTION_VIEW_MEDIA_EQUALIZER_24 = create("actions__24__view-media-equalizer");
+    public static final AntuIcon ACTION_VIEW_MEDIA_LYRICS_24 = create("actions__24__view-media-lyrics");
+    public static final AntuIcon ACTION_VIEW_MEDIA_PLAYLIST_24 = create("actions__24__view-media-playlist");
+    public static final AntuIcon ACTION_VIEW_MEDIA_VISUALIZATION_24 = create("actions__24__view-media-visualization");
+    public static final AntuIcon ACTION_VIEW_MULTIPLE_OBJECTS_24 = create("actions__24__view-multiple-objects");
+    public static final AntuIcon ACTION_VIEW_OBJECT_HISTOGRAM_LINEAR_24 = create("actions__24__view-object-histogram-linear");
+    public static final AntuIcon ACTION_VIEW_OBJECT_HISTOGRAM_LOGARITHMIC_24 = create("actions__24__view-object-histogram-logarithmic");
+    public static final AntuIcon ACTION_VIEW_PIM_CALENDAR_24 = create("actions__24__view-pim-calendar");
+    public static final AntuIcon ACTION_VIEW_PIM_CONTACTS_24 = create("actions__24__view-pim-contacts");
+    public static final AntuIcon ACTION_VIEW_PIM_JOURNAL_24 = create("actions__24__view-pim-journal");
+    public static final AntuIcon ACTION_VIEW_PIM_MAIL_24 = create("actions__24__view-pim-mail");
+    public static final AntuIcon ACTION_VIEW_PIM_NEWS_24 = create("actions__24__view-pim-news");
+    public static final AntuIcon ACTION_VIEW_PIM_NOTES_24 = create("actions__24__view-pim-notes");
+    public static final AntuIcon ACTION_VIEW_PIM_TASKS_24 = create("actions__24__view-pim-tasks");
+    public static final AntuIcon ACTION_VIEW_PIM_TASKS_PENDING_24 = create("actions__24__view-pim-tasks-pending");
+    public static final AntuIcon ACTION_VIEW_PRESENTATION_24 = create("actions__24__view-presentation");
+    public static final AntuIcon ACTION_VIEW_PREVIEW_24 = create("actions__24__view-preview");
+    public static final AntuIcon ACTION_VIEW_PREVIEW_32 = create("actions__32__view-preview");
+    public static final AntuIcon ACTION_VIEW_PROCESS_ALL_24 = create("actions__24__view-process-all");
+    public static final AntuIcon ACTION_VIEW_PROCESS_ALL_TREE_24 = create("actions__24__view-process-all-tree");
+    public static final AntuIcon ACTION_VIEW_PROCESS_OWN_24 = create("actions__24__view-process-own");
+    public static final AntuIcon ACTION_VIEW_PROCESS_SYSTEM_24 = create("actions__24__view-process-system");
+    public static final AntuIcon ACTION_VIEW_PROCESS_TREE_24 = create("actions__24__view-process-tree");
+    public static final AntuIcon ACTION_VIEW_PROCESS_USERS_24 = create("actions__24__view-process-users");
+    public static final AntuIcon ACTION_VIEW_READERMODE_24 = create("actions__24__view-readermode");
+    public static final AntuIcon ACTION_VIEW_READERMODE_ACTIVE_24 = create("actions__24__view-readermode-active");
+    public static final AntuIcon ACTION_VIEW_REFRESH_24 = create("actions__24__view-refresh");
+    public static final AntuIcon ACTION_VIEW_REFRESH_32 = create("actions__32__view-refresh");
+    public static final AntuIcon ACTION_VIEW_RESOURCE_CALENDAR_24 = create("actions__24__view-resource-calendar");
+    public static final AntuIcon ACTION_VIEW_RESTORE_24 = create("actions__24__view-restore");
+    public static final AntuIcon ACTION_VIEW_RIGHT_CLOSE_24 = create("actions__24__view-right-close");
+    public static final AntuIcon ACTION_VIEW_RIGHT_CLOSE_32 = create("actions__32__view-right-close");
+    public static final AntuIcon ACTION_VIEW_RIGHT_NEW_24 = create("actions__24__view-right-new");
+    public static final AntuIcon ACTION_VIEW_RIGHT_NEW_32 = create("actions__32__view-right-new");
+    public static final AntuIcon ACTION_VIEW_SERVICES_SCRIPTED_AMAROK_24 = create("actions__24__view-services-scripted-amarok");
+    public static final AntuIcon ACTION_VIEW_SIDETREE_24 = create("actions__24__view-sidetree");
+    public static final AntuIcon ACTION_VIEW_SORT_ASCENDING_24 = create("actions__24__view-sort-ascending");
+    public static final AntuIcon ACTION_VIEW_SORT_ASCENDING_32 = create("actions__32__view-sort-ascending");
+    public static final AntuIcon ACTION_VIEW_SORT_DESCENDING_24 = create("actions__24__view-sort-descending");
+    public static final AntuIcon ACTION_VIEW_SORT_DESCENDING_32 = create("actions__32__view-sort-descending");
+    public static final AntuIcon ACTION_VIEW_SPLIT_LEFT_RIGHT_24 = create("actions__24__view-split-left-right");
+    public static final AntuIcon ACTION_VIEW_SPLIT_TOP_BOTTOM_24 = create("actions__24__view-split-top-bottom");
+    public static final AntuIcon ACTION_VIEW_STATISTICS_24 = create("actions__24__view-statistics");
+    public static final AntuIcon ACTION_VIEW_STATISTICS_48 = create("actions__48__view-statistics");
+    public static final AntuIcon ACTION_VIEW_TABLE_OF_CONTENTS_LTR_24 = create("actions__24__view-table-of-contents-ltr");
+    public static final AntuIcon ACTION_VIEW_TABLE_OF_CONTENTS_RTL_24 = create("actions__24__view-table-of-contents-rtl");
+    public static final AntuIcon ACTION_VIEW_TASK_24 = create("actions__24__view-task");
+    public static final AntuIcon ACTION_VIEW_TASK_ADD_24 = create("actions__24__view-task-add");
+    public static final AntuIcon ACTION_VIEW_TASK_CHILD_24 = create("actions__24__view-task-child");
+    public static final AntuIcon ACTION_VIEW_TASK_CHILD_ADD_24 = create("actions__24__view-task-child-add");
+    public static final AntuIcon ACTION_VIEW_TIME_SCHEDULE_24 = create("actions__24__view-time-schedule");
+    public static final AntuIcon ACTION_VIEW_TIME_SCHEDULE_BASELINED_24 = create("actions__24__view-time-schedule-baselined");
+    public static final AntuIcon ACTION_VIEW_TIME_SCHEDULE_BASELINED_ADD_24 = create("actions__24__view-time-schedule-baselined-add");
+    public static final AntuIcon ACTION_VIEW_TIME_SCHEDULE_BASELINED_REMOVE_24 = create("actions__24__view-time-schedule-baselined-remove");
+    public static final AntuIcon ACTION_VIEW_TIME_SCHEDULE_CALCULUS_24 = create("actions__24__view-time-schedule-calculus");
+    public static final AntuIcon ACTION_VIEW_TIME_SCHEDULE_CHILD_INSERT_24 = create("actions__24__view-time-schedule-child-insert");
+    public static final AntuIcon ACTION_VIEW_TIME_SCHEDULE_EDIT_24 = create("actions__24__view-time-schedule-edit");
+    public static final AntuIcon ACTION_VIEW_TIME_SCHEDULE_INSERT_24 = create("actions__24__view-time-schedule-insert");
+    public static final AntuIcon ACTION_VIEW_WEB_BROWSER_DOM_TREE_24 = create("actions__24__view-web-browser-dom-tree");
+    public static final AntuIcon ACTION_VIEWIMAGE_24 = create("actions__24__viewimage");
+    public static final AntuIcon ACTION_VISIBILITY_24 = create("actions__24__visibility");
+    public static final AntuIcon ACTION_WHITEBALANCE_24 = create("actions__24__whitebalance");
+    public static final AntuIcon ACTION_WINDOW_24 = create("actions__24__window");
+    public static final AntuIcon ACTION_WINDOW_CLOSE_24 = create("actions__24__window-close");
+    public static final AntuIcon ACTION_WINDOW_CLOSE_32 = create("actions__32__window-close");
+    public static final AntuIcon ACTION_WINDOW_DUPLICATE_24 = create("actions__24__window-duplicate");
+    public static final AntuIcon ACTION_WINDOW_NEW_24 = create("actions__24__window-new");
+    public static final AntuIcon ACTION_WINDOW_NEXT_24 = create("actions__24__window-next");
+    public static final AntuIcon ACTION_WINDOW_PREVIOUS_24 = create("actions__24__window-previous");
+    public static final AntuIcon ACTION_X_CLEMENTINE_ARTIST_24 = create("actions__24__x-clementine-artist");
+    public static final AntuIcon ACTION_X_SHAPE_CONNECTION_24 = create("actions__24__x-shape-connection");
+    public static final AntuIcon ACTION_X_SHAPE_FORMULA_24 = create("actions__24__x-shape-formula");
+    public static final AntuIcon ACTION_X_SHAPE_IMAGE_24 = create("actions__24__x-shape-image");
+    public static final AntuIcon ACTION_X_SHAPE_TEXT_24 = create("actions__24__x-shape-text");
+    public static final AntuIcon ACTION_X_ZOOM_IN_24 = create("actions__24__x-zoom-in");
+    public static final AntuIcon ACTION_X_ZOOM_OUT_24 = create("actions__24__x-zoom-out");
+    public static final AntuIcon ACTION_XML_ATTRIBUTE_DELETE_24 = create("actions__24__xml-attribute-delete");
+    public static final AntuIcon ACTION_XML_ELEMENT_NEW_24 = create("actions__24__xml-element-new");
+    public static final AntuIcon ACTION_XML_NODE_DELETE_24 = create("actions__24__xml-node-delete");
+    public static final AntuIcon ACTION_XML_NODE_DUPLICATE_24 = create("actions__24__xml-node-duplicate");
+    public static final AntuIcon ACTION_XML_TEXT_NEW_24 = create("actions__24__xml-text-new");
+    public static final AntuIcon ACTION_XY_CURVE_24 = create("actions__24__xy-curve");
+    public static final AntuIcon ACTION_XY_EQUATION_CURVE_24 = create("actions__24__xy-equation-curve");
+    public static final AntuIcon ACTION_XY_FIT_CURVE_24 = create("actions__24__xy-fit-curve");
+    public static final AntuIcon ACTION_Y_ZOOM_IN_24 = create("actions__24__y-zoom-in");
+    public static final AntuIcon ACTION_Y_ZOOM_OUT_24 = create("actions__24__y-zoom-out");
+    public static final AntuIcon ACTION_ZOOM_1_TO_2_24 = create("actions__24__zoom-1-to-2");
+    public static final AntuIcon ACTION_ZOOM_2_TO_1_24 = create("actions__24__zoom-2-to-1");
+    public static final AntuIcon ACTION_ZOOM_24 = create("actions__24__zoom");
+    public static final AntuIcon ACTION_ZOOM_DOUBLE_SIZE_24 = create("actions__24__zoom-double-size");
+    public static final AntuIcon ACTION_ZOOM_DRAW_24 = create("actions__24__zoom-draw");
+    public static final AntuIcon ACTION_ZOOM_FIT_BEST_24 = create("actions__24__zoom-fit-best");
+    public static final AntuIcon ACTION_ZOOM_FIT_DRAWING_24 = create("actions__24__zoom-fit-drawing");
+    public static final AntuIcon ACTION_ZOOM_FIT_HEIGHT_24 = create("actions__24__zoom-fit-height");
+    public static final AntuIcon ACTION_ZOOM_FIT_PAGE_24 = create("actions__24__zoom-fit-page");
+    public static final AntuIcon ACTION_ZOOM_FIT_SELECTION_24 = create("actions__24__zoom-fit-selection");
+    public static final AntuIcon ACTION_ZOOM_FIT_WIDTH_24 = create("actions__24__zoom-fit-width");
+    public static final AntuIcon ACTION_ZOOM_HALF_SIZE_24 = create("actions__24__zoom-half-size");
+    public static final AntuIcon ACTION_ZOOM_IN_24 = create("actions__24__zoom-in");
+    public static final AntuIcon ACTION_ZOOM_IN_X_24 = create("actions__24__zoom-in-x");
+    public static final AntuIcon ACTION_ZOOM_IN_Y_24 = create("actions__24__zoom-in-y");
+    public static final AntuIcon ACTION_ZOOM_NEXT_24 = create("actions__24__zoom-next");
+    public static final AntuIcon ACTION_ZOOM_ORIGINAL_24 = create("actions__24__zoom-original");
+    public static final AntuIcon ACTION_ZOOM_OUT_24 = create("actions__24__zoom-out");
+    public static final AntuIcon ACTION_ZOOM_OUT_X_24 = create("actions__24__zoom-out-x");
+    public static final AntuIcon ACTION_ZOOM_OUT_Y_24 = create("actions__24__zoom-out-y");
+    public static final AntuIcon ACTION_ZOOM_PREVIOUS_24 = create("actions__24__zoom-previous");
+    public static final AntuIcon ACTION_ZOOM_SELECT_24 = create("actions__24__zoom-select");
+    public static final AntuIcon ACTION_ZOOM_SELECT_FIT_24 = create("actions__24__zoom-select-fit");
+    public static final AntuIcon ACTION_ZOOM_SELECT_X_24 = create("actions__24__zoom-select-x");
+    public static final AntuIcon ACTION_ZOOM_SELECT_Y_24 = create("actions__24__zoom-select-y");
+
+    private static AntuIcon create(String iconID) {
+        AntuIcon icon = new AntuIcon(iconID);
+        ICONS_BY_ID.put(iconID, icon);
+        return icon;
+    }
+
+    private final String iconID;
+    private final AntuIconStyle style;
+
+    public AntuIcon(String path) {
+        this(path, null);
+    }
+
+    public AntuIcon(String iconName, AntuIconStyle style) {
+        this.iconID = iconName;
+        this.style = style;
+    }
+
+    public static AntuIcon forID(String iconID) {
+        return ICONS_BY_ID.get(iconID);
+    }
+
+    @Override
+    public AntuIcon withStyle(AntuIconStyle antuIconStyle) {
+        return new AntuIcon(iconID, antuIconStyle);
+    }
+
+    @Override
+    public AntuIconStyle getStyle() {
+        return style;
+    }
+
+    public String getIconID() {
+        return iconID;
+    }
 }
-
-

@@ -1,18 +1,21 @@
 # Teamapps Icon Provider for Antu Classic Icons
 
+
+This Icon set contains 3582 SVG icons and two styles `LIGHT`(default) and `DARK` for Dark Backgrounds. The original purpose of this collection is a for a Linux Desktop Operating System.
+
 Icons Source: <https://github.com/fabianalexisinostroza/Antu-classic>
 
-Icons are organised in subgroups:
+The Icons are in various Categories:
 
-* `AntuIcon.ACTIONS`: 1471 icons
-* `AntuIcon.APPLETS`: 55 icons
-* `AntuIcon.APPS`: 1498 icons
-* `AntuIcon.CATEGORIES`: 32 icons
-* `AntuIcon.DEVICES`: 70 icons
-* `AntuIcon.EMBLEMS`: 21 icons
-* `AntuIcon.EMOTES`: 32 icons
-* `AntuIcon.PLACES`: 270 icons
-* `AntuIcon.STATUS`: 136 icons
+* `AntuIcon.ACTION_*`: 1471 icons
+* `AntuIcon.APPLET_*`: 55 icons
+* `AntuIcon.APP_*`: 1498 icons
+* `AntuIcon.CATEGORY_*`: 32 icons
+* `AntuIcon.DEVICE_*`: 70 icons
+* `AntuIcon.EMBLEM_*`: 21 icons
+* `AntuIcon.EMOTE_*`: 32 icons
+* `AntuIcon.PLACE_*`: 270 icons
+* `AntuIcon.STATUS_*`: 136 icons
 
 Mimetype Icons of the Antu Theme are excluded
 
@@ -24,29 +27,22 @@ Add dependency to your TeamApps Maven Project:
         <dependency>
             <groupId>org.teamapps</groupId>
             <artifactId>teamapps-antu-icon-provider</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
         </dependency>
 ~~~
 
-Add additional Icon Provider to WebController
+Usage:
 
 ~~~java
+import org.teamapps.icons.Icon;
+import org.teamapps.icon.antu.AntuIcon;
+import org.teamapps.icon.antu.AntuIconStyle;
 
-public class PanelExample {
-    public static void main(String[] args) throws Exception {
-        SimpleWebController controller = new SimpleWebController(context -> {
-
-            // create new Panel
-            Panel panel = new Panel(AntuIcon.STATUS.SECURITY_HIGH_64, "Panel with AntuIcon");
-
-            // add DummyComponent as panel Content
-            panel.setContent(new DummyComponent());
-
-            return panel;
-        });
-        // Register AntuIconProvider
-        controller.addAdditionalIconProvider(new AntuIconProvider());
-        new TeamAppsJettyEmbeddedServer(controller, Files.createTempDir()).start();
+public class IconExample {
+    public static Void someMethod() {
+        Icon icon1 = AntuIcon.STATUS_SECURITY_HIGH_64;
+        Icon icon2 = AntuIcon.STATUS_MIC_OFF_22.withStyle(AntuIconStyle.DARK);
+        Icon icon3 = AntuIcon.ACTION_AUTOCORRECTION_32.withStyle(AntuIconStyle.LIGHT); // Default Style
     }
 }
 ~~~

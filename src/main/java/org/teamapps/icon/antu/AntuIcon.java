@@ -22,10 +22,8 @@ package org.teamapps.icon.antu;
 import org.teamapps.icons.Icon;
 import org.teamapps.icons.spi.IconLibrary;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 @IconLibrary(
         name = "antu",
@@ -38,6 +36,18 @@ public class AntuIcon implements Icon<AntuIcon, AntuIconStyle> {
 
 
     private static final Map<String, AntuIcon> ICONS_BY_ID = new HashMap<>();
+
+    private static AntuIcon create(String iconID) {
+        AntuIcon icon = new AntuIcon(iconID);
+        ICONS_BY_ID.put(iconID, icon);
+        return icon;
+    }
+
+    public static List<AntuIcon> getIcons() {
+        return ICONS_BY_ID.values().stream()
+                .sorted(Comparator.comparing(AntuIcon::getIconID))
+                .collect(Collectors.toList());
+    }
 
     // APPLETS
     public static final AntuIcon APPLET_APPLETS_TEMPLATE_256 = create("applets__256__applets-template");
@@ -3639,12 +3649,6 @@ public class AntuIcon implements Icon<AntuIcon, AntuIconStyle> {
     public static final AntuIcon ACTION_ZOOM_SELECT_FIT_24 = create("actions__24__zoom-select-fit");
     public static final AntuIcon ACTION_ZOOM_SELECT_X_24 = create("actions__24__zoom-select-x");
     public static final AntuIcon ACTION_ZOOM_SELECT_Y_24 = create("actions__24__zoom-select-y");
-
-    private static AntuIcon create(String iconID) {
-        AntuIcon icon = new AntuIcon(iconID);
-        ICONS_BY_ID.put(iconID, icon);
-        return icon;
-    }
 
     private final String iconID;
     private final AntuIconStyle style;

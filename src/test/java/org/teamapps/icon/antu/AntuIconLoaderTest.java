@@ -38,7 +38,7 @@ public class AntuIconLoaderTest {
         assertNotEquals("", svg);
         assertTrue(svg.contains("<svg"));
 
-        String resourcePath = "/org/teamapps/icon/antu-classic/Antu/status/22/kdeconnect-tray.svg";
+        String resourcePath = "/org/teamapps/icon/antu/Antu/status/22/kdeconnect-tray.svg";
         String resourcesvg = loadResourceString(resourcePath);
         assertEquals(resourcesvg, svg);
 
@@ -56,7 +56,7 @@ public class AntuIconLoaderTest {
         assertNotEquals("", svg);
         assertTrue(svg.contains("<svg"));
 
-        String resourcePath = "/org/teamapps/icon/antu-classic/AntuDark/status/22/kdeconnect-tray.svg";
+        String resourcePath = "/org/teamapps/icon/antu/AntuDark/status/22/kdeconnect-tray.svg";
         String resourcesvg = loadResourceString(resourcePath);
         assertEquals(resourcesvg, svg);
 
@@ -79,7 +79,7 @@ public class AntuIconLoaderTest {
                 System.out.println("ERROR Loading Icon: " + antuIcon.getIconID() + ", error: " + e.getMessage());
             }
             assertNotNull(svg);
-            assertNotEquals("", svg);
+//            assertNotEquals("", svg);
             if (!svg.contains("<svg")) {
                 System.out.println(antuIcon.getIconID() + "\n" + svg);
             }
@@ -87,6 +87,7 @@ public class AntuIconLoaderTest {
             assertTrue("resource contains svg end tag " + antuIcon.getIconID() + "\n" + svg, svg.contains("</svg>"));
         }
     }
+
     @Test
     public void loadAllIconsDark() throws Exception {
         // Test Dark Icons
@@ -100,7 +101,7 @@ public class AntuIconLoaderTest {
                 System.out.println("ERROR Loading Icon: " + antuIcon.getIconID() + ", error: " + e.getMessage());
             }
             assertNotNull(svg);
-            assertNotEquals("", svg);
+//            assertNotEquals("should not be empty " + antuIcon.getIconID() + "\n" + svg,"", svg);
             assertTrue("resource contains svg start tag " + antuIcon.getIconID() + "\n" + svg, svg.contains("<svg"));
             assertTrue("resource contains svg end tag " + antuIcon.getIconID() + "\n" + svg, svg.contains("</svg>"));
         }

@@ -78,6 +78,24 @@ Enum naming regex
 $4_$3
 ~~~
 
+optimze SVGs
+~~~bash
+alias optimizesvg="scour --strip-xml-prolog --remove-metadata --remove-descriptions --remove-titles --strip-xml-space  --no-line-breaks  --shorten-ids --enable-id-stripping --set-precision 4"
+for svg in Antu/apps/**/*.svg ; do echo $svg optimizesvg $svg > ../antu/$svg || echo ERROR: $svg > ./error.log ;done
+~~~
+
+TODO: check. These Icons are only in AntuDark, but they are not for a dark theme:
+
+- actions/24/branch.svg
+- actions/24/diag_class.svg
+- actions/24/entry-delete.svg
+- actions/24/entry-edit.svg
+- actions/24/generalisation.svg
+- actions/24/password-show-on.svg
+- actions/24/snap-bounding-box.svg
+- actions/24/umbrello_diagram_entityrelationship.svg
+
+
 ## TEAMAPPS SOFTWARE LICENSE
 
 Apache 2.0

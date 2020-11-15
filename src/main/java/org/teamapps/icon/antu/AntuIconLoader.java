@@ -49,7 +49,7 @@ public class AntuIconLoader implements IconLoader<AntuIcon, AntuIconStyle> {
 
         String folder = style.getFolder();
         String iconPath = iconName.replace("__", "/");
-        String resourcePath = "/org/teamapps/icon/antu-classic/" + folder + "/" + iconPath + ".svg";
+        String resourcePath = "/org/teamapps/icon/antu/" + folder + "/" + iconPath + ".svg";
         InputStream inputStream = getClass().getResourceAsStream(resourcePath);
         if (inputStream == null) {
             return null;

@@ -33,24 +33,30 @@ public class AntuIconTest {
 
     @Test
     public void forID() throws Exception {
-        assertEquals(AntuIcon.forID("status__22__kdeconnect-tray"), AntuIcon.STATUS_KDECONNECT_TRAY_22);
+        assertEquals(AntuIcon.forID("STATUS_KDECONNECT_TRAY_22"), AntuIcon.STATUS_KDECONNECT_TRAY_22);
+    }
+    @Test
+    public void forIDDark() throws Exception {
+        assertEquals(AntuIcon.forIDDark("STATUS_KDECONNECT_TRAY_22"), AntuIcon.STATUS_KDECONNECT_TRAY_22.withStyle(AntuIconStyle.DARK));
     }
 
     @Test
     public void withStyle() {
         assertEquals(AntuIcon.STATUS_KDECONNECT_TRAY_22.withStyle(AntuIconStyle.DARK).getStyle(), AntuIconStyle.DARK);
+
+        assertEquals(AntuIcon.STATUS_KDECONNECT_TRAY_22.withStyle(AntuIconStyle.LIGHT), AntuIcon.STATUS_KDECONNECT_TRAY_22);
     }
 
     @Test
     public void getStyle() {
-        assertNull(AntuIcon.STATUS_KDECONNECT_TRAY_22.getStyle());
+        assertEquals(AntuIcon.STATUS_KDECONNECT_TRAY_22.getStyle(), AntuIconStyle.LIGHT);
+
         assertEquals(AntuIcon.STATUS_KDECONNECT_TRAY_22.withStyle(AntuIconStyle.DARK).getStyle(), AntuIconStyle.DARK);
         assertEquals(AntuIcon.STATUS_KDECONNECT_TRAY_22.withStyle(AntuIconStyle.LIGHT).getStyle(), AntuIconStyle.LIGHT);
     }
 
     @Test
     public void getIconID() {
-        assertEquals("status__22__kdeconnect-tray", AntuIcon.STATUS_KDECONNECT_TRAY_22.getIconID());
-
+        assertEquals("STATUS_KDECONNECT_TRAY_22", AntuIcon.STATUS_KDECONNECT_TRAY_22.getIconID());
     }
 }

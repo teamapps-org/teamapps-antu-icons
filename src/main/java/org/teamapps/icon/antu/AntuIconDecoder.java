@@ -44,16 +44,16 @@ public class AntuIconDecoder implements IconDecoder<AntuIcon, AntuIconStyle> {
 
         if (parts.length == 1) {
             // No Style / Default Style
-            String iconName = parts[0];
-            return AntuIcon.forID(iconName).withStyle(AntuIconStyle.LIGHT);
+            String iconID = parts[0];
+            return AntuIcon.forID(iconID); // .withStyle(AntuIconStyle.LIGHT);
         } else if (parts.length == 2){
             // Some Style
-            String iconName = parts[1];
+            String iconID = parts[1];
             String iconStyle = parts[0];
 
             return switch (iconStyle) {
-                case "DARK" -> AntuIcon.forID(iconName).withStyle(AntuIconStyle.DARK);
-                case "LIGHT" -> AntuIcon.forID(iconName).withStyle(AntuIconStyle.LIGHT);
+                case "DARK" -> AntuIcon.forID(iconID).withStyle(AntuIconStyle.DARK);
+                case "LIGHT" -> AntuIcon.forID(iconID); // .withStyle(AntuIconStyle.LIGHT);
                 default -> null;
             };
 

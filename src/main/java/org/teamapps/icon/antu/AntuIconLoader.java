@@ -42,13 +42,13 @@ public class AntuIconLoader implements IconLoader<AntuIcon, AntuIconStyle> {
      */
     @Override
     public IconResource loadIcon(AntuIcon icon, int size, IconLoaderContext context) {
-        return new IconResource(getSVG(icon.getIconID(), icon.getStyle()), IconType.SVG);
+        return new IconResource(getSVG(icon.getIconPath(), icon.getStyle()), IconType.SVG);
     }
 
-    private byte[] getSVG(String iconName, AntuIconStyle style) {
+    private byte[] getSVG(String iconPath, AntuIconStyle style) {
 
         String folder = style.getFolder();
-        String iconPath = iconName.replace("__", "/");
+        // String iconPath = iconPath.replace("__", "/");
         String resourcePath = "/org/teamapps/icon/antu/" + folder + "/" + iconPath + ".svg";
         InputStream inputStream = getClass().getResourceAsStream(resourcePath);
         if (inputStream == null) {

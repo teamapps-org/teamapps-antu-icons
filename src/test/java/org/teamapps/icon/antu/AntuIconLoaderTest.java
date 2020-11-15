@@ -33,12 +33,12 @@ public class AntuIconLoaderTest {
     @Test
     public void loadIcon() throws Exception {
         AntuIconLoader antuIconLoader = new AntuIconLoader();
-        IconResource iconResource = antuIconLoader.loadIcon(AntuIcon.STATUS_KDECONNECT_TRAY_22.withStyle(AntuIconStyle.LIGHT), 22, null);
+        IconResource iconResource = antuIconLoader.loadIcon(AntuIcon.STATUS_SECURITY_LOW_22.withStyle(AntuIconStyle.LIGHT), 22, null);
         String svg = new String(iconResource.getBytes());
         assertNotEquals("", svg);
         assertTrue(svg.contains("<svg"));
 
-        String resourcePath = "/org/teamapps/icon/antu/Antu/status/22/kdeconnect-tray.svg";
+        String resourcePath = "/org/teamapps/icon/antu/Antu/status/22/security-low.svg";
         String resourcesvg = loadResourceString(resourcePath);
         assertEquals(resourcesvg, svg);
 
@@ -73,7 +73,7 @@ public class AntuIconLoaderTest {
         for (AntuIcon antuIcon : AntuIcon.getIcons()) {
             String svg = "";
             try {
-                IconResource iconResource = antuIconLoader.loadIcon(antuIcon.withStyle(AntuIconStyle.LIGHT), 22, null);
+                IconResource iconResource = antuIconLoader.loadIcon(antuIcon, 22, null);
                 svg = new String(iconResource.getBytes());
             } catch (Exception e) {
                 System.out.println("ERROR Loading Icon: " + antuIcon.getIconID() + ", error: " + e.getMessage());

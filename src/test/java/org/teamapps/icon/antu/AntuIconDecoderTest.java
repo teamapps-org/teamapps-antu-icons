@@ -28,16 +28,16 @@ public class AntuIconDecoderTest {
     @Test
     public void decodeIcon() {
         AntuIconDecoder antuIconDecoder = new AntuIconDecoder();
-        assertEquals(antuIconDecoder.decodeIcon("DARK~apps__48__calligrahandbook",null).getIconID(),AntuIcon.APP_CALLIGRAHANDBOOK_48.getIconID());
-        assertEquals(antuIconDecoder.decodeIcon("DARK~apps__48__calligrahandbook",null).getStyle(),AntuIconStyle.DARK);
+        assertEquals(antuIconDecoder.decodeIcon("DARK~APP_CALLIGRAHANDBOOK_48",null).getIconID(),AntuIcon.APP_CALLIGRAHANDBOOK_48.getIconID());
+        assertEquals(antuIconDecoder.decodeIcon("DARK~APP_CALLIGRAHANDBOOK_48",null).getStyle(),AntuIconStyle.DARK);
 
-        // assertEquals(antuIconDecoder.decodeIcon("DARK~apps__48__calligrahandbook",null),AntuIcon.APP_CALLIGRAHANDBOOK_48.withStyle(AntuIconStyle.DARK));
+        assertEquals(antuIconDecoder.decodeIcon("DARK~APP_CALLIGRAHANDBOOK_48",null),AntuIcon.APP_CALLIGRAHANDBOOK_48.withStyle(AntuIconStyle.DARK));
 
-        assertEquals(antuIconDecoder.decodeIcon("LIGHT~apps__48__calligrahandbook",null).getIconID(),AntuIcon.APP_CALLIGRAHANDBOOK_48.getIconID());
-        assertEquals(antuIconDecoder.decodeIcon("LIGHT~apps__48__calligrahandbook",null).getStyle(),AntuIconStyle.LIGHT);
+        assertEquals(antuIconDecoder.decodeIcon("LIGHT~APP_CALLIGRAHANDBOOK_48",null).getIconID(),AntuIcon.APP_CALLIGRAHANDBOOK_48.getIconID());
+        assertEquals(antuIconDecoder.decodeIcon("LIGHT~APP_CALLIGRAHANDBOOK_48",null).getStyle(),AntuIconStyle.LIGHT);
 
-        assertEquals(antuIconDecoder.decodeIcon("apps__48__calligrahandbook",null).getIconID(),AntuIcon.APP_CALLIGRAHANDBOOK_48.getIconID());
-        assertEquals(antuIconDecoder.decodeIcon("apps__48__calligrahandbook",null).getStyle(),AntuIconStyle.LIGHT);
+        assertEquals(antuIconDecoder.decodeIcon("APP_CALLIGRAHANDBOOK_48",null).getIconID(),AntuIcon.APP_CALLIGRAHANDBOOK_48.getIconID());
+        assertEquals(antuIconDecoder.decodeIcon("APP_CALLIGRAHANDBOOK_48",null).getStyle(),AntuIconStyle.LIGHT);
 
     }
 }

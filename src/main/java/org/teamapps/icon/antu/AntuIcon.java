@@ -34,13 +34,21 @@ import java.util.stream.Collectors;
 )
 public class AntuIcon implements Icon<AntuIcon, AntuIconStyle> {
 
-
     private static final Map<String, AntuIcon> ICONS_BY_ID = new HashMap<>();
+    private final String iconID;
+    private final AntuIconStyle style;
 
-    private static AntuIcon create(String iconID) {
-        AntuIcon icon = new AntuIcon(iconID);
-        ICONS_BY_ID.put(iconID, icon);
-        return icon;
+    public AntuIcon(String path) {
+        this(path, null);
+    }
+
+    public AntuIcon(String iconName, AntuIconStyle style) {
+        this.iconID = iconName;
+        this.style = style;
+    }
+
+    public static AntuIcon forID(String iconID) {
+        return ICONS_BY_ID.get(iconID);
     }
 
     public static List<AntuIcon> getIcons() {
@@ -48,6 +56,27 @@ public class AntuIcon implements Icon<AntuIcon, AntuIconStyle> {
                 .sorted(Comparator.comparing(AntuIcon::getIconID))
                 .collect(Collectors.toList());
     }
+
+    @Override
+    public AntuIcon withStyle(AntuIconStyle antuIconStyle) {
+        return new AntuIcon(iconID, antuIconStyle);
+    }
+
+    @Override
+    public AntuIconStyle getStyle() {
+        return style;
+    }
+
+    public String getIconID() {
+        return iconID;
+    }
+
+    private static AntuIcon create(String iconID) {
+        AntuIcon icon = new AntuIcon(iconID);
+        ICONS_BY_ID.put(iconID, icon);
+        return icon;
+    }
+
 
     // APPLETS
     public static final AntuIcon APPLET_APPLETS_TEMPLATE_256 = create("applets__256__applets-template");
@@ -1082,7 +1111,6 @@ public class AntuIcon implements Icon<AntuIcon, AntuIconStyle> {
     public static final AntuIcon APP_POSTMAN_IMAGE_UPLOADER_48 = create("apps__48__postman-image-uploader");
     public static final AntuIcon APP_POWDER_TOY_48 = create("apps__48__powder-toy");
     public static final AntuIcon APP_PRAGHA_48 = create("apps__48__pragha");
-    public static final AntuIcon APP_PREFERENCES_CONTACT_LIST_32 = create("apps__32__preferences-contact-list");
     public static final AntuIcon APP_PREFERENCES_CONTACT_LIST_48 = create("apps__48__preferences-contact-list");
     public static final AntuIcon APP_PREFERENCES_DESKTOP_32 = create("apps__32__preferences-desktop");
     public static final AntuIcon APP_PREFERENCES_DESKTOP_48 = create("apps__48__preferences-desktop");
@@ -1170,7 +1198,6 @@ public class AntuIcon implements Icon<AntuIcon, AntuIconStyle> {
     public static final AntuIcon APP_PREFERENCES_SYSTEM_BLUETOOTH_16 = create("apps__16__preferences-system-bluetooth");
     public static final AntuIcon APP_PREFERENCES_SYSTEM_BLUETOOTH_32 = create("apps__32__preferences-system-bluetooth");
     public static final AntuIcon APP_PREFERENCES_SYSTEM_BLUETOOTH_48 = create("apps__48__preferences-system-bluetooth");
-    public static final AntuIcon APP_PREFERENCES_SYSTEM_BLUETOOTH_INACTIVE_32 = create("apps__32__preferences-system-bluetooth-inactive");
     public static final AntuIcon APP_PREFERENCES_SYSTEM_BLUETOOTH_INACTIVE_48 = create("apps__48__preferences-system-bluetooth-inactive");
     public static final AntuIcon APP_PREFERENCES_SYSTEM_BLUETOOTH_INACTIVE2_48 = create("apps__48__preferences-system-bluetooth-inactive2");
     public static final AntuIcon APP_PREFERENCES_SYSTEM_FIREWALL_48 = create("apps__48__preferences-system-firewall");
@@ -1831,7 +1858,6 @@ public class AntuIcon implements Icon<AntuIcon, AntuIconStyle> {
     public static final AntuIcon PLACE_FOLDER_WIFI_22 = create("places__22__folder-wifi");
     public static final AntuIcon PLACE_FOLDER_YELLOW_22 = create("places__22__folder-yellow");
     public static final AntuIcon PLACE_FOLDER_22 = create("places__22__folder");
-    public static final AntuIcon PLACE_LIBRARY_MUSIC_22 = create("places__22__library-music");
     public static final AntuIcon PLACE_MAIL_FOLDER_INBOX_22 = create("places__22__mail-folder-inbox");
     public static final AntuIcon PLACE_MAIL_FOLDER_OUTBOX_22 = create("places__22__mail-folder-outbox");
     public static final AntuIcon PLACE_MAIL_FOLDER_SENT_22 = create("places__22__mail-folder-sent");
@@ -1911,7 +1937,6 @@ public class AntuIcon implements Icon<AntuIcon, AntuIconStyle> {
     public static final AntuIcon PLACE_FOLDER_WIFI_32 = create("places__32__folder-wifi");
     public static final AntuIcon PLACE_FOLDER_YELLOW_32 = create("places__32__folder-yellow");
     public static final AntuIcon PLACE_FOLDER_32 = create("places__32__folder");
-    public static final AntuIcon PLACE_LIBRARY_MUSIC_32 = create("places__32__library-music");
     public static final AntuIcon PLACE_NETWORK_SERVER_DATABASE_32 = create("places__32__network-server-database");
     public static final AntuIcon PLACE_NETWORK_SERVER_32 = create("places__32__network-server");
     public static final AntuIcon PLACE_NETWORK_WORKGROUP_32 = create("places__32__network-workgroup");
@@ -2005,7 +2030,6 @@ public class AntuIcon implements Icon<AntuIcon, AntuIconStyle> {
     public static final AntuIcon PLACE_FOLDER_WIFI_64 = create("places__64__folder-wifi");
     public static final AntuIcon PLACE_FOLDER_YELLOW_64 = create("places__64__folder-yellow");
     public static final AntuIcon PLACE_FOLDER_64 = create("places__64__folder");
-    public static final AntuIcon PLACE_LIBRARY_MUSIC_64 = create("places__64__library-music");
     public static final AntuIcon PLACE_NETWORK_SERVER_DATABASE_64 = create("places__64__network-server-database");
     public static final AntuIcon PLACE_NETWORK_SERVER_64 = create("places__64__network-server");
     public static final AntuIcon PLACE_NETWORK_WORKGROUP_64 = create("places__64__network-workgroup");
@@ -2049,7 +2073,7 @@ public class AntuIcon implements Icon<AntuIcon, AntuIconStyle> {
     public static final AntuIcon STATUS_BATTERY_060_64 = create("status__64__battery-060");
     public static final AntuIcon STATUS_BATTERY_080_64 = create("status__64__battery-080");
     public static final AntuIcon STATUS_BATTERY_100_64 = create("status__64__battery-100");
-    public static final AntuIcon STATUS_BATTERY_CAUTION_64 = create("status__64__  battery-caution");
+    public static final AntuIcon STATUS_BATTERY_CAUTION_64 = create("status__64__battery-caution");
     public static final AntuIcon STATUS_BATTERY_CHARGING_040_64 = create("status__64__battery-charging-040");
     public static final AntuIcon STATUS_BATTERY_CHARGING_060_64 = create("status__64__battery-charging-060");
     public static final AntuIcon STATUS_BATTERY_CHARGING_080_64 = create("status__64__battery-charging-080");
@@ -2061,26 +2085,18 @@ public class AntuIcon implements Icon<AntuIcon, AntuIconStyle> {
     public static final AntuIcon STATUS_CAMERA_OFF_22 = create("status__22__camera-off");
     public static final AntuIcon STATUS_CAMERA_ON_22 = create("status__22__camera-on");
     public static final AntuIcon STATUS_CAMERA_READY_22 = create("status__22__camera-ready");
-    public static final AntuIcon STATUS_CLOUDSTATUS_22 = create("status__22__cloudstatus");
     public static final AntuIcon STATUS_DIALOG_ERROR_64 = create("status__64__dialog-error");
-    public static final AntuIcon STATUS_DIALOG_INFORMATION_16 = create("status__16__dialog-information");
     public static final AntuIcon STATUS_DIALOG_INFORMATION_22 = create("status__22__dialog-information");
     public static final AntuIcon STATUS_DIALOG_INFORMATION_64 = create("status__64__dialog-information");
     public static final AntuIcon STATUS_DIALOG_PASSWORD_64 = create("status__64__dialog-password");
     public static final AntuIcon STATUS_DIALOG_QUESTION_64 = create("status__64__dialog-question");
     public static final AntuIcon STATUS_DIALOG_WARNING_64 = create("status__64__dialog-warning");
-    public static final AntuIcon STATUS_DROPBOXSTATUS_BUSY_22 = create("status__22__dropboxstatus-busy");
-    public static final AntuIcon STATUS_DROPBOXSTATUS_BUSY2_22 = create("status__22__dropboxstatus-busy2");
-    public static final AntuIcon STATUS_DROPBOXSTATUS_IDLE_22 = create("status__22__dropboxstatus-idle");
-    public static final AntuIcon STATUS_DROPBOXSTATUS_LOGO_22 = create("status__22__dropboxstatus-logo");
-    public static final AntuIcon STATUS_DROPBOXSTATUS_X_22 = create("status__22__dropboxstatus-x");
     public static final AntuIcon STATUS_FOLDER_CLOUD_22 = create("status__22__folder-cloud");
     public static final AntuIcon STATUS_FOLDER_OPEN_64 = create("status__64__folder-open");
     public static final AntuIcon STATUS_IMAGE_LOADING_64 = create("status__64__image-loading");
     public static final AntuIcon STATUS_IMAGE_MISSING_22 = create("status__22__image-missing");
     public static final AntuIcon STATUS_IRC_CHANNEL_JOINED_22 = create("status__22__irc-channel-joined");
     public static final AntuIcon STATUS_IRC_CHANNEL_PARTED_22 = create("status__22__irc-channel-parted");
-    public static final AntuIcon STATUS_KDECONNECT_TRAY_16_16 = create("status__16__kdeconnect-tray-16");
     public static final AntuIcon STATUS_KDECONNECT_TRAY_22 = create("status__22__kdeconnect-tray");
     public static final AntuIcon STATUS_LAPTOP_CONNECTED_22 = create("status__22__laptop-connected");
     public static final AntuIcon STATUS_LAPTOP_DISCONNECTED_22 = create("status__22__laptop-disconnected");
@@ -2119,13 +2135,13 @@ public class AntuIcon implements Icon<AntuIcon, AntuIconStyle> {
     public static final AntuIcon STATUS_SMARTPHONE_CONNECTED_22 = create("status__22__smartphone-connected");
     public static final AntuIcon STATUS_SMARTPHONE_DISCONNECTED_22 = create("status__22__smartphone-disconnected");
     public static final AntuIcon STATUS_SMARTPHONE_TRUSTED_22 = create("status__22__smartphone-trusted");
+    public static final AntuIcon STATUS_STATE_BUSY_22 = create("status__22__dropboxstatus-busy");
     public static final AntuIcon STATUS_STATE_DOWNLOAD_22 = create("status__22__state-download");
-    public static final AntuIcon STATUS_STATE_ERROR_22 = create("status__22__state-error");
+    public static final AntuIcon STATUS_STATE_ERROR_22 = create("status__22__dropboxstatus-x");
+    public static final AntuIcon STATUS_STATE_IDLE_22 = create("status__22__dropboxstatus-idle");
     public static final AntuIcon STATUS_STATE_INFORMATION_22 = create("status__22__state-information");
     public static final AntuIcon STATUS_STATE_OFFLINE_22 = create("status__22__state-offline");
-    public static final AntuIcon STATUS_STATE_OK_22 = create("status__22__state-ok");
     public static final AntuIcon STATUS_STATE_PAUSE_22 = create("status__22__state-pause");
-    public static final AntuIcon STATUS_STATE_SYNC_22 = create("status__22__state-sync");
     public static final AntuIcon STATUS_STATE_WARNING_22 = create("status__22__state-warning");
     public static final AntuIcon STATUS_TABLET_CONNECTED_22 = create("status__22__tablet-connected");
     public static final AntuIcon STATUS_TABLET_DISCONNECTED_22 = create("status__22__tablet-disconnected");
@@ -3650,33 +3666,4 @@ public class AntuIcon implements Icon<AntuIcon, AntuIconStyle> {
     public static final AntuIcon ACTION_ZOOM_SELECT_X_24 = create("actions__24__zoom-select-x");
     public static final AntuIcon ACTION_ZOOM_SELECT_Y_24 = create("actions__24__zoom-select-y");
 
-    private final String iconID;
-    private final AntuIconStyle style;
-
-    public AntuIcon(String path) {
-        this(path, null);
-    }
-
-    public AntuIcon(String iconName, AntuIconStyle style) {
-        this.iconID = iconName;
-        this.style = style;
-    }
-
-    public static AntuIcon forID(String iconID) {
-        return ICONS_BY_ID.get(iconID);
-    }
-
-    @Override
-    public AntuIcon withStyle(AntuIconStyle antuIconStyle) {
-        return new AntuIcon(iconID, antuIconStyle);
-    }
-
-    @Override
-    public AntuIconStyle getStyle() {
-        return style;
-    }
-
-    public String getIconID() {
-        return iconID;
-    }
 }

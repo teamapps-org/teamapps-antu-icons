@@ -19,10 +19,8 @@
  */
 package org.teamapps.icon.antu;
 
-import org.junit.Assert;
-import org.junit.jupiter.api.Test;
-import org.teamapps.icon.antu.AntuIcon;
-import org.teamapps.icon.antu.AntuIconStyle;
+
+import org.junit.Test;
 
 import static org.junit.Assert.*;
 
@@ -33,24 +31,24 @@ public class AntuIconTest {
         assertTrue(AntuIcon.getIcons().contains(AntuIcon.ACTION_DOCUMENTINFO_24));
     }
 
-    @org.junit.Test
+    @Test
     public void forID() throws Exception {
-        assertEquals(AntuIcon.forID("status__16__kdeconnect-tray-16"), AntuIcon.STATUS_KDECONNECT_TRAY_22);
+        assertEquals(AntuIcon.forID("status__22__kdeconnect-tray"), AntuIcon.STATUS_KDECONNECT_TRAY_22);
     }
 
-    @org.junit.Test
+    @Test
     public void withStyle() {
         assertEquals(AntuIcon.STATUS_KDECONNECT_TRAY_22.withStyle(AntuIconStyle.DARK).getStyle(), AntuIconStyle.DARK);
     }
 
-    @org.junit.Test
+    @Test
     public void getStyle() {
         assertNull(AntuIcon.STATUS_KDECONNECT_TRAY_22.getStyle());
         assertEquals(AntuIcon.STATUS_KDECONNECT_TRAY_22.withStyle(AntuIconStyle.DARK).getStyle(), AntuIconStyle.DARK);
         assertEquals(AntuIcon.STATUS_KDECONNECT_TRAY_22.withStyle(AntuIconStyle.LIGHT).getStyle(), AntuIconStyle.LIGHT);
     }
 
-    @org.junit.Test
+    @Test
     public void getIconID() {
         assertEquals("status__22__kdeconnect-tray", AntuIcon.STATUS_KDECONNECT_TRAY_22.getIconID());
 

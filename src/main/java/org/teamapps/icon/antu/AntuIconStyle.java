@@ -48,4 +48,19 @@ public class AntuIconStyle {
                 AntuIconStyle.DARK
         );
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        AntuIconStyle iconStyle = (AntuIconStyle) o;
+
+        return styleId.equals(iconStyle.styleId);
+    }
+
+    @Override
+    public int hashCode() {
+        return styleId.hashCode();
+    }
 }

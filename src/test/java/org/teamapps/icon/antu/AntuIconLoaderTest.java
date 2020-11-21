@@ -30,9 +30,10 @@ import static org.junit.Assert.*;
 
 public class AntuIconLoaderTest {
 
+    private AntuIconLoader antuIconLoader = new AntuIconLoader();
+
     @Test
     public void loadIcon() {
-        AntuIconLoader antuIconLoader = new AntuIconLoader();
         IconResource iconResource = antuIconLoader.loadIcon(AntuIcon.STATUS_SECURITY_LOW_22.withStyle(AntuIconStyle.LIGHT), 22, null);
         String svg = new String(iconResource.getBytes());
         assertNotEquals("", svg);
@@ -50,7 +51,6 @@ public class AntuIconLoaderTest {
 
     @Test
     public void loadIconDark() {
-        AntuIconLoader antuIconLoader = new AntuIconLoader();
         IconResource iconResource = antuIconLoader.loadIcon(AntuIcon.STATUS_KDECONNECT_TRAY_22.withStyle(AntuIconStyle.DARK), 22, null);
         String svg = new String(iconResource.getBytes());
         assertNotEquals("", svg);
@@ -68,7 +68,6 @@ public class AntuIconLoaderTest {
 
     @Test
     public void loadAllIcons() {
-        AntuIconLoader antuIconLoader = new AntuIconLoader();
 
         for (AntuIcon antuIcon : AntuIcon.getIcons()) {
             String svg = "";
@@ -91,7 +90,6 @@ public class AntuIconLoaderTest {
     @Test
     public void loadAllIconsDark() {
         // Test Dark Icons
-        AntuIconLoader antuIconLoader = new AntuIconLoader();
         for (AntuIcon antuIcon : AntuIcon.getIcons()) {
             String svg = "";
             try {

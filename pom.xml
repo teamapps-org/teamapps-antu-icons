@@ -4,7 +4,7 @@
 
     <groupId>org.teamapps</groupId>
     <artifactId>teamapps-antu-icon-provider</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.1.0-SNAPSHOT</version>
 
     <name>TeamApps Antu Icon Provider</name>
     <description>TeamApps Antu Classic Icon Provider</description>
@@ -31,8 +31,8 @@
     </developers>
 
     <properties>
-        <maven.compiler.source>14</maven.compiler.source>
-        <maven.compiler.target>14</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven-assembly-plugin-version>3.0.0</maven-assembly-plugin-version>
         <slf4j-version>1.7.25</slf4j-version>
@@ -68,6 +68,13 @@
         <dependency>
             <groupId>org.teamapps</groupId>
             <artifactId>teamapps-common</artifactId>
+            <version>${teamapps.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.teamapps</groupId>
+            <artifactId>teamapps-server-jetty-embedded</artifactId>
             <version>${teamapps.version}</version>
             <scope>provided</scope>
         </dependency>

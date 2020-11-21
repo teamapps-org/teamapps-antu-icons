@@ -51,11 +51,15 @@ public class AntuIconDecoder implements IconDecoder<AntuIcon, AntuIconStyle> {
             String iconID = parts[1];
             String iconStyle = parts[0];
 
-            return switch (iconStyle) {
-                case "DARK" -> AntuIcon.forId(iconID).withStyle(AntuIconStyle.DARK);
-                case "LIGHT" -> AntuIcon.forId(iconID); // .withStyle(AntuIconStyle.LIGHT);
-                default -> null;
-            };
+            // .withStyle(AntuIconStyle.LIGHT);
+            switch (iconStyle) {
+                case "DARK":
+                    return AntuIcon.forId(iconID).withStyle(AntuIconStyle.DARK);
+                case "LIGHT":
+                    return AntuIcon.forId(iconID);
+                default:
+                    return null;
+            }
 
         }
         return null;

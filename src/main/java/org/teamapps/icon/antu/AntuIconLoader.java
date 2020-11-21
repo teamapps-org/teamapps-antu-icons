@@ -50,12 +50,12 @@ public class AntuIconLoader implements IconLoader<AntuIcon, AntuIconStyle> {
         String folder = style.getFolder();
         // String iconPath = iconPath.replace("__", "/");
         String resourcePath = "/org/teamapps/icon/antu/" + folder + "/" + iconPath + ".svg";
-        InputStream inputStream = getClass().getResourceAsStream(resourcePath);
-        if (inputStream == null) {
-            return null;
-        }
 
-        try {
+
+        try(InputStream inputStream = getClass().getResourceAsStream(resourcePath)) {
+            if (inputStream == null) {
+                return null;
+            }
             return inputStream.readAllBytes();
             // String svg = IOUtils.toString(inputStream, StandardCharsets.UTF_8);
             // return svg.getBytes(StandardCharsets.UTF_8);

@@ -27,7 +27,7 @@ Add dependency to your TeamApps Maven Project:
         <dependency>
             <groupId>org.teamapps</groupId>
             <artifactId>teamapps-antu-icon-provider</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
+            <version>1.1.0</version>
         </dependency>
 ~~~
 
@@ -43,6 +43,37 @@ public class IconExample {
         Icon icon1 = AntuIcon.STATUS_SECURITY_HIGH_64;
         Icon icon2 = AntuIcon.STATUS_MIC_OFF_22.withStyle(AntuIconStyle.DARK);
         Icon icon3 = AntuIcon.ACTION_AUTOCORRECTION_32.withStyle(AntuIconStyle.LIGHT); // Default Style
+    }
+}
+~~~
+
+## Antu Icon Browser
+
+This Project includes a visual Icon Browser.
+
+![AntuIconBrowser](./project-resources/AntuIconBrowser.png)
+
+Start `AntuIconBrowser.main()` in this project or start it from your Teamapps project
+
+`Component antuIconBrowser = new AntuIconBrowser(sessionContext).getUI();`
+
+Complete IconBrowser class. Start and point your browser to http://localhost:8082
+~~~java
+import org.teamapps.icon.antu.AntuIconBrowser;
+import org.teamapps.server.jetty.embedded.TeamAppsJettyEmbeddedServer;
+import org.teamapps.ux.component.Component;
+import org.teamapps.ux.component.rootpanel.RootPanel;
+import org.teamapps.webcontroller.WebController;
+
+public class IconBrowser {
+    public static void main(String[] args) throws Exception {
+        WebController controller = sessionContext -> {
+            RootPanel rootPanel = new RootPanel();
+            sessionContext.addRootPanel(null, rootPanel);
+            Component antuIconBrowser = new AntuIconBrowser(sessionContext).getUI();
+            rootPanel.setContent(antuIconBrowser);
+        };
+        new TeamAppsJettyEmbeddedServer(controller, 8082).start();
     }
 }
 ~~~

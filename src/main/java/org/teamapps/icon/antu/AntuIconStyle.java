@@ -21,16 +21,22 @@ package org.teamapps.icon.antu;
 
 public class AntuIconStyle {
 
-    public static final AntuIconStyle LIGHT = new AntuIconStyle("Antu");
-    public static final AntuIconStyle DARK = new AntuIconStyle("AntuDark");
+    public static final AntuIconStyle LIGHT = new AntuIconStyle("LIGHT", "Antu");
+    public static final AntuIconStyle DARK = new AntuIconStyle("DARK", "AntuDark");
 
-    private String folder;
+    private final String styleId;
+    private final String folder;
 
-    public AntuIconStyle(String name) {
-        this.folder = name;
+    public AntuIconStyle(String styleId, String folder) {
+        this.styleId = styleId;
+        this.folder = folder;
     }
 
     public String getFolder() {
         return folder;
+    }
+
+    public String getStyleId() {
+        return styleId;
     }
 }

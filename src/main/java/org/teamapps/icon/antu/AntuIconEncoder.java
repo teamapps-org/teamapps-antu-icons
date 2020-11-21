@@ -42,9 +42,9 @@ public class AntuIconEncoder implements IconEncoder<AntuIcon, AntuIconStyle> {
         String encodedString;
         AntuIconStyle style = icon.getStyle();
         if (style == AntuIconStyle.DARK) {
-            encodedString = "DARK~"+icon.getIconID();
+            encodedString = "DARK~"+icon.getIconId();
         } else {
-            encodedString = icon.getIconID();
+            encodedString = icon.getIconId();
         }
         return encodedString;
     }

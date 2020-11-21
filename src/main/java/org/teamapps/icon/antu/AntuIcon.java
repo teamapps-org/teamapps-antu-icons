@@ -36,40 +36,36 @@ public class AntuIcon implements Icon<AntuIcon, AntuIconStyle> {
 
     private static final Map<String, AntuIcon> ICONS_BY_ID_LIGHT = new HashMap<>();
     private static final Map<String, AntuIcon> ICONS_BY_ID_DARK = new HashMap<>();
-    private final String iconID;
+    private final String iconId;
     private final AntuIconStyle style;
     private final String iconPath;
 
-    public AntuIcon(String iconID, String iconPath, AntuIconStyle style) {
-        this.iconID = iconID;
+    private AntuIcon(String iconId, String iconPath, AntuIconStyle style) {
+        this.iconId = iconId;
         this.iconPath = iconPath;
-        if (style != null){
-            this.style = style;
-        } else {
-            this.style = AntuIconStyle.LIGHT;
-        }
+        this.style = Objects.requireNonNullElse(style, AntuIconStyle.LIGHT);
     }
 
-    public static AntuIcon forID(String iconID) {
-        return ICONS_BY_ID_LIGHT.get(iconID);
+    public static AntuIcon forId(String iconId) {
+        return forId(iconId,AntuIconStyle.LIGHT);
     }
-    public static AntuIcon forIDDark(String iconID) {
-        return ICONS_BY_ID_DARK.get(iconID);
+    public static AntuIcon forId(String id, AntuIconStyle style) {
+        if (style == null || AntuIconStyle.LIGHT.equals(style)) {
+            return ICONS_BY_ID_LIGHT.get(id);
+        } else {
+            return ICONS_BY_ID_DARK.get(id);
+        }
     }
 
     public static List<AntuIcon> getIcons() {
         return ICONS_BY_ID_LIGHT.values().stream()
-                .sorted(Comparator.comparing(AntuIcon::getIconID))
+                .sorted(Comparator.comparing(AntuIcon::getIconId))
                 .collect(Collectors.toList());
     }
 
     @Override
     public AntuIcon withStyle(AntuIconStyle antuIconStyle) {
-        if (antuIconStyle.equals(AntuIconStyle.DARK)) {
-            return forIDDark(iconID);
-        } else {
-            return forID(iconID);
-        }
+        return forId(iconId, antuIconStyle);
     }
 
     @Override
@@ -77,18 +73,18 @@ public class AntuIcon implements Icon<AntuIcon, AntuIconStyle> {
         return style;
     }
 
-    public String getIconID() {
-        return iconID;
+    public String getIconId() {
+        return iconId;
     }
     public String getIconPath() {
         return iconPath;
     }
 
-    private static AntuIcon create(String iconID, String iconPath) {
-        AntuIcon icon = new AntuIcon(iconID, iconPath, null);
-        ICONS_BY_ID_LIGHT.put(iconID, icon);
-        AntuIcon darkIcon = new AntuIcon(iconID, iconPath, AntuIconStyle.DARK);
-        ICONS_BY_ID_DARK.put(iconID, darkIcon);
+    private static AntuIcon create(String id, String path) {
+        AntuIcon icon = new AntuIcon(id, path, null);
+        ICONS_BY_ID_LIGHT.put(id, icon);
+        AntuIcon darkIcon = new AntuIcon(id, path, AntuIconStyle.DARK);
+        ICONS_BY_ID_DARK.put(id, darkIcon);
         return icon;
     }
 
@@ -2149,7 +2145,7 @@ public class AntuIcon implements Icon<AntuIcon, AntuIconStyle> {
     public static final AntuIcon STATUS_SCRIPT_ERROR_22 = create("STATUS_SCRIPT_ERROR_22", "status/22/script-error");
     public static final AntuIcon STATUS_SECURITY_HIGH_22 = create("STATUS_SECURITY_HIGH_22", "status/22/security-high");
     public static final AntuIcon STATUS_SECURITY_HIGH_64 = create("STATUS_SECURITY_HIGH_64", "status/64/security-high");
-    public static final AntuIcon STATUS_SECURITY_LOW_22  = create("STATUS_SECURITY_LOW_22 ", "status/22/security-low");
+    public static final AntuIcon STATUS_SECURITY_LOW_22  = create("STATUS_SECURITY_LOW_22", "status/22/security-low");
     public static final AntuIcon STATUS_SECURITY_LOW_64 = create("STATUS_SECURITY_LOW_64", "status/64/security-low");
     public static final AntuIcon STATUS_SECURITY_MEDIUM_22 = create("STATUS_SECURITY_MEDIUM_22", "status/22/security-medium");
     public static final AntuIcon STATUS_SECURITY_MEDIUM_64 = create("STATUS_SECURITY_MEDIUM_64", "status/64/security-medium");

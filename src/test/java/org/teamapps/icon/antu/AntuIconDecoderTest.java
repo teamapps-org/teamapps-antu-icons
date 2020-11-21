@@ -28,15 +28,15 @@ public class AntuIconDecoderTest {
     @Test
     public void decodeIcon() {
         AntuIconDecoder antuIconDecoder = new AntuIconDecoder();
-        assertEquals(antuIconDecoder.decodeIcon("DARK~APP_CALLIGRAHANDBOOK_48",null).getIconID(),AntuIcon.APP_CALLIGRAHANDBOOK_48.getIconID());
+        assertEquals(antuIconDecoder.decodeIcon("DARK~APP_CALLIGRAHANDBOOK_48",null).getIconId(),AntuIcon.APP_CALLIGRAHANDBOOK_48.getIconId());
         assertEquals(antuIconDecoder.decodeIcon("DARK~APP_CALLIGRAHANDBOOK_48",null).getStyle(),AntuIconStyle.DARK);
 
         assertEquals(antuIconDecoder.decodeIcon("DARK~APP_CALLIGRAHANDBOOK_48",null),AntuIcon.APP_CALLIGRAHANDBOOK_48.withStyle(AntuIconStyle.DARK));
 
-        assertEquals(antuIconDecoder.decodeIcon("LIGHT~APP_CALLIGRAHANDBOOK_48",null).getIconID(),AntuIcon.APP_CALLIGRAHANDBOOK_48.getIconID());
+        assertEquals(antuIconDecoder.decodeIcon("LIGHT~APP_CALLIGRAHANDBOOK_48",null).getIconId(),AntuIcon.APP_CALLIGRAHANDBOOK_48.getIconId());
         assertEquals(antuIconDecoder.decodeIcon("LIGHT~APP_CALLIGRAHANDBOOK_48",null).getStyle(),AntuIconStyle.LIGHT);
 
-        assertEquals(antuIconDecoder.decodeIcon("APP_CALLIGRAHANDBOOK_48",null).getIconID(),AntuIcon.APP_CALLIGRAHANDBOOK_48.getIconID());
+        assertEquals(antuIconDecoder.decodeIcon("APP_CALLIGRAHANDBOOK_48",null).getIconId(),AntuIcon.APP_CALLIGRAHANDBOOK_48.getIconId());
         assertEquals(antuIconDecoder.decodeIcon("APP_CALLIGRAHANDBOOK_48",null).getStyle(),AntuIconStyle.LIGHT);
 
     }

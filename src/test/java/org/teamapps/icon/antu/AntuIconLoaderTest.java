@@ -31,7 +31,7 @@ import static org.junit.Assert.*;
 public class AntuIconLoaderTest {
 
     @Test
-    public void loadIcon() throws Exception {
+    public void loadIcon() {
         AntuIconLoader antuIconLoader = new AntuIconLoader();
         IconResource iconResource = antuIconLoader.loadIcon(AntuIcon.STATUS_SECURITY_LOW_22.withStyle(AntuIconStyle.LIGHT), 22, null);
         String svg = new String(iconResource.getBytes());
@@ -49,7 +49,7 @@ public class AntuIconLoaderTest {
     }
 
     @Test
-    public void loadIconDark() throws Exception {
+    public void loadIconDark() {
         AntuIconLoader antuIconLoader = new AntuIconLoader();
         IconResource iconResource = antuIconLoader.loadIcon(AntuIcon.STATUS_KDECONNECT_TRAY_22.withStyle(AntuIconStyle.DARK), 22, null);
         String svg = new String(iconResource.getBytes());
@@ -67,7 +67,7 @@ public class AntuIconLoaderTest {
     }
 
     @Test
-    public void loadAllIcons() throws Exception {
+    public void loadAllIcons() {
         AntuIconLoader antuIconLoader = new AntuIconLoader();
 
         for (AntuIcon antuIcon : AntuIcon.getIcons()) {
@@ -76,20 +76,20 @@ public class AntuIconLoaderTest {
                 IconResource iconResource = antuIconLoader.loadIcon(antuIcon, 22, null);
                 svg = new String(iconResource.getBytes());
             } catch (Exception e) {
-                System.out.println("ERROR Loading Icon: " + antuIcon.getIconID() + ", error: " + e.getMessage());
+                System.out.println("ERROR Loading Icon: " + antuIcon.getIconId() + ", error: " + e.getMessage());
             }
             assertNotNull(svg);
 //            assertNotEquals("", svg);
             if (!svg.contains("<svg")) {
-                System.out.println(antuIcon.getIconID() + "\n" + svg);
+                System.out.println(antuIcon.getIconId() + "\n" + svg);
             }
-            assertTrue("resource contains svg start tag " + antuIcon.getIconID() + "\n" + svg, svg.contains("<svg"));
-            assertTrue("resource contains svg end tag " + antuIcon.getIconID() + "\n" + svg, svg.contains("</svg>"));
+            assertTrue("resource contains svg start tag " + antuIcon.getIconId() + "\n" + svg, svg.contains("<svg"));
+            assertTrue("resource contains svg end tag " + antuIcon.getIconId() + "\n" + svg, svg.contains("</svg>"));
         }
     }
 
     @Test
-    public void loadAllIconsDark() throws Exception {
+    public void loadAllIconsDark() {
         // Test Dark Icons
         AntuIconLoader antuIconLoader = new AntuIconLoader();
         for (AntuIcon antuIcon : AntuIcon.getIcons()) {
@@ -98,12 +98,12 @@ public class AntuIconLoaderTest {
                 IconResource iconResource = antuIconLoader.loadIcon(antuIcon.withStyle(AntuIconStyle.DARK), 22, null);
                 svg = new String(iconResource.getBytes());
             } catch (Exception e) {
-                System.out.println("ERROR Loading Icon: " + antuIcon.getIconID() + ", error: " + e.getMessage());
+                System.out.println("ERROR Loading Icon: " + antuIcon.getIconId() + ", error: " + e.getMessage());
             }
             assertNotNull(svg);
 //            assertNotEquals("should not be empty " + antuIcon.getIconID() + "\n" + svg,"", svg);
-            assertTrue("resource contains svg start tag " + antuIcon.getIconID() + "\n" + svg, svg.contains("<svg"));
-            assertTrue("resource contains svg end tag " + antuIcon.getIconID() + "\n" + svg, svg.contains("</svg>"));
+            assertTrue("resource contains svg start tag " + antuIcon.getIconId() + "\n" + svg, svg.contains("<svg"));
+            assertTrue("resource contains svg end tag " + antuIcon.getIconId() + "\n" + svg, svg.contains("</svg>"));
         }
 
 //        String resourcePath = "/org/teamapps/icon/antu-classic/Antu/status/22/kdeconnect-tray.svg";

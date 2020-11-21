@@ -19,6 +19,9 @@
  */
 package org.teamapps.icon.antu;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class AntuIconStyle {
 
     public static final AntuIconStyle LIGHT = new AntuIconStyle("LIGHT", "Antu");
@@ -38,5 +41,11 @@ public class AntuIconStyle {
 
     public String getStyleId() {
         return styleId;
+    }
+    public static List<AntuIconStyle> getStyles(){
+        return List.of(
+                AntuIconStyle.LIGHT,
+                AntuIconStyle.DARK
+        );
     }
 }

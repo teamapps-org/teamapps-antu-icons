@@ -78,13 +78,17 @@ Enum naming regex
 $4_$3
 ~~~
 
+## SVG Optimization
+
+The original SVGs (with some fixes/renaming and deletions) are in the folder `antu-classic` for reference, the optimized SVG file resources used by this provider are in `src/main/resources/org/teamapps/icon/antu`
+
 optimze SVGs
 ~~~bash
 alias optimizesvg="scour --strip-xml-prolog --remove-metadata --remove-descriptions --remove-titles --strip-xml-space  --no-line-breaks  --shorten-ids --enable-id-stripping --set-precision 4"
 for svg in Antu/apps/**/*.svg ; do echo $svg optimizesvg $svg > ../antu/$svg || echo ERROR: $svg > ./error.log ;done
 ~~~
 
-TODO: check. These Icons are only in AntuDark, but they are not for a dark theme:
+TODO: check. There are some icon files that are only in AntuDark, but they are not all for a dark theme:
 
 - actions/24/branch.svg
 - actions/24/diag_class.svg

@@ -1,0 +1,1 @@
+<svg viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="a" x1="20" x2="4" gradientUnits="userSpaceOnUse"><stop stop-color="#f2f2f2" offset="0"/><stop stop-color="#b3b3b3" offset="1"/></linearGradient></defs><path transform="matrix(.75 0 0 .75-1-1)" d="m4 4v16h16v-16z" fill="url(#a)"/></svg>

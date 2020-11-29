@@ -4,7 +4,7 @@
 
     <groupId>org.teamapps</groupId>
     <artifactId>teamapps-antu-icon-provider</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1-SNAPSHOT</version>
 
     <name>TeamApps Antu Icon Provider</name>
     <description>TeamApps Antu Classic Icon Provider</description>
@@ -54,7 +54,7 @@
         <url>https://github.com/teamapps-org/teamapps-antu-icon-provider</url>
         <connection>scm:git:git@github.com:teamapps-org/teamapps-antu-icon-provider.git</connection>
         <developerConnection>scm:git:git@github.com:teamapps-org/teamapps-antu-icon-provider.git</developerConnection>
-        <tag>v1.1.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <dependencies>

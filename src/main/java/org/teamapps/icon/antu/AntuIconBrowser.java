@@ -131,7 +131,8 @@ public class AntuIconBrowser {
 
             // Custom Notification with VERY LARGE ICON
             TemplateField<BaseTemplateRecord<Void>> templateField = new TemplateField<>(BaseTemplate.LIST_ITEM_EXTRA_VERY_LARGE_ICON_TWO_LINES);
-            templateField.setValue(new BaseTemplateRecord<>(iconItemClickedEventData.getRecord(), iconItemClickedEventData.getRecord().getIconId(), iconItemClickedEventData.getRecord().getIconPath()));
+            AntuIcon icon = iconItemClickedEventData.getRecord();
+            templateField.setValue(new BaseTemplateRecord<>(icon, "AntuIcon." + icon.getIconId(), icon.getIconPath()+".svg"));
             Notification iconNotification = new Notification();
             iconNotification.setContent(templateField);
             iconNotification.setShowProgressBar(false);

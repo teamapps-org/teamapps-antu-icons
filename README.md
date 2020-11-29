@@ -1,7 +1,20 @@
 # Teamapps Icon Provider for Antu Classic Icons
 
+<img src="src/main/resources/org/teamapps/icon/antu/Antu/apps/48/gcstar.svg" width="64" height="64" alt="AntuIcon.APP_GCSTAR_48" />
 
-This Icon set contains 3582 SVG icons and two styles `LIGHT`(default) and `DARK` for Dark Backgrounds. The original purpose of this collection is a for a Linux Desktop Operating System.
+This Icon set contains 3582 SVG icons and two styles `LIGHT`(default) and `DARK` for Dark Backgrounds. 
+
+The original purpose of this collection is a for a Linux Desktop Operating System. 
+Because of this, it contains icons with different styles and sizes and duplicated icons.
+For example, there are icons for Application Launcher that are designed for bigger sizes. 
+`AntuIcon.APPLET_BINARYCLOCK_256` <img src="src/main/resources/org/teamapps/icon/antu/Antu/applets/256/org.kde.plasma.binaryclock.svg" width="64" height="64" />
+
+Other icons are designed for small status icons or action buttons in toolbars in specific applications.  `AntuIcon.ACTION_CONTRAST_24`
+<img src="src/main/resources/org/teamapps/icon/antu/Antu/actions/24/contrast.svg" width="24" height="24" />
+`AntuIcon.STATUS_MIC_OFF_22`<img src="src/main/resources/org/teamapps/icon/antu/Antu/status/22/mic-off.svg" width="22" height="22" />
+
+The number of at the end of an icon ID is the originally intended size. 
+
 
 Icons Source: <https://github.com/fabianalexisinostroza/Antu-classic>
 

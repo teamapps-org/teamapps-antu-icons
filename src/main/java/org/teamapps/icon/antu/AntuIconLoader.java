@@ -29,16 +29,7 @@ import java.io.InputStream;
 
 public class AntuIconLoader implements IconLoader<AntuIcon> {
     /**
-     * Loads an icon.
-     * <p>
-     * The specified icon MUST have a style set (unless the STYLE type is {@link Void}). Callers need to ensure this!
-     * <p>
-     * Implementations MAY therefore assume the icon's to be styled.
-     *
-     * @param icon    AntuIcon
-     * @param size    The size of the requested icon.
-     * @param context {@link IconLoaderContext)
-     * @return The icon in binary form and type and size of the icon (as {@link IconResource}), or null, if the icon could not be loaded.
+     * {@inheritDoc}
      */
     @Override
     public IconResource loadIcon(AntuIcon icon, int size, IconLoaderContext context) {

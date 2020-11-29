@@ -20,23 +20,11 @@
 package org.teamapps.icon.antu;
 
 import org.teamapps.icons.IconDecoderContext;
-import org.teamapps.icons.IconLoaderContext;
 import org.teamapps.icons.spi.IconDecoder;
-import org.teamapps.icons.spi.IconEncoder;
 
 public class AntuIconDecoder implements IconDecoder<AntuIcon> {
     /**
-     * Decodes an icon from an encoded icon {@link String}.
-     * <p>
-     * Implementations MUST return an icon, even if the requested size is not available.
-     * In this case, a larger or smaller icon should be returned.
-     * The resizing will be done elsewhere.
-     * <p>
-     * Implementations MUST support unstyled icons.
-     *
-     * @param encodedIconString The encoded icon String as produced by the corresponding {@link IconEncoder}.
-     * @param context {@link IconLoaderContext}
-     * @return The icon.
+     * {@inheritDoc}
      */
     @Override
     public AntuIcon decodeIcon(String encodedIconString, IconDecoderContext context) {

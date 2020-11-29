@@ -27,7 +27,7 @@ import org.teamapps.icons.spi.IconLoader;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class AntuIconLoader implements IconLoader<AntuIcon, AntuIconStyle> {
+public class AntuIconLoader implements IconLoader<AntuIcon> {
     /**
      * Loads an icon.
      * <p>

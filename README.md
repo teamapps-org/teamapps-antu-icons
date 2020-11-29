@@ -1,11 +1,31 @@
 # Teamapps Icon Provider for Antu Classic Icons
 
 
-This Icon set contains 3582 SVG icons and two styles `LIGHT`(default) and `DARK` for Dark Backgrounds. The original purpose of this collection is a for a Linux Desktop Operating System.
+This icon set contains more than 3000 SVG icons and two styles `LIGHT`(default) and `DARK` for use on dark backgrounds. The SVG icons are
+from [Antü-Classic Icons](https://github.com/fabianalexisinostroza/Antu-classic)
 
-Icons Source: <https://github.com/fabianalexisinostroza/Antu-classic>
+The original purpose of this collection is an icon theme for a Linux Desktop.
+Because of this, it contains icons with different styles and sizes and duplicated icons.
 
-The Icons are in various Categories:
+For example, there are icons for Application Launcher that are designed for bigger sizes.
+Other icons are designed for small status icons or action buttons in toolbars in specific applications.
+
+The number of at the end of an icon ID is the originally intended size.
+
+
+| *Example Icon ID* | *Icon* |
+| ----------------- | ------ |
+| `AntuIcon.APPLET_WEBSLICE_256` | <img src="src/main/resources/org/teamapps/icon/antu/Antu/applets/256/cqcb.plasma.webslice.svg" width="64" height="64" /> |
+| `AntuIcon.APP_GCSTAR_48` | <img src="src/main/resources/org/teamapps/icon/antu/Antu/apps/48/gcstar.svg" width="64" height="64" alt="AntuIcon.APP_GCSTAR_48" /> |
+| `AntuIcon.APP_DESIGNER_48` | <img src="src/main/resources/org/teamapps/icon/antu/Antu/apps/48/designer.svg" width="64" height="64" alt="AntuIcon.APP_GCSTAR_48" /> |
+| `AntuIcon.DEVICE_PHONE_64` | <img src="src/main/resources/org/teamapps/icon/antu/Antu/devices/64/phone.svg" width="64" height="64" /> |
+| `AntuIcon.STATUS_BATTERY_CHARGING_060_64` | <img src="src/main/resources/org/teamapps/icon/antu/Antu/status/64/battery-charging-060.svg" height="64" /> |
+| `AntuIcon.ACTION_EDIT_DELETE_32` | <img src="src/main/resources/org/teamapps/icon/antu/Antu/actions/32/edit-delete.svg" width="32" height="32" /> |
+| `AntuIcon.ACTION_TABLE_24` | <img src="src/main/resources/org/teamapps/icon/antu/Antu/actions/24/table.svg" width="32" height="32" /> |
+| `AntuIcon.ACTION_CONTRAST_24` | <img src="src/main/resources/org/teamapps/icon/antu/Antu/actions/24/contrast.svg" width="24" height="24" /> |
+| `AntuIcon.STATUS_MIC_OFF_22` | <img src="src/main/resources/org/teamapps/icon/antu/Antu/status/22/mic-off.svg" width="22" height="22" /> |
+
+The icons are grouped in categories:
 
 * `AntuIcon.ACTION_*`: 1471 icons
 * `AntuIcon.APPLET_*`: 55 icons
@@ -17,7 +37,7 @@ The Icons are in various Categories:
 * `AntuIcon.PLACE_*`: 270 icons
 * `AntuIcon.STATUS_*`: 136 icons
 
-Mimetype Icons of the Antu Theme are excluded
+The mimetype icons of the upstream Antu theme are excluded
 
 ## Usage
 
@@ -53,11 +73,12 @@ This Project includes a visual Icon Browser.
 
 ![AntuIconBrowser](./project-resources/AntuIconBrowser.png)
 
-Start `AntuIconBrowser.main()` in this project or start it from your Teamapps project
+Launch it quickly from your Teamapps project.
 
 `Component antuIconBrowser = new AntuIconBrowser(sessionContext).getUI();`
 
-Complete IconBrowser class. Start and point your browser to http://localhost:8082
+You can copy the following complete IconBrowser class. Run it and point your browser to <http://localhost:8082>
+
 ~~~java
 import org.teamapps.icon.antu.AntuIconBrowser;
 import org.teamapps.server.jetty.embedded.TeamAppsJettyEmbeddedServer;
@@ -114,6 +135,7 @@ $4_$3
 The original SVGs (with some fixes/renaming and deletions) are in the folder `antu-classic` for reference, the optimized SVG file resources used by this provider are in `src/main/resources/org/teamapps/icon/antu`
 
 optimze SVGs
+
 ~~~bash
 alias optimizesvg="scour --strip-xml-prolog --remove-metadata --remove-descriptions --remove-titles --strip-xml-space  --no-line-breaks  --shorten-ids --enable-id-stripping --set-precision 4"
 for svg in Antu/apps/**/*.svg ; do echo $svg optimizesvg $svg > ../antu/$svg || echo ERROR: $svg > ./error.log ;done

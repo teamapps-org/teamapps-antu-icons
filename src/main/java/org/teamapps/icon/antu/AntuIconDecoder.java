@@ -24,7 +24,7 @@ import org.teamapps.icons.IconLoaderContext;
 import org.teamapps.icons.spi.IconDecoder;
 import org.teamapps.icons.spi.IconEncoder;
 
-public class AntuIconDecoder implements IconDecoder<AntuIcon, AntuIconStyle> {
+public class AntuIconDecoder implements IconDecoder<AntuIcon> {
     /**
      * Decodes an icon from an encoded icon {@link String}.
      * <p>

@@ -23,7 +23,7 @@ import org.teamapps.icons.IconEncoderContext;
 import org.teamapps.icons.IconLoaderContext;
 import org.teamapps.icons.spi.IconEncoder;
 
-public class AntuIconEncoder implements IconEncoder<AntuIcon, AntuIconStyle> {
+public class AntuIconEncoder implements IconEncoder<AntuIcon> {
     /**
      * Creates a string representation of the provided icon.
      * <p>

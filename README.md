@@ -1,5 +1,5 @@
-# Teamapps Icon Provider for Antu Classic Icons
-
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.teamapps/teamapps-antu-icon-provider/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.teamapps/teamapps-antu-icon-provider)
+# Teamapps Icon Provider for Antu Classic Icons 
 
 This icon set contains more than 3000 SVG icons and two styles `LIGHT`(default) and `DARK` for use on dark backgrounds. The SVG icons are
 from [Antü-Classic Icons](https://github.com/fabianalexisinostroza/Antu-classic)
@@ -41,13 +41,14 @@ The mimetype icons of the upstream Antu theme are excluded
 
 ## Usage
 
-Add dependency to your TeamApps Maven Project:
+Add dependency to your TeamApps Maven Project. latest version: [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.teamapps/teamapps-antu-icon-provider/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.teamapps/teamapps-antu-icon-provider)
+
 
 ~~~xml
         <dependency>
             <groupId>org.teamapps</groupId>
             <artifactId>teamapps-antu-icon-provider</artifactId>
-            <version>1.1.0</version>
+            <version>1.1.1</version>
         </dependency>
 ~~~
 

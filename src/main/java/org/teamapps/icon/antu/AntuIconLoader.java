@@ -26,6 +26,7 @@ import org.teamapps.icons.spi.IconLoader;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.text.MessageFormat;
 
 public class AntuIconLoader implements IconLoader<AntuIcon> {
     /**
@@ -33,16 +34,18 @@ public class AntuIconLoader implements IconLoader<AntuIcon> {
      */
     @Override
     public IconResource loadIcon(AntuIcon icon, int size, IconLoaderContext context) {
-        return new IconResource(getSVG(icon.getIconPath(), icon.getStyle()), IconType.SVG);
+        AntuIconStyle style = icon.getStyle();
+        String folder = style.getFolder();
+        String resourcePath = "/org/teamapps/icon/antu/" + folder + "/" + icon.getIconPath() + ".svg";
+        byte[] svgBytes = getSVG(resourcePath, icon);
+        if (svgBytes == null){
+            System.out.println(MessageFormat.format("Could not load icon {0} style: {1} from path: {2}", icon.getIconId(), icon.getStyle().getStyleId(), resourcePath));
+            return null;
+        }
+        return new IconResource(svgBytes, IconType.SVG);
     }
 
-    private byte[] getSVG(String iconPath, AntuIconStyle style) {
-
-        String folder = style.getFolder();
-        // String iconPath = iconPath.replace("__", "/");
-        String resourcePath = "/org/teamapps/icon/antu/" + folder + "/" + iconPath + ".svg";
-
-
+    private byte[] getSVG(String resourcePath, AntuIcon icon) {
         try(InputStream inputStream = getClass().getResourceAsStream(resourcePath)) {
             if (inputStream == null) {
                 return null;
@@ -51,6 +54,7 @@ public class AntuIconLoader implements IconLoader<AntuIcon> {
             // String svg = IOUtils.toString(inputStream, StandardCharsets.UTF_8);
             // return svg.getBytes(StandardCharsets.UTF_8);
         } catch (IOException e) {
+            System.out.println(MessageFormat.format("Could not load icon '{0}' style: '{1}' from path '{2}. error: '{3}", icon.getIconId(), icon.getStyle().getStyleId(), resourcePath, e.getMessage()));
             e.printStackTrace();
         }
         return null;

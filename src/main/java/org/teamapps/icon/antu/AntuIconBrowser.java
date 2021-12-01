@@ -22,12 +22,15 @@ package org.teamapps.icon.antu;
 import org.teamapps.common.format.Color;
 import org.teamapps.server.jetty.embedded.TeamAppsJettyEmbeddedServer;
 import org.teamapps.ux.component.Component;
+import org.teamapps.ux.component.field.NumberField;
+import org.teamapps.ux.component.field.NumberFieldSliderMode;
 import org.teamapps.ux.component.field.TemplateField;
 import org.teamapps.ux.component.field.TextField;
 import org.teamapps.ux.component.field.combobox.ComboBox;
 import org.teamapps.ux.component.flexcontainer.VerticalLayout;
 import org.teamapps.ux.component.form.ResponsiveForm;
 import org.teamapps.ux.component.form.ResponsiveFormLayout;
+import org.teamapps.ux.component.format.VerticalElementAlignment;
 import org.teamapps.ux.component.infiniteitemview.InfiniteItemView2;
 import org.teamapps.ux.component.infiniteitemview.ListInfiniteItemViewModel;
 import org.teamapps.ux.component.notification.Notification;
@@ -46,6 +49,7 @@ public class AntuIconBrowser {
     private SessionContext sessionContext;
     private AntuIconStyle iconStyle;
     private final ListInfiniteItemViewModel<AntuIcon> iconViewModel = new ListInfiniteItemViewModel<>(AntuIcon.getIcons());
+    private InfiniteItemView2<AntuIcon> iconView;
 
     public AntuIconBrowser(SessionContext sessionContext) {
         this.sessionContext = sessionContext;
@@ -75,7 +79,9 @@ public class AntuIconBrowser {
         TextField searchField = new TextField();
         layout.addLabelAndField(AntuIcon.ACTION_SEARCH_24, "Icon Name", searchField);
         searchField.setEmptyText("Search...");
-        searchField.onTextInput.addListener(s ->iconViewModel.setRecords(AntuIcon.getIcons().stream().filter(icon -> s == null || icon.getIconId().contains(s.toUpperCase())).collect(Collectors.toList())));
+        searchField.onTextInput.addListener(s ->iconViewModel.setRecords(AntuIcon.getIcons().stream()
+                .filter(icon -> s == null || icon.getIconId().contains(s.toUpperCase()))
+                .collect(Collectors.toList())));
         verticalLayout.addComponent(searchField);
 
         // Style Selector
@@ -97,18 +103,32 @@ public class AntuIconBrowser {
             iconStyle = style;
             iconViewModel.onAllDataChanged.fire();
             if (style.equals(AntuIconStyle.DARK)) {
-                iconViewComponent.setBodyBackgroundColor(Color.BLACK.withAlpha(0.96f));
+                iconViewComponent.setBodyBackgroundColor(Color.fromHex("222").withAlpha(0.96f));
+                iconViewComponent.setCssStyle("color", "grey");
             } else {
                 iconViewComponent.setBodyBackgroundColor(Color.WHITE.withAlpha(0.96f));
+                iconViewComponent.setCssStyle("color", "inherit");
             }
         });
         layout.addLabelAndField(AntuIcon.ACTION_DRAW_BRUSH_24, "Icon Style", styleSelector);
+
+        // Icon Size
+        NumberField sizeField = new NumberField(0);
+        layout.addLabelAndField(AntuIcon.ACTION_VIEW_FULLSCREEN_24, "Icon Size", sizeField);
+        sizeField.setValue(48);
+        sizeField.setMinValue(10);
+        sizeField.setMaxValue(300);
+        sizeField.setSliderMode(NumberFieldSliderMode.VISIBLE);
+        sizeField.onValueChanged.addListener(value -> {
+            iconView.setItemTemplate(BaseTemplate.createTreeSingleLineNodeTemplate(value.intValue(), VerticalElementAlignment.CENTER, value.intValue() + 50));
+            iconView.setItemHeight(value.intValue() + 10);
+        });
         verticalLayout.addComponentFillRemaining(iconViewComponent);
         return verticalLayout;
     }
 
     public Panel createIconViewer() {
-        InfiniteItemView2<AntuIcon> iconView = new InfiniteItemView2<>();
+        iconView = new InfiniteItemView2<>();
         iconView.setItemTemplate(BaseTemplate.LIST_ITEM_LARGE_ICON_SINGLE_LINE);
         iconView.setItemHeight(50);
         iconView.setItemWidth(300);
@@ -132,7 +152,7 @@ public class AntuIconBrowser {
             // Custom Notification with VERY LARGE ICON
             TemplateField<BaseTemplateRecord<Void>> templateField = new TemplateField<>(BaseTemplate.LIST_ITEM_EXTRA_VERY_LARGE_ICON_TWO_LINES);
             AntuIcon icon = iconItemClickedEventData.getRecord();
-            templateField.setValue(new BaseTemplateRecord<>(icon, "AntuIcon." + icon.getIconId(), icon.getIconPath()+".svg"));
+            templateField.setValue(new BaseTemplateRecord<>(icon, "AntuIcon." + icon.getIconId(), String.format("public static AntuIcon forId(\"{1}\"})", icon.getIconId())));
             Notification iconNotification = new Notification();
             iconNotification.setContent(templateField);
             iconNotification.setShowProgressBar(false);

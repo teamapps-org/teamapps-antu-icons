@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.teamapps</groupId>
-    <artifactId>teamapps-antu-icon-provider</artifactId>
+    <artifactId>teamapps-antu-icons</artifactId>
     <version>1.1.2-SNAPSHOT</version>
 
     <name>TeamApps Antu Icon Provider</name>
@@ -36,7 +36,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven-assembly-plugin-version>3.0.0</maven-assembly-plugin-version>
         <slf4j-version>1.7.25</slf4j-version>
-        <teamapps.version>0.9.126</teamapps.version>
+        <teamapps.version>0.9.139</teamapps.version>
     </properties>
 
     <distributionManagement>
@@ -51,9 +51,9 @@
     </distributionManagement>
 
     <scm>
-        <url>https://github.com/teamapps-org/teamapps-antu-icon-provider</url>
-        <connection>scm:git:git@github.com:teamapps-org/teamapps-antu-icon-provider.git</connection>
-        <developerConnection>scm:git:git@github.com:teamapps-org/teamapps-antu-icon-provider.git</developerConnection>
+        <url>https://github.com/teamapps-org/teamapps-antu-icons</url>
+        <connection>scm:git:git@github.com:teamapps-org/teamapps-antu-icons.git</connection>
+        <developerConnection>scm:git:git@github.com:teamapps-org/teamapps-antu-icons.git</developerConnection>
         <tag>HEAD</tag>
     </scm>
 

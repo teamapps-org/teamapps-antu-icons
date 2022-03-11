@@ -1,4 +1,4 @@
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.teamapps/teamapps-antu-icon-provider/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.teamapps/teamapps-antu-icon-provider)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.teamapps/teamapps-antu-icons/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.teamapps/teamapps-antu-icons)
 # Teamapps Icon Provider for Antu Classic Icons 
 
 This icon set contains more than 3000 SVG icons and two styles `LIGHT`(default) and `DARK` for use on dark backgrounds. The SVG icons are
@@ -41,13 +41,13 @@ The mimetype icons of the upstream Antu theme are excluded
 
 ## Usage
 
-Add dependency to your TeamApps Maven Project. latest version: [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.teamapps/teamapps-antu-icon-provider/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.teamapps/teamapps-antu-icon-provider)
+Add dependency to your TeamApps Maven Project. latest version: [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.teamapps/teamapps-antu-icons/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.teamapps/teamapps-antu-icons)
 
 
 ~~~xml
         <dependency>
             <groupId>org.teamapps</groupId>
-            <artifactId>teamapps-antu-icon-provider</artifactId>
+            <artifactId>teamapps-antu-icons</artifactId>
             <version>1.1.1</version>
         </dependency>
 ~~~
@@ -105,7 +105,7 @@ public class IconBrowser {
 Sync Icons:
 
 ~~~bash
-# clone antu-classic repository to directory beside teamapps-antu-icon-provider
+# clone antu-classic repository to directory beside teamapps-antu-icons
 git clone https://github.com/fabianalexisinostroza/Antu-classic ../antu-classic
 
 # sync content without .git and mimetype icons to resources, exclude duplicate folders
@@ -138,7 +138,8 @@ The original SVGs (with some fixes/renaming and deletions) are in the folder `an
 optimze SVGs
 
 ~~~bash
-alias optimizesvg="scour --strip-xml-prolog --remove-metadata --remove-descriptions --remove-titles --strip-xml-space  --no-line-breaks  --shorten-ids --enable-id-stripping --set-precision 4"
+alias optimizesvg="scour --strip-xml-prolog --remo
+ve-metadata --remove-descriptions --remove-titles --strip-xml-space  --no-line-breaks  --shorten-ids --enable-id-stripping --set-precision 4"
 for svg in Antu/apps/**/*.svg ; do echo $svg optimizesvg $svg > ../antu/$svg || echo ERROR: $svg > ./error.log ;done
 ~~~
 
